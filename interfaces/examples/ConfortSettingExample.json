@@ -1,0 +1,20 @@
+{
+  "@context": {
+    "core": "http://delta.linkeddata.es/def/core#",
+    "saref": "https://w3id.org/saref#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@graph": [
+    {
+      "@id": "http://example.org/ns#FEID01",
+      "@type": "core:FEID",
+      "core:hasComfortSettings": {
+        "@id": "http://example.org/ns#ComfortSetting01"
+      }
+    },
+    {
+      "@id": "http://example.org/ns#ComfortSetting01",
+      "@type": "core:ComfortSetting"
+    }
+  ]
+}

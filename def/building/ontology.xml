@@ -1,0 +1,1568 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://bimerr.iot.linkeddata.es/def/building#"
+     xml:base="http://bimerr.iot.linkeddata.es/def/building"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:vann="http://purl.org/vocab/vann/">
+    <owl:Ontology rdf:about="http://bimerr.iot.linkeddata.es/def/building#">
+        <dc:creator>Serge Chávez-Feria (Ontology Engineering Group, Universidad Politécnica de Madrid)</dc:creator>
+        <dc:description xml:lang="en">The Building ontology has been developed to perform as the core module of the BIMERR project, containing information related to buidling topology, components, materials, and geometry. The geometry information is managed as information objects whitout entering in the details of the BIM model.</dc:description>
+        <dc:license xml:lang="en">http://purl.org/NET/rdflicense/cc-by4.0</dc:license>
+        <dc:publisher xml:lang="en">http://www.oeg-upm.net/</dc:publisher>
+        <dc:title xml:lang="en">Building ontology</dc:title>
+        <vann:preferredNamespacePrefix>building</vann:preferredNamespacePrefix>
+        <owl:versionInfo xml:lang="en">0.0.3</owl:versionInfo>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/created -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/created"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/creator -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/description -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/description"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/license -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/license"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/publisher -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/publisher"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/title -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/title"/>
+    
+
+
+    <!-- http://purl.org/vocab/vann/preferredNamespacePrefix -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespacePrefix"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://bimerr.iot.linkeddata.es/def/building#hasApartment -->
+
+
+    <owl:ObjectProperty rdf:about="http://bimerr.iot.linkeddata.es/def/building#hasApartment">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/bot#containsZone"/>
+        <rdfs:comment xml:lang="en">Relation to indicate that a storey has apartments.</rdfs:comment>
+        <rdfs:label xml:lang="en">has apartment</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://bimerr.iot.linkeddata.es/def/building#hasLayer -->
+
+
+    <owl:ObjectProperty rdf:about="http://bimerr.iot.linkeddata.es/def/building#hasLayer">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/bot#hasSubElement"/>
+        <rdfs:domain rdf:resource="http://bimerr.iot.linkeddata.es/def/building#Construction"/>
+        <rdfs:range rdf:resource="http://bimerr.iot.linkeddata.es/def/building#Layer"/>
+        <rdfs:comment xml:lang="en">Relation to link construction components (walls, floors, etc) with their internal layers.</rdfs:comment>
+        <rdfs:label xml:lang="en">has layer</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://bimerr.iot.linkeddata.es/def/building#hasSubComponent -->
+
+
+    <owl:ObjectProperty rdf:about="http://bimerr.iot.linkeddata.es/def/building#hasSubComponent">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/bot#hasSubElement"/>
+        <rdfs:domain rdf:resource="http://bimerr.iot.linkeddata.es/def/building#Component"/>
+        <rdfs:range rdf:resource="http://bimerr.iot.linkeddata.es/def/building#Component"/>
+        <rdfs:comment xml:lang="en">Relation to link building components (HVAC, doors, etc) with the sub-components they are conformed with.</rdfs:comment>
+        <rdfs:label xml:lang="en">has subcomponent</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://bimerr.iot.linkeddata.es/def/building#includesMaterial -->
+
+
+    <owl:ObjectProperty rdf:about="http://bimerr.iot.linkeddata.es/def/building#includesMaterial">
+        <rdfs:range rdf:resource="http://bimerr.iot.linkeddata.es/def/building#Material"/>
+        <rdfs:label xml:lang="en">includes material</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/bot#containsZone -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/bot#containsZone">
+        <rdfs:domain rdf:resource="https://w3id.org/bot#Zone"/>
+        <rdfs:range rdf:resource="https://w3id.org/bot#Zone"/>
+        <rdfs:comment xml:lang="en">Relation to buildings contained in a zone. The typical domains of bot:hasBuilding are instances of bot:Site.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/bot#"/>
+        <rdfs:label xml:lang="en">contains zone</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/bot#hasElement -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/bot#hasElement">
+        <rdfs:domain rdf:resource="https://w3id.org/bot#Zone"/>
+        <rdfs:range rdf:resource="https://w3id.org/bot#Element"/>
+        <rdfs:comment xml:lang="en">Links a Zone to an Element that is contained in, or adjacent to, the Zone. The intended use of this relationship is not to be stated explicitly, but to be inferred from its sub-properties. It will, for example, allow one to query for all the doors of a building given that they have an adjacency to spaces of the building.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/bot#"/>
+        <rdfs:label xml:lang="en">has element</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/bot#hasSpace -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/bot#hasSpace">
+        <rdfs:domain rdf:resource="https://w3id.org/bot#Zone"/>
+        <rdfs:range rdf:resource="https://w3id.org/bot#Space"/>
+        <rdfs:comment xml:lang="en">Relation to spaces contained in a zone. The typical domains of bot:hasSpace are instances of bot:Storey and bot:Building.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/bot#"/>
+        <rdfs:label xml:lang="en">has space</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/bot#hasStorey -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/bot#hasStorey">
+        <rdfs:domain rdf:resource="https://w3id.org/bot#Zone"/>
+        <rdfs:range rdf:resource="https://w3id.org/bot#Storey"/>
+        <rdfs:comment xml:lang="en">Relation to storeys contained in a zone. The typical domains of bot:hasStorey are instances of bot:Building.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/bot#"/>
+        <rdfs:label xml:lang="en">has storey</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/bot#hasSubElement -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/bot#hasSubElement">
+        <rdfs:domain rdf:resource="https://w3id.org/bot#Element"/>
+        <rdfs:range rdf:resource="https://w3id.org/bot#Element"/>
+        <rdfs:comment xml:lang="en">Relation between an element a) and another element b) hosted by element a).</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/bot#"/>
+        <rdfs:label xml:lang="en">has sub-element</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://bimerr.iot.linkeddata.es/def/building#buildingAddress -->
+
+
+    <owl:DatatypeProperty rdf:about="http://bimerr.iot.linkeddata.es/def/building#buildingAddress">
+        <rdfs:domain rdf:resource="http://bimerr.iot.linkeddata.es/def/building#Building"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Address of the building</rdfs:comment>
+        <rdfs:label xml:lang="en">building address</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://bimerr.iot.linkeddata.es/def/building#ifcIdentifier -->
+
+
+    <owl:DatatypeProperty rdf:about="http://bimerr.iot.linkeddata.es/def/building#ifcIdentifier">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Identifier within the IFC file.</rdfs:comment>
+        <rdfs:label xml:lang="en">ifc identifier</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://bimerr.iot.linkeddata.es/def/building#maxOccupants -->
+
+
+    <owl:DatatypeProperty rdf:about="http://bimerr.iot.linkeddata.es/def/building#maxOccupants">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment xml:lang="en">Maximum limit range to describe the number of occupants inside a zone.</rdfs:comment>
+        <rdfs:label xml:lang="en">max number occupants</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://bimerr.iot.linkeddata.es/def/building#minOccupants -->
+
+
+    <owl:DatatypeProperty rdf:about="http://bimerr.iot.linkeddata.es/def/building#minOccupants">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment xml:lang="en">Minimum limit range to describe the number of occupants inside a zone.</rdfs:comment>
+        <rdfs:label xml:lang="en">min number occupants</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3.org/2003/01/geo/wgs84_pos#alt -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#alt">
+        <rdfs:comment xml:lang="en">Attribute to indicate the altitud geolocalization coordinate of a building.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#"/>
+        <rdfs:label xml:lang="en">altitud</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3.org/2003/01/geo/wgs84_pos#lat -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#lat">
+        <rdfs:comment xml:lang="en">Attribute to indicate the latitud geolocalization coordinate of a building.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#"/>
+        <rdfs:label xml:lang="en">latitud</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3.org/2003/01/geo/wgs84_pos#long -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#long">
+        <rdfs:comment xml:lang="en">Attribute to indicate the longitud geolocalization coordinate of a building.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#"/>
+        <rdfs:label xml:lang="en">longitud</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://bimerr.iot.linkeddata.es/def/building#Accessory -->
+
+
+    <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/building#Accessory">
+        <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/building#VentilationSystem"/>
+        <rdfs:label xml:lang="en">Accessory</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bimerr.iot.linkeddata.es/def/building#AdhesiveAndFiller -->
+
+
+    <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/building#AdhesiveAndFiller">
+        <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/building#Material"/>
+        <rdfs:label xml:lang="en">Adhesive and filler</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bimerr.iot.linkeddata.es/def/building#AdhesiveBridgesAndPreSplash -->
+
+
+    <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/building#AdhesiveBridgesAndPreSplash">
+        <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/building#MasonryAndPlasterMortar"/>
+        <rdfs:label xml:lang="en">Adhesive bridges and pre-splash</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bimerr.iot.linkeddata.es/def/building#AdobeMasonryUnfired -->
+
+
+    <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/building#AdobeMasonryUnfired">
+        <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/building#Masonry"/>
+        <rdfs:label xml:lang="en">Adobe masonry (unfired)</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bimerr.iot.linkeddata.es/def/building#AeratedConcreteMasonry -->
+
+
+    <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/building#AeratedConcreteMasonry">
+        <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/building#Masonry"/>
+        <rdfs:label xml:lang="en">Aerated concrete masonry</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bimerr.iot.linkeddata.es/def/building#Air -->
+
+
+    <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/building#Air">
+        <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/building#Material"/>
+        <rdfs:label xml:lang="en">Air</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bimerr.iot.linkeddata.es/def/building#Apartment -->
+
+
+    <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/building#Apartment">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/bot#Zone"/>
+        <rdfs:comment xml:lang="en">A delimited zone within a storey which brings shelter to its residents.</rdfs:comment>
+        <rdfs:label xml:lang="en">Apartment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bimerr.iot.linkeddata.es/def/building#BiomassBoiler -->
+
+
+    <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/building#BiomassBoiler">
+        <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/building#HeatingSystem"/>
+        <rdfs:label xml:lang="en">Biomass boiler</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bimerr.iot.linkeddata.es/def/building#BrickMasonry -->
+
+
+    <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/building#BrickMasonry">
+        <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/building#Masonry"/>
+        <rdfs:label xml:lang="en">Brick masonry</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bimerr.iot.linkeddata.es/def/building#Building -->
+
+
+    <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/building#Building">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/bot#Building"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://bimerr.iot.linkeddata.es/def/building#ifcIdentifier"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://bimerr.iot.linkeddata.es/def/building#buildingAddress"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#alt"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#lat"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos#long"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A building represents a structure that provides shelter for its occupants or contents and stands in one place. The building is also used to provide a basic element within the spatial structure hierarchy for the components of a building project (together with site, storey, and space). (Definition taken from IFC4x1 standard)</rdfs:comment>
+        <rdfs:label xml:lang="en">Building</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bimerr.iot.linkeddata.es/def/building#BuildingBoard -->
+
+
+    <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/building#BuildingBoard">
+        <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/building#Material"/>
+        <rdfs:label xml:lang="en">Building board</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bimerr.iot.linkeddata.es/def/building#CeilingAndRoofElement -->
+
+
+    <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/building#CeilingAndRoofElement">
+        <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/building#Material"/>
+        <rdfs:label xml:lang="en">Ceiling and roof element</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bimerr.iot.linkeddata.es/def/building#CelluloseFibreInsulationMaterial -->
+
+
+    <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/building#CelluloseFibreInsulationMaterial">
+        <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/building#InsulatingMaterialsFromRenewableRawMaterial"/>
+        <rdfs:label xml:lang="en">Cellulose fibre insulation material</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bimerr.iot.linkeddata.es/def/building#CementBoundEPSBoard -->
+
+
+    <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/building#CementBoundEPSBoard">
+        <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/building#SyntheticInsulatingMaterial"/>
+        <rdfs:label xml:lang="en">Cement-bound EPS board</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bimerr.iot.linkeddata.es/def/building#CementBoundLightweightConcreteSlab -->
+
+
+    <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/building#CementBoundLightweightConcreteSlab">
+        <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/building#BuildingBoard"/>
+        <rdfs:label xml:lang="en">Cement-bound lightweight concrete slab</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bimerr.iot.linkeddata.es/def/building#ClayBuildingBoard -->
+
+
+    <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/building#ClayBuildingBoard">
+        <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/building#BuildingBoard"/>
+        <rdfs:label xml:lang="en">Clay building board</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bimerr.iot.linkeddata.es/def/building#CoatingsAndImpregnation -->
+
+
+    <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/building#CoatingsAndImpregnation">
+        <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/building#Material"/>
+        <rdfs:label xml:lang="en">Coatings and impregnation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bimerr.iot.linkeddata.es/def/building#CoconutFibreInsulatingMaterial -->
+
+
+    <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/building#CoconutFibreInsulatingMaterial">
+        <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/building#InsulatingMaterialsFromRenewableRawMaterial"/>
+        <rdfs:label xml:lang="en">Coconut fibre insulating material</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bimerr.iot.linkeddata.es/def/building#Component -->
+
+
+    <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/building#Component">
+        <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/building#Element"/>
+        <rdfs:comment xml:lang="en">Represents assemblies or undividible building products.</rdfs:comment>
+        <rdfs:label xml:lang="en">Component</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bimerr.iot.linkeddata.es/def/building#Concrete -->
+
+
+    <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/building#Concrete">
+        <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/building#Material"/>
+        <rdfs:label xml:lang="en">Concrete</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bimerr.iot.linkeddata.es/def/building#ConcreteInWUQuality -->
+
+
+    <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/building#ConcreteInWUQuality">
+        <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/building#Concrete"/>
+        <rdfs:label xml:lang="en">Concrete in WU quality</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bimerr.iot.linkeddata.es/def/building#ConcreteMasonry -->
+
+
+    <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/building#ConcreteMasonry">
+        <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/building#Masonry"/>
+        <rdfs:label xml:lang="en">Concrete masonry</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bimerr.iot.linkeddata.es/def/building#ConcreteWithEPSAggregate -->
+
+
+    <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/building#ConcreteWithEPSAggregate">
+        <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/building#Concrete"/>
+        <rdfs:label xml:lang="en">Concrete with EPS aggregate</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bimerr.iot.linkeddata.es/def/building#ConcreteWithExpandedClayOrBrickChippingsAggregate -->
+
+
+    <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/building#ConcreteWithExpandedClayOrBrickChippingsAggregate">
+        <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/building#Concrete"/>
+        <rdfs:label xml:lang="en">Concrete with expanded clay or brick chippings aggregate</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bimerr.iot.linkeddata.es/def/building#ConcreteWithExpandedShaleAggregate -->
+
+
+    <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/building#ConcreteWithExpandedShaleAggregate">
+        <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/building#Concrete"/>
+        <rdfs:label xml:lang="en">Concrete with expanded shale aggregate</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bimerr.iot.linkeddata.es/def/building#ConcreteWithPumiceAggregate -->
+
+
+    <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/building#ConcreteWithPumiceAggregate">
+        <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/building#Concrete"/>
+        <rdfs:label xml:lang="en">Concrete with pumice aggregate</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bimerr.iot.linkeddata.es/def/building#ConcreteWithSlagPumiceAggregate -->
+
+
+    <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/building#ConcreteWithSlagPumiceAggregate">
+        <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/building#Concrete"/>
+        <rdfs:label xml:lang="en">Concrete with slag pumice aggregate</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bimerr.iot.linkeddata.es/def/building#ConcreteWithSulphateSlagCement -->
+
+
+    <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/building#ConcreteWithSulphateSlagCement">
+        <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/building#Concrete"/>
+        <rdfs:label xml:lang="en">Concrete with sulphate slag cement</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bimerr.iot.linkeddata.es/def/building#Construction -->
+
+
+    <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/building#Construction">
+        <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/building#Element"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://bimerr.iot.linkeddata.es/def/building#ifcIdentifier"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Building component that is conformed by layers, such as a wall, roof, or floor.</rdfs:comment>
+        <rdfs:label xml:lang="en">Construction</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bimerr.iot.linkeddata.es/def/building#CorkInsulatingMaterial -->
+
+
+    <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/building#CorkInsulatingMaterial">
+        <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/building#InsulatingMaterialsFromRenewableRawMaterial"/>
+        <rdfs:label xml:lang="en">Cork insulating material</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bimerr.iot.linkeddata.es/def/building#CottonInsulationMaterial -->
+
+
+    <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/building#CottonInsulationMaterial">
+        <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/building#InsulatingMaterialsFromRenewableRawMaterial"/>
+        <rdfs:label xml:lang="en">Cotton insulation material</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bimerr.iot.linkeddata.es/def/building#Door -->
+
+
+    <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/building#Door">
+        <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/building#Component"/>
+        <rdfs:label xml:lang="en">Door</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bimerr.iot.linkeddata.es/def/building#EPSInsulatingMaterial -->
+
+
+    <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/building#EPSInsulatingMaterial">
+        <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/building#SyntheticInsulatingMaterial"/>
+        <rdfs:label xml:lang="en">EPS insulating material</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bimerr.iot.linkeddata.es/def/building#Element -->
+
+
+    <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/building#Element">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/bot#Element"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://bimerr.iot.linkeddata.es/def/building#ifcIdentifier"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Building component or construction element which can be described by a set of properties.</rdfs:comment>
+        <rdfs:label xml:lang="en">Element</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bimerr.iot.linkeddata.es/def/building#ExternalPlaster -->
+
+
+    <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/building#ExternalPlaster">
+        <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/building#MasonryAndPlasterMortar"/>
+        <rdfs:label xml:lang="en">External plaster</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bimerr.iot.linkeddata.es/def/building#FacadeCladding -->
+
+
+    <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/building#FacadeCladding">
+        <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/building#Material"/>
+        <rdfs:label xml:lang="en">Facade cladding</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bimerr.iot.linkeddata.es/def/building#FibreCementBoard -->
+
+
+    <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/building#FibreCementBoard">
+        <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/building#BuildingBoard"/>
+        <rdfs:label xml:lang="en">Fibre cement board</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bimerr.iot.linkeddata.es/def/building#FillingBrick -->
+
+
+    <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/building#FillingBrick">
+        <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/building#BrickMasonry"/>
+        <rdfs:label xml:lang="en">Filling brick</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bimerr.iot.linkeddata.es/def/building#FilmProtectionMaterial -->
+
+
+    <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/building#FilmProtectionMaterial">
+        <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/building#SealingSheetVapourBarrierFoil"/>
+        <rdfs:label xml:lang="en">Film protection material</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bimerr.iot.linkeddata.es/def/building#FlaxInsulatingMaterial -->
+
+
+    <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/building#FlaxInsulatingMaterial">
+        <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/building#InsulatingMaterialsFromRenewableRawMaterial"/>
+        <rdfs:label xml:lang="en">Flax insulating material</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bimerr.iot.linkeddata.es/def/building#FloorCovering -->
+
+
+    <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/building#FloorCovering">
+        <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/building#Material"/>
+        <rdfs:label xml:lang="en">Floor covering</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bimerr.iot.linkeddata.es/def/building#FoamGlassInsulationBoard -->
+
+
+    <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/building#FoamGlassInsulationBoard">
+        <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/building#MineralInsulationMaterial"/>
+        <rdfs:label xml:lang="en">Foam glass insulation board</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bimerr.iot.linkeddata.es/def/building#FossilBoiler -->
+
+
+    <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/building#FossilBoiler">
+        <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/building#HeatingSystem"/>
+        <rdfs:label xml:lang="en">Fossil boiler</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bimerr.iot.linkeddata.es/def/building#Gas -->
+
+
+    <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/building#Gas">
+        <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/building#Material"/>
+        <rdfs:label xml:lang="en">Gas</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bimerr.iot.linkeddata.es/def/building#GlassWoolInsulatingMaterial -->
+
+
+    <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/building#GlassWoolInsulatingMaterial">
+        <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/building#MineralInsulationMaterial"/>
+        <rdfs:label xml:lang="en">Glass wool insulating material</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bimerr.iot.linkeddata.es/def/building#Glazing -->
+
+
+    <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/building#Glazing">
+        <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/building#WindowAndComponent"/>
+        <rdfs:label xml:lang="en">Glazing</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bimerr.iot.linkeddata.es/def/building#GrassFibreInsulationBoard -->
+
+
+    <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/building#GrassFibreInsulationBoard">
+        <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/building#InsulatingMaterialsFromRenewableRawMaterial"/>
+        <rdfs:label xml:lang="en">Grass fibre insulation board</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bimerr.iot.linkeddata.es/def/building#HeatFlowDownwards -->
+
+
+    <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/building#HeatFlowDownwards">
+        <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/building#Air"/>
+        <rdfs:label xml:lang="en">Heat flow downwards</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bimerr.iot.linkeddata.es/def/building#HeatFlowHorizontal -->
+
+
+    <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/building#HeatFlowHorizontal">
+        <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/building#Air"/>
+        <rdfs:label xml:lang="en">Heat flow horizontal</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bimerr.iot.linkeddata.es/def/building#HeatFlowUpwards -->
+
+
+    <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/building#HeatFlowUpwards">
+        <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/building#Air"/>
+        <rdfs:label xml:lang="en">Heat flow upwards</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bimerr.iot.linkeddata.es/def/building#HeatPump -->
+
+
+    <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/building#HeatPump">
+        <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/building#HeatingSystem"/>
+        <rdfs:label xml:lang="en">Heat pump</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bimerr.iot.linkeddata.es/def/building#HeatingPipe -->
+
+
+    <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/building#HeatingPipe">
+        <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/building#HeatingSystem"/>
+        <rdfs:label xml:lang="en">Heating pipe</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bimerr.iot.linkeddata.es/def/building#HeatingSystem -->
+
+
+    <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/building#HeatingSystem">
+        <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/building#Component"/>
+        <rdfs:label xml:lang="en">Heating system</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bimerr.iot.linkeddata.es/def/building#HempInsulatingMaterial -->
+
+
+    <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/building#HempInsulatingMaterial">
+        <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/building#InsulatingMaterialsFromRenewableRawMaterial"/>
+        <rdfs:label xml:lang="en">Hemp insulating material</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bimerr.iot.linkeddata.es/def/building#HighPerforatedBrickMasonry -->
+
+
+    <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/building#HighPerforatedBrickMasonry">
+        <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/building#BrickMasonry"/>
+        <rdfs:label xml:lang="en">High perforated brick masonry</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bimerr.iot.linkeddata.es/def/building#HotWaterTank -->
+
+
+    <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/building#HotWaterTank">
+        <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/building#Component"/>
+        <rdfs:label xml:lang="en">Hot water tank</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bimerr.iot.linkeddata.es/def/building#InsulatingMaterialsFromRenewableRawMaterial -->
+
+
+    <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/building#InsulatingMaterialsFromRenewableRawMaterial">
+        <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/building#InsulationMaterial"/>
+        <rdfs:label xml:lang="en">Insulating materials from renewable raw material</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bimerr.iot.linkeddata.es/def/building#InsulationMaterial -->
+
+
+    <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/building#InsulationMaterial">
+        <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/building#Material"/>
+        <rdfs:label xml:lang="en">Insulation material</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bimerr.iot.linkeddata.es/def/building#InteriorPlaster -->
+
+
+    <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/building#InteriorPlaster">
+        <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/building#MasonryAndPlasterMortar"/>
+        <rdfs:label xml:lang="en">Interior plaster</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bimerr.iot.linkeddata.es/def/building#Layer -->
+
+
+    <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/building#Layer">
+        <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/building#Element"/>
+        <rdfs:comment xml:lang="en">A single and identifiable part of an element which is constructed of a number of layers (one or more). Each Layer has a constant thickness and is located relative to the referencing Construction element. (Definition adapted from IFC)</rdfs:comment>
+        <rdfs:label xml:lang="en">Layer</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bimerr.iot.linkeddata.es/def/building#Masonry -->
+
+
+    <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/building#Masonry">
+        <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/building#Material"/>
+        <rdfs:label xml:lang="en">Masonry</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bimerr.iot.linkeddata.es/def/building#MasonryAndPlasterMortar -->
+
+
+    <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/building#MasonryAndPlasterMortar">
+        <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/building#Material"/>
+        <rdfs:label xml:lang="en">Masonry and plaster mortar</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bimerr.iot.linkeddata.es/def/building#Material -->
+
+
+    <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/building#Material">
+        <rdfs:comment xml:lang="en">A homogeneous or inhomogeneous substance that can be used to form elements (physical products or their components). (Definition taken from IFC)</rdfs:comment>
+        <rdfs:label xml:lang="en">Material</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bimerr.iot.linkeddata.es/def/building#MineralFoamInsulationBoard -->
+
+
+    <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/building#MineralFoamInsulationBoard">
+        <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/building#MineralInsulationMaterial"/>
+        <rdfs:label xml:lang="en">Mineral foam insulation board</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bimerr.iot.linkeddata.es/def/building#MineralInsulationMaterial -->
+
+
+    <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/building#MineralInsulationMaterial">
+        <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/building#InsulationMaterial"/>
+        <rdfs:label xml:lang="en">Mineral insulation material</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bimerr.iot.linkeddata.es/def/building#Mortar -->
+
+
+    <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/building#Mortar">
+        <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/building#MasonryAndPlasterMortar"/>
+        <rdfs:label xml:lang="en">Mortar</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bimerr.iot.linkeddata.es/def/building#NaturalStone -->
+
+
+    <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/building#NaturalStone">
+        <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/building#Material"/>
+        <rdfs:label xml:lang="en">Natural stone</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bimerr.iot.linkeddata.es/def/building#NaturalStoneMasonry -->
+
+
+    <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/building#NaturalStoneMasonry">
+        <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/building#Masonry"/>
+        <rdfs:label xml:lang="en">Natural stone masonry</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bimerr.iot.linkeddata.es/def/building#NormalConcrete -->
+
+
+    <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/building#NormalConcrete">
+        <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/building#Concrete"/>
+        <rdfs:label xml:lang="en">Normal concrete</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bimerr.iot.linkeddata.es/def/building#PURPIRInsulationBoard -->
+
+
+    <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/building#PURPIRInsulationBoard">
+        <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/building#SyntheticInsulatingMaterial"/>
+        <rdfs:label xml:lang="en">PUR/PIR insulation board</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bimerr.iot.linkeddata.es/def/building#PerliteInsulationBoard -->
+
+
+    <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/building#PerliteInsulationBoard">
+        <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/building#MineralInsulationMaterial"/>
+        <rdfs:label xml:lang="en">Perlite insulation board</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bimerr.iot.linkeddata.es/def/building#PhenolicResinFoamBoard -->
+
+
+    <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/building#PhenolicResinFoamBoard">
+        <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/building#SyntheticInsulatingMaterial"/>
+        <rdfs:label xml:lang="en">Phenolic resin foam board</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bimerr.iot.linkeddata.es/def/building#PhotovoltaicSystem -->
+
+
+    <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/building#PhotovoltaicSystem">
+        <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/building#Component"/>
+        <rdfs:label xml:lang="en">Photovoltaic system</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bimerr.iot.linkeddata.es/def/building#PlasterBase -->
+
+
+    <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/building#PlasterBase">
+        <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/building#MasonryAndPlasterMortar"/>
+        <rdfs:label xml:lang="en">Plaster base</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bimerr.iot.linkeddata.es/def/building#Platerboard -->
+
+
+    <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/building#Platerboard">
+        <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/building#BuildingBoard"/>
+        <rdfs:label xml:lang="en">Plasterboard</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bimerr.iot.linkeddata.es/def/building#PolyesterFibreInsulatingMaterial -->
+
+
+    <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/building#PolyesterFibreInsulatingMaterial">
+        <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/building#SyntheticInsulatingMaterial"/>
+        <rdfs:label xml:lang="en">Polyester fibre insulating material</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bimerr.iot.linkeddata.es/def/building#PolyethyleneInsulatingMaterial -->
+
+
+    <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/building#PolyethyleneInsulatingMaterial">
+        <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/building#SyntheticInsulatingMaterial"/>
+        <rdfs:label xml:lang="en">Polyethylene (PE) insulating material</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bimerr.iot.linkeddata.es/def/building#Radiator -->
+
+
+    <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/building#Radiator">
+        <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/building#HeatingSystem"/>
+    </owl:Class>
+    
+
+
+    <!-- http://bimerr.iot.linkeddata.es/def/building#ReedInsulationPanel -->
+
+
+    <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/building#ReedInsulationPanel">
+        <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/building#InsulatingMaterialsFromRenewableRawMaterial"/>
+        <rdfs:label xml:lang="en">Reed insulation panel</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bimerr.iot.linkeddata.es/def/building#ReinforcedConcreteNormalConcreteWithReinforcement -->
+
+
+    <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/building#ReinforcedConcreteNormalConcreteWithReinforcement">
+        <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/building#Concrete"/>
+        <rdfs:label xml:lang="en">Reinforced concrete / normal concrete with reinforcement</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bimerr.iot.linkeddata.es/def/building#RockWoolInsulationMaterial -->
+
+
+    <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/building#RockWoolInsulationMaterial">
+        <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/building#MineralInsulationMaterial"/>
+        <rdfs:label xml:lang="en">Rock wool insulation material</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bimerr.iot.linkeddata.es/def/building#RoofCovery -->
+
+
+    <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/building#RoofCovery">
+        <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/building#Material"/>
+        <rdfs:label xml:lang="en">Roof covery</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bimerr.iot.linkeddata.es/def/building#SandLimeBrickwork -->
+
+
+    <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/building#SandLimeBrickwork">
+        <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/building#Masonry"/>
+        <rdfs:label xml:lang="en">Sand-lime brickwork</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bimerr.iot.linkeddata.es/def/building#Screed -->
+
+
+    <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/building#Screed">
+        <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/building#Material"/>
+        <rdfs:label xml:lang="en">Screed</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bimerr.iot.linkeddata.es/def/building#SealantsAndAdhesive -->
+
+
+    <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/building#SealantsAndAdhesive">
+        <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/building#Material"/>
+        <rdfs:label xml:lang="en">Sealant and adhesive</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bimerr.iot.linkeddata.es/def/building#SealingSheet -->
+
+
+    <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/building#SealingSheet">
+        <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/building#SealingSheetVapourBarrierFoil"/>
+        <rdfs:label xml:lang="en">Sealing sheet</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bimerr.iot.linkeddata.es/def/building#SealingSheetVapourBarrierFoil -->
+
+
+    <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/building#SealingSheetVapourBarrierFoil">
+        <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/building#Material"/>
+        <rdfs:label xml:lang="en">Sealing sheet vapour barrier foil</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bimerr.iot.linkeddata.es/def/building#SheepWoolInsulation -->
+
+
+    <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/building#SheepWoolInsulation">
+        <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/building#InsulatingMaterialsFromRenewableRawMaterial"/>
+        <rdfs:label xml:lang="en">Sheep wool insulation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bimerr.iot.linkeddata.es/def/building#SheetsOfBondedLightweightAggregate -->
+
+
+    <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/building#SheetsOfBondedLightweightAggregate">
+        <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/building#BuildingBoard"/>
+        <rdfs:label xml:lang="en">Sheets of bonded lightweight aggregate</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bimerr.iot.linkeddata.es/def/building#SlottedBrickMasonry -->
+
+
+    <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/building#SlottedBrickMasonry">
+        <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/building#BrickMasonry"/>
+        <rdfs:label xml:lang="en">Slotted brick masonry</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bimerr.iot.linkeddata.es/def/building#SolarSystem -->
+
+
+    <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/building#SolarSystem">
+        <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/building#Component"/>
+        <rdfs:label xml:lang="en">Solar system</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bimerr.iot.linkeddata.es/def/building#Space -->
+
+
+    <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/building#Space">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/bot#Space"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://bimerr.iot.linkeddata.es/def/building#maxOccupants"/>
+                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://bimerr.iot.linkeddata.es/def/building#ifcIdentifier"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A space is (if specified) associated to a building storey (or in case of exterior spaces to a site). A space may span over several connected spaces. Therefore a space group provides for a collection of spaces included in a storey. A space can also be decomposed in parts, where each part defines a partial space. (Definition taken from IFC standard)</rdfs:comment>
+        <rdfs:label xml:lang="en">Space</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bimerr.iot.linkeddata.es/def/building#Storey -->
+
+
+    <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/building#Storey">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/bot#Storey"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://bimerr.iot.linkeddata.es/def/building#ifcIdentifier"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A storey is (if specified) associated to a building. A storey may span over several connected storeys. Therefore storey complex provides for a collection of storeys included in a building. A storey can also be decomposed in (horizontical) parts, where each part defines a partial storey. (Definition taken from IFC standard)</rdfs:comment>
+        <rdfs:label xml:lang="en">Storey</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bimerr.iot.linkeddata.es/def/building#StrawInsulationMaterial -->
+
+
+    <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/building#StrawInsulationMaterial">
+        <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/building#InsulatingMaterialsFromRenewableRawMaterial"/>
+        <rdfs:label xml:lang="en">Straw insulation material</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bimerr.iot.linkeddata.es/def/building#StructuralSolidWood -->
+
+
+    <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/building#StructuralSolidWood">
+        <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/building#Material"/>
+        <rdfs:label xml:lang="en">Structural solid wood</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bimerr.iot.linkeddata.es/def/building#SyntheticInsulatingMaterial -->
+
+
+    <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/building#SyntheticInsulatingMaterial">
+        <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/building#InsulationMaterial"/>
+        <rdfs:label xml:lang="en">Synthetic insulating material</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bimerr.iot.linkeddata.es/def/building#TippingAndAggregate -->
+
+
+    <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/building#TippingAndAggregate">
+        <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/building#Material"/>
+        <rdfs:label xml:lang="en">Tipping and aggregate</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bimerr.iot.linkeddata.es/def/building#VacuumInsulationPanel -->
+
+
+    <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/building#VacuumInsulationPanel">
+        <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/building#MineralInsulationMaterial"/>
+        <rdfs:label xml:lang="en">Vacuum insulation panel</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bimerr.iot.linkeddata.es/def/building#VapourBarrierAndBrake -->
+
+
+    <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/building#VapourBarrierAndBrake">
+        <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/building#SealingSheetVapourBarrierFoil"/>
+        <rdfs:label xml:lang="en">Vapour barrier and brake</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bimerr.iot.linkeddata.es/def/building#VentilationPipe -->
+
+
+    <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/building#VentilationPipe">
+        <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/building#VentilationSystem"/>
+        <rdfs:label xml:lang="en">Ventilation pipe</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bimerr.iot.linkeddata.es/def/building#VentilationSystem -->
+
+
+    <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/building#VentilationSystem">
+        <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/building#Component"/>
+        <rdfs:label xml:lang="en">Ventillation system</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bimerr.iot.linkeddata.es/def/building#VentilationUnit -->
+
+
+    <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/building#VentilationUnit">
+        <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/building#VentilationSystem"/>
+        <rdfs:label xml:lang="en">Ventilation unit</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bimerr.iot.linkeddata.es/def/building#WallElement -->
+
+
+    <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/building#WallElement">
+        <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/building#Component"/>
+        <rdfs:label xml:lang="en">Wall element</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bimerr.iot.linkeddata.es/def/building#WallPaintAndCovering -->
+
+
+    <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/building#WallPaintAndCovering">
+        <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/building#Material"/>
+        <rdfs:label xml:lang="en">Wall paint and covering</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bimerr.iot.linkeddata.es/def/building#WindowAndComponent -->
+
+
+    <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/building#WindowAndComponent">
+        <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/building#Component"/>
+        <rdfs:label xml:lang="en">Window and components</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bimerr.iot.linkeddata.es/def/building#WindowFrame -->
+
+
+    <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/building#WindowFrame">
+        <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/building#WindowAndComponent"/>
+        <rdfs:label xml:lang="en">Window frame</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bimerr.iot.linkeddata.es/def/building#WoodAndWoodBasedPanel -->
+
+
+    <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/building#WoodAndWoodBasedPanel">
+        <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/building#BuildingBoard"/>
+        <rdfs:label xml:lang="en">Wood and wood based panel</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bimerr.iot.linkeddata.es/def/building#WoodChipInsulationBoard -->
+
+
+    <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/building#WoodChipInsulationBoard">
+        <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/building#MineralInsulationMaterial"/>
+        <rdfs:label xml:lang="en">Wood chip insulation board</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bimerr.iot.linkeddata.es/def/building#WoodFibreInsulatingMaterial -->
+
+
+    <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/building#WoodFibreInsulatingMaterial">
+        <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/building#InsulatingMaterialsFromRenewableRawMaterial"/>
+        <rdfs:label xml:lang="en">Wood fibre insulating material</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bimerr.iot.linkeddata.es/def/building#WoodShavingLooseSawdust -->
+
+
+    <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/building#WoodShavingLooseSawdust">
+        <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/building#InsulatingMaterialsFromRenewableRawMaterial"/>
+        <rdfs:label xml:lang="en">Wood shaving (loose), sawdust</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bimerr.iot.linkeddata.es/def/building#WoodWoolInsulationBoard -->
+
+
+    <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/building#WoodWoolInsulationBoard">
+        <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/building#MineralInsulationMaterial"/>
+        <rdfs:label xml:lang="en">Wood wool insulation board</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bimerr.iot.linkeddata.es/def/building#WoodWoolMultiLayerInsulationBoard -->
+
+
+    <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/building#WoodWoolMultiLayerInsulationBoard">
+        <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/building#MineralInsulationMaterial"/>
+        <rdfs:label xml:lang="en">Wood-wool multi-layer insulation board</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bimerr.iot.linkeddata.es/def/building#XPSInsulationBoard -->
+
+
+    <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/building#XPSInsulationBoard">
+        <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/building#SyntheticInsulatingMaterial"/>
+        <rdfs:label xml:lang="en">XPS insulation board</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/bot#Building -->
+
+
+    <owl:Class rdf:about="https://w3id.org/bot#Building">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/bot#Zone"/>
+        <rdfs:comment xml:lang="en">An independent unit of the built environment with a characteristic spatial structure, intended to serve at least one function or user activity [ISO-12006].</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/bot#"/>
+        <rdfs:label xml:lang="en">bot:Building</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/bot#Element -->
+
+
+    <owl:Class rdf:about="https://w3id.org/bot#Element">
+        <rdfs:comment xml:lang="en">Constituent of a construction entity with a characteristic technical function, form or position [[ISO-12006], 3.4.7].</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/bot#"/>
+        <rdfs:label xml:lang="en">bot:Element</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/bot#Space -->
+
+
+    <owl:Class rdf:about="https://w3id.org/bot#Space">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/bot#Zone"/>
+        <rdfs:comment xml:lang="en">A part of the physical world or a virtual world whose 3D spatial extent is bounded actually or theoretically, and provides for certain functions within the zone it is contained in.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/bot#"/>
+        <rdfs:label xml:lang="en">bot:Space</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/bot#Storey -->
+
+
+    <owl:Class rdf:about="https://w3id.org/bot#Storey">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/bot#Zone"/>
+        <rdfs:comment xml:lang="en">A level part of a building.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/bot#"/>
+        <rdfs:label xml:lang="en">bot:Storey</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/bot#Zone -->
+
+
+    <owl:Class rdf:about="https://w3id.org/bot#Zone">
+        <rdfs:comment xml:lang="en">A part of the physical world or a virtual world that is inherently both located in this world and having a 3D spatial extent.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://w3id.org/bot#"/>
+        <rdfs:label xml:lang="en">bot:Zone</rdfs:label>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.1.11) https://github.com/owlcs/owlapi/ -->
+
+

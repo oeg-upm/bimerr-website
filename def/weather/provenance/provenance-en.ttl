@@ -1,0 +1,13 @@
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+<..\index-en.html> a prov:Entity;
+	 dc:title "BIMERR Weather Ontology";
+	 prov:wasAttributedTo <https://www.linkedin.com/in/artificialintelligence-researcher-salvadorgonzalezgerpe>;
+	 dc:creator <https://www.linkedin.com/in/artificialintelligence-researcher-salvadorgonzalezgerpe>;
+	 prov:wasAttributedTo <https://github.com/Serge3006>;
+	 dc:contributor <https://github.com/Serge3006>;
+	 prov:wasAttributedTo <http://w3id.org/people/mpoveda>;
+	 dc:contributor <http://w3id.org/people/mpoveda>;
+	 prov:wasAttributedTo <https://github.com/dgarijo/Widoco/>,<http://www.essepuntato.it/lode/>;
+.

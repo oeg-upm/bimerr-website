@@ -1,0 +1,28 @@
+{
+  "@context": {
+    "core": "http://delta.linkeddata.es/def/core#",
+    "saref": "https://w3id.org/saref#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@graph": [
+    {
+      "@id": "http://example.org/ns#KPI1",
+      "@type": "core:KeyPerformanceIndicator",
+      "core:hasMeasurement": {
+        "@id": "http://example.org/ns#Measurement1"
+      }
+    },
+    {
+      "@id": "http://example.org/ns#Measurement1",
+      "@type": "core:Measurement",
+      "saref:hasValue": {
+        "@type": "xsd:float",
+        "@value": "14.2"
+      },
+      "saref:timeStamp": {
+        "@type": "xsd:dateTime",
+        "@value": "2002-09-24+06:00"
+      }
+    }
+  ]
+}

@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>DELTA Ontologies</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="This describes a catalog of ontologies authored or contributed to by DELTA.">
+    <meta name="languaje" content="English">
+    
+    <link rel="stylesheet" href="vocab/themes/blue/style.css" type="text/css" media="print, projection, screen" />
+    <script src="vocab/js/jquery-1.11.0.js"></script>
+    <script type="text/javascript" src="vocab/js/jquery.tablesorter.min.js"></script>
+    <script type="text/javascript" src="vocab/js/jquery.stickytableheaders.js"></script>
+    <script type="text/javascript" src="vocab/js/jquery-ui.js"></script>
+    <script type="text/javascript" src="vocab/js/bootstrap.js"></script>
+    <link rel="stylesheet" href="vocab/css/jquery-ui.css"></link>
+    <script type="text/javascript" id="js">
+	    $(document).ready(function() 
+		    { 
+		    	$("#tablesorter-demo").tablesorter(); 
+		    	$("#tablesorter-demo").stickyTableHeaders(); 
+		    	$('[data-toggle="tooltip"]').tooltip(); 
+		    } 
+	    ); 
+    </script>
+
+    <!-- Le styles -->
+    <link href="vocab/css/bootstrap.css" rel="stylesheet">
+    <style type="text/css">
+      body {
+        padding-top: 60px;
+        padding-bottom: 40px;
+      }
+    </style>
+    
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="vocab/js/html5shiv.js"></script>
+    <![endif]-->
+
+    <!-- Fav and touch icons -->
+  </head>
+
+  <body>
+
+<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+    <div class="collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="index.html">Ontologies</a></li>
+        <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Ontology testing</a>
+          <ul class="dropdown-menu">
+            <li ><a href="testingreport.html">Development requirements</a></li>
+          </ul>
+        </li>
+        <li ><a href="interfaces.html">Developers</a></li>
+        <li ><a href="guide.html">How we work</a></li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div>
+ </div>
+    <div class="container">
+
+      <!-- Jumbotron -->
+      <div class="jumbotron">
+        <h1><a href="https://delta-h2020.eu/"><img src="vocab/logo.jpg" alt="OEG logo" class="img-rounded" class="img-responsive" /></a></h1>
+        <p class="lead">Here you can find the list of interfaces involved  in the data exchange for  </a>DELTA project </p>
+      
+      </div>
+      <hr>
+<br>
+
+  <table id="tablesorter-demo" class="tablesorter table table-hover table-responsive" >
+    <thead>
+    <tr>
+    <th class="col-md-2">Interface name</th>
+    <th class="col-md-3">SHACL shapes</th>
+    <th class="col-md-2">JSON-LD examples </th>
+    <th class="col-md-2">Level</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+      <td>Aggregator Profile</td>
+      <td>
+        <span><a href ="interfaces/shapes/AggregatorProfileShape.ttl" target="_blank">Aggregator Profile Shape</a></span></td>
+      <td>
+        <span><a href ="interfaces/examples/AggregatorProfileExample.json" target="_blank">Aggregator Profile Example</a></span>
+      </td>
+      <td><span class="label label-success">Aggregator</span> </td>
+    </tr>
+    <tr>
+      <td>Comfort settings</td>
+      <td>
+        <span><a href ="interfaces/shapes/ConfortSettingsShape.ttl" target="_blank">Comfort settings Shape</a></span></td>
+      <td>
+        <span><a href ="interfaces/examples/ConfortSettingExample.json" target="_blank">Comfort settings Example</a></span>
+      </td>
+      <td><span class="label label-success">Aggregator</span> </td>
+    </tr>
+    <tr>
+      <td>Consumption</td>
+      <td>
+        <span><a href ="interfaces/shapes/ConsumptionShape.ttl" target="_blank">Consumption Shape</a></span></td>
+      <td>
+        <span><a href ="interfaces/examples/ConsumptionExample.json" target="_blank">Consumption Example</a></span>
+      </td>
+      <td><span class="label label-primary">DVN</span> </td>
+
+    </tr>
+    <tr>
+      <td>Customer Info</td>
+      <td>
+        <span><a href ="interfaces/shapes/CustomerInfoShape.ttl" target="_blank">Customer Info Shape</a></span></td>
+      <td>
+        <span><a href ="interfaces/examples/CustomerInfoExample.json" target="_blank">Customer Info Example</a></span>
+      </td>
+      <td><span class="label label-success">Aggregator</span> </td>
+    </tr>
+    <tr>
+      <td>DR Signal</td>
+      <td>
+        <span><a href ="interfaces/shapes/DRSignalShape.ttl" target="_blank">DR Signal Shape</a></span></td>
+      <td>
+        <span><a href ="interfaces/examples/DRSignalExample.json" target="_blank">DR Signal Example</a></span>
+      </td>
+      <td><span class="label label-primary">DVN</span> </td>
+
+    </tr>
+    <tr>
+      <td>Energy Price </td>
+      <td>
+        <span><a href ="interfaces/shapes/EnergyPriceShape.ttl" target="_blank">Energy Price Shape</a></span></td>
+      <td>
+        <span><a href ="interfaces/examples/EnergyPriceProfileExample.json" target="_blank">Energy Price Example</a></span>
+      </td>
+      <td><span class="label label-success">Aggregator</span> </td>
+
+    </tr>
+
+    <tr>
+      <td>FEID Cluster </td>
+      <td>
+        <span><a href ="interfaces/shapes/FEIDClusterShape.ttl" target="_blank">FEID Cluster Shape</a></span></td>
+      <td>
+        <span><a href ="interfaces/examples/FEIDClusterExample.json" target="_blank">FEID Cluster Example</a></span>
+      </td>
+      <td><span class="label label-primary">DVN</span> </td>
+
+    </tr>
+    <tr>
+      <td>FEID Profile </td>
+      <td>
+        <span><a href ="interfaces/shapes/FEIDprofileShape.ttl" target="_blank">FEID Profile Shape</a></span></td>
+      <td>
+        <span><a href ="interfaces/examples/FEIDProfileExample.json" target="_blank">FEID Profile Example</a></span>
+      </td>
+      <td><span class="label label-primary">DVN</span> </td>
+
+    </tr>
+
+    <tr>
+      <td>Flexibility Forecast </td>
+      <td>
+        <span><a href ="interfaces/shapes/FlexibilityForecastShape.ttl" target="_blank">Flexibility Forecast  Shape</a></span></td>
+      <td>
+        <span><a href ="interfaces/examples/FlexibilityForecastExample.json" target="_blank">Flexibility Forecast  Example</a></span>
+      </td>
+      <td><span class="label label-primary">DVN</span> </td>
+
+    </tr>
+
+    <tr>
+      <td>Forecast Profiling </td>
+      <td>
+        <span><a href ="interfaces/shapes/ForecastedProfilingShape.ttl" target="_blank">Forecast Profiling   Shape</a></span></td>
+      <td>
+        <span><a href ="interfaces/examples/ForecastedProfilingExample.json" target="_blank">Forecast Profiling   Example</a></span>
+      </td>
+      <td><span class="label label-primary">DVN</span> </td>
+    </tr>
+
+    <tr>
+      <td>KPI</td>
+      <td>
+        <span><a href ="interfaces/shapes/KPIShape.ttl" target="_blank">KPI Shape</a></span></td>
+      <td>
+        <span><a href ="interfaces/examples/KPIExample.json" target="_blank">KPI Example</a></span>
+      </td>
+      <td><span class="label label-primary">DVN</span> </td>
+    </tr>
+
+    <tr>
+      <td>Market Settlement</td>
+      <td>
+        <span><a href ="interfaces/shapes/MarketSettlementShape.ttl" target="_blank">Market Settlement Shape</a></span></td>
+      <td>
+        <span><a href ="interfaces/examples/MarketSettlementExample.json" target="_blank">Market Settlement Example</a></span>
+      </td>
+      <td><span class="label label-success">Aggregator</span> </td>
+    </tr>
+
+    <tr>
+      <td>Node Cluster</td>
+      <td>
+        <span><a href ="interfaces/shapes/NodeClusterShape.ttl" target="_blank">Node Cluster Shape</a></span></td>
+      <td>
+        <span><a href ="interfaces/examples/NodeClusterExample.json" target="_blank">Node Cluster Example</a></span>
+      </td>
+      <td><span class="label label-success">Aggregator</span> </td>
+    </tr>
+
+    <tr>
+      <td>Node Profile</td>
+      <td>
+        <span><a href ="interfaces/shapes/NodeProfileShape.ttl" target="_blank">Node Profile Shape</a></span></td>
+      <td>
+        <span><a href ="interfaces/examples/NodeProfileExample.json" target="_blank">Node Profile Example</a></span>
+      </td>
+      <td><span class="label label-primary">DVN</span> </td>
+    </tr>
+
+    <tr>
+      <td>Reward</td>
+      <td>
+        <span><a href ="interfaces/shapes/RewardShape.ttl" target="_blank">Reward Shape</a></span></td>
+      <td>
+        <span><a href ="interfaces/examples/RewardExample.json" target="_blank">Reward Example</a></span>
+      </td>
+      <td><span class="label label-success">Aggregator</span> </td>
+    </tr>
+
+    <tr>
+      <td>Smart Contract</td>
+      <td>
+        <span><a href ="interfaces/shapes/SmartContractShape.ttl" target="_blank">Smart Contract Shape</a></span></td>
+      <td>
+        <span><a href ="interfaces/examples/SmartContractExample.json" target="_blank">Smart Contract Example</a></span>
+      </td>
+      <td><span class="label label-success">Aggregator</span> </td>
+    </tr>
+
+    <tr>
+      <td>System Constraint</td>
+      <td>
+        <span><a href ="interfaces/shapes/SystemConstraintShape.ttl" target="_blank">System Constraint Shape</a></span></td>
+      <td>
+        <span><a href ="interfaces/examples/SystemConstraintExample.json" target="_blank">System Constraint Example</a></span>
+      </td>
+      <td><span class="label label-success">Aggregator</span> </td>
+    </tr>
+
+    <tr>
+      <td>Transaction</td>
+      <td>
+        <span><a href ="interfaces/shapes/TransactionShape.ttl" target="_blank">Transaction Shape</a></span></td>
+      <td>
+        <span><a href ="interfaces/examples/TransactionExample.json" target="_blank">Transaction Example</a></span>
+      </td>
+      <td><span class="label label-primary">DVN</span> </td>
+
+    </tr>
+
+    <tr>
+      <td>Voltage Frequency</td>
+      <td>
+        <span><a href ="interfaces/shapes/VoltageFreqShape.ttl" target="_blank">Voltage Frequency Shape</a></span></td>
+      <td>
+        <span><a href ="interfaces/examples/VoltageFreqExample.json" target="_blank">Voltage Frequency Example</a></span>
+      </td>
+      <td><span class="label label-success">Aggregator</span> </td>
+    </tr>
+
+    </tbody>
+  </table>
+
+
+ <footer class="footer">
+            <div class="row">
+    	<div class="col-md-10">
+    		Developed by 	        <a href = "http://oeg-upm.net" target="_blank">Ontology Engineering Group</a>
+	        <br>
+    	Built with <a target="_blank" href="http://getbootstrap.com/">Bootstrap</a>
+    	Icons from <a target="_blank" href="http://glyphicons.com/">Glyphicons</a>
+ 	        <br>
+	        Latest revision Feb, 2019
+           <br><p>&copy; Ontology Engineering Group</p>
+        </div>
+    	<div class="col-md-2">
+    		<a href="http://www.oeg-upm.net/" target="_blank"><img src="vocab/logo.gif" alt="OEG logo" class="img-rounded" class="img-responsive" /></a>
+    	</div>
+      </div>
+      </footer>
+    </div> <!-- /container -->
+<script>
+$(function() {
+var availableTags = [
+"delta-ontology"];
+$( "#tags" ).autocomplete({
+source: availableTags,
+select: function(event, ui) {
+hideRows(ui.item.value);
+}
+});
+});
+</script>
+<script>
+function hideRows(text) {
+index = 1;
+tr = document.getElementById('tr'+index);
+while (tr!=null){
+valores = document.getElementById('inp'+index).value;
+if (valores.indexOf(text)==-1){
+tr.style.display='none';
+}
+index++;
+tr = document.getElementById('tr'+index);
+}
+document.getElementById('remButt').style.display='';
+}
+
+function showRows() {	
+index = 1;
+tr = document.getElementById('tr'+index);
+while (tr!=null){
+tr.style.display='';
+index++;
+tr = document.getElementById('tr'+index);
+}
+butt = document.getElementById('remButt').style.display='none';
+}
+</script>  </body>
+</html>

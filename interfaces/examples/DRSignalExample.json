@@ -1,0 +1,76 @@
+{
+  "@context": {
+    "core": "http://delta.linkeddata.es/def/core#",
+    "saref": "https://w3id.org/saref#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "time": "http://www.w3.org/2006/time#",
+    "oadr": "https://w3id.org/def/openadr#"
+  },
+  "@graph": [
+    {
+      "@id": "http://example.org/ns#VirtualNode01",
+      "@type": "core:VirtualNode",
+      "oadr:send": {
+        "@id": "http://example.org/ns#Event01"
+      }
+    },
+    {
+      "@id": "http://example.org/ns#Event01",
+      "@type": "oadr:Event",
+      "oadr:hasSignal": {
+        "@id": "http://example.org/ns#EnergyPrice01"
+      }
+    },
+    {
+      "@id": "http://example.org/ns#EnergyPrice01",
+      "@type": "oadr:Signal",
+      "oadr:hasSignalInterval": {
+        "@id": "http://example.org/ns#SignalInterval"
+      }
+    },
+    {
+      "@id": "http://example.org/ns#EnergyPrice01",
+      "@type": "oadr:Signal",
+      "oadr:hasSignalInterval": {
+        "@id": "http://example.org/ns#SignalInterval"
+      }
+    },
+    {
+      "@id": "http://example.org/ns#SignalInterval",
+      "@type": "oadr:SignalInterval",
+      "oadr:intervalDuration": {
+        "@id": "http://example.org/ns#Interval01"
+      },
+     "oadr:hasTypicalValue": {
+        "@type": "xsd:float",
+        "@value": "15.2"
+      }
+    },
+    {
+      "@id": "http://example.org/ns#Interval01",
+      "@type": "time:Interval",
+      "time:hasBeginning": {
+        "@id": "http://example.org/ns#Instant01"
+      },
+      "time:hasEnd": {
+        "@id": "http://example.org/ns#Instant02"
+      }
+    },
+    {
+      "@id": "http://example.org/ns#Instant01",
+      "@type": "time:Instant",
+      "time:inXSDDate": {
+        "@type": "xsd:date",
+        "@value": "2019-04-11"
+      }
+    },
+    {
+      "@id": "http://example.org/ns#Instant02",
+      "@type": "time:Instant",
+      "time:inXSDDate": {
+        "@type": "xsd:date",
+        "@value": "2019-04-12"
+      }
+    }
+  ]
+}

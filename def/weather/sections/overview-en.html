@@ -1,0 +1,784 @@
+<h2 id="overv" class="list">BIMERR Weather Ontology: Overview <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown">
+This ontology has the following classes and properties.</span>
+<h4>Classes</h4>
+<ul class="hlist">
+   <li>
+      <a href="#https://w3id.org/def/saref4city#AdministrativeArea"
+         title="https://w3id.org/def/saref4city#AdministrativeArea">Administrative Area</a>
+   </li>
+   <li>
+      <a href="#AtmosphericPhenomenon"
+         title="https://bimerr.iot.linkeddata.es/def/weather#AtmosphericPhenomenon">Atmospheric Phenomenon</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/def/saref4city#City" title="https://w3id.org/def/saref4city#City">City</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/def/saref4city#Country" title="https://w3id.org/def/saref4city#Country">Country</a>
+   </li>
+   <li>
+      <a href="#https://saref.etsi.org/core/Device" title="https://saref.etsi.org/core/Device">Device</a>
+   </li>
+   <li>
+      <a href="#https://saref.etsi.org/core/FeatureOfInterest" title="https://saref.etsi.org/core/FeatureOfInterest">Feature of Interest</a>
+   </li>
+   <li>
+      <a href="#Ground"
+         title="https://bimerr.iot.linkeddata.es/def/weather#Ground">Ground</a>
+   </li>
+   <li>
+      <a href="#Humidity"
+         title="https://bimerr.iot.linkeddata.es/def/weather#Humidity">Humidity</a>
+   </li>
+   <li>
+      <a href="#Illuminance"
+         title="https://bimerr.iot.linkeddata.es/def/weather#Illuminance">Illuminance</a>
+   </li>
+   <li>
+      <a href="#https://saref.etsi.org/core/Measurement" title="https://saref.etsi.org/core/Measurement">Measurement</a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/2003/01/geo/wgs84_pos#Point" title="http://www.w3.org/2003/01/geo/wgs84_pos#Point">Point</a>
+   </li>
+   <li>
+      <a href="#Precipitation"
+         title="https://bimerr.iot.linkeddata.es/def/weather#Precipitation">Precipitation</a>
+   </li>
+   <li>
+      <a href="#Pressure"
+         title="https://bimerr.iot.linkeddata.es/def/weather#Pressure">Pressure</a>
+   </li>
+   <li>
+      <a href="#https://saref.etsi.org/core/Property" title="https://saref.etsi.org/core/Property">Property</a>
+   </li>
+   <li>
+      <a href="#Radiation"
+         title="https://bimerr.iot.linkeddata.es/def/weather#Radiation">Radiation</a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/ns/sosa/Sensor" title="http://www.w3.org/ns/sosa/Sensor">Sensor</a>
+   </li>
+   <li>
+      <a href="#SkyCover"
+         title="https://bimerr.iot.linkeddata.es/def/weather#SkyCover">Sky Cover</a>
+   </li>
+   <li>
+      <a href="#Snow"
+         title="https://bimerr.iot.linkeddata.es/def/weather#Snow">Snow</a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"
+         title="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing">Spatial Thing</a>
+   </li>
+   <li>
+      <a href="#Storm"
+         title="https://bimerr.iot.linkeddata.es/def/weather#Storm">Storm</a>
+   </li>
+   <li>
+      <a href="#Temperature"
+         title="https://bimerr.iot.linkeddata.es/def/weather#Temperature">Temperature</a>
+   </li>
+   <li>
+      <a href="#Time"
+         title="https://bimerr.iot.linkeddata.es/def/weather#Time">Time</a>
+   </li>
+   <li>
+      <a href="#https://w3id.org/saref#UnitOfMeasure" title="https://w3id.org/saref#UnitOfMeasure">Unit of Measure</a>
+   </li>
+   <li>
+      <a href="#WeatherProperty"
+         title="https://bimerr.iot.linkeddata.es/def/weather#WeatherProperty">Weather Property</a>
+   </li>
+   <li>
+      <a href="#Wind"
+         title="https://bimerr.iot.linkeddata.es/def/weather#Wind">
+         <span>wind</span>
+      </a>
+   </li>
+</ul><h4>Object Properties</h4><ul class="hlist">
+   <li>
+      <a href="#https://saref.etsi.org/core/controlsProperty" title="https://saref.etsi.org/core/controlsProperty">controls property</a>
+   </li>
+   <li>
+      <a href="#https://saref.etsi.org/core/hasMeasurement" title="https://saref.etsi.org/core/hasMeasurement">has measurement</a>
+   </li>
+   <li>
+      <a href="#https://saref.etsi.org/core/hasProperty" title="https://saref.etsi.org/core/hasProperty">has property</a>
+   </li>
+   <li>
+      <a href="#https://saref.etsi.org/core/isControlledByDevice" title="https://saref.etsi.org/core/isControlledByDevice">is controlled by device</a>
+   </li>
+   <li>
+      <a href="#https://saref.etsi.org/core/isMeasuredByDevice" title="https://saref.etsi.org/core/isMeasuredByDevice">is measured by device</a>
+   </li>
+   <li>
+      <a href="#https://saref.etsi.org/core/isMeasuredIn" title="https://saref.etsi.org/core/isMeasuredIn">is measured in</a>
+   </li>
+   <li>
+      <a href="#https://saref.etsi.org/core/isMeasurementOf" title="https://saref.etsi.org/core/isMeasurementOf">is measurement of</a>
+   </li>
+   <li>
+      <a href="#https://saref.etsi.org/core/isPropertyOf" title="https://saref.etsi.org/core/isPropertyOf">is property of</a>
+   </li>
+   <li>
+      <a href="#locatedIn"
+         title="https://bimerr.iot.linkeddata.es/def/weather#locatedIn">located in</a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/2003/01/geo/wgs84_pos#location" title="http://www.w3.org/2003/01/geo/wgs84_pos#location">location</a>
+   </li>
+   <li>
+      <a href="#https://saref.etsi.org/core/makeMeasurement" title="https://saref.etsi.org/core/makeMeasurement">make measurement</a>
+   </li>
+   <li>
+      <a href="#https://saref.etsi.org/core/measurementMadeBy" title="https://saref.etsi.org/core/measurementMadeBy">measurement made by</a>
+   </li>
+   <li>
+      <a href="#https://saref.etsi.org/core/measuresProperty" title="https://saref.etsi.org/core/measuresProperty">measures property</a>
+   </li>
+   <li>
+      <a href="#https://saref.etsi.org/core/relatesToMeasurement" title="https://saref.etsi.org/core/relatesToMeasurement">relates to measurement</a>
+   </li>
+   <li>
+      <a href="#https://saref.etsi.org/core/relatesToProprety" title="https://saref.etsi.org/core/relatesToProprety">relates to property</a>
+   </li>
+</ul><h4>Data Properties</h4><ul class="hlist">
+   <li>
+      <a href="#http://www.w3.org/2003/01/geo/wgs84_pos#alt" title="http://www.w3.org/2003/01/geo/wgs84_pos#alt">altitude</a>
+   </li>
+   <li>
+      <a href="#https://saref.etsi.org/core/hasTimeStamp" title="https://saref.etsi.org/core/hasTimeStamp">has time stamp</a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/2003/01/geo/wgs84_pos#lat" title="http://www.w3.org/2003/01/geo/wgs84_pos#lat">latitude</a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/2003/01/geo/wgs84_pos#long" title="http://www.w3.org/2003/01/geo/wgs84_pos#long">longitude</a>
+   </li>
+</ul><h4>Named Individuals</h4><ul class="hlist">
+   <li>
+      <a href="#AerosolOpticalDepth"
+         title="https://bimerr.iot.linkeddata.es/def/weather#AerosolOpticalDepth">
+         <span>aerosol optical depth</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Albedo"
+         title="https://bimerr.iot.linkeddata.es/def/weather#Albedo">
+         <span>albedo</span>
+      </a>
+   </li>
+   <li>
+      <a href="#apparentTemperature"
+         title="https://bimerr.iot.linkeddata.es/def/weather#apparentTemperature">
+         <span>apparent temperature</span>
+      </a>
+   </li>
+   <li>
+      <a href="#apparentTemperatureHigh"
+         title="https://bimerr.iot.linkeddata.es/def/weather#apparentTemperatureHigh">
+         <span>apparent temperature high</span>
+      </a>
+   </li>
+   <li>
+      <a href="#apparentTemperatureHighTime"
+         title="https://bimerr.iot.linkeddata.es/def/weather#apparentTemperatureHighTime">
+         <span>apparent temperature high time</span>
+      </a>
+   </li>
+   <li>
+      <a href="#apparentTemperatureLow"
+         title="https://bimerr.iot.linkeddata.es/def/weather#apparentTemperatureLow">
+         <span>apparent temperature low</span>
+      </a>
+   </li>
+   <li>
+      <a href="#apparentTemperatureLowTime"
+         title="https://bimerr.iot.linkeddata.es/def/weather#apparentTemperatureLowTime">
+         <span>apparent temperature low time</span>
+      </a>
+   </li>
+   <li>
+      <a href="#apparentTemperatureMax"
+         title="https://bimerr.iot.linkeddata.es/def/weather#apparentTemperatureMax">
+         <span>apparent temperature max</span>
+      </a>
+   </li>
+   <li>
+      <a href="#apparentTemperatureMaxTime"
+         title="https://bimerr.iot.linkeddata.es/def/weather#apparentTemperatureMaxTime">
+         <span>apparent temperature max time</span>
+      </a>
+   </li>
+   <li>
+      <a href="#apparentTemperatureMin"
+         title="https://bimerr.iot.linkeddata.es/def/weather#apparentTemperatureMin">
+         <span>apparent temperature min</span>
+      </a>
+   </li>
+   <li>
+      <a href="#apparentTemperatureMinTime"
+         title="https://bimerr.iot.linkeddata.es/def/weather#apparentTemperatureMinTime">
+         <span>apparent temperature min time</span>
+      </a>
+   </li>
+   <li>
+      <a href="#AtmosphericStationPressure"
+         title="https://bimerr.iot.linkeddata.es/def/weather#AtmosphericStationPressure">
+         <span>atmospheric station pressure</span>
+      </a>
+   </li>
+   <li>
+      <a href="#AverageTemperatureForPeriod"
+         title="https://bimerr.iot.linkeddata.es/def/weather#AverageTemperatureForPeriod">
+         <span>average temperature for period</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://www.ontology-of-units-of-measure.org/resource/om-2/candelaPerSquareMetre"
+         title="http://www.ontology-of-units-of-measure.org/resource/om-2/candelaPerSquareMetre">
+         <span>candela per square metre</span>
+      </a>
+   </li>
+   <li>
+      <a href="#CeillingHeight"
+         title="https://bimerr.iot.linkeddata.es/def/weather#CeillingHeight">
+         <span>ceilling height</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://www.ontology-of-units-of-measure.org/resource/om-2/centimetre"
+         title="http://www.ontology-of-units-of-measure.org/resource/om-2/centimetre">
+         <span>centimetre</span>
+      </a>
+   </li>
+   <li>
+      <a href="#cloudCover"
+         title="https://bimerr.iot.linkeddata.es/def/weather#cloudCover">
+         <span>cloud cover</span>
+      </a>
+   </li>
+   <li>
+      <a href="#DataSourceAndUncertaintyFlags"
+         title="https://bimerr.iot.linkeddata.es/def/weather#DataSourceAndUncertaintyFlags">
+         <span>data source and uncertainty flags</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://www.ontology-of-units-of-measure.org/resource/om-2/day"
+         title="http://www.ontology-of-units-of-measure.org/resource/om-2/day">
+         <span>day</span>
+      </a>
+   </li>
+   <li>
+      <a href="#DaysSinceLastSnowfall"
+         title="https://bimerr.iot.linkeddata.es/def/weather#DaysSinceLastSnowfall">
+         <span>days since last snowfall</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://www.ontology-of-units-of-measure.org/resource/om-2/degree"
+         title="http://www.ontology-of-units-of-measure.org/resource/om-2/degree">
+         <span>degree</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://www.ontology-of-units-of-measure.org/resource/om-2/degreeCelsius"
+         title="http://www.ontology-of-units-of-measure.org/resource/om-2/degreeCelsius">
+         <span>degree celsius</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://www.ontology-of-units-of-measure.org/resource/om-2/degreeFahrenheit"
+         title="http://www.ontology-of-units-of-measure.org/resource/om-2/degreeFahrenheit">
+         <span>degree fahrenheit</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://www.ontology-of-units-of-measure.org/resource/om-2/Density"
+         title="http://www.ontology-of-units-of-measure.org/resource/om-2/Density">
+         <span>density</span>
+      </a>
+   </li>
+   <li>
+      <a href="#DewPointTemperature"
+         title="https://bimerr.iot.linkeddata.es/def/weather#DewPointTemperature">
+         <span>dew point temperature</span>
+      </a>
+   </li>
+   <li>
+      <a href="#DiffuseHorizontalRadiation"
+         title="https://bimerr.iot.linkeddata.es/def/weather#DiffuseHorizontalRadiation">
+         <span>diffuse horizontal radiation</span>
+      </a>
+   </li>
+   <li>
+      <a href="#DirectHorizontalIlluminance"
+         title="https://bimerr.iot.linkeddata.es/def/weather#DirectHorizontalIlluminance">
+         <span>direct horizontal illuminance</span>
+      </a>
+   </li>
+   <li>
+      <a href="#DirectNormalIlluminance"
+         title="https://bimerr.iot.linkeddata.es/def/weather#DirectNormalIlluminance">
+         <span>direct normal illuminance</span>
+      </a>
+   </li>
+   <li>
+      <a href="#DirectNormalRadiation"
+         title="https://bimerr.iot.linkeddata.es/def/weather#DirectNormalRadiation">
+         <span>direct normal radiation</span>
+      </a>
+   </li>
+   <li>
+      <a href="#DryBulbTemperature"
+         title="https://bimerr.iot.linkeddata.es/def/weather#DryBulbTemperature">
+         <span>dry bulb temperature</span>
+      </a>
+   </li>
+   <li>
+      <a href="#ExtraterrestialDirectNormalRadiation"
+         title="https://bimerr.iot.linkeddata.es/def/weather#ExtraterrestialDirectNormalRadiation">
+         <span>extraterrestial direct normal radiation</span>
+      </a>
+   </li>
+   <li>
+      <a href="#ExtraterrestialHorizontalRadiation"
+         title="https://bimerr.iot.linkeddata.es/def/weather#ExtraterrestialHorizontalRadiation">
+         <span>extraterrestial horizontal radiation</span>
+      </a>
+   </li>
+   <li>
+      <a href="#GlobalHorizontalIlluminance"
+         title="https://bimerr.iot.linkeddata.es/def/weather#GlobalHorizontalIlluminance">
+         <span>global horizontal illuminance</span>
+      </a>
+   </li>
+   <li>
+      <a href="#GlobalHorizontalRadiation"
+         title="https://bimerr.iot.linkeddata.es/def/weather#GlobalHorizontalRadiation">
+         <span>global horizontal radiation</span>
+      </a>
+   </li>
+   <li>
+      <a href="#GroundConductivity"
+         title="https://bimerr.iot.linkeddata.es/def/weather#GroundConductivity">
+         <span>ground conductivity</span>
+      </a>
+   </li>
+   <li>
+      <a href="#GroundDensity"
+         title="https://bimerr.iot.linkeddata.es/def/weather#GroundDensity">
+         <span>ground density</span>
+      </a>
+   </li>
+   <li>
+      <a href="#GroundSpecificHeat"
+         title="https://bimerr.iot.linkeddata.es/def/weather#GroundSpecificHeat">
+         <span>ground specific heat</span>
+      </a>
+   </li>
+   <li>
+      <a href="#GroundTemperature"
+         title="https://bimerr.iot.linkeddata.es/def/weather#GroundTemperature">
+         <span>ground temperature</span>
+      </a>
+   </li>
+   <li>
+      <a href="#GroundTemperatureDepth"
+         title="https://bimerr.iot.linkeddata.es/def/weather#GroundTemperatureDepth">
+         <span>ground temperature depth</span>
+      </a>
+   </li>
+   <li>
+      <a href="#HorizontalInfraredRadiationIntensity"
+         title="https://bimerr.iot.linkeddata.es/def/weather#HorizontalInfraredRadiationIntensity">
+         <span>horizontal infrared radiation intensity</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://www.ontology-of-units-of-measure.org/resource/om-2/hour"
+         title="http://www.ontology-of-units-of-measure.org/resource/om-2/hour">
+         <span>hour</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://www.ontology-of-units-of-measure.org/resource/om-2/inch-International"
+         title="http://www.ontology-of-units-of-measure.org/resource/om-2/inch-International">
+         <span>inch international</span>
+      </a>
+   </li>
+   <li>
+      <a href="#InchesPerHour"
+         title="https://bimerr.iot.linkeddata.es/def/weather#InchesPerHour">
+         <span>inches per hour</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://www.ontology-of-units-of-measure.org/resource/om-2/joulePerKilogram"
+         title="http://www.ontology-of-units-of-measure.org/resource/om-2/joulePerKilogram">
+         <span>joule per kilogram</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://www.ontology-of-units-of-measure.org/resource/om-2/kilogramPerCubicmetre"
+         title="http://www.ontology-of-units-of-measure.org/resource/om-2/kilogramPerCubicmetre">
+         <span>kilogram per cubicmetre</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://www.ontology-of-units-of-measure.org/resource/om-2/kilometre"
+         title="http://www.ontology-of-units-of-measure.org/resource/om-2/kilometre">
+         <span>kilometre</span>
+      </a>
+   </li>
+   <li>
+      <a href="#LiquidPrecipitationDepth"
+         title="https://bimerr.iot.linkeddata.es/def/weather#LiquidPrecipitationDepth">
+         <span>liquid precipitation depth</span>
+      </a>
+   </li>
+   <li>
+      <a href="#LiquidPrecipitationQuantity"
+         title="https://bimerr.iot.linkeddata.es/def/weather#LiquidPrecipitationQuantity">
+         <span>liquid precipitation quantity</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://www.ontology-of-units-of-measure.org/resource/om-2/lux"
+         title="http://www.ontology-of-units-of-measure.org/resource/om-2/lux">
+         <span>lux</span>
+      </a>
+   </li>
+   <li>
+      <a href="#MaxTemperatureForPeriod"
+         title="https://bimerr.iot.linkeddata.es/def/weather#MaxTemperatureForPeriod">
+         <span>max temperature for period</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://www.ontology-of-units-of-measure.org/resource/om-2/metre"
+         title="http://www.ontology-of-units-of-measure.org/resource/om-2/metre">
+         <span>metre</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://www.ontology-of-units-of-measure.org/resource/om-2/metrePerSecond-Time"
+         title="http://www.ontology-of-units-of-measure.org/resource/om-2/metrePerSecond-Time">
+         <span>metre per second time</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://www.ontology-of-units-of-measure.org/resource/om-2/mile-Statute"
+         title="http://www.ontology-of-units-of-measure.org/resource/om-2/mile-Statute">
+         <span>mile statute</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://www.ontology-of-units-of-measure.org/resource/om-2/mile-StatutePerHour"
+         title="http://www.ontology-of-units-of-measure.org/resource/om-2/mile-StatutePerHour">
+         <span>mile statute per hour</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://www.ontology-of-units-of-measure.org/resource/om-2/millibar"
+         title="http://www.ontology-of-units-of-measure.org/resource/om-2/millibar">
+         <span>millibar</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://www.ontology-of-units-of-measure.org/resource/om-2/millimetre"
+         title="http://www.ontology-of-units-of-measure.org/resource/om-2/millimetre">
+         <span>millimetre</span>
+      </a>
+   </li>
+   <li>
+      <a href="#MinTemperatureForPeriod"
+         title="https://bimerr.iot.linkeddata.es/def/weather#MinTemperatureForPeriod">
+         <span>min temperature for period</span>
+      </a>
+   </li>
+   <li>
+      <a href="#moonPhase"
+         title="https://bimerr.iot.linkeddata.es/def/weather#moonPhase">
+         <span>moon phase</span>
+      </a>
+   </li>
+   <li>
+      <a href="#nearestStormBearing"
+         title="https://bimerr.iot.linkeddata.es/def/weather#nearestStormBearing">
+         <span>nearest storm bearing</span>
+      </a>
+   </li>
+   <li>
+      <a href="#nearestStormDistance"
+         title="https://bimerr.iot.linkeddata.es/def/weather#nearestStormDistance">
+         <span>nearest storm distance</span>
+      </a>
+   </li>
+   <li>
+      <a href="#OpaqueSkycover"
+         title="https://bimerr.iot.linkeddata.es/def/weather#OpaqueSkycover">
+         <span>opaque skycover</span>
+      </a>
+   </li>
+   <li>
+      <a href="#ozone"
+         title="https://bimerr.iot.linkeddata.es/def/weather#ozone">
+         <span>ozone</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://www.ontology-of-units-of-measure.org/resource/om-2/pascal"
+         title="http://www.ontology-of-units-of-measure.org/resource/om-2/pascal">
+         <span>pascal</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://www.ontology-of-units-of-measure.org/resource/om-2/percent"
+         title="http://www.ontology-of-units-of-measure.org/resource/om-2/percent">
+         <span>percent</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Period"
+         title="https://bimerr.iot.linkeddata.es/def/weather#Period">
+         <span>period</span>
+      </a>
+   </li>
+   <li>
+      <a href="#precipAccumulation"
+         title="https://bimerr.iot.linkeddata.es/def/weather#precipAccumulation">
+         <span>precip accumulation</span>
+      </a>
+   </li>
+   <li>
+      <a href="#precipIntensity"
+         title="https://bimerr.iot.linkeddata.es/def/weather#precipIntensity">
+         <span>precip intensity</span>
+      </a>
+   </li>
+   <li>
+      <a href="#precipIntensityError"
+         title="https://bimerr.iot.linkeddata.es/def/weather#precipIntensityError">
+         <span>precip intensity error</span>
+      </a>
+   </li>
+   <li>
+      <a href="#precipIntensityMax"
+         title="https://bimerr.iot.linkeddata.es/def/weather#precipIntensityMax">
+         <span>precip intensity max</span>
+      </a>
+   </li>
+   <li>
+      <a href="#precipIntensityMaxTime"
+         title="https://bimerr.iot.linkeddata.es/def/weather#precipIntensityMaxTime">
+         <span>precip intensity max time</span>
+      </a>
+   </li>
+   <li>
+      <a href="#precipProbability"
+         title="https://bimerr.iot.linkeddata.es/def/weather#precipProbability">
+         <span>precip probability</span>
+      </a>
+   </li>
+   <li>
+      <a href="#precipType"
+         title="https://bimerr.iot.linkeddata.es/def/weather#precipType">
+         <span>precip type</span>
+      </a>
+   </li>
+   <li>
+      <a href="#PrecipitableWater"
+         title="https://bimerr.iot.linkeddata.es/def/weather#PrecipitableWater">
+         <span>precipitable water</span>
+      </a>
+   </li>
+   <li>
+      <a href="#PresentWeatherCodes"
+         title="https://bimerr.iot.linkeddata.es/def/weather#PresentWeatherCodes">
+         <span>present weather codes</span>
+      </a>
+   </li>
+   <li>
+      <a href="#PresentWeatherObservation"
+         title="https://bimerr.iot.linkeddata.es/def/weather#PresentWeatherObservation">
+         <span>present weather observation</span>
+      </a>
+   </li>
+   <li>
+      <a href="#pressure"
+         title="https://bimerr.iot.linkeddata.es/def/weather#pressure">
+         <span>pressure</span>
+      </a>
+   </li>
+   <li>
+      <a href="#RelativeHumidity"
+         title="https://bimerr.iot.linkeddata.es/def/weather#RelativeHumidity">
+         <span>relative humidity</span>
+      </a>
+   </li>
+   <li>
+      <a href="#SnowDepth"
+         title="https://bimerr.iot.linkeddata.es/def/weather#SnowDepth">
+         <span>snow depth</span>
+      </a>
+   </li>
+   <li>
+      <a href="#sunriseTime"
+         title="https://bimerr.iot.linkeddata.es/def/weather#sunriseTime">
+         <span>sunrise time</span>
+      </a>
+   </li>
+   <li>
+      <a href="#sunsetTime"
+         title="https://bimerr.iot.linkeddata.es/def/weather#sunsetTime">
+         <span>sunset time</span>
+      </a>
+   </li>
+   <li>
+      <a href="#temperature"
+         title="https://bimerr.iot.linkeddata.es/def/weather#temperature">
+         <span>temperature</span>
+      </a>
+   </li>
+   <li>
+      <a href="#temperatureHigh"
+         title="https://bimerr.iot.linkeddata.es/def/weather#temperatureHigh">
+         <span>temperature high</span>
+      </a>
+   </li>
+   <li>
+      <a href="#temperatureHighTime"
+         title="https://bimerr.iot.linkeddata.es/def/weather#temperatureHighTime">
+         <span>temperature high time</span>
+      </a>
+   </li>
+   <li>
+      <a href="#temperatureLow"
+         title="https://bimerr.iot.linkeddata.es/def/weather#temperatureLow">
+         <span>temperature low</span>
+      </a>
+   </li>
+   <li>
+      <a href="#temperatureLowTime"
+         title="https://bimerr.iot.linkeddata.es/def/weather#temperatureLowTime">
+         <span>temperature low time</span>
+      </a>
+   </li>
+   <li>
+      <a href="#temperatureMax"
+         title="https://bimerr.iot.linkeddata.es/def/weather#temperatureMax">
+         <span>temperature max</span>
+      </a>
+   </li>
+   <li>
+      <a href="#temperatureMaxTime"
+         title="https://bimerr.iot.linkeddata.es/def/weather#temperatureMaxTime">
+         <span>temperature max time</span>
+      </a>
+   </li>
+   <li>
+      <a href="#temperatureMin"
+         title="https://bimerr.iot.linkeddata.es/def/weather#temperatureMin">
+         <span>temperature min</span>
+      </a>
+   </li>
+   <li>
+      <a href="#temperatureMinTime"
+         title="https://bimerr.iot.linkeddata.es/def/weather#temperatureMinTime">
+         <span>temperature min time</span>
+      </a>
+   </li>
+   <li>
+      <a href="#TenthsOfCoverage"
+         title="https://bimerr.iot.linkeddata.es/def/weather#TenthsOfCoverage">
+         <span>tenths of coverage</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Thousandths"
+         title="https://bimerr.iot.linkeddata.es/def/weather#Thousandths">
+         <span>thousandths</span>
+      </a>
+   </li>
+   <li>
+      <a href="#time"
+         title="https://bimerr.iot.linkeddata.es/def/weather#time">
+         <span>time</span>
+      </a>
+   </li>
+   <li>
+      <a href="#TotalSkyCover"
+         title="https://bimerr.iot.linkeddata.es/def/weather#TotalSkyCover">
+         <span>total sky cover</span>
+      </a>
+   </li>
+   <li>
+      <a href="#uvIndex"
+         title="https://bimerr.iot.linkeddata.es/def/weather#uvIndex">
+         <span>uv index</span>
+      </a>
+   </li>
+   <li>
+      <a href="#uvIndexTime"
+         title="https://bimerr.iot.linkeddata.es/def/weather#uvIndexTime">
+         <span>uv index time</span>
+      </a>
+   </li>
+   <li>
+      <a href="#Visibility"
+         title="https://bimerr.iot.linkeddata.es/def/weather#Visibility">
+         <span>visibility</span>
+      </a>
+   </li>
+   <li>
+      <a href="#WattHourPerSquareMetre"
+         title="https://bimerr.iot.linkeddata.es/def/weather#WattHourPerSquareMetre">
+         <span>watt hour per square metre</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://www.ontology-of-units-of-measure.org/resource/om-2/wattPerMetreKelvin"
+         title="http://www.ontology-of-units-of-measure.org/resource/om-2/wattPerMetreKelvin">
+         <span>watt per metre kelvin</span>
+      </a>
+   </li>
+   <li>
+      <a href="#windBearing"
+         title="https://bimerr.iot.linkeddata.es/def/weather#windBearing">
+         <span>wind bearing</span>
+      </a>
+   </li>
+   <li>
+      <a href="#WindDirection"
+         title="https://bimerr.iot.linkeddata.es/def/weather#WindDirection">
+         <span>wind direction</span>
+      </a>
+   </li>
+   <li>
+      <a href="#windGust"
+         title="https://bimerr.iot.linkeddata.es/def/weather#windGust">
+         <span>wind gust</span>
+      </a>
+   </li>
+   <li>
+      <a href="#windGustTime"
+         title="https://bimerr.iot.linkeddata.es/def/weather#windGustTime">
+         <span>wind gust time</span>
+      </a>
+   </li>
+   <li>
+      <a href="#windSpeed"
+         title="https://bimerr.iot.linkeddata.es/def/weather#windSpeed">
+         <span>wind speed</span>
+      </a>
+   </li>
+   <li>
+      <a href="#ZenithLuminance"
+         title="https://bimerr.iot.linkeddata.es/def/weather#ZenithLuminance">
+         <span>zenith luminance</span>
+      </a>
+   </li>
+</ul>

@@ -1,0 +1,55 @@
+{
+  "@context": {
+    "core": "http://delta.linkeddata.es/def/core#",
+    "dc": "http://purl.org/dc/elements/1.1/",
+    "saref": "https://w3id.org/saref#",
+    "dcterms": "http://purl.org/dc/terms/",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "terms": "http://purl.org/dc/terms/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@graph": [
+    {
+      "@id": "http://example.org/ns#VirtualNode01",
+      "@type": "core:VirtualNode",
+      "core:hasCluster": {
+        "@id": "http://example.org/ns#Cluster01"
+      }
+    },
+    {
+      "@id": "http://example.org/ns#Cluster01",
+      "@type": "core:Cluster",
+      "core:manages": {
+        "@id": "http://example.org/ns#FEID01"
+      }
+    },
+    {
+      "@id": "http://example.org/ns#FEID01",
+      "@type": "core:FEID",
+      "core:hasAggregatedProperty": {
+        "@id": "http://example.org/ns#Flexibility01"
+      }
+    },
+    {
+      "@id": "http://example.org/ns#Flexibility01",
+      "@type": "core:Flexibility",
+      "saref:isRelatedToMeasurement": {
+        "@id": "http://example.org/ns#Measurement01"
+      }
+    },
+    {
+      "@id": "http://example.org/ns#Measurement1",
+      "@type": "core:Measurement",
+      "saref:hasValue": {
+        "@type": "xsd:float",
+        "@value": "136.1"
+      },
+      "saref:timeStamp": {
+        "@type": "xsd:dateTime",
+        "@value": "2002-09-24+06:00"
+      }
+    }
+  ]
+}

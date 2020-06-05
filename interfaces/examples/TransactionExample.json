@@ -1,0 +1,20 @@
+{
+  "@context": {
+    "core": "http://delta.linkeddata.es/def/core#",
+    "saref": "https://w3id.org/saref#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@graph": [
+    {
+      "@id": "http://example.org/ns#Transaction01",
+      "@type": "core:Transaction"
+    },
+    {
+      "@id": "http://example.org/ns#VirtualNode01",
+      "@type": "core:VirtualNode",
+      "core:hasTransaction": {
+        "@id": "http://example.org/ns#Transaction01"
+      }
+    }
+  ]
+} 

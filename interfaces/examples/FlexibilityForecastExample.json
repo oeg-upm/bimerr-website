@@ -1,0 +1,45 @@
+{
+  "@context": {
+    "core": "http://delta.linkeddata.es/def/core#",
+    "saref": "https://w3id.org/saref#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@graph": [
+    {
+      "@id": "http://example.org/ns#VirtualNode01",
+      "@type": [
+        "core:VirtualNode"
+      ],
+      "core:manages": {"@id": "http://example.org/ns#FEID1"}
+    },
+    {
+      "@id": "http://example.org/ns#Flexibility01",
+      "@type": [
+        "core:Flexibility"
+      ],
+      "saref:isRelatedToMeasurement": {"@id": "http://example.org/ns#Measurement1"}
+    },
+    {
+      "@id": "http://example.org/ns#Measurement1",
+      "@type": "core:Measurement",
+      "saref:hasValue": {
+        "@type": "xsd:float",
+        "@value": "136.1"
+      },
+      "saref:timeStamp": {
+        "@type": "xsd:dateTime",
+        "@value": "2002-09-24+06:00"
+      }
+    },
+
+    {
+      "@id": "http://example.org/ns#FEID1",
+      "@type": [
+        "core:FEID"
+      ],
+      "core:hasAggregatedProperty": [
+        {"@id": "http://example.org/ns#Flexibility01"}
+      ]
+    }
+  ]
+}

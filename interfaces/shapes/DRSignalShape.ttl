@@ -1,0 +1,65 @@
+@prefix dash: <http://datashapes.org/dash#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <http://schema.org/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix core: <http://delta.linkeddata.es/def/core#> .
+@prefix saref: <https://w3id.org/saref#>.
+@prefix oadr: <https://w3id.org/def/openadr#>.
+@prefix time: <http://www.w3.org/2006/time#>.
+
+schema:NodeShape
+    a sh:NodeShape ;
+    sh:targetClass core:VirtualNode;
+    sh:property [
+        sh:path oadr:send ;
+        sh:class oadr:Event;
+        sh:minCount 1
+    ] .
+
+schema:EventShape
+    a sh:NodeShape ;
+    sh:targetClass  oadr:Event;
+    sh:property [
+        sh:path oadr:hasSignal ;
+        sh:class oadr:Signal;
+        sh:minCount 1
+    ] .
+
+schema:SignalShape
+    a sh:NodeShape ;
+    sh:targetClass oadr:Signal;
+    sh:property [
+        sh:path oadr:hasSignalInterval ;
+        sh:class oadr:SignalInterval ;
+        sh:minCount 1
+    ]  .
+
+schema:SignalIntervalShape
+    a sh:NodeShape ;
+    sh:targetClass oadr:SignalInterval;
+    sh:property [
+        sh:path oadr:intervalDuration ;
+        sh:class time:Interval ;
+        sh:minCount 1
+    ] ;
+    sh:property [
+        sh:path oadr:hasTypicalValue;
+        sh:datatype xsd:float;
+        sh:minCount 1
+    ] .
+
+schema:IntervalShape
+    sh:targetClass time:Interval ;
+    a sh:NodeShape ;
+    sh:property [
+        sh:path time:hasBeginning;
+        sh:class time:Instant;
+        sh:minCount 1
+    ];
+    sh:property [
+        sh:path time:hasEnd;
+        sh:class  time:Instant;
+        sh:minCount 1
+    ] . 

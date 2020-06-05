@@ -1,0 +1,46 @@
+@prefix dash: <http://datashapes.org/dash#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <http://schema.org/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix core: <http://delta.linkeddata.es/def/core#> .
+@prefix saref: <https://w3id.org/saref#>.
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix om: <http://www.wurvoc.org/vocabularies/om-1.8#> .
+
+schema:SmartContractShape
+    a sh:NodeShape ;
+    sh:targetClass core:SmartContract;
+    sh:property [
+        sh:path core:agreesOn;
+        sh:class core:Property;
+        sh:minCount 1
+    ] ;
+
+    sh:property [
+        sh:path core:hasPayment;
+        sh:class core:Payment;
+        sh:minCount 1
+    ] .
+
+schema:PropertyShape
+    a sh:NodeShape ;
+    sh:targetClass core:Property ;
+    sh:property [
+        sh:path core:hasMeasurement ;
+        sh:class core:Measurement
+    ] .
+
+schema:MeasurementShape
+    a sh:NodeShape ;
+    sh:targetClass core:Measument ;
+    sh:property [
+        sh:path core:hasValue ;
+        sh:datatype xsd:float;
+        sh:minCount 1
+    ] ;
+    sh:property [
+        sh:path core:isMeasuredIn;
+        sh:class om:Unit_of_measure 
+    ].

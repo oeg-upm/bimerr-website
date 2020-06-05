@@ -1,0 +1,417 @@
+@prefix : <http://bimerr.iot.linkeddata.es/def/key-performance-indicator#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://bimerr.iot.linkeddata.es/def/key-performance-indicator#> .
+
+<http://bimerr.iot.linkeddata.es/def/key-performance-indicator#> rdf:type owl:Ontology ;
+                                                                  <http://purl.org/dc/elements/1.1/created> "2020-02-01"@en ;
+                                                                  <http://purl.org/dc/elements/1.1/creator> "María Poveda Villalón" ,
+                                                                                                            "Serge Chávez Feria" ;
+                                                                  <http://purl.org/dc/elements/1.1/description> "The Key Performance Indicator module aims to model the metrics defined at the beginning of building renovation activities to monitor the conformance with typical requirements related to energy efficient buildings."@en ;
+                                                                  <http://purl.org/dc/elements/1.1/publisher> "http://www.oeg-upm.net/" ;
+                                                                  <http://purl.org/dc/elements/1.1/title> "Key Performance Indicator ontology"@en ;
+                                                                  <http://purl.org/dc/terms/license> "http://purl.org/NET/rdflicense/cc-by4.0" ;
+                                                                  <http://purl.org/vocab/vann/preferredNamespacePrefix> "kpi"@en ;
+                                                                  <http://purl.org/vocab/vann/preferredNamespaceUri> <http://bimerr.iot.linkeddata.es/def/key-performance-indicator#> ;
+                                                                  owl:versionInfo "0.0.3" .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/elements/1.1/created
+<http://purl.org/dc/elements/1.1/created> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/creator
+<http://purl.org/dc/elements/1.1/creator> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/description
+<http://purl.org/dc/elements/1.1/description> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/publisher
+<http://purl.org/dc/elements/1.1/publisher> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/title
+<http://purl.org/dc/elements/1.1/title> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/creator
+<http://purl.org/dc/terms/creator> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/license
+<http://purl.org/dc/terms/license> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespacePrefix
+<http://purl.org/vocab/vann/preferredNamespacePrefix> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespaceUri
+<http://purl.org/vocab/vann/preferredNamespaceUri> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://bimerr.iot.linkeddata.es/def/key-performance-indicator#assessedUnderProject
+:assessedUnderProject rdf:type owl:ObjectProperty ;
+                      rdfs:range :Project ;
+                      rdfs:comment "A KPI value is assessed within the context of a project."@en ;
+                      rdfs:label "assessed under project"@en .
+
+
+###  http://bimerr.iot.linkeddata.es/def/key-performance-indicator#assessedUnderScenario
+:assessedUnderScenario rdf:type owl:ObjectProperty ;
+                       rdfs:range :Scenario ;
+                       rdfs:comment "A KPI value is assessed within the context of a scenario."@en ;
+                       rdfs:label "assessed under scenario"@en .
+
+
+###  http://bimerr.iot.linkeddata.es/def/key-performance-indicator#basedOnParameter
+:basedOnParameter rdf:type owl:ObjectProperty ;
+                  rdfs:label "based on parameter"@en .
+
+
+###  http://bimerr.iot.linkeddata.es/def/key-performance-indicator#hasGoal
+:hasGoal rdf:type owl:ObjectProperty ;
+         rdfs:range :Goal ;
+         rdfs:comment "Link to link a project with a set of goals."@en ;
+         rdfs:label "has goal"@en .
+
+
+###  http://bimerr.iot.linkeddata.es/def/key-performance-indicator#hasSubGoal
+:hasSubGoal rdf:type owl:ObjectProperty ;
+            rdfs:label "has sub-goal"@en .
+
+
+###  http://bimerr.iot.linkeddata.es/def/key-performance-indicator#monitorIndicator
+:monitorIndicator rdf:type owl:ObjectProperty ;
+                  rdfs:comment "A goal need to monitor a set of KPI values, to verify its accomplishment."@en ;
+                  rdfs:label "monitor indicator"@en .
+
+
+###  http://bimerr.iot.linkeddata.es/def/key-performance-indicator#relatedToProject
+:relatedToProject rdf:type owl:ObjectProperty ;
+                  rdfs:comment "A renovation scenario is simulated within the context of a project."@en ;
+                  rdfs:label "related to project"@en .
+
+
+###  https://w3id.org/def/saref4city#hasCalculationPeriod
+<https://w3id.org/def/saref4city#hasCalculationPeriod> rdf:type owl:ObjectProperty ;
+                                                       rdfs:label "has calculation period"@en .
+
+
+###  https://w3id.org/def/saref4city#quantifiesKPI
+<https://w3id.org/def/saref4city#quantifiesKPI> rdf:type owl:ObjectProperty ;
+                                                rdfs:comment "A KPI value quantifies a specific KPI."@en ;
+                                                rdfs:label "quantifies KPI"@en .
+
+
+###  https://w3id.org/def/saref4city#refersToTime
+<https://w3id.org/def/saref4city#refersToTime> rdf:type owl:ObjectProperty ;
+                                               rdfs:comment "Property to add a time stamp to a KPI value."@en ;
+                                               rdfs:label "refers to time"@en .
+
+
+###  https://w3id.org/saref#isMeasuredIn
+<https://w3id.org/saref#isMeasuredIn> rdf:type owl:ObjectProperty ;
+                                      rdfs:comment "Link a KPI value to a unit of measure."@en ;
+                                      rdfs:label "is measured in"@en .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://bimerr.iot.linkeddata.es/def/key-performance-indicator#address
+:address rdf:type owl:DatatypeProperty ;
+         rdfs:comment "Address of a project."@en ;
+         rdfs:label "address"@en .
+
+
+###  http://bimerr.iot.linkeddata.es/def/key-performance-indicator#changeDate
+:changeDate rdf:type owl:DatatypeProperty ;
+            rdfs:comment "The most recent editing date of a project ."@en ;
+            rdfs:label "change date"@en .
+
+
+###  http://bimerr.iot.linkeddata.es/def/key-performance-indicator#coordinates
+:coordinates rdf:type owl:DatatypeProperty ;
+             rdfs:label "coordinates"@en .
+
+
+###  http://bimerr.iot.linkeddata.es/def/key-performance-indicator#identifier
+:identifier rdf:type owl:DatatypeProperty ;
+            rdfs:range xsd:string ;
+            rdfs:label "identifier"@en .
+
+
+###  http://bimerr.iot.linkeddata.es/def/key-performance-indicator#maxValue
+:maxValue rdf:type owl:DatatypeProperty ;
+          rdfs:comment "Upper limit to define a KPI Value."@en ;
+          rdfs:label "max value"@en .
+
+
+###  http://bimerr.iot.linkeddata.es/def/key-performance-indicator#minValue
+:minValue rdf:type owl:DatatypeProperty ;
+          rdfs:comment "Lower limit to define a KPI Value."@en ;
+          rdfs:label "min value"@en .
+
+
+###  http://bimerr.iot.linkeddata.es/def/key-performance-indicator#tolerance
+:tolerance rdf:type owl:DatatypeProperty ;
+           rdfs:domain :KPIValue ;
+           rdfs:comment "Tolerance error in the value of a KPI."@en ;
+           rdfs:label "tolerance"@en .
+
+
+###  https://w3id.org/saref#hasValue
+<https://w3id.org/saref#hasValue> rdf:type owl:DatatypeProperty ;
+                                  rdfs:comment "Numeric quantity of a KPI value."@en ;
+                                  rdfs:label "has value"@en .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://bimerr.iot.linkeddata.es/def/key-performance-indicator#CalculationParameter
+:CalculationParameter rdf:type owl:Class ;
+                      rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                        owl:onProperty <https://w3id.org/saref#isMeasuredIn> ;
+                                        owl:allValuesFrom <https://w3id.org/saref#UnitOfMeasure>
+                                      ] ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty <https://w3id.org/saref#hasValue> ;
+                                        owl:cardinality "1"^^xsd:nonNegativeInteger
+                                      ] ;
+                      rdfs:comment "Represent the parameters or variables that take places in the assessment of a KPI."@en ;
+                      rdfs:label "Calculation parameter"@en .
+
+
+###  http://bimerr.iot.linkeddata.es/def/key-performance-indicator#ComfortKPI
+:ComfortKPI rdf:type owl:Class ;
+            rdfs:subClassOf :Kpi ;
+            rdfs:comment "KPI metric related to the residents comfort level for a building renovation project."@en ;
+            rdfs:label "Comfort KPI"@en .
+
+
+###  http://bimerr.iot.linkeddata.es/def/key-performance-indicator#EconomicKPI
+:EconomicKPI rdf:type owl:Class ;
+             rdfs:subClassOf :Kpi ;
+             rdfs:comment "KPI metric related to the economic aspects of a building renovation project."@en ;
+             rdfs:label "Economic KPI"@en .
+
+
+###  http://bimerr.iot.linkeddata.es/def/key-performance-indicator#EnergyKPI
+:EnergyKPI rdf:type owl:Class ;
+           rdfs:subClassOf :Kpi ;
+           rdfs:comment "KPI metric focused on the energy aspects of a building renovation project."@en ;
+           rdfs:label "Energy KPI"@en .
+
+
+###  http://bimerr.iot.linkeddata.es/def/key-performance-indicator#Goal
+:Goal rdf:type owl:Class ;
+      rdfs:subClassOf [ rdf:type owl:Restriction ;
+                        owl:onProperty :monitorIndicator ;
+                        owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                        owl:onClass :KPIValue
+                      ] ;
+      rdfs:comment "Goals or subgoals describe the objetives to be achieved within the renovation process. For instance: \"Stay within estimated budget\""@en ;
+      rdfs:label "Goal"@en .
+
+
+###  http://bimerr.iot.linkeddata.es/def/key-performance-indicator#KPIValue
+:KPIValue rdf:type owl:Class ;
+          rdfs:subClassOf <https://w3id.org/def/saref4city#KeyPerformanceIndicatorAssessment> ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :assessedUnderProject ;
+                            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                            owl:onClass :Project
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :assessedUnderScenario ;
+                            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                            owl:onClass :Scenario
+                          ] ;
+          rdfs:comment "Key performance indicator values calculated for a specific renovation project and scenario."@en ;
+          rdfs:label "Key Performance Indicator Value"@en .
+
+
+###  http://bimerr.iot.linkeddata.es/def/key-performance-indicator#Kpi
+:Kpi rdf:type owl:Class ;
+     rdfs:subClassOf <https://w3id.org/def/saref4city#KeyPerformanceIndicator> ,
+                     [ rdf:type owl:Restriction ;
+                       owl:onProperty :identifier ;
+                       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                       owl:onDataRange xsd:string
+                     ] ;
+     rdfs:comment "Key performance indicators related to building renovation projects"@en ;
+     rdfs:label "KPI"@en ,
+                "Key Performance Indicator"@en .
+
+
+###  http://bimerr.iot.linkeddata.es/def/key-performance-indicator#Project
+:Project rdf:type owl:Class ;
+         rdfs:subClassOf [ rdf:type owl:Restriction ;
+                           owl:onProperty :hasGoal ;
+                           owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                           owl:onClass :Goal
+                         ] ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty :address ;
+                           owl:someValuesFrom xsd:string
+                         ] ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty :identifier ;
+                           owl:someValuesFrom xsd:string
+                         ] ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty :changeDate ;
+                           owl:allValuesFrom xsd:dateTime
+                         ] ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty :coordinates ;
+                           owl:allValuesFrom xsd:string
+                         ] ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty :address ;
+                           owl:cardinality "1"^^xsd:nonNegativeInteger
+                         ] ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty :identifier ;
+                           owl:cardinality "1"^^xsd:nonNegativeInteger
+                         ] ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty :changeDate ;
+                           owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                         ] ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty :coordinates ;
+                           owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                         ] ;
+         rdfs:comment "A project is a temporary endeavor undertaken to achieve defined objectives (definition taken from DBpedia)."@en ;
+         rdfs:label "Project"@en .
+
+
+###  http://bimerr.iot.linkeddata.es/def/key-performance-indicator#Scenario
+:Scenario rdf:type owl:Class ;
+          rdfs:subClassOf [ rdf:type owl:Restriction ;
+                            owl:onProperty :relatedToProject ;
+                            owl:allValuesFrom :Project
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :relatedToProject ;
+                            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                            owl:onClass :Project
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :identifier ;
+                            owl:someValuesFrom xsd:string
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :identifier ;
+                            owl:cardinality "1"^^xsd:nonNegativeInteger
+                          ] ;
+          rdfs:comment "The simluation of a building renovation work."@en ;
+          rdfs:label "Scenario"@en .
+
+
+###  http://bimerr.iot.linkeddata.es/def/key-performance-indicator#SustainabilityKPI
+:SustainabilityKPI rdf:type owl:Class ;
+                   rdfs:subClassOf :Kpi ;
+                   rdfs:comment "KPI metric focused on the sustainability of a building renovation project."@en ;
+                   rdfs:label "Sustainability KPI"@en .
+
+
+###  http://bimerr.iot.linkeddata.es/def/key-performance-indicator#TimeKPI
+:TimeKPI rdf:type owl:Class ;
+         rdfs:subClassOf :Kpi ;
+         rdfs:comment "KPI metric related to temporal metrics for a building renovation project."@en ;
+         rdfs:label "Time KPI"@en .
+
+
+###  http://www.w3.org/2006/time#Instant
+<http://www.w3.org/2006/time#Instant> rdf:type owl:Class ;
+                                      rdfs:subClassOf <http://www.w3.org/2006/time#TemporalEntity> ;
+                                      rdfs:comment "A temporal entity with zero extent or duration."@en ;
+                                      rdfs:isDefinedBy <http://www.w3.org/2006/time#> ;
+                                      rdfs:label "Instant"@en .
+
+
+###  http://www.w3.org/2006/time#Interval
+<http://www.w3.org/2006/time#Interval> rdf:type owl:Class ;
+                                       rdfs:subClassOf <http://www.w3.org/2006/time#TemporalEntity> ;
+                                       rdfs:comment "A temporal entity with an extent or duration."@en ;
+                                       rdfs:isDefinedBy <http://www.w3.org/2006/time#> ;
+                                       rdfs:label "Interval"@en .
+
+
+###  http://www.w3.org/2006/time#TemporalDuration
+<http://www.w3.org/2006/time#TemporalDuration> rdf:type owl:Class ;
+                                               rdfs:comment "Time extent; duration of a time interval separate from its particular start position."@en ;
+                                               rdfs:label "Temporal duration"@en .
+
+
+###  http://www.w3.org/2006/time#TemporalEntity
+<http://www.w3.org/2006/time#TemporalEntity> rdf:type owl:Class ;
+                                             rdfs:comment "A temporal interval or instant."@en ;
+                                             rdfs:isDefinedBy <http://www.w3.org/2006/time#> ;
+                                             rdfs:label "Temporal entity"@en .
+
+
+###  https://w3id.org/def/saref4city#KeyPerformanceIndicator
+<https://w3id.org/def/saref4city#KeyPerformanceIndicator> rdf:type owl:Class ;
+                                                          rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                                            owl:onProperty <https://w3id.org/def/saref4city#hasCalculationPeriod> ;
+                                                                            owl:allValuesFrom <http://www.w3.org/2006/time#TemporalDuration>
+                                                                          ] ,
+                                                                          [ rdf:type owl:Restriction ;
+                                                                            owl:onProperty <https://w3id.org/def/saref4city#hasCalculationPeriod> ;
+                                                                            owl:allValuesFrom <http://www.w3.org/2006/time#TemporalEntity>
+                                                                          ] ;
+                                                          rdfs:comment "A Key Performance Indicator (KPI) is a type of performance measurement. KPIs evaluate the success of an organization or of a particular activity in which it engages. (Definition taken from FIWARE)"@en ;
+                                                          rdfs:isDefinedBy <https://w3id.org/def/saref4city#> ;
+                                                          rdfs:label "Key Performance Indicator"@en .
+
+
+###  https://w3id.org/def/saref4city#KeyPerformanceIndicatorAssessment
+<https://w3id.org/def/saref4city#KeyPerformanceIndicatorAssessment> rdf:type owl:Class ;
+                                                                    rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                                                      owl:onProperty <https://w3id.org/def/saref4city#quantifiesKPI> ;
+                                                                                      owl:allValuesFrom <https://w3id.org/def/saref4city#KeyPerformanceIndicator>
+                                                                                    ] ,
+                                                                                    [ rdf:type owl:Restriction ;
+                                                                                      owl:onProperty <https://w3id.org/def/saref4city#refersToTime> ;
+                                                                                      owl:allValuesFrom <http://www.w3.org/2006/time#TemporalEntity>
+                                                                                    ] ,
+                                                                                    [ rdf:type owl:Restriction ;
+                                                                                      owl:onProperty <https://w3id.org/saref#isMeasuredIn> ;
+                                                                                      owl:allValuesFrom <https://w3id.org/saref#UnitOfMeasure>
+                                                                                    ] ,
+                                                                                    [ rdf:type owl:Restriction ;
+                                                                                      owl:onProperty <https://w3id.org/saref#hasValue> ;
+                                                                                      owl:minCardinality "1"^^xsd:nonNegativeInteger
+                                                                                    ] ;
+                                                                    rdfs:comment "A Key Performance Indicator assessment represents the assessment of a KPI calculated by a given agent in a given time."@en ;
+                                                                    rdfs:isDefinedBy <https://w3id.org/def/saref4city#> ;
+                                                                    rdfs:label "Key Performance Indicator Assessment"@en .
+
+
+###  https://w3id.org/saref#UnitOfMeasure
+<https://w3id.org/saref#UnitOfMeasure> rdf:type owl:Class ;
+                                       rdfs:comment "The unit of measure is a standard for measurement of a quantity, such as a Property. For example, Power is a property and Watt is a unit of power that represents a definite predetermined power: when we say 10 Watt, we actually mean 10 times the definite predetermined power called \"watt\". Our definition is based on the definition of unit of measure in the Ontology of units of Measure (OM). We propose here a list of some units of measure that are relevant for the purpose of the Smart Appliances ontology, but this list can be extended."@en ;
+                                       rdfs:isDefinedBy <https://w3id.org/saref#> ;
+                                       rdfs:label "Unit of measure"@en .
+
+
+###  Generated by the OWL API (version 5.1.11) https://github.com/owlcs/owlapi/

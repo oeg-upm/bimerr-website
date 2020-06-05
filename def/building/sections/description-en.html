@@ -1,0 +1,18 @@
+<h2 id="desc" class="list">Building ontology: Description <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+
+<p>Figure 1 presents an overview of the classes and the properties included in the Building ontology. The ontology reuses the structure proposed in the BOT ontology to then extend
+this definition to allocate new relations and attributes specific for the BIMERR project. For instance, we created the concept building:Space to add the attributes building:maxOccupants
+and building:minOccupants, which are Datatype properties required by other domains to generate occupancy profiles.</p>
+
+<p>Another important point, is the extension of the term bot:Element, which supports three main sub-classes of building elements: building:Compoent, building:Construction, and building:Layer.
+A building:Component refers in general to MEP devices such as spaces heaters. The class building:Construction represents all the building elements conformed by layers such as floors, or
+roofs. Finally, the building:Layer concept represents the internal layers of those construction components. A layer can be composed by several materials, where each material has a set of
+physical properties, modelled by the <a href="https://bimerr.iot.linkeddata.es/def/material-properties/">Materials Properties Ontology</a>, which is another module of the BIMERR project.</p>
+
+<center><img src="resources/images/ontology.jpg" alt="General overview of the Building ontology." width="95%">   <figcaption><b>Figure 1. -</b> General overview of the Building ontology main classes and properties.</figcaption></center>
+
+
+<p>Figure 2 presents an overview of the building components and construction taxonomy. This figure shows just a glimpse of the general components and materials classification tree introduced in this model.
+All the subelements can be shown directly in the ontology file.</p>
+
+<center><img src="resources/images/component_taxonomy.jpg" alt="General overview of the Building Component Taxonomy." width="95%">   <figcaption><b>Figure 2. -</b> General overview of the Building Component Taxonomy.</figcaption></center>

@@ -1,0 +1,43 @@
+{
+  "@context": {
+    "core": "http://delta.linkeddata.es/def/core#",
+    "saref": "https://w3id.org/saref#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "om": "http://www.wurvoc.org/vocabularies/om-1.8#",
+    "time": "http://www.w3.org/2006/time#"
+  },
+  "@graph": [
+    {
+      "@id": "http://example.org/ns#SmartContract01",
+      "@type": "core:SmartContract",
+      "core:agreesOn": {
+        "@id": "http://example.org/ns#Energy01"
+      },
+      "core:hasPayment": {
+        "@id": "http://example.org/ns#Payment01"
+      }
+    },
+    {
+      "@id": "http://example.org/ns#Energy01",
+      "@type": "core:Energy",
+      "core:hasMeasurement": {
+        "@id": "http://example.org/ns#Measurement1"
+      }
+    },
+    {
+      "@id": "http://example.org/ns#Measurement1",
+      "@type": "core:Load",
+      "core:hasValue": {
+        "@type": "xsd:float",
+        "@value": "1.2"
+      },
+      "saref:isMeasuredIn": {
+        "@id": "om:watt"
+      }
+    },
+    {
+      "@id": "http://example.org/ns#Payment01",
+      "@type": "core:Payment"
+    }
+  ]
+}

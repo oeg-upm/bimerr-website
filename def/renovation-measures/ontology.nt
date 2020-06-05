@@ -1,0 +1,316 @@
+<http://bimerr.iot.linkeddata.es/def/renovation-measures#> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://bimerr.iot.linkeddata.es/def/renovation-measures#> <http://bimerr.iot.linkeddata.es/def/renovation-measures#preferredNamespacePrefix> "rm" .
+<http://bimerr.iot.linkeddata.es/def/renovation-measures#> <http://purl.org/dc/elements/1.1/creator> "María Poveda-Villalón" .
+<http://bimerr.iot.linkeddata.es/def/renovation-measures#> <http://purl.org/dc/elements/1.1/creator> "Serge Chávez-Feria" .
+<http://bimerr.iot.linkeddata.es/def/renovation-measures#> <http://purl.org/dc/elements/1.1/description> "The Renovation Measures ontology provides the vocabulary to represent building renovation options for specific elements. User of the ontology can express that within a renovation project, they will change the roof, that is made of an specific material, for a new roof with improved characteristics. Furthermore, the ontology allows to represent cost information related to the components, installation and maintenance of them."@en .
+<http://bimerr.iot.linkeddata.es/def/renovation-measures#> <http://purl.org/dc/elements/1.1/publisher> "http://www.oeg-upm.net/" .
+<http://bimerr.iot.linkeddata.es/def/renovation-measures#> <http://purl.org/dc/elements/1.1/title> "Renovation Measures ontology"@en .
+<http://bimerr.iot.linkeddata.es/def/renovation-measures#> <http://www.w3.org/2002/07/owl#versionInfo> "0.0.2" .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://bimerr.iot.linkeddata.es/def/renovation-measures#preferredNamespacePrefix
+<http://bimerr.iot.linkeddata.es/def/renovation-measures#preferredNamespacePrefix> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/elements/1.1/creator
+<http://purl.org/dc/elements/1.1/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/elements/1.1/description
+<http://purl.org/dc/elements/1.1/description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/elements/1.1/publisher
+<http://purl.org/dc/elements/1.1/publisher> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/elements/1.1/title
+<http://purl.org/dc/elements/1.1/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/vocab/vann/preferredNamespaceUri
+<http://purl.org/vocab/vann/preferredNamespaceUri> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# http://bimerr.iot.linkeddata.es/def/renovation-measures#affectedElement
+<http://bimerr.iot.linkeddata.es/def/renovation-measures#affectedElement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://bimerr.iot.linkeddata.es/def/renovation-measures#affectedElement> <http://www.w3.org/2000/01/rdf-schema#range> <http://bimerr.iot.linkeddata.es/def/building#Element> .
+<http://bimerr.iot.linkeddata.es/def/renovation-measures#affectedElement> <http://www.w3.org/2000/01/rdf-schema#comment> "The building elements affected by the replacement or renovation of another building element."@en .
+<http://bimerr.iot.linkeddata.es/def/renovation-measures#affectedElement> <http://www.w3.org/2000/01/rdf-schema#label> "affected element"@en .
+# 
+# http://bimerr.iot.linkeddata.es/def/renovation-measures#hasCost
+<http://bimerr.iot.linkeddata.es/def/renovation-measures#hasCost> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://bimerr.iot.linkeddata.es/def/renovation-measures#hasCost> <http://www.w3.org/2000/01/rdf-schema#range> <http://bimerr.iot.linkeddata.es/def/renovation-measures#Cost> .
+<http://bimerr.iot.linkeddata.es/def/renovation-measures#hasCost> <http://www.w3.org/2000/01/rdf-schema#comment> "Property to link a building element with its costs."@en .
+<http://bimerr.iot.linkeddata.es/def/renovation-measures#hasCost> <http://www.w3.org/2000/01/rdf-schema#label> "has cost"@en .
+# 
+# http://bimerr.iot.linkeddata.es/def/renovation-measures#hasProject
+<http://bimerr.iot.linkeddata.es/def/renovation-measures#hasProject> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://bimerr.iot.linkeddata.es/def/renovation-measures#hasProject> <http://www.w3.org/2000/01/rdf-schema#range> <http://bimerr.iot.linkeddata.es/def/key-performance-indicator#Project> .
+<http://bimerr.iot.linkeddata.es/def/renovation-measures#hasProject> <http://www.w3.org/2000/01/rdf-schema#comment> "Property to link a cost within the context of a project."@en .
+<http://bimerr.iot.linkeddata.es/def/renovation-measures#hasProject> <http://www.w3.org/2000/01/rdf-schema#label> "has project"@en .
+# 
+# http://bimerr.iot.linkeddata.es/def/renovation-measures#hasScenario
+<http://bimerr.iot.linkeddata.es/def/renovation-measures#hasScenario> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://bimerr.iot.linkeddata.es/def/renovation-measures#hasScenario> <http://www.w3.org/2000/01/rdf-schema#range> <http://bimerr.iot.linkeddata.es/def/key-performance-indicator#Scenario> .
+<http://bimerr.iot.linkeddata.es/def/renovation-measures#hasScenario> <http://www.w3.org/2000/01/rdf-schema#comment> "Property to link a cost with a specific renovation scenario."@en .
+<http://bimerr.iot.linkeddata.es/def/renovation-measures#hasScenario> <http://www.w3.org/2000/01/rdf-schema#label> "has scenario"@en .
+# 
+# http://bimerr.iot.linkeddata.es/def/renovation-measures#isCostOf
+<http://bimerr.iot.linkeddata.es/def/renovation-measures#isCostOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://bimerr.iot.linkeddata.es/def/renovation-measures#isCostOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://bimerr.iot.linkeddata.es/def/building#Element> .
+<http://bimerr.iot.linkeddata.es/def/renovation-measures#isCostOf> <http://www.w3.org/2000/01/rdf-schema#label> "is cost of"@en .
+# 
+# http://bimerr.iot.linkeddata.es/def/renovation-measures#renovatedElement
+<http://bimerr.iot.linkeddata.es/def/renovation-measures#renovatedElement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://bimerr.iot.linkeddata.es/def/renovation-measures#renovatedElement> <http://www.w3.org/2000/01/rdf-schema#range> <http://bimerr.iot.linkeddata.es/def/building#Element> .
+<http://bimerr.iot.linkeddata.es/def/renovation-measures#renovatedElement> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates the building element type to replace or renovate."@en .
+<http://bimerr.iot.linkeddata.es/def/renovation-measures#renovatedElement> <http://www.w3.org/2000/01/rdf-schema#label> "renovated element"@en .
+# 
+# http://qudt.org/schema/qudt#unit
+<http://qudt.org/schema/qudt#unit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://qudt.org/schema/qudt#unit> <http://www.w3.org/2000/01/rdf-schema#range> <http://qudt.org/schema/qudt#Unit> .
+<http://qudt.org/schema/qudt#unit> <http://www.w3.org/2000/01/rdf-schema#label> "unit"@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# http://bimerr.iot.linkeddata.es/def/building#ifcIdentifier
+<http://bimerr.iot.linkeddata.es/def/building#ifcIdentifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://bimerr.iot.linkeddata.es/def/building#ifcIdentifier> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://bimerr.iot.linkeddata.es/def/building#ifcIdentifier> <http://www.w3.org/2000/01/rdf-schema#label> "ifc identifier"@en .
+# 
+# http://bimerr.iot.linkeddata.es/def/renovation-measures#lifetime
+<http://bimerr.iot.linkeddata.es/def/renovation-measures#lifetime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://bimerr.iot.linkeddata.es/def/renovation-measures#lifetime> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<http://bimerr.iot.linkeddata.es/def/renovation-measures#lifetime> <http://www.w3.org/2000/01/rdf-schema#label> "lifetime"@en .
+# 
+# http://schema.org#currency
+<http://schema.org#currency> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://schema.org#currency> <http://www.w3.org/2000/01/rdf-schema#label> "currency"@en .
+# 
+# http://schema.org#value
+<http://schema.org#value> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://schema.org#value> <http://www.w3.org/2000/01/rdf-schema#label> "value"@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://bimerr.iot.linkeddata.es/def/building#Component
+<http://bimerr.iot.linkeddata.es/def/building#Component> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://bimerr.iot.linkeddata.es/def/building#Component> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://bimerr.iot.linkeddata.es/def/building#Element> .
+<http://bimerr.iot.linkeddata.es/def/building#Component> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents assemblies or undividible building products."@en .
+<http://bimerr.iot.linkeddata.es/def/building#Component> <http://www.w3.org/2000/01/rdf-schema#label> "Component"@en .
+# 
+# http://bimerr.iot.linkeddata.es/def/building#Construction
+<http://bimerr.iot.linkeddata.es/def/building#Construction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://bimerr.iot.linkeddata.es/def/building#Construction> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://bimerr.iot.linkeddata.es/def/building#Element> .
+<http://bimerr.iot.linkeddata.es/def/building#Construction> <http://www.w3.org/2000/01/rdf-schema#comment> "Building component that is conformed by layers, such as a wall, roof, or floor."@en .
+<http://bimerr.iot.linkeddata.es/def/building#Construction> <http://www.w3.org/2000/01/rdf-schema#label> "Construction"@en .
+# 
+# http://bimerr.iot.linkeddata.es/def/building#CoolingSystem
+<http://bimerr.iot.linkeddata.es/def/building#CoolingSystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://bimerr.iot.linkeddata.es/def/building#CoolingSystem> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://bimerr.iot.linkeddata.es/def/building#Component> .
+<http://bimerr.iot.linkeddata.es/def/building#CoolingSystem> <http://www.w3.org/2000/01/rdf-schema#label> "Cooling system"@en .
+# 
+# http://bimerr.iot.linkeddata.es/def/building#Element
+<http://bimerr.iot.linkeddata.es/def/building#Element> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://bimerr.iot.linkeddata.es/def/building#Element> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid1 .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid1 <http://www.w3.org/2002/07/owl#onProperty> <http://bimerr.iot.linkeddata.es/def/building#ifcIdentifier> .
+_:genid1 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid1 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#string> .
+<http://bimerr.iot.linkeddata.es/def/building#Element> <http://www.w3.org/2000/01/rdf-schema#comment> "Building component or construction element which can be described by a set of properties."@en .
+<http://bimerr.iot.linkeddata.es/def/building#Element> <http://www.w3.org/2000/01/rdf-schema#label> "Building element"@en .
+# 
+# http://bimerr.iot.linkeddata.es/def/building#Facade
+<http://bimerr.iot.linkeddata.es/def/building#Facade> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://bimerr.iot.linkeddata.es/def/building#Facade> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://bimerr.iot.linkeddata.es/def/building#Construction> .
+<http://bimerr.iot.linkeddata.es/def/building#Facade> <http://www.w3.org/2000/01/rdf-schema#label> "Facade"@en .
+# 
+# http://bimerr.iot.linkeddata.es/def/building#Fenestration
+<http://bimerr.iot.linkeddata.es/def/building#Fenestration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://bimerr.iot.linkeddata.es/def/building#Fenestration> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://bimerr.iot.linkeddata.es/def/building#Component> .
+<http://bimerr.iot.linkeddata.es/def/building#Fenestration> <http://www.w3.org/2000/01/rdf-schema#label> "Fenestration system"@en .
+# 
+# http://bimerr.iot.linkeddata.es/def/building#Floor
+<http://bimerr.iot.linkeddata.es/def/building#Floor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://bimerr.iot.linkeddata.es/def/building#Floor> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://bimerr.iot.linkeddata.es/def/building#Construction> .
+<http://bimerr.iot.linkeddata.es/def/building#Floor> <http://www.w3.org/2000/01/rdf-schema#label> "Floor"@en .
+# 
+# http://bimerr.iot.linkeddata.es/def/building#HeatingSystem
+<http://bimerr.iot.linkeddata.es/def/building#HeatingSystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://bimerr.iot.linkeddata.es/def/building#HeatingSystem> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://bimerr.iot.linkeddata.es/def/building#Component> .
+<http://bimerr.iot.linkeddata.es/def/building#HeatingSystem> <http://www.w3.org/2000/01/rdf-schema#label> "Heating system"@en .
+# 
+# http://bimerr.iot.linkeddata.es/def/building#Roof
+<http://bimerr.iot.linkeddata.es/def/building#Roof> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://bimerr.iot.linkeddata.es/def/building#Roof> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://bimerr.iot.linkeddata.es/def/building#Construction> .
+<http://bimerr.iot.linkeddata.es/def/building#Roof> <http://www.w3.org/2000/01/rdf-schema#label> "Roof"@en .
+# 
+# http://bimerr.iot.linkeddata.es/def/building#SolarCollector
+<http://bimerr.iot.linkeddata.es/def/building#SolarCollector> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://bimerr.iot.linkeddata.es/def/building#SolarCollector> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://bimerr.iot.linkeddata.es/def/building#Component> .
+<http://bimerr.iot.linkeddata.es/def/building#SolarCollector> <http://www.w3.org/2000/01/rdf-schema#label> "Solar collector"@en .
+# 
+# http://bimerr.iot.linkeddata.es/def/key-performance-indicator#Project
+<http://bimerr.iot.linkeddata.es/def/key-performance-indicator#Project> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://bimerr.iot.linkeddata.es/def/key-performance-indicator#Project> <http://www.w3.org/2000/01/rdf-schema#comment> "A project is a temporary endeavor undertaken to achieve defined objectives (definition taken from DBpedia)."@en .
+<http://bimerr.iot.linkeddata.es/def/key-performance-indicator#Project> <http://www.w3.org/2000/01/rdf-schema#label> "Project"@en .
+# 
+# http://bimerr.iot.linkeddata.es/def/key-performance-indicator#Scenario
+<http://bimerr.iot.linkeddata.es/def/key-performance-indicator#Scenario> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://bimerr.iot.linkeddata.es/def/key-performance-indicator#Scenario> <http://www.w3.org/2000/01/rdf-schema#comment> "The simluation of a building renovation work."@en .
+<http://bimerr.iot.linkeddata.es/def/key-performance-indicator#Scenario> <http://www.w3.org/2000/01/rdf-schema#label> "Scenario"@en .
+# 
+# http://bimerr.iot.linkeddata.es/def/renovation-measures#ActiveMeasure
+<http://bimerr.iot.linkeddata.es/def/renovation-measures#ActiveMeasure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://bimerr.iot.linkeddata.es/def/renovation-measures#ActiveMeasure> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://bimerr.iot.linkeddata.es/def/renovation-measures#RenovationMeasure> .
+<http://bimerr.iot.linkeddata.es/def/renovation-measures#ActiveMeasure> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents the action to replace an active building system or component. For example, the replacement of the HVAC system."@en .
+<http://bimerr.iot.linkeddata.es/def/renovation-measures#ActiveMeasure> <http://www.w3.org/2000/01/rdf-schema#label> "Active measure"@en .
+# 
+# http://bimerr.iot.linkeddata.es/def/renovation-measures#Cost
+<http://bimerr.iot.linkeddata.es/def/renovation-measures#Cost> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://bimerr.iot.linkeddata.es/def/renovation-measures#Cost> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://schema.org#MonetaryAmount> .
+<http://bimerr.iot.linkeddata.es/def/renovation-measures#Cost> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid2 .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid2 <http://www.w3.org/2002/07/owl#onProperty> <http://bimerr.iot.linkeddata.es/def/renovation-measures#hasProject> .
+_:genid2 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid2 <http://www.w3.org/2002/07/owl#onClass> <http://bimerr.iot.linkeddata.es/def/key-performance-indicator#Project> .
+<http://bimerr.iot.linkeddata.es/def/renovation-measures#Cost> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid3 .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid3 <http://www.w3.org/2002/07/owl#onProperty> <http://bimerr.iot.linkeddata.es/def/renovation-measures#hasScenario> .
+_:genid3 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid3 <http://www.w3.org/2002/07/owl#onClass> <http://bimerr.iot.linkeddata.es/def/key-performance-indicator#Scenario> .
+<http://bimerr.iot.linkeddata.es/def/renovation-measures#Cost> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid4 .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid4 <http://www.w3.org/2002/07/owl#onProperty> <http://bimerr.iot.linkeddata.es/def/renovation-measures#isCostOf> .
+_:genid4 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid4 <http://www.w3.org/2002/07/owl#onClass> <http://bimerr.iot.linkeddata.es/def/building#Element> .
+<http://bimerr.iot.linkeddata.es/def/renovation-measures#Cost> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid5 .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid5 <http://www.w3.org/2002/07/owl#onProperty> <http://bimerr.iot.linkeddata.es/def/renovation-measures#hasProject> .
+_:genid5 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid5 <http://www.w3.org/2002/07/owl#onClass> <http://bimerr.iot.linkeddata.es/def/key-performance-indicator#Project> .
+<http://bimerr.iot.linkeddata.es/def/renovation-measures#Cost> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid6 .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid6 <http://www.w3.org/2002/07/owl#onProperty> <http://bimerr.iot.linkeddata.es/def/renovation-measures#hasScenario> .
+_:genid6 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid6 <http://www.w3.org/2002/07/owl#onClass> <http://bimerr.iot.linkeddata.es/def/key-performance-indicator#Scenario> .
+<http://bimerr.iot.linkeddata.es/def/renovation-measures#Cost> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid7 .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid7 <http://www.w3.org/2002/07/owl#onProperty> <http://bimerr.iot.linkeddata.es/def/renovation-measures#isCostOf> .
+_:genid7 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid7 <http://www.w3.org/2002/07/owl#onClass> <http://bimerr.iot.linkeddata.es/def/building#Element> .
+<http://bimerr.iot.linkeddata.es/def/renovation-measures#Cost> <http://www.w3.org/2000/01/rdf-schema#comment> "The cost related to a building item."@en .
+<http://bimerr.iot.linkeddata.es/def/renovation-measures#Cost> <http://www.w3.org/2000/01/rdf-schema#label> "Cost"@en .
+# 
+# http://bimerr.iot.linkeddata.es/def/renovation-measures#InstallationCost
+<http://bimerr.iot.linkeddata.es/def/renovation-measures#InstallationCost> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://bimerr.iot.linkeddata.es/def/renovation-measures#InstallationCost> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://bimerr.iot.linkeddata.es/def/renovation-measures#Cost> .
+<http://bimerr.iot.linkeddata.es/def/renovation-measures#InstallationCost> <http://www.w3.org/2000/01/rdf-schema#comment> "The installation cost of a building item."@en .
+<http://bimerr.iot.linkeddata.es/def/renovation-measures#InstallationCost> <http://www.w3.org/2000/01/rdf-schema#label> "Installation cost"@en .
+# 
+# http://bimerr.iot.linkeddata.es/def/renovation-measures#MaintenanceCost
+<http://bimerr.iot.linkeddata.es/def/renovation-measures#MaintenanceCost> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://bimerr.iot.linkeddata.es/def/renovation-measures#MaintenanceCost> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://bimerr.iot.linkeddata.es/def/renovation-measures#Cost> .
+<http://bimerr.iot.linkeddata.es/def/renovation-measures#MaintenanceCost> <http://www.w3.org/2000/01/rdf-schema#comment> "The maintenance cost of a building item."@en .
+<http://bimerr.iot.linkeddata.es/def/renovation-measures#MaintenanceCost> <http://www.w3.org/2000/01/rdf-schema#label> "Maintenance cost"@en .
+# 
+# http://bimerr.iot.linkeddata.es/def/renovation-measures#PassiveMeasure
+<http://bimerr.iot.linkeddata.es/def/renovation-measures#PassiveMeasure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://bimerr.iot.linkeddata.es/def/renovation-measures#PassiveMeasure> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://bimerr.iot.linkeddata.es/def/renovation-measures#RenovationMeasure> .
+<http://bimerr.iot.linkeddata.es/def/renovation-measures#PassiveMeasure> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents the action to replace a passive building system or component. For example, the replacement of a window."@en .
+<http://bimerr.iot.linkeddata.es/def/renovation-measures#PassiveMeasure> <http://www.w3.org/2000/01/rdf-schema#label> "Passive measure"@en .
+# 
+# http://bimerr.iot.linkeddata.es/def/renovation-measures#PurchasingCost
+<http://bimerr.iot.linkeddata.es/def/renovation-measures#PurchasingCost> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://bimerr.iot.linkeddata.es/def/renovation-measures#PurchasingCost> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://bimerr.iot.linkeddata.es/def/renovation-measures#Cost> .
+<http://bimerr.iot.linkeddata.es/def/renovation-measures#PurchasingCost> <http://www.w3.org/2000/01/rdf-schema#comment> "The purchasing cost of a building item."@en .
+<http://bimerr.iot.linkeddata.es/def/renovation-measures#PurchasingCost> <http://www.w3.org/2000/01/rdf-schema#label> "Purchasing cost"@en .
+# 
+# http://bimerr.iot.linkeddata.es/def/renovation-measures#RemovalCost
+<http://bimerr.iot.linkeddata.es/def/renovation-measures#RemovalCost> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://bimerr.iot.linkeddata.es/def/renovation-measures#RemovalCost> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://bimerr.iot.linkeddata.es/def/renovation-measures#Cost> .
+<http://bimerr.iot.linkeddata.es/def/renovation-measures#RemovalCost> <http://www.w3.org/2000/01/rdf-schema#comment> "The removal cost of a building item."@en .
+<http://bimerr.iot.linkeddata.es/def/renovation-measures#RemovalCost> <http://www.w3.org/2000/01/rdf-schema#label> "Removal cost"@en .
+# 
+# http://bimerr.iot.linkeddata.es/def/renovation-measures#RenewableMeasure
+<http://bimerr.iot.linkeddata.es/def/renovation-measures#RenewableMeasure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://bimerr.iot.linkeddata.es/def/renovation-measures#RenewableMeasure> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://bimerr.iot.linkeddata.es/def/renovation-measures#RenovationMeasure> .
+<http://bimerr.iot.linkeddata.es/def/renovation-measures#RenewableMeasure> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents the action to replace a renewable building system or component. For example, the replacement of the solar panel."@en .
+<http://bimerr.iot.linkeddata.es/def/renovation-measures#RenewableMeasure> <http://www.w3.org/2000/01/rdf-schema#label> "Renewable measure"@en .
+# 
+# http://bimerr.iot.linkeddata.es/def/renovation-measures#RenovationMeasure
+<http://bimerr.iot.linkeddata.es/def/renovation-measures#RenovationMeasure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://bimerr.iot.linkeddata.es/def/renovation-measures#RenovationMeasure> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid8 .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid8 <http://www.w3.org/2002/07/owl#onProperty> <http://bimerr.iot.linkeddata.es/def/renovation-measures#affectedElement> .
+_:genid8 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid8 <http://www.w3.org/2002/07/owl#onClass> <http://bimerr.iot.linkeddata.es/def/building#Element> .
+<http://bimerr.iot.linkeddata.es/def/renovation-measures#RenovationMeasure> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid9 .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid9 <http://www.w3.org/2002/07/owl#onProperty> <http://bimerr.iot.linkeddata.es/def/renovation-measures#renovatedElement> .
+_:genid9 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid9 <http://www.w3.org/2002/07/owl#onClass> <http://bimerr.iot.linkeddata.es/def/building#Element> .
+<http://bimerr.iot.linkeddata.es/def/renovation-measures#RenovationMeasure> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid10 .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid10 <http://www.w3.org/2002/07/owl#onProperty> <http://qudt.org/schema/qudt#unit> .
+_:genid10 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid10 <http://www.w3.org/2002/07/owl#onClass> <http://qudt.org/schema/qudt#Unit> .
+<http://bimerr.iot.linkeddata.es/def/renovation-measures#RenovationMeasure> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid11 .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid11 <http://www.w3.org/2002/07/owl#onProperty> <http://bimerr.iot.linkeddata.es/def/renovation-measures#renovatedElement> .
+_:genid11 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid11 <http://www.w3.org/2002/07/owl#onClass> <http://bimerr.iot.linkeddata.es/def/building#Element> .
+<http://bimerr.iot.linkeddata.es/def/renovation-measures#RenovationMeasure> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid12 .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid12 <http://www.w3.org/2002/07/owl#onProperty> <http://qudt.org/schema/qudt#unit> .
+_:genid12 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid12 <http://www.w3.org/2002/07/owl#onClass> <http://qudt.org/schema/qudt#Unit> .
+<http://bimerr.iot.linkeddata.es/def/renovation-measures#RenovationMeasure> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid13 .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid13 <http://www.w3.org/2002/07/owl#onProperty> <http://bimerr.iot.linkeddata.es/def/renovation-measures#lifetime> .
+_:genid13 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid13 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#integer> .
+<http://bimerr.iot.linkeddata.es/def/renovation-measures#RenovationMeasure> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid14 .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid14 <http://www.w3.org/2002/07/owl#onProperty> <http://bimerr.iot.linkeddata.es/def/renovation-measures#lifetime> .
+_:genid14 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid14 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#integer> .
+<http://bimerr.iot.linkeddata.es/def/renovation-measures#RenovationMeasure> <http://www.w3.org/2000/01/rdf-schema#comment> "A replacement activity of building elements involved within the context of a renovation project."@en .
+<http://bimerr.iot.linkeddata.es/def/renovation-measures#RenovationMeasure> <http://www.w3.org/2000/01/rdf-schema#label> "Renovation measure"@en .
+# 
+# http://qudt.org/schema/qudt#Unit
+<http://qudt.org/schema/qudt#Unit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://qudt.org/schema/qudt#Unit> <http://www.w3.org/2000/01/rdf-schema#comment> "A unit of measure, or unit, is a particular quantity value that has been chosen as a scale for measuring other quantities the same kind (more generally of equivalent dimension). For example, the meter is a quantity of length that has been rigorously defined and standardized by the BIPM (International Board of Weights and Measures). Any measurement of the length can be expressed as a number multiplied by the unit meter. More formally, the value of a physical quantity Q with respect to a unit (U) is expressed as the scalar multiple of a real number (n) and U, as  \\\\(Q = nU\\\\)."@en .
+<http://qudt.org/schema/qudt#Unit> <http://www.w3.org/2000/01/rdf-schema#label> "Unit"@en .
+# 
+# http://schema.org#MonetaryAmount
+<http://schema.org#MonetaryAmount> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://schema.org#MonetaryAmount> <http://www.w3.org/2000/01/rdf-schema#comment> "A monetary value or range. This type can be used to describe an amount of money such as $50 USD, or a range as in describing a bank account being suitable for a balance between £1,000 and £1,000,000 GBP, or the value of a salary, etc."@en .
+<http://schema.org#MonetaryAmount> <http://www.w3.org/2000/01/rdf-schema#label> "Monetary amount"@en .
+# 
+# Generated by the OWL API (version 5.1.11) https://github.com/owlcs/owlapi/
