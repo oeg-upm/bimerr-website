@@ -1,16 +1,42 @@
 [ {
   "@id" : "_:genid1",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#cardinality" : [ {
+  "http://www.w3.org/2002/07/owl#maxQualifiedCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
     "@value" : "1"
   } ],
+  "http://www.w3.org/2002/07/owl#onDataRange" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://bimerr.iot.linkeddata.es/def/building#ifcIdentifier"
+    "@id" : "http://bimerr.iot.linkeddata.es/def/building#hasSimple3DModel"
   } ]
 }, {
   "@id" : "_:genid10",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#maxQualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onDataRange" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/building#hasSimple3DModel"
+  } ]
+}, {
+  "@id" : "_:genid11",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#minCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/building#maxOccupants"
+  } ]
+}, {
+  "@id" : "_:genid12",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#cardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
     "@value" : "1"
@@ -19,14 +45,50 @@
     "@id" : "http://bimerr.iot.linkeddata.es/def/building#ifcIdentifier"
   } ]
 }, {
-  "@id" : "_:genid2",
+  "@id" : "_:genid13",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#maxCardinality" : [ {
+  "http://www.w3.org/2002/07/owl#maxQualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onDataRange" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/building#hasSimple3DModel"
+  } ]
+}, {
+  "@id" : "_:genid14",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#cardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
     "@value" : "1"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://bimerr.iot.linkeddata.es/def/building#buildingAddress"
+    "@id" : "http://bimerr.iot.linkeddata.es/def/building#ifcIdentifier"
+  } ]
+}, {
+  "@id" : "_:genid15",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#maxQualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onDataRange" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/building#hasSimple3DModel"
+  } ]
+}, {
+  "@id" : "_:genid2",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#cardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/building#ifcIdentifier"
   } ]
 }, {
   "@id" : "_:genid3",
@@ -36,17 +98,20 @@
     "@value" : "1"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://www.w3.org/2003/01/geo/wgs84_pos#alt"
+    "@id" : "http://bimerr.iot.linkeddata.es/def/building#buildingAddress"
   } ]
 }, {
   "@id" : "_:genid4",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#maxCardinality" : [ {
+  "http://www.w3.org/2002/07/owl#maxQualifiedCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
     "@value" : "1"
   } ],
+  "http://www.w3.org/2002/07/owl#onDataRange" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://www.w3.org/2003/01/geo/wgs84_pos#lat"
+    "@id" : "http://bimerr.iot.linkeddata.es/def/building#hasSimple3DModel"
   } ]
 }, {
   "@id" : "_:genid5",
@@ -56,36 +121,36 @@
     "@value" : "1"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://www.w3.org/2003/01/geo/wgs84_pos#long"
+    "@id" : "http://www.w3.org/2003/01/geo/wgs84_pos#alt"
   } ]
 }, {
   "@id" : "_:genid6",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#maxCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.w3.org/2003/01/geo/wgs84_pos#lat"
+  } ]
+}, {
+  "@id" : "_:genid7",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#maxCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.w3.org/2003/01/geo/wgs84_pos#long"
+  } ]
+}, {
+  "@id" : "_:genid8",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://bimerr.iot.linkeddata.es/def/building#ifcIdentifier"
   } ],
   "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
-  } ]
-}, {
-  "@id" : "_:genid7",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#cardinality" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-    "@value" : "1"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://bimerr.iot.linkeddata.es/def/building#ifcIdentifier"
-  } ]
-}, {
-  "@id" : "_:genid8",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#minCardinality" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-    "@value" : "1"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://bimerr.iot.linkeddata.es/def/building#maxOccupants"
   } ]
 }, {
   "@id" : "_:genid9",
@@ -127,21 +192,11 @@
     "@value" : "0.0.3"
   } ]
 }, {
-  "@id" : "http://bimerr.iot.linkeddata.es/def/building#Accessory",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Accessory"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://bimerr.iot.linkeddata.es/def/building#VentilationSystem"
-  } ]
-}, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/building#AdhesiveAndFiller",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "Adhesive and filler"
+    "@value" : "Adhesive"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://bimerr.iot.linkeddata.es/def/building#Material"
@@ -197,8 +252,13 @@
     "@language" : "en",
     "@value" : "Apartment"
   } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@value" : "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcZone"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/bot#Zone"
+  }, {
+    "@id" : "_:genid1"
   } ]
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/building#BiomassBoiler",
@@ -208,7 +268,7 @@
     "@value" : "Biomass boiler"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://bimerr.iot.linkeddata.es/def/building#HeatingSystem"
+    "@id" : "http://bimerr.iot.linkeddata.es/def/building#Component"
   } ]
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/building#BrickMasonry",
@@ -231,10 +291,11 @@
     "@language" : "en",
     "@value" : "Building"
   } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@value" : "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcBuilding"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/bot#Building"
-  }, {
-    "@id" : "_:genid1"
   }, {
     "@id" : "_:genid2"
   }, {
@@ -243,6 +304,10 @@
     "@id" : "_:genid4"
   }, {
     "@id" : "_:genid5"
+  }, {
+    "@id" : "_:genid6"
+  }, {
+    "@id" : "_:genid7"
   } ]
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/building#BuildingBoard",
@@ -255,11 +320,11 @@
     "@id" : "http://bimerr.iot.linkeddata.es/def/building#Material"
   } ]
 }, {
-  "@id" : "http://bimerr.iot.linkeddata.es/def/building#CeilingAndRoofElement",
+  "@id" : "http://bimerr.iot.linkeddata.es/def/building#CeilingElement",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "Ceiling and roof element"
+    "@value" : "Ceiling element"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://bimerr.iot.linkeddata.es/def/building#Material"
@@ -305,11 +370,11 @@
     "@id" : "http://bimerr.iot.linkeddata.es/def/building#BuildingBoard"
   } ]
 }, {
-  "@id" : "http://bimerr.iot.linkeddata.es/def/building#CoatingsAndImpregnation",
+  "@id" : "http://bimerr.iot.linkeddata.es/def/building#CoatingImpregnation",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "Coatings and impregnation"
+    "@value" : "Coating impregnation"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://bimerr.iot.linkeddata.es/def/building#Material"
@@ -439,10 +504,13 @@
     "@language" : "en",
     "@value" : "Construction"
   } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@value" : "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#description_IfcMaterialLayerSet"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://bimerr.iot.linkeddata.es/def/building#Element"
   }, {
-    "@id" : "_:genid6"
+    "@id" : "_:genid8"
   } ]
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/building#CorkInsulatingMaterial",
@@ -471,6 +539,9 @@
     "@language" : "en",
     "@value" : "Door"
   } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@value" : "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcDoor"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://bimerr.iot.linkeddata.es/def/building#Component"
   } ]
@@ -495,10 +566,15 @@
     "@language" : "en",
     "@value" : "Element"
   } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@value" : "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcBuildingElement"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/bot#Element"
   }, {
-    "@id" : "_:genid7"
+    "@id" : "_:genid9"
+  }, {
+    "@id" : "_:genid10"
   } ]
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/building#ExternalPlaster",
@@ -509,6 +585,16 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://bimerr.iot.linkeddata.es/def/building#MasonryAndPlasterMortar"
+  } ]
+}, {
+  "@id" : "http://bimerr.iot.linkeddata.es/def/building#Facade",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Facade"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/building#Construction"
   } ]
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/building#FacadeCladding",
@@ -529,6 +615,16 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://bimerr.iot.linkeddata.es/def/building#BuildingBoard"
+  } ]
+}, {
+  "@id" : "http://bimerr.iot.linkeddata.es/def/building#Filler",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Filler"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/building#Material"
   } ]
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/building#FillingBrick",
@@ -561,6 +657,19 @@
     "@id" : "http://bimerr.iot.linkeddata.es/def/building#InsulatingMaterialsFromRenewableRawMaterial"
   } ]
 }, {
+  "@id" : "http://bimerr.iot.linkeddata.es/def/building#Floor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Floor"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@value" : "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcSlab"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/building#Construction"
+  } ]
+}, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/building#FloorCovering",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
@@ -588,7 +697,7 @@
     "@value" : "Fossil boiler"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://bimerr.iot.linkeddata.es/def/building#HeatingSystem"
+    "@id" : "http://bimerr.iot.linkeddata.es/def/building#Component"
   } ]
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/building#Gas",
@@ -609,16 +718,6 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://bimerr.iot.linkeddata.es/def/building#MineralInsulationMaterial"
-  } ]
-}, {
-  "@id" : "http://bimerr.iot.linkeddata.es/def/building#Glazing",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Glazing"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://bimerr.iot.linkeddata.es/def/building#WindowAndComponent"
   } ]
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/building#GrassFibreInsulationBoard",
@@ -668,7 +767,7 @@
     "@value" : "Heat pump"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://bimerr.iot.linkeddata.es/def/building#HeatingSystem"
+    "@id" : "http://bimerr.iot.linkeddata.es/def/building#Component"
   } ]
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/building#HeatingPipe",
@@ -678,7 +777,7 @@
     "@value" : "Heating pipe"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://bimerr.iot.linkeddata.es/def/building#HeatingSystem"
+    "@id" : "http://bimerr.iot.linkeddata.es/def/building#Component"
   } ]
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/building#HeatingSystem",
@@ -761,6 +860,9 @@
     "@language" : "en",
     "@value" : "Layer"
   } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@value" : "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#category_IfcMaterialLayer"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://bimerr.iot.linkeddata.es/def/building#Element"
   } ]
@@ -794,6 +896,12 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Material"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@value" : "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcMaterial"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/building#Element"
   } ]
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/building#MineralFoamInsulationBoard",
@@ -939,7 +1047,7 @@
   "@id" : "http://bimerr.iot.linkeddata.es/def/building#Radiator",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://bimerr.iot.linkeddata.es/def/building#HeatingSystem"
+    "@id" : "http://bimerr.iot.linkeddata.es/def/building#Component"
   } ]
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/building#ReedInsulationPanel",
@@ -972,11 +1080,34 @@
     "@id" : "http://bimerr.iot.linkeddata.es/def/building#MineralInsulationMaterial"
   } ]
 }, {
+  "@id" : "http://bimerr.iot.linkeddata.es/def/building#Roof",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Roof"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@value" : "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcRoof"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/building#Construction"
+  } ]
+}, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/building#RoofCovery",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Roof covery"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/building#Material"
+  } ]
+}, {
+  "@id" : "http://bimerr.iot.linkeddata.es/def/building#RoofElement",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Roof element"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://bimerr.iot.linkeddata.es/def/building#Material"
@@ -1082,12 +1213,17 @@
     "@language" : "en",
     "@value" : "Space"
   } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@value" : "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcSpace"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/bot#Space"
   }, {
-    "@id" : "_:genid8"
+    "@id" : "_:genid11"
   }, {
-    "@id" : "_:genid9"
+    "@id" : "_:genid12"
+  }, {
+    "@id" : "_:genid13"
   } ]
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/building#Storey",
@@ -1100,10 +1236,15 @@
     "@language" : "en",
     "@value" : "Storey"
   } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@value" : "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcBuildingStorey"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/bot#Storey"
   }, {
-    "@id" : "_:genid10"
+    "@id" : "_:genid14"
+  }, {
+    "@id" : "_:genid15"
   } ]
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/building#StrawInsulationMaterial",
@@ -1166,6 +1307,16 @@
     "@id" : "http://bimerr.iot.linkeddata.es/def/building#SealingSheetVapourBarrierFoil"
   } ]
 }, {
+  "@id" : "http://bimerr.iot.linkeddata.es/def/building#VentilationAccessory",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Ventilation accessory"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/building#Component"
+  } ]
+}, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/building#VentilationPipe",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
@@ -1173,7 +1324,7 @@
     "@value" : "Ventilation pipe"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://bimerr.iot.linkeddata.es/def/building#VentilationSystem"
+    "@id" : "http://bimerr.iot.linkeddata.es/def/building#Component"
   } ]
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/building#VentilationSystem",
@@ -1193,7 +1344,7 @@
     "@value" : "Ventilation unit"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://bimerr.iot.linkeddata.es/def/building#VentilationSystem"
+    "@id" : "http://bimerr.iot.linkeddata.es/def/building#Component"
   } ]
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/building#WallElement",
@@ -1216,11 +1367,14 @@
     "@id" : "http://bimerr.iot.linkeddata.es/def/building#Material"
   } ]
 }, {
-  "@id" : "http://bimerr.iot.linkeddata.es/def/building#WindowAndComponent",
+  "@id" : "http://bimerr.iot.linkeddata.es/def/building#Window",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "Window and components"
+    "@value" : "Window"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@value" : "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcWindow"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://bimerr.iot.linkeddata.es/def/building#Component"
@@ -1233,7 +1387,17 @@
     "@value" : "Window frame"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://bimerr.iot.linkeddata.es/def/building#WindowAndComponent"
+    "@id" : "http://bimerr.iot.linkeddata.es/def/building#Component"
+  } ]
+}, {
+  "@id" : "http://bimerr.iot.linkeddata.es/def/building#WindowGlazing",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Window glazing"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/building#Component"
   } ]
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/building#WoodAndWoodBasedPanel",
@@ -1357,6 +1521,13 @@
     "@id" : "https://w3id.org/bot#hasSubElement"
   } ]
 }, {
+  "@id" : "http://bimerr.iot.linkeddata.es/def/building#hasSimple3DModel",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has simple 3D model"
+  } ]
+}, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/building#hasSubComponent",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -1393,12 +1564,18 @@
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/building#includesMaterial",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/building#Construction"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "includes material"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://bimerr.iot.linkeddata.es/def/building#Material"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/bot#hasSubElement"
   } ]
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/building#maxOccupants",
