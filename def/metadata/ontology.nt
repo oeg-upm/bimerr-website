@@ -1,0 +1,105 @@
+<http://bimerr.iot.linkeddata.es/def/bimerr-metadata> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://bimerr.iot.linkeddata.es/def/bimerr-metadata> <http://purl.org/dc/elements/1.1/created> "2020-05-28"@en .
+<http://bimerr.iot.linkeddata.es/def/bimerr-metadata> <http://purl.org/dc/elements/1.1/creator> "María Poveda-Villalón" .
+<http://bimerr.iot.linkeddata.es/def/bimerr-metadata> <http://purl.org/dc/elements/1.1/creator> "Serge Chávez-Feria" .
+<http://bimerr.iot.linkeddata.es/def/bimerr-metadata> <http://purl.org/dc/elements/1.1/description> "Ontology module that includes the medata and annotation terms needed in the BIMERR project."@en .
+<http://bimerr.iot.linkeddata.es/def/bimerr-metadata> <http://purl.org/dc/elements/1.1/publisher> "http://www.oeg-upm.net/" .
+<http://bimerr.iot.linkeddata.es/def/bimerr-metadata> <http://purl.org/dc/elements/1.1/title> "BIMERR Metadata ontology"@en .
+<http://bimerr.iot.linkeddata.es/def/bimerr-metadata> <http://purl.org/dc/terms/license> "http://purl.org/NET/rdflicense/cc-by4.0" .
+<http://bimerr.iot.linkeddata.es/def/bimerr-metadata> <http://purl.org/vocab/vann/preferredNamespacePrefix> "bm"@en .
+<http://bimerr.iot.linkeddata.es/def/bimerr-metadata> <http://www.w3.org/2002/07/owl#versionInfo> "0.0.1"@en .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/dc/elements/1.1/created
+<http://purl.org/dc/elements/1.1/created> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/elements/1.1/creator
+<http://purl.org/dc/elements/1.1/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/elements/1.1/description
+<http://purl.org/dc/elements/1.1/description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/elements/1.1/publisher
+<http://purl.org/dc/elements/1.1/publisher> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/elements/1.1/title
+<http://purl.org/dc/elements/1.1/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/license
+<http://purl.org/dc/terms/license> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/vocab/vann/preferredNamespacePrefix
+<http://purl.org/vocab/vann/preferredNamespacePrefix> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2000/01/rdf-schema#comment
+<http://www.w3.org/2000/01/rdf-schema#comment> <http://www.w3.org/2000/01/rdf-schema#comment> "A brief overview that acts as an account of a concept’s contents."@en .
+# 
+# http://www.w3.org/2002/07/owl#versionInfo
+<http://www.w3.org/2002/07/owl#versionInfo> <http://www.w3.org/2000/01/rdf-schema#comment> "The version of the model when the concept was last modified."@en .
+# 
+# http://www.w3.org/2004/02/skos/core#altLabel
+<http://www.w3.org/2004/02/skos/core#altLabel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://www.w3.org/2004/02/skos/core#altLabel> <http://www.w3.org/2000/01/rdf-schema#comment> "Used to define synonyms or related terms."@en .
+# 
+# http://bimerr.iot.linkeddata.es/def/bimerr-metadata#codeList
+<http://bimerr.iot.linkeddata.es/def/bimerr-metadata#codeList> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://bimerr.iot.linkeddata.es/def/bimerr-metadata#codeList> <http://www.w3.org/2000/01/rdf-schema#comment> "A link to the code list that should be typically used for the data that refers to the specific concept."@en .
+# 
+# http://bimerr.iot.linkeddata.es/def/bimerr-metadata#codeType
+<http://bimerr.iot.linkeddata.es/def/bimerr-metadata#codeType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://bimerr.iot.linkeddata.es/def/bimerr-metadata#codeType> <http://www.w3.org/2000/01/rdf-schema#comment> "The type of code list that is applied for the specific concept."@en .
+# 
+# http://bimerr.iot.linkeddata.es/def/bimerr-metadata#deprecated
+<http://bimerr.iot.linkeddata.es/def/bimerr-metadata#deprecated> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://bimerr.iot.linkeddata.es/def/bimerr-metadata#deprecated> <http://www.w3.org/2000/01/rdf-schema#comment> "The date when the specific concept became obsolete in the model."@en .
+# 
+# http://bimerr.iot.linkeddata.es/def/bimerr-metadata#isDefinedByStandard
+<http://bimerr.iot.linkeddata.es/def/bimerr-metadata#isDefinedByStandard> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://bimerr.iot.linkeddata.es/def/bimerr-metadata#isDefinedByStandard> <http://www.w3.org/2000/01/rdf-schema#comment> "A list of standards in which the specific concept is modeled, along with their complementary information, i.e. the exact concept used in such a standard, its type (e.g. element, attribute) and its use (required/optional) that applies for attributes."@en .
+# 
+# http://bimerr.iot.linkeddata.es/def/bimerr-metadata#measurementType
+<http://bimerr.iot.linkeddata.es/def/bimerr-metadata#measurementType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://bimerr.iot.linkeddata.es/def/bimerr-metadata#measurementType> <http://www.w3.org/2000/01/rdf-schema#comment> "An indication of the measurement type that is applicable to a concept, e.g. referring to distance, temperature, etc."@en .
+# 
+# http://bimerr.iot.linkeddata.es/def/bimerr-metadata#measurementUnit
+<http://bimerr.iot.linkeddata.es/def/bimerr-metadata#measurementUnit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://bimerr.iot.linkeddata.es/def/bimerr-metadata#measurementUnit> <http://www.w3.org/2000/01/rdf-schema#comment> "The baseline measurement unit for the specific concept and measurement type."@en .
+# 
+# http://bimerr.iot.linkeddata.es/def/bimerr-metadata#ordered
+<http://bimerr.iot.linkeddata.es/def/bimerr-metadata#ordered> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://bimerr.iot.linkeddata.es/def/bimerr-metadata#ordered> <http://www.w3.org/2000/01/rdf-schema#comment> "An indication of whether ordering is needed for multiple appearances of the same concept."@en .
+# 
+# http://bimerr.iot.linkeddata.es/def/bimerr-metadata#sensitive
+<http://bimerr.iot.linkeddata.es/def/bimerr-metadata#sensitive> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://bimerr.iot.linkeddata.es/def/bimerr-metadata#sensitive> <http://www.w3.org/2000/01/rdf-schema#comment> "An indication whether the specific concept models personal or sensitive data."@en .
+# 
+# http://bimerr.iot.linkeddata.es/def/bimerr-metadata#timeZone
+<http://bimerr.iot.linkeddata.es/def/bimerr-metadata#timeZone> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://bimerr.iot.linkeddata.es/def/bimerr-metadata#timeZone> <http://www.w3.org/2000/01/rdf-schema#comment> "The timezone to which the data refer by default."@en .
+# 
+# http://bimerr.iot.linkeddata.es/def/bimerr-metadata#transformation
+<http://bimerr.iot.linkeddata.es/def/bimerr-metadata#transformation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://bimerr.iot.linkeddata.es/def/bimerr-metadata#transformation> <http://www.w3.org/2000/01/rdf-schema#comment> "Information for the transformation rules that are related to a specific applicable standard. It practically contains the function that is required for the transformation and the parameters / concepts that are involved."@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Annotations
+# #
+# #################################################################
+# 
+# 
+<http://purl.org/dc/elements/1.1/created> <http://www.w3.org/2000/01/rdf-schema#comment> "The date when the specific concept was added in the model."@en .
+# 
+<http://www.w3.org/2000/01/rdf-schema#label> <http://www.w3.org/2000/01/rdf-schema#comment> "A set of related terms (e.g. synonyms) that can be alternatively used to represent the concept."@en .
+# 
+# 
+# Generated by the OWL API (version 5.1.11) https://github.com/owlcs/owlapi/

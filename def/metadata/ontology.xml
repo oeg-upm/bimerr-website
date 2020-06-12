@@ -1,0 +1,230 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://bimerr.iot.linkeddata.es/def/bimerr-metadata#"
+     xml:base="http://bimerr.iot.linkeddata.es/def/bimerr-metadata"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:bimerr-metadata="http://bimerr.iot.linkeddata.es/def/bimerr-metadata#">
+    <owl:Ontology rdf:about="http://bimerr.iot.linkeddata.es/def/bimerr-metadata">
+        <dc:created xml:lang="en">2020-05-28</dc:created>
+        <dc:creator>María Poveda-Villalón</dc:creator>
+        <dc:creator>Serge Chávez-Feria</dc:creator>
+        <dc:description xml:lang="en">Ontology module that includes the medata and annotation terms needed in the BIMERR project.</dc:description>
+        <dc:publisher>http://www.oeg-upm.net/</dc:publisher>
+        <dc:title xml:lang="en">BIMERR Metadata ontology</dc:title>
+        <terms:license>http://purl.org/NET/rdflicense/cc-by4.0</terms:license>
+        <vann:preferredNamespacePrefix xml:lang="en">bm</vann:preferredNamespacePrefix>
+        <owl:versionInfo xml:lang="en">0.0.1</owl:versionInfo>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/created -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/created"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/creator -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/description -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/description"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/publisher -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/publisher"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/title -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/title"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/license -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license"/>
+    
+
+
+    <!-- http://purl.org/vocab/vann/preferredNamespacePrefix -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespacePrefix"/>
+    
+
+
+    <!-- http://www.w3.org/2000/01/rdf-schema#comment -->
+
+
+    <rdf:Description rdf:about="http://www.w3.org/2000/01/rdf-schema#comment">
+        <rdfs:comment xml:lang="en">A brief overview that acts as an account of a concept’s contents.</rdfs:comment>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#versionInfo -->
+
+
+    <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#versionInfo">
+        <rdfs:comment xml:lang="en">The version of the model when the concept was last modified.</rdfs:comment>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#altLabel -->
+
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#altLabel">
+        <rdfs:comment xml:lang="en">Used to define synonyms or related terms.</rdfs:comment>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://bimerr.iot.linkeddata.es/def/bimerr-metadata#codeList -->
+
+
+    <owl:AnnotationProperty rdf:about="http://bimerr.iot.linkeddata.es/def/bimerr-metadata#codeList">
+        <rdfs:comment xml:lang="en">A link to the code list that should be typically used for the data that refers to the specific concept.</rdfs:comment>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://bimerr.iot.linkeddata.es/def/bimerr-metadata#codeType -->
+
+
+    <owl:AnnotationProperty rdf:about="http://bimerr.iot.linkeddata.es/def/bimerr-metadata#codeType">
+        <rdfs:comment xml:lang="en">The type of code list that is applied for the specific concept.</rdfs:comment>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://bimerr.iot.linkeddata.es/def/bimerr-metadata#deprecated -->
+
+
+    <owl:AnnotationProperty rdf:about="http://bimerr.iot.linkeddata.es/def/bimerr-metadata#deprecated">
+        <rdfs:comment xml:lang="en">The date when the specific concept became obsolete in the model.</rdfs:comment>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://bimerr.iot.linkeddata.es/def/bimerr-metadata#isDefinedByStandard -->
+
+
+    <owl:AnnotationProperty rdf:about="http://bimerr.iot.linkeddata.es/def/bimerr-metadata#isDefinedByStandard">
+        <rdfs:comment xml:lang="en">A list of standards in which the specific concept is modeled, along with their complementary information, i.e. the exact concept used in such a standard, its type (e.g. element, attribute) and its use (required/optional) that applies for attributes.</rdfs:comment>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://bimerr.iot.linkeddata.es/def/bimerr-metadata#measurementType -->
+
+
+    <owl:AnnotationProperty rdf:about="http://bimerr.iot.linkeddata.es/def/bimerr-metadata#measurementType">
+        <rdfs:comment xml:lang="en">An indication of the measurement type that is applicable to a concept, e.g. referring to distance, temperature, etc.</rdfs:comment>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://bimerr.iot.linkeddata.es/def/bimerr-metadata#measurementUnit -->
+
+
+    <owl:AnnotationProperty rdf:about="http://bimerr.iot.linkeddata.es/def/bimerr-metadata#measurementUnit">
+        <rdfs:comment xml:lang="en">The baseline measurement unit for the specific concept and measurement type.</rdfs:comment>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://bimerr.iot.linkeddata.es/def/bimerr-metadata#ordered -->
+
+
+    <owl:AnnotationProperty rdf:about="http://bimerr.iot.linkeddata.es/def/bimerr-metadata#ordered">
+        <rdfs:comment xml:lang="en">An indication of whether ordering is needed for multiple appearances of the same concept.</rdfs:comment>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://bimerr.iot.linkeddata.es/def/bimerr-metadata#sensitive -->
+
+
+    <owl:AnnotationProperty rdf:about="http://bimerr.iot.linkeddata.es/def/bimerr-metadata#sensitive">
+        <rdfs:comment xml:lang="en">An indication whether the specific concept models personal or sensitive data.</rdfs:comment>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://bimerr.iot.linkeddata.es/def/bimerr-metadata#timeZone -->
+
+
+    <owl:AnnotationProperty rdf:about="http://bimerr.iot.linkeddata.es/def/bimerr-metadata#timeZone">
+        <rdfs:comment xml:lang="en">The timezone to which the data refer by default.</rdfs:comment>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://bimerr.iot.linkeddata.es/def/bimerr-metadata#transformation -->
+
+
+    <owl:AnnotationProperty rdf:about="http://bimerr.iot.linkeddata.es/def/bimerr-metadata#transformation">
+        <rdfs:comment xml:lang="en">Information for the transformation rules that are related to a specific applicable standard. It practically contains the function that is required for the transformation and the parameters / concepts that are involved.</rdfs:comment>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/created">
+        <rdfs:comment xml:lang="en">The date when the specific concept was added in the model.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.w3.org/2000/01/rdf-schema#label">
+        <rdfs:comment xml:lang="en">A set of related terms (e.g. synonyms) that can be alternatively used to represent the concept.</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#versionInfo">
+        <rdfs:comment xml:lang="en">The version of the model when the concept was last modified.</rdfs:comment>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.1.11) https://github.com/owlcs/owlapi/ -->
+
+
