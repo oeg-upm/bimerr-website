@@ -1,18 +1,276 @@
 [ {
   "@id" : "_:genid1",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "_:genid2"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#hasConstruction"
+  } ]
+}, {
+  "@id" : "_:genid10",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#Material"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#hasMaterial"
+  } ]
+}, {
+  "@id" : "_:genid11",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "https://saref.etsi.org/core/Measurement"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#hasMeasurement"
+  } ]
+}, {
+  "@id" : "_:genid12",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "https://saref.etsi.org/core/Property"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://saref.etsi.org/core/hasProperty"
+  } ]
+}, {
+  "@id" : "_:genid13",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "https://saref.etsi.org/core/Measurement"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#hasMeasurement"
+  } ]
+}, {
+  "@id" : "_:genid14",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "https://saref.etsi.org/core/Property"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://saref.etsi.org/core/hasProperty"
+  } ]
+}, {
+  "@id" : "_:genid15",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#minQualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onClass" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#MaterialConstituent"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#hasMaterialConstituent"
+  } ]
+}, {
+  "@id" : "_:genid16",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#Material"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#hasMaterial"
+  } ]
+}, {
+  "@id" : "_:genid17",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "https://saref.etsi.org/core/Measurement"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#hasMeasurement"
+  } ]
+}, {
+  "@id" : "_:genid18",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "https://saref.etsi.org/core/Property"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://saref.etsi.org/core/hasProperty"
+  } ]
+}, {
+  "@id" : "_:genid19",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "https://saref.etsi.org/core/Measurement"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#hasMeasurement"
+  } ]
+}, {
+  "@id" : "_:genid2",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#MaterialConstituentSet"
+    }, {
+      "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#MaterialLayerSet"
+    }, {
+      "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#MaterialProfileSet"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid20",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "https://saref.etsi.org/core/Property"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://saref.etsi.org/core/hasProperty"
+  } ]
+}, {
+  "@id" : "_:genid21",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#minQualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onClass" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#MaterialLayer"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#hasMaterialLayer"
+  } ]
+}, {
+  "@id" : "_:genid22",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#Material"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#hasMaterial"
+  } ]
+}, {
+  "@id" : "_:genid23",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "https://saref.etsi.org/core/Measurement"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#hasMeasurement"
+  } ]
+}, {
+  "@id" : "_:genid24",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "https://saref.etsi.org/core/Property"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://saref.etsi.org/core/hasProperty"
+  } ]
+}, {
+  "@id" : "_:genid25",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "https://saref.etsi.org/core/Measurement"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#hasMeasurement"
+  } ]
+}, {
+  "@id" : "_:genid26",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "https://saref.etsi.org/core/Property"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://saref.etsi.org/core/hasProperty"
+  } ]
+}, {
+  "@id" : "_:genid27",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#minQualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onClass" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#MaterialProfile"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#hasMaterialProfile"
+  } ]
+}, {
+  "@id" : "_:genid28",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#MaterialDatabase"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#isPropertyFromDatabase"
+  } ]
+}, {
+  "@id" : "_:genid29",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "https://saref.etsi.org/core/UnitOfMeasure"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit"
+  } ]
+}, {
+  "@id" : "_:genid30",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#MaterialDatabase"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#isPropertyValueFromDatabase"
+  } ]
+}, {
+  "@id" : "_:genid31",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "https://saref.etsi.org/core/Measurement"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#hasMeasurement"
+  } ]
+}, {
+  "@id" : "_:genid32",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "https://saref.etsi.org/core/Property"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://saref.etsi.org/core/hasProperty"
+  } ]
+}, {
+  "@id" : "_:genid33",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "https://saref.etsi.org/core/UnitOfMeasure"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#isMeasuredIn"
+  } ]
+}, {
+  "@id" : "_:genid34",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "https://saref.etsi.org/core/Property"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://saref.etsi.org/core/relatesToProperty"
+  } ]
+}, {
+  "@id" : "_:genid35",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onClass" : [ {
     "@id" : "https://saref.etsi.org/core/UnitOfMeasure"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://saref.etsi.org/core/isMeasuredIn"
+    "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#isMeasuredIn"
   } ],
   "http://www.w3.org/2002/07/owl#qualifiedCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
     "@value" : "1"
   } ]
 }, {
-  "@id" : "_:genid2",
+  "@id" : "_:genid36",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#cardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
@@ -22,72 +280,244 @@
     "@id" : "https://saref.etsi.org/core/hasValue"
   } ]
 }, {
-  "@id" : "_:genid3",
+  "@id" : "_:genid37",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "http://www.w3.org/ns/ssn/Property"
+    "@id" : "https://saref.etsi.org/core/Measurement"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://www.w3.org/ns/ssn/hasProperty"
-  } ]
-}, {
-  "@id" : "_:genid4",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#minQualifiedCardinality" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-    "@value" : "1"
-  } ],
-  "http://www.w3.org/2002/07/owl#onClass" : [ {
-    "@id" : "http://www.w3.org/ns/ssn/Property"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://www.w3.org/ns/ssn/hasProperty"
-  } ]
-}, {
-  "@id" : "_:genid5",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "http://www.w3.org/ns/sosa/Result"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://www.w3.org/ns/sosa/hasResult"
+    "@id" : "https://saref.etsi.org/core/relatesToMeasurement"
   } ]
 }, {
   "@id" : "_:genid6",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#minQualifiedCardinality" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-    "@value" : "1"
-  } ],
-  "http://www.w3.org/2002/07/owl#onClass" : [ {
-    "@id" : "http://www.w3.org/ns/sosa/Result"
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "https://saref.etsi.org/core/Measurement"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://www.w3.org/ns/sosa/hasResult"
+    "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#hasMeasurement"
   } ]
 }, {
-  "@id" : "http://bimerr.iot.linkeddata.es/def/building#Component",
+  "@id" : "_:genid7",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "https://saref.etsi.org/core/Property"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://saref.etsi.org/core/hasProperty"
+  } ]
+}, {
+  "@id" : "_:genid8",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "https://saref.etsi.org/core/Measurement"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#hasMeasurement"
+  } ]
+}, {
+  "@id" : "_:genid9",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "https://saref.etsi.org/core/Property"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://saref.etsi.org/core/hasProperty"
+  } ]
+}, {
+  "@id" : "http://bimerr.iot.linkeddata.es/def/building#BiomassBoiler",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Biomass Boiler"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/def/saref4bldg#Boiler"
+  } ]
+}, {
+  "@id" : "http://bimerr.iot.linkeddata.es/def/building#BuildingElement",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The building element comprises all elements that are primarily part of the construction of a building, i.e., its structural and space separating system. Building elements are all physically existent and tangible things."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Building Element"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@value" : "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcBuildingElement"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://bimerr.iot.linkeddata.es/def/building#Element"
+  } ]
+}, {
+  "@id" : "http://bimerr.iot.linkeddata.es/def/building#Door",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The door is a building element that is predominately used to provide controlled access for people and goods. It includes constructions with hinged, pivoted, sliding, and additionally revolving and folding operations. A door consists of a lining and one or several panels."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Door"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@value" : "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcDoor"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/building#BuildingElement"
+  } ]
+}, {
+  "@id" : "http://bimerr.iot.linkeddata.es/def/building#DuctSegment",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A duct segment is used to typically join two sections of duct network."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Duct Segment"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@value" : "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcDuctSegment"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/building#FlowSegment"
   } ]
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/building#Element",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "An element is a generalization of all components that make up an AEC product."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Element"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@language" : "en",
+    "@value" : "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcElement"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.w3.org/ns/sosa/FeatureOfInterest"
+    "@id" : "_:genid1"
+  }, {
+    "@id" : "_:genid6"
+  }, {
+    "@id" : "_:genid7"
   } ]
 }, {
-  "@id" : "http://bimerr.iot.linkeddata.es/def/building#Layer",
+  "@id" : "http://bimerr.iot.linkeddata.es/def/building#FlowSegment",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Defines the occurrence of a segment of a flow distribution system."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Flow Segment"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@value" : "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcFlowSegment"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://bimerr.iot.linkeddata.es/def/building#Element"
+    "@id" : "https://w3id.org/def/saref4bldg#DistributionFlowDevice"
   } ]
 }, {
-  "@id" : "http://bimerr.iot.linkeddata.es/def/building#Material",
+  "@id" : "http://bimerr.iot.linkeddata.es/def/building#FossilBoiler",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Fossil Boiler"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://bimerr.iot.linkeddata.es/def/building#Element"
+    "@id" : "https://w3id.org/def/saref4bldg#Boiler"
+  } ]
+}, {
+  "@id" : "http://bimerr.iot.linkeddata.es/def/building#PipeSegment",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A pipe segment is used to typically join two sections of a piping network."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Pipe Segment"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@value" : "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcPipeSegment"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/building#FlowSegment"
+  } ]
+}, {
+  "@id" : "http://bimerr.iot.linkeddata.es/def/building#Roof",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A roof is the covering of the top part of a building, it protects the building against the effects of wheather."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Roof"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@value" : "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcRoof"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/building#BuildingElement"
+  } ]
+}, {
+  "@id" : "http://bimerr.iot.linkeddata.es/def/building#Slab",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A slab is a component of the construction that normally encloses a space vertically. The slab may provide the lower support (floor) or upper construction (roof slab) in any space in a building."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Slab"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@value" : "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcSlab"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/building#BuildingElement"
+  } ]
+}, {
+  "@id" : "http://bimerr.iot.linkeddata.es/def/building#Wall",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The wall represents a vertical construction that bounds or subdivides spaces. Wall are usually vertical, or nearly vertical, planar elements, often designed to bear structural loads. A wall is however not required to be load bearing."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Wall"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@value" : "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcWall"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/building#BuildingElement"
+  } ]
+}, {
+  "@id" : "http://bimerr.iot.linkeddata.es/def/building#Window",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The window is a building element that is predominately used to provide natural light and fresh air. It includes vertical opening but also horizontal opening such as skylights or light domes. It includes constructions with swinging, pivoting, sliding, or revolving panels and fixed panels. A window consists of a lining and one or several panels."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Window"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@value" : "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcWindow"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/building#BuildingElement"
   } ]
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#",
@@ -112,158 +542,660 @@
     "@value" : "props"
   } ],
   "http://www.w3.org/2002/07/owl#versionInfo" : [ {
-    "@value" : "0.0.3"
+    "@value" : "0.0.5"
+  } ]
+}, {
+  "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#ASHRAE",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://bimerr.iot.linkeddata.es/def/material-properties#MaterialDatabase" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The ASHRAE 2005 Handbook of Fundamentals, Chapter 25 contains thermal property data (e.g., conductivity, density, specific heat) of selected building materials. The data is provided for reference materials and not concrete building products. The materials dataset is also provided as part of the EnergyPlus software."
   } ]
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#AbioticDepletionPotentialForFossilResources",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://bimerr.iot.linkeddata.es/def/material-properties#MaterialProperty" ],
+  "http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#MJ"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Abiotic depletion potential for fossil resources (ADPF)"
   } ]
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#AbioticDepletionPotentialForNonFossilResources",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://bimerr.iot.linkeddata.es/def/material-properties#MaterialProperty" ],
+  "http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#KG-SB-EQ"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Abiotic depletion potential for non fossil resources (ADPE)"
   } ]
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#AcidificationPotentialOfSoilAndWater",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://bimerr.iot.linkeddata.es/def/material-properties#MaterialProperty" ],
+  "http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#KG-SO2-EQ"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Acidification potential of soil and water (AP)"
   } ]
 }, {
+  "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#AdhesiveAndFiller",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Adhesive and Filler"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#Material"
+  } ]
+}, {
+  "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#AdhesiveBridgesAndPreSplash",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Adhesive bridges and pre-splash"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#MasonryAndPlasterMortar"
+  } ]
+}, {
+  "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#AdobeMasonryUnfired",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Adobe masonry (unfired)"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#Masonry"
+  } ]
+}, {
+  "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#AeratedConcreteMasonry",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Aerated concrete masonry"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#Masonry"
+  } ]
+}, {
+  "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#Air",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Air"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#Material"
+  } ]
+}, {
+  "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#BAUBOOK",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://bimerr.iot.linkeddata.es/def/material-properties#MaterialDatabase" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A database of building material and their ecological and structural-physical aspects. Currently 3616 building products from 359 vendors are described in the database. The baubook platform also contains a catalog with around 400 reference values which includes different ecological and structural-physical indicators. These values deliver the primary indicators and orientation values for energy and eco certificates.  They are especially helpful for calculating energy certificates in early planning phase where the concrete products are not decided yet."
+  } ]
+}, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#BacksideInfraredHemisphericalEmissivity",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://bimerr.iot.linkeddata.es/def/material-properties#MaterialProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Backside infrared hemispherical emissivity (BSIHE)"
   } ]
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#BacksideSolarReflectanceAtNormalIncidence",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://bimerr.iot.linkeddata.es/def/material-properties#MaterialProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Backside solar reflectance at normal incidence (BSSRNI)"
   } ]
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#BacksideVisibleReflectanceAtNormalIncidence",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://bimerr.iot.linkeddata.es/def/material-properties#MaterialProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Backside visible reflectance at normal incidence (BSVRNI)"
   } ]
 }, {
-  "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#ComponentProperty",
+  "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#BrickMasonry",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "Properties related to building components."
-  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "Component property"
+    "@value" : "Brick masonry"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.w3.org/ns/sosa/ObservableProperty"
+    "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#Masonry"
   } ]
 }, {
-  "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#ComponentsForReusec",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#BuildingBoard",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "Components for re-usec (CRU)"
+    "@value" : "Building board"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#Material"
+  } ]
+}, {
+  "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#CeilingAndRoofElement",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Ceiling and roof element"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#Material"
+  } ]
+}, {
+  "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#CelluloseFibreInsulationMaterial",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Cellulose fibre insulation material"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#InsulatingMaterialsFromRenewableRawMaterial"
+  } ]
+}, {
+  "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#CementBoundEPSBoard",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Cement-bound EPS board"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#SyntheticInsulatingMaterial"
+  } ]
+}, {
+  "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#CementBoundLightweightConcreteSlab",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Cement-bound lightweight concrete slab"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#BuildingBoard"
+  } ]
+}, {
+  "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#ClayBuildingBoard",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Clay building board"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#BuildingBoard"
+  } ]
+}, {
+  "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#CoatingAndImpregnation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Coating and impregnation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#Material"
+  } ]
+}, {
+  "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#CoconutFibreInsulatingMaterial",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Coconut fibre insulating material"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#InsulatingMaterialsFromRenewableRawMaterial"
+  } ]
+}, {
+  "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#ComponentsForReuse",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://bimerr.iot.linkeddata.es/def/material-properties#MaterialProperty" ],
+  "http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#KG"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Components for re-use (CRU)"
+  } ]
+}, {
+  "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#Concrete",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Concrete"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#Material"
+  } ]
+}, {
+  "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#ConcreteInWUQuality",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Concrete in WU quality"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#Concrete"
+  } ]
+}, {
+  "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#ConcreteMasonry",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Concrete masonry"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#Masonry"
+  } ]
+}, {
+  "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#ConcreteWithEPSAggregate",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Concrete with EPS aggregate"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#Concrete"
+  } ]
+}, {
+  "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#ConcreteWithExpandedClayOrBrickChippingsAggregate",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Concrete with expanded clay or brick chippings aggregate"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#Concrete"
+  } ]
+}, {
+  "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#ConcreteWithExpandedShaleAggregate",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Concrete with expanded shale aggregate"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#Concrete"
+  } ]
+}, {
+  "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#ConcreteWithPumiceAggregate",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Concrete with pumice aggregate"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#Concrete"
+  } ]
+}, {
+  "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#ConcreteWithSlagPumiceAggregate",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Concrete with slag pumice aggregate"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#Concrete"
+  } ]
+}, {
+  "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#ConcreteWithSulphateSlagCement",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Concrete with sulphate slag cement"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#Concrete"
   } ]
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#Conductivity",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://bimerr.iot.linkeddata.es/def/material-properties#MaterialProperty" ],
+  "http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#W-PER-M-K"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Conductivity"
+  } ]
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#ConversionFactorTo1Kg",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://bimerr.iot.linkeddata.es/def/material-properties#MaterialProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Conversion factor to 1 Kg"
+  } ]
+}, {
+  "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#CorkInsulatingMaterial",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Cork insulating material"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#InsulatingMaterialsFromRenewableRawMaterial"
+  } ]
+}, {
+  "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#CottonInsulationMaterial",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Cotton insulation material"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#InsulatingMaterialsFromRenewableRawMaterial"
+  } ]
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#Density",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://bimerr.iot.linkeddata.es/def/material-properties#MaterialProperty" ],
+  "http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#KG-PER-M3"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Density"
+  } ]
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#DepletionPotentialOfTheStratosphericLayer",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://bimerr.iot.linkeddata.es/def/material-properties#MaterialProperty" ],
+  "http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#KG-CFC-11"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Depletion potential of the stratospheric layer (ODP)"
   } ]
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#DoorHeatTransmissionCoefficient",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://bimerr.iot.linkeddata.es/def/material-properties#MaterialProperty" ],
+  "http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#W-PER-M2-K"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Door heat transmission coefficient"
+  } ]
+}, {
+  "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#EPSInsulatingMaterial",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "EPS insulating material"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#SyntheticInsulatingMaterial"
+  } ]
+}, {
+  "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#ElasticFloorCovering",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Elastic floor covering."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#FloorCovering"
+  } ]
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#EutrophicationPotential",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://bimerr.iot.linkeddata.es/def/material-properties#MaterialProperty" ],
+  "http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#KG-PO34"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Eutrophication Potential (EP)"
   } ]
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#ExportedElectricalEnergy",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://bimerr.iot.linkeddata.es/def/material-properties#MaterialProperty" ],
+  "http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#MJ"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Exported electrical energy (EEE)"
   } ]
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#ExportedThermalEnergy",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://bimerr.iot.linkeddata.es/def/material-properties#MaterialProperty" ],
+  "http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#MJ"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Exported thermal energy (EET)"
   } ]
 }, {
+  "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#ExternalPlaster",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "External plaster"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#MasonryAndPlasterMortar"
+  } ]
+}, {
+  "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#FacadeCladding",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Facade cladding"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#Material"
+  } ]
+}, {
+  "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#FibreCementBoard",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Fibre cement board"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#BuildingBoard"
+  } ]
+}, {
+  "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#FillingBrick",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Filling brick"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#BrickMasonry"
+  } ]
+}, {
+  "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#FilmProtectionMaterial",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Film protection material"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#SealingSheetVapourBarrierFoil"
+  } ]
+}, {
+  "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#FlaxInsulatingMaterial",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Flax insulating material"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#InsulatingMaterialsFromRenewableRawMaterial"
+  } ]
+}, {
+  "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#FloorCovering",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Floor covering"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#Material"
+  } ]
+}, {
+  "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#FoamGlassInsulationBoard",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Foam glass insulation board"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#MineralInsulationMaterial"
+  } ]
+}, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#FormationPotentialToTroposphericOzone",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://bimerr.iot.linkeddata.es/def/material-properties#MaterialProperty" ],
+  "http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#KG-C2H4"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Formation potential to tropospheric ozone (POCP)"
   } ]
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#FrontTransmittanceAtNormalIncidence",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://bimerr.iot.linkeddata.es/def/material-properties#MaterialProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Front transmittance at normal incidence (FSSRNI)"
   } ]
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#FrontsideInfraredHemisphericalEmissivity",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://bimerr.iot.linkeddata.es/def/material-properties#MaterialProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Frontside infrared hemispherical emissivity (FSIHE)"
   } ]
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#FrontsideVisibleReflectanceAtNormalIncidence",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://bimerr.iot.linkeddata.es/def/material-properties#MaterialProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Frontside visible reflectance at normal incidence (FSVRNI)"
   } ]
 }, {
+  "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#Gas",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Gas"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#Material"
+  } ]
+}, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#GlassEnergyTransmissionFactor",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://bimerr.iot.linkeddata.es/def/material-properties#MaterialProperty" ],
+  "http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#PERCENT"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Glass energy tranmission factor"
+  } ]
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#GlassHeatTransmissionCoefficient",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ]
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://bimerr.iot.linkeddata.es/def/material-properties#MaterialProperty" ],
+  "http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#W-PER-M2-K"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Glass heat transmission coefficient"
+  } ]
+}, {
+  "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#GlassWoolInsulatingMaterial",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Glass wool insulating material"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#MineralInsulationMaterial"
+  } ]
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#GlobalWarmingPotential",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://bimerr.iot.linkeddata.es/def/material-properties#MaterialProperty" ],
+  "http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#KG-CO2-EQ"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Global warming potential (GWP)"
   } ]
 }, {
+  "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#GrassFibreInsulationBoard",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Grass fibre insulation board"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#InsulatingMaterialsFromRenewableRawMaterial"
+  } ]
+}, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#HazardousWasteDisposed",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://bimerr.iot.linkeddata.es/def/material-properties#MaterialProperty" ],
+  "http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#KG"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Hazardous waste disposed (HWD)"
+  } ]
+}, {
+  "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#HeatFlowDownwards",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Heat flow downwards"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#Air"
+  } ]
+}, {
+  "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#HeatFlowHorizontal",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Heat flow horizontal"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#Air"
+  } ]
+}, {
+  "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#HeatFlowUpwards",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Heat flow upwards"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#Air"
+  } ]
+}, {
+  "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#HempInsulatingMaterial",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Hemp insulating material"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#InsulatingMaterialsFromRenewableRawMaterial"
+  } ]
+}, {
+  "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#HighPerforatedBrickMasonry",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "High perforated brick masonry"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#BrickMasonry"
   } ]
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#InfraredTransmittanceAtNormalIncidence_(ITNI)",
@@ -273,51 +1205,406 @@
     "@value" : "Infrared transmittance at normal incidence (ITNI)"
   } ]
 }, {
-  "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#LayerPosition",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://bimerr.iot.linkeddata.es/def/material-properties#LayerProperty" ]
-}, {
-  "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#LayerProperty",
+  "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#InsulatingMaterialsFromRenewableRawMaterial",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "Properties related to a layer element."
+    "@value" : "Insulating materials from renewable raw material"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#InsulationMaterial"
+  } ]
+}, {
+  "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#InsulationMaterial",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Insulation material"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#Material"
+  } ]
+}, {
+  "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#InteriorPlaster",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Interior plaster"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#MasonryAndPlasterMortar"
+  } ]
+}, {
+  "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#J-PER-KG-K",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://saref.etsi.org/core/UnitOfMeasure" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Joule per Kilogram Kelvin"
+  } ]
+}, {
+  "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#KG",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://saref.etsi.org/core/UnitOfMeasure" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Kilogram"
+  } ]
+}, {
+  "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#KG-C2H4",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://saref.etsi.org/core/UnitOfMeasure" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Kilograms of Ethylene"
+  } ]
+}, {
+  "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#KG-CFC-11",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://saref.etsi.org/core/UnitOfMeasure" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Kilograms of Chlorofluorocarbon 11"
+  } ]
+}, {
+  "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#KG-CO2-EQ",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://saref.etsi.org/core/UnitOfMeasure" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Kilograms of equivalent Dioxide Carbon"
+  } ]
+}, {
+  "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#KG-PER-M",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://saref.etsi.org/core/UnitOfMeasure" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Kilograms per Meter"
+  } ]
+}, {
+  "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#KG-PER-M2",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://saref.etsi.org/core/UnitOfMeasure" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Kilograms per Square Meter"
+  } ]
+}, {
+  "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#KG-PER-M3",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://saref.etsi.org/core/UnitOfMeasure" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Kilograms per Cubic Meter"
+  } ]
+}, {
+  "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#KG-PO34",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://saref.etsi.org/core/UnitOfMeasure" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Kilograms of Phosphate"
+  } ]
+}, {
+  "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#KG-SB-EQ",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://saref.etsi.org/core/UnitOfMeasure" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "kilograms of Antimony"
+  } ]
+}, {
+  "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#KG-SO2-EQ",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://saref.etsi.org/core/UnitOfMeasure" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Kilograms of Sulfur dioxide"
+  } ]
+}, {
+  "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#LayerPosition",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://bimerr.iot.linkeddata.es/def/material-properties#MaterialProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Layer position"
+  } ]
+}, {
+  "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#LengthWeight",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://bimerr.iot.linkeddata.es/def/material-properties#MaterialProperty" ],
+  "http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#KG-PER-M"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "Layer property"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.w3.org/ns/sosa/ObservableProperty"
+    "@value" : "Length weight"
   } ]
 }, {
-  "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#LayerThickness",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://bimerr.iot.linkeddata.es/def/material-properties#LayerProperty" ]
-}, {
-  "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#LengthWeight",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://bimerr.iot.linkeddata.es/def/material-properties#MaterialProperty" ]
-}, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#Lifetime",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://bimerr.iot.linkeddata.es/def/material-properties#MaterialProperty" ]
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://bimerr.iot.linkeddata.es/def/material-properties#MaterialProperty" ],
+  "http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#YEARS"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Lifetime"
+  } ]
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#LinearThermalBridgeCoefficient",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://bimerr.iot.linkeddata.es/def/material-properties#MaterialProperty" ]
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://bimerr.iot.linkeddata.es/def/material-properties#MaterialProperty" ],
+  "http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#W-PER-M-K"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Linear thermal bridge coefficient"
+  } ]
+}, {
+  "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#M",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://saref.etsi.org/core/UnitOfMeasure" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Meter"
+  } ]
+}, {
+  "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#M2",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://saref.etsi.org/core/UnitOfMeasure" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Square meter"
+  } ]
+}, {
+  "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#M2-K-PER-W",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://saref.etsi.org/core/UnitOfMeasure" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Square Meter Kelvin per Watt"
+  } ]
+}, {
+  "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#M3",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://saref.etsi.org/core/UnitOfMeasure" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Cubic meter"
+  } ]
+}, {
+  "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#MJ",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://saref.etsi.org/core/UnitOfMeasure" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Mega Joule"
+  } ]
+}, {
+  "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#Masonry",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Masonry"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#Material"
+  } ]
+}, {
+  "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#MasonryAndPlasterMortar",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Masonry and plaster mortar"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#Material"
+  } ]
+}, {
+  "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#Material",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A homogeneous or inhomogeneous substance that can be used to form elements (physical products or their components). (Definition taken from IFC)"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Material"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@value" : "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcMaterial"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "_:genid8"
+  }, {
+    "@id" : "_:genid9"
+  } ]
+}, {
+  "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#MaterialConstituent",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A single and identifiable part of an element which is constructed of a number of part (one or more) each having an individual material."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Material constituent"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@language" : "en",
+    "@value" : "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcMaterialConstituent"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "_:genid10"
+  }, {
+    "@id" : "_:genid11"
+  }, {
+    "@id" : "_:genid12"
+  } ]
+}, {
+  "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#MaterialConstituentSet",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A collection of individual material constituents, each assigning a material to a part of an element."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Material constituent set"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@language" : "en",
+    "@value" : "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcMaterialConstituentSet"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "_:genid13"
+  }, {
+    "@id" : "_:genid14"
+  }, {
+    "@id" : "_:genid15"
+  } ]
+}, {
+  "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#MaterialDatabase",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Represents the set of available databases for building materials."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Material database"
+  } ]
+}, {
+  "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#MaterialLayer",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A single and identifiable part of an element which is constructed of a number of layers (one or more)."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Material layer"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@language" : "en",
+    "@value" : "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcMaterialLayer"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "_:genid16"
+  }, {
+    "@id" : "_:genid17"
+  }, {
+    "@id" : "_:genid18"
+  } ]
+}, {
+  "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#MaterialLayerSet",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A designation by which materials of an element constructed of a number of material layers is known and through which the relative positioning of individual layers can be expressed."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Material layer set"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@language" : "en",
+    "@value" : "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcMaterialLayerSet"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "_:genid19"
+  }, {
+    "@id" : "_:genid20"
+  }, {
+    "@id" : "_:genid21"
+  } ]
+}, {
+  "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#MaterialProfile",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A single and identifiable cross section of an element which is constructed of a number of profiles (one or more)."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Material profile"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@language" : "en",
+    "@value" : "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcMaterialProfile"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "_:genid22"
+  }, {
+    "@id" : "_:genid23"
+  }, {
+    "@id" : "_:genid24"
+  } ]
+}, {
+  "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#MaterialProfileSet",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A designation by which individual material(s) of a prismatic element (for example, beam or column) constructed of a single or multiple material profiles is known."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Material profile set"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@language" : "en",
+    "@value" : "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcMaterialProfileSet"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "_:genid25"
+  }, {
+    "@id" : "_:genid26"
+  }, {
+    "@id" : "_:genid27"
+  } ]
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#MaterialProperty",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Properties related to layer materials."
+    "@value" : "Properties that describe building materials."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Material property"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.w3.org/ns/sosa/ObservableProperty"
+    "@id" : "https://saref.etsi.org/core/Property"
+  }, {
+    "@id" : "_:genid28"
+  }, {
+    "@id" : "_:genid29"
+  } ]
+}, {
+  "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#MaterialPropertyMeasurement",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The measurement, value and unit of measure, related to properties of building materials."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Material property measurement"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://saref.etsi.org/core/Measurement"
+  }, {
+    "@id" : "_:genid30"
   } ]
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#MaterialsForEnergyRecovery",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://bimerr.iot.linkeddata.es/def/material-properties#MaterialProperty" ],
+  "http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#KG"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Materials for energy recovery (MER)"
@@ -325,35 +1612,99 @@
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#MaterialsForRecycling",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://bimerr.iot.linkeddata.es/def/material-properties#MaterialProperty" ],
+  "http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#KG"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Materials for recycling (MFR)"
   } ]
 }, {
-  "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#Module",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://bimerr.iot.linkeddata.es/def/material-properties#MaterialProperty" ]
+  "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#MineralFloorCovering",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Mineral floor covering."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#FloorCovering"
+  } ]
+}, {
+  "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#MineralFoamInsulationBoard",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Mineral foam insulation board"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#MineralInsulationMaterial"
+  } ]
+}, {
+  "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#MineralInsulationMaterial",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Mineral insulation material"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#InsulationMaterial"
+  } ]
+}, {
+  "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#Mortar",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Mortar"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#MasonryAndPlasterMortar"
+  } ]
+}, {
+  "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#NaturalStone",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Natural stone"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#Material"
+  } ]
+}, {
+  "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#NaturalStoneMasonry",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Natural stone masonry"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#Masonry"
+  } ]
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#NonHazardousWasteDisposed",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://bimerr.iot.linkeddata.es/def/material-properties#MaterialProperty" ],
+  "http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#KG"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Non hazardous waste disposed (NHWD)"
   } ]
 }, {
-  "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#ObservationResult",
+  "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#NormalConcrete",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "Observation result"
+    "@value" : "Normal concrete"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.w3.org/ns/sosa/Result"
-  }, {
-    "@id" : "https://saref.etsi.org/core/Measurement"
-  }, {
-    "@id" : "_:genid1"
-  }, {
-    "@id" : "_:genid2"
+    "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#Concrete"
+  } ]
+}, {
+  "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#OKOBAUDAT",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://bimerr.iot.linkeddata.es/def/material-properties#MaterialDatabase" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A database that provides around 1200 life cycle assessment datasets regarding building materials, construction, transport, energy and disposal processes. The database can be used to reconstruct the entire building life cycle and is maintained by the German Ministry of Interior, Building and Community. The used data format is based on the ILCD data format, compliant to EN 15804 and provided as CSV files."
   } ]
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#OpticalDataType",
@@ -363,21 +1714,236 @@
     "@value" : "Optical data type (ODT)"
   } ]
 }, {
+  "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#PERCENT",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://saref.etsi.org/core/UnitOfMeasure" ]
+}, {
+  "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#PURPIRInsulationBoard",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "PUR/PIR insulation board"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#SyntheticInsulatingMaterial"
+  } ]
+}, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#Percentage",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://bimerr.iot.linkeddata.es/def/material-properties#MaterialProperty" ]
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://bimerr.iot.linkeddata.es/def/material-properties#MaterialProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Percentage"
+  } ]
+}, {
+  "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#PerliteInsulationBoard",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Perlite insulation board"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#MineralInsulationMaterial"
+  } ]
+}, {
+  "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#PhenolicResinFoamBoard",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Phenolic resin foam board"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#SyntheticInsulatingMaterial"
+  } ]
+}, {
+  "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#PlasterBase",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Plaster base"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#MasonryAndPlasterMortar"
+  } ]
+}, {
+  "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#Platerboard",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Plasterboard"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#BuildingBoard"
+  } ]
+}, {
+  "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#PolyesterFibreInsulatingMaterial",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Polyester fibre insulating material"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#SyntheticInsulatingMaterial"
+  } ]
+}, {
+  "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#PolyethyleneInsulatingMaterial",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Polyethylene (PE) insulating material"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#SyntheticInsulatingMaterial"
+  } ]
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#RadioactiveWasteDisposed",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://bimerr.iot.linkeddata.es/def/material-properties#MaterialProperty" ],
+  "http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#KG"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Radioactive waste disposed (RWD)"
   } ]
 }, {
+  "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#ReedInsulationPanel",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Reed insulation panel"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#InsulatingMaterialsFromRenewableRawMaterial"
+  } ]
+}, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#ReferenceSize",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://bimerr.iot.linkeddata.es/def/material-properties#MaterialProperty" ]
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://bimerr.iot.linkeddata.es/def/material-properties#MaterialProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Reference size"
+  } ]
+}, {
+  "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#ReinforcedConcreteNormalConcreteWithReinforcement",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Reinforced concrete / normal concrete with reinforcement"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#Concrete"
+  } ]
+}, {
+  "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#RockWoolInsulationMaterial",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Rock wool insulation material"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#MineralInsulationMaterial"
+  } ]
+}, {
+  "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#RoofCovering",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Roof covering"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#Material"
+  } ]
+}, {
+  "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#Roughness",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://bimerr.iot.linkeddata.es/def/material-properties#MaterialProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Roughness"
+  } ]
+}, {
+  "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#SandLimeBrickwork",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Sand-lime brickwork"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#Masonry"
+  } ]
+}, {
+  "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#Screed",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Screed"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#Material"
+  } ]
+}, {
+  "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#SealantsAndAdhesive",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Sealant and adhesive"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#Material"
+  } ]
+}, {
+  "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#SealingSheet",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Sealing sheet"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#SealingSheetVapourBarrierFoil"
+  } ]
+}, {
+  "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#SealingSheetVapourBarrierFoil",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Sealing sheet, vapour barrier, foil"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#Material"
+  } ]
+}, {
+  "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#SheepWoolInsulation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Sheep wool insulation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#InsulatingMaterialsFromRenewableRawMaterial"
+  } ]
+}, {
+  "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#SheetsOfBondedLightweightAggregate",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Sheets of bonded lightweight aggregate"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#BuildingBoard"
+  } ]
+}, {
+  "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#SlottedBrickMasonry",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Slotted brick masonry"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#BrickMasonry"
+  } ]
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#SolarAbsorptance",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://bimerr.iot.linkeddata.es/def/material-properties#MaterialProperty" ]
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://bimerr.iot.linkeddata.es/def/material-properties#MaterialProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Solar absorptance"
+  } ]
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#SolarTransmittanceAtNormalIncidence",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://bimerr.iot.linkeddata.es/def/material-properties#MaterialProperty" ],
@@ -386,20 +1952,118 @@
     "@value" : "Solar transmittance at normal incidence (STNI)"
   } ]
 }, {
+  "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#SolidFloorCovering",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Solid floor covering."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#FloorCovering"
+  } ]
+}, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#SpecificHeat",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://bimerr.iot.linkeddata.es/def/material-properties#MaterialProperty" ]
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://bimerr.iot.linkeddata.es/def/material-properties#MaterialProperty" ],
+  "http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#J-PER-KG-K"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Specific heat"
+  } ]
+}, {
+  "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#StrawInsulationMaterial",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Straw insulation material"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#InsulatingMaterialsFromRenewableRawMaterial"
+  } ]
+}, {
+  "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#StructuralSolidWood",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Structural (solid) wood"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#Material"
+  } ]
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#SurfaceWeight",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://bimerr.iot.linkeddata.es/def/material-properties#MaterialProperty" ]
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://bimerr.iot.linkeddata.es/def/material-properties#MaterialProperty" ],
+  "http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#KG-PER-M2"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Surface weight"
+  } ]
+}, {
+  "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#SyntheticInsulatingMaterial",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Synthetic insulating material"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#InsulationMaterial"
+  } ]
+}, {
+  "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#TextileFloorCovering",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Textile floor covering."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#FloorCovering"
+  } ]
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#ThermalAbsorptance",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://bimerr.iot.linkeddata.es/def/material-properties#MaterialProperty" ]
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://bimerr.iot.linkeddata.es/def/material-properties#MaterialProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Thermal absorptance"
+  } ]
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#ThermalResistance",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://bimerr.iot.linkeddata.es/def/material-properties#MaterialProperty" ]
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://bimerr.iot.linkeddata.es/def/material-properties#MaterialProperty" ],
+  "http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#M2-K-PER-W"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Thermal resistance"
+  } ]
+}, {
+  "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#Thickness",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://bimerr.iot.linkeddata.es/def/material-properties#MaterialProperty" ],
+  "http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#M"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Thickness"
+  } ]
+}, {
+  "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#TippingAndAggregate",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Tipping and aggregate"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#Material"
+  } ]
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#TotalUseOfNonRenewablePrimaryEnergyResource",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://bimerr.iot.linkeddata.es/def/material-properties#MaterialProperty" ],
+  "http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#MJ"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Total use of non renewable primary energy resource (PENRT)"
@@ -407,16 +2071,36 @@
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#TotalUseOfRenewablePrimaryEnergy",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://bimerr.iot.linkeddata.es/def/material-properties#MaterialProperty" ],
+  "http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#MJ"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Total use of renewable primary energy (PERT)"
   } ]
 }, {
+  "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#UnderlaysAndBackCoatingsOfFloorCovering",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Underlays and back coatings of floor covering."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#FloorCovering"
+  } ]
+}, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#UnitOfReference",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://bimerr.iot.linkeddata.es/def/material-properties#MaterialProperty" ]
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://bimerr.iot.linkeddata.es/def/material-properties#MaterialProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Unit of reference"
+  } ]
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#UseOfNetFreshWater",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://bimerr.iot.linkeddata.es/def/material-properties#MaterialProperty" ],
+  "http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#M3"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Use of net fresh water (FW)"
@@ -424,6 +2108,9 @@
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#UseOfNonRenewablePrimaryEnergy",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://bimerr.iot.linkeddata.es/def/material-properties#MaterialProperty" ],
+  "http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#MJ"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Use of non renewable primary energy (PENRE)"
@@ -431,6 +2118,9 @@
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#UseOfNonRenewablePrimaryEnergyResourcesUsedAsRawMaterials",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://bimerr.iot.linkeddata.es/def/material-properties#MaterialProperty" ],
+  "http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#MJ"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Use of non renewable primary energy resources used as raw materials (PENRM)"
@@ -438,6 +2128,9 @@
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#UseOfNonRenewableSecondaryFuels",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://bimerr.iot.linkeddata.es/def/material-properties#MaterialProperty" ],
+  "http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#MJ"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Use of non renewable secondary fuels (NRSF)"
@@ -445,6 +2138,9 @@
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#UseOfRenewablePrimaryEnergy",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://bimerr.iot.linkeddata.es/def/material-properties#MaterialProperty" ],
+  "http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#MJ"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Use of renewable primary energy (PERE)"
@@ -452,6 +2148,9 @@
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#UseOfRenewablePrimaryEnergyResourcesUsedAsRawMaterials",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://bimerr.iot.linkeddata.es/def/material-properties#MaterialProperty" ],
+  "http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#MJ"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Use of renewable primary energy resources used as raw materials (PERM)"
@@ -459,22 +2158,85 @@
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#UseOfRenewableSecondaryFuels",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://bimerr.iot.linkeddata.es/def/material-properties#MaterialProperty" ],
+  "http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#MJ"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Use of renewable secondary fuels (RSF)"
   } ]
 }, {
+  "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#UseOfSecondaryMaterial",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://bimerr.iot.linkeddata.es/def/material-properties#MaterialProperty" ],
+  "http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#KG"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Use of secondary material (SM)"
+  } ]
+}, {
+  "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#UsedFromYear",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://bimerr.iot.linkeddata.es/def/material-properties#MaterialProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Used from year"
+  } ]
+}, {
+  "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#UsedToYear",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://bimerr.iot.linkeddata.es/def/material-properties#MaterialProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Used to year"
+  } ]
+}, {
+  "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#VacuumInsulationPanel",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Vacuum insulation panel"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#MineralInsulationMaterial"
+  } ]
+}, {
+  "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#VapourBarrierAndBrake",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Vapour barrier and brake"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#SealingSheetVapourBarrierFoil"
+  } ]
+}, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#VapourDiffusionResistance",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://bimerr.iot.linkeddata.es/def/material-properties#MaterialProperty" ]
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://bimerr.iot.linkeddata.es/def/material-properties#MaterialProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Vapour diffusion resistance"
+  } ]
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#VapourDiffusionResistanceDry",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://bimerr.iot.linkeddata.es/def/material-properties#MaterialProperty" ]
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://bimerr.iot.linkeddata.es/def/material-properties#MaterialProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Vapour diffusion resistance dry"
+  } ]
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#VapourDiffusionResistanceWet",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://bimerr.iot.linkeddata.es/def/material-properties#MaterialProperty" ]
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://bimerr.iot.linkeddata.es/def/material-properties#MaterialProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Vapour diffusion resistance wet"
+  } ]
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#VisibleAbsorptance",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://bimerr.iot.linkeddata.es/def/material-properties#MaterialProperty" ]
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://bimerr.iot.linkeddata.es/def/material-properties#MaterialProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Visible absorptance"
+  } ]
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#VisibleTransmittanceAtNormalIncidence",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://bimerr.iot.linkeddata.es/def/material-properties#MaterialProperty" ],
@@ -483,14 +2245,59 @@
     "@value" : "Visible transmittance at normal incidence (VTNI)"
   } ]
 }, {
+  "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#W-PER-M-K",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://saref.etsi.org/core/UnitOfMeasure" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Watt per Meter Kelvin"
+  } ]
+}, {
+  "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#W-PER-M2-K",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://saref.etsi.org/core/UnitOfMeasure" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Watt per Square Meter Kelvin"
+  } ]
+}, {
+  "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#WallPaintAndCovering",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Wall paint and covering"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#Material"
+  } ]
+}, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#WindowFrameHeatTransmissionCoefficient",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://bimerr.iot.linkeddata.es/def/material-properties#MaterialProperty" ]
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://bimerr.iot.linkeddata.es/def/material-properties#MaterialProperty" ],
+  "http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#W-PER-M2-K"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Window frame heat transmission coefficient"
+  } ]
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#WindowFrameRungWidth",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://bimerr.iot.linkeddata.es/def/material-properties#MaterialProperty" ]
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://bimerr.iot.linkeddata.es/def/material-properties#MaterialProperty" ],
+  "http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#M"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Window frame rung width"
+  } ]
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#WindowFrameWidth",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://bimerr.iot.linkeddata.es/def/material-properties#MaterialProperty" ]
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://bimerr.iot.linkeddata.es/def/material-properties#MaterialProperty" ],
+  "http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#M"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Window frame width"
+  } ]
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#WindowGlassSpectralDataSetName",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://bimerr.iot.linkeddata.es/def/material-properties#MaterialProperty" ],
@@ -500,10 +2307,206 @@
   } ]
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#WindowThickness",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://bimerr.iot.linkeddata.es/def/material-properties#MaterialProperty" ]
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://bimerr.iot.linkeddata.es/def/material-properties#MaterialProperty" ],
+  "http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#M"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Window thickness"
+  } ]
+}, {
+  "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#WoodAndWoodBasedPanel",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Wood and wood based panel"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#BuildingBoard"
+  } ]
+}, {
+  "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#WoodChipInsulationBoard",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Wood chip insulation board"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#MineralInsulationMaterial"
+  } ]
+}, {
+  "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#WoodFibreInsulatingMaterial",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Wood fibre insulating material"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#InsulatingMaterialsFromRenewableRawMaterial"
+  } ]
+}, {
+  "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#WoodShavingLooseSawdust",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Wood shaving (loose), sawdust"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#InsulatingMaterialsFromRenewableRawMaterial"
+  } ]
+}, {
+  "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#WoodWoolInsulationBoard",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Wood wool insulation board"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#MineralInsulationMaterial"
+  } ]
+}, {
+  "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#WoodWoolMultiLayerInsulationBoard",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Wood-wool multi-layer insulation board"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#MineralInsulationMaterial"
+  } ]
+}, {
+  "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#XPSInsulationBoard",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "XPS insulation board"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#SyntheticInsulatingMaterial"
+  } ]
+}, {
+  "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#YEARS",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "https://saref.etsi.org/core/UnitOfMeasure" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Years"
+  } ]
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#Yield",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://bimerr.iot.linkeddata.es/def/material-properties#MaterialProperty" ]
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://bimerr.iot.linkeddata.es/def/material-properties#MaterialProperty" ],
+  "http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#M2"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Yield"
+  } ]
+}, {
+  "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#hasConstruction",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Relation between a building element and its construction. This construction can be a layer set, a profile set, or a constituent set. For example, a window has two construction individuals: The Lining and the Glazing."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has construction"
+  } ]
+}, {
+  "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#hasMaterial",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Relation between a construction component (Layer, profile, constituent) and the materials that define them."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has material"
+  } ]
+}, {
+  "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#hasMaterialConstituent",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A relation between a constituent set and the specific material constituents."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has material constituent"
+  } ]
+}, {
+  "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#hasMaterialLayer",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A relation between a layer set and the specific material layers."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has material layer"
+  } ]
+}, {
+  "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#hasMaterialProfile",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A relation between a profile set and the specific material profiles."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has material profile"
+  } ]
+}, {
+  "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#hasMeasurement",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A relationship between a feature of interest and a measurement about it."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://saref.etsi.org/core/FeatureOfInterest"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has measurement"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://saref.etsi.org/core/Measurement"
+  } ]
+}, {
+  "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#isMeasuredIn",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A relationship identifying the unit of measure used for a certain entity."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "is measured in"
+  } ]
+}, {
+  "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#isPropertyFromDatabase",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Relates a material's property with the database where it is defined."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "is property from database"
+  } ]
+}, {
+  "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#isPropertyValueFromDatabase",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Relates a property value with the database where it comes from."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "is property value from database"
+  } ]
 }, {
   "@id" : "http://purl.org/dc/elements/1.1/creator",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
@@ -523,104 +2526,414 @@
   "@id" : "http://purl.org/vocab/vann/preferredNamespacePrefix",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
-  "@id" : "http://www.w3.org/ns/sosa/FeatureOfInterest",
+  "@id" : "http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "This property indicates a commonly-used unit."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "commonly has unit"
+  } ]
+}, {
+  "@id" : "https://saref.etsi.org/core/FeatureOfInterest",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A feature of interest represents any real world entity from which a property is measured. (Definition taken from SAREF)"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Feature of interest"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "_:genid3"
+    "@id" : "_:genid31"
   }, {
-    "@id" : "_:genid4"
-  } ]
-}, {
-  "@id" : "http://www.w3.org/ns/sosa/ObservableProperty",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "Properties used in the building construction sector for the different elements involved."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Observable property"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.w3.org/ns/ssn/Property"
-  } ]
-}, {
-  "@id" : "http://www.w3.org/ns/sosa/Observation",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Observation"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "_:genid5"
-  }, {
-    "@id" : "_:genid6"
-  } ]
-}, {
-  "@id" : "http://www.w3.org/ns/sosa/Result",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Result"
-  } ]
-}, {
-  "@id" : "http://www.w3.org/ns/sosa/hasResult",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "has result"
-  } ]
-}, {
-  "@id" : "http://www.w3.org/ns/sosa/observedProperty",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "observed property"
-  } ]
-}, {
-  "@id" : "http://www.w3.org/ns/ssn/Property",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Property"
-  } ]
-}, {
-  "@id" : "http://www.w3.org/ns/ssn/hasProperty",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "has property"
+    "@id" : "_:genid32"
   } ]
 }, {
   "@id" : "https://saref.etsi.org/core/Measurement",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Represents the measured value made over a property. It is also linked to the unit of measure in which the value is expressed and the timestamp of the measurement. (Definition taken from SAREF)"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Measurement"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "_:genid33"
+  }, {
+    "@id" : "_:genid34"
+  }, {
+    "@id" : "_:genid35"
+  }, {
+    "@id" : "_:genid36"
+  } ]
+}, {
+  "@id" : "https://saref.etsi.org/core/Property",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A quality of a feature of interest that can be measured; an aspect of a feature of interest that is intrinsic to and cannot exist without the feature. (Definition taken from SAREF)"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Property"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "_:genid37"
   } ]
 }, {
   "@id" : "https://saref.etsi.org/core/UnitOfMeasure",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The unit of measure is a standard for measurement of a quantity, such as a Property. For example, Power is a property and Watt is a unit of power that represents a definite predetermined power: when we say 10 Watt, we actually mean 10 times the definite predetermined power called \"watt\". Our definition is based on the definition of unit of measure in the Ontology of units of Measure (OM). We propose here a list of some units of measure that are relevant for the purpose of SAREF, but this list can be extended, also using some other ontologies rather than the Ontology of units of Measure (OM). (Definition taken from SAREF)"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Unit of measure"
   } ]
 }, {
+  "@id" : "https://saref.etsi.org/core/hasProperty",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A relationship between a feature of interest and a property of that feature."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://saref.etsi.org/core/FeatureOfInterest"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has property"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://saref.etsi.org/core/Property"
+  } ]
+}, {
   "@id" : "https://saref.etsi.org/core/hasValue",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A relationship defining the value of a certain property, e.g., energy or power. Note that, even if numeric values are expected to enable reasoning, measurement values could use other datatypes."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "has value"
   } ]
 }, {
-  "@id" : "https://saref.etsi.org/core/isMeasuredIn",
+  "@id" : "https://saref.etsi.org/core/relatesToMeasurement",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A relationship between a property and the measurements it relates to."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "is measured in"
+    "@value" : "relates to measurement"
+  } ]
+}, {
+  "@id" : "https://saref.etsi.org/core/relatesToProperty",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A relationship between a measurement and the property it relates to."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "relates to property"
+  } ]
+}, {
+  "@id" : "https://w3id.org/def/saref4bldg#Boiler",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A boiler is a closed, pressure-rated vessel in which water or other fluid is heated using an energy source such as natural gas, heating oil, or electricity. The fluid in the vessel is then circulated out of the boiler for use in various processes or heating applications."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Boiler"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@value" : "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcBoiler"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/def/saref4bldg#EnergyConversionDevice"
+  } ]
+}, {
+  "@id" : "https://w3id.org/def/saref4bldg#DistributionDevice",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A generalization of all elements that participate in a distribution system."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Distribution Device"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@value" : "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcDistributionElement"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/building#Element"
+  } ]
+}, {
+  "@id" : "https://w3id.org/def/saref4bldg#DistributionFlowDevice",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Defines occurrence elements of a distribution system that facilitate the distribution of energy or matter, such as air, water or power."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Distribution Flow Device"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@value" : "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcDistributionFlowElement"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/def/saref4bldg#DistributionDevice"
+  } ]
+}, {
+  "@id" : "https://w3id.org/def/saref4bldg#EnergyConversionDevice",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Defines the occurrence of a device used to perform energy conversion or heat transfer and typically participates in a flow distribution system."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Energy Conversion Device"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@value" : "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcEnergyConversionDevice"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/def/saref4bldg#DistributionFlowDevice"
+  } ]
+}, {
+  "@id" : "https://w3id.org/def/saref4bldg#Fan",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A fan is a device which imparts mechanical work on a gas. A typical usage of a fan is to induce airflow in a building services air distribution system."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Fan"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@value" : "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcFan"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/def/saref4bldg#FlowMovingDevice"
+  } ]
+}, {
+  "@id" : "https://w3id.org/def/saref4bldg#FlowController",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Defines the occurrence of elements of a distribution system that are used to regulate flow through a distribution system. Examples include dampers, valves, switches, and relays."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Flow Controller"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@value" : "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcFlowController"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/def/saref4bldg#DistributionFlowDevice"
+  } ]
+}, {
+  "@id" : "https://w3id.org/def/saref4bldg#FlowMovingDevice",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Defines the occurrence of an apparatus used to distribute, circulate or perform conveyance of fluids, including liquids and gases (such as a pump or fan), and typically participates in a flow distribution system."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Flow Moving Device"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@value" : "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcFlowMovingDevice"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/def/saref4bldg#DistributionFlowDevice"
+  } ]
+}, {
+  "@id" : "https://w3id.org/def/saref4bldg#FlowStorageDevice",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Defines the occurrence of a device that participates in a distribution system and is used for temporary storage (such as a tank)."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Flow Storage Device"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@value" : "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcFlowStorageDevice"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/def/saref4bldg#DistributionFlowDevice"
+  } ]
+}, {
+  "@id" : "https://w3id.org/def/saref4bldg#FlowTerminal",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Defines the occurrence of a permanently attached element that acts as a terminus or beginning of a distribution system (such as an air outlet, drain, water closet, or sink). A terminal is typically a point at which a system interfaces with an external environment."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Flow Terminal"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@value" : "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcFlowTerminal"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/def/saref4bldg#DistributionFlowDevice"
+  } ]
+}, {
+  "@id" : "https://w3id.org/def/saref4bldg#HeatExchanger",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A heat exchanger is a device used to provide heat transfer between non-mixing media such as plate and shell and tube heat exchangers."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Heat Exchanger"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@value" : "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcHeatExchanger"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/def/saref4bldg#EnergyConversionDevice"
+  } ]
+}, {
+  "@id" : "https://w3id.org/def/saref4bldg#Outlet",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "An outlet is a device installed at a point to receive one or more inserted plugs for electrical power or communications."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Outlet"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@value" : "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcOutlet"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/def/saref4bldg#FlowTerminal"
+  } ]
+}, {
+  "@id" : "https://w3id.org/def/saref4bldg#Pump",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A pump is a device which imparts mechanical work on fluids or slurries to move them through a channel or pipeline. A typical use of a pump is to circulate chilled water or heating hot water in a building services distribution system."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Pump"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@value" : "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcPump"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/def/saref4bldg#FlowMovingDevice"
+  } ]
+}, {
+  "@id" : "https://w3id.org/def/saref4bldg#SolarDevice",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A solar device converts solar radiation into other energy such as electric current or thermal energy."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Solar Device"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@value" : "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcSolarDevice"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/def/saref4bldg#EnergyConversionDevice"
+  } ]
+}, {
+  "@id" : "https://w3id.org/def/saref4bldg#SpaceHeater",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Space heaters utilize a combination of radiation and/or natural convection using a heating source such as electricity, steam or hot water to heat a limited space or area. Examples of space heaters include radiators, convectors, baseboard and finned-tube heaters."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Space Heater"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@value" : "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcSpaceHeater"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/def/saref4bldg#FlowTerminal"
+  } ]
+}, {
+  "@id" : "https://w3id.org/def/saref4bldg#SwitchingDevice",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A switch is used in a cable distribution system (electrical circuit) to control or modulate the flow of electricity."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Switching Device"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@value" : "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcSwitchingDevice"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/def/saref4bldg#FlowController"
+  } ]
+}, {
+  "@id" : "https://w3id.org/def/saref4bldg#Tank",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A tank is a vessel or container in which a fluid or gas is stored for later use."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Tank"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@value" : "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcTank"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/def/saref4bldg#FlowStorageDevice"
+  } ]
+}, {
+  "@id" : "https://w3id.org/def/saref4bldg#TubeBundle",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A tube bundle is a device consisting of tubes and bundles of tubes used for heat transfer and contained typically within other energy conversion devices, such as a chiller or coil."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Tube Bundle"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@value" : "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcTubeBundle"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/def/saref4bldg#EnergyConversionDevice"
   } ]
 } ]

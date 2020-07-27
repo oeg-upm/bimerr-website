@@ -1256,7 +1256,7 @@
 
 
     <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/occupancy-profile#Movement">
-        <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+        <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1#Person"/>
         <rdfs:comment xml:lang="en">The Movement class is used to represent the occupant&apos;s movements inside or between spaces.</rdfs:comment>
         <rdfs:label xml:lang="en">Movement</rdfs:label>
     </owl:Class>
@@ -1322,7 +1322,7 @@
 
 
     <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/occupancy-profile#Occupant">
-        <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+        <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1#Person"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://bimerr.iot.linkeddata.es/def/occupancy-profile#hasBehavior"/>
@@ -1750,10 +1750,10 @@
     
 
 
-    <!-- http://xmlns.com/foaf/0.1/Person -->
+    <!-- http://xmlns.com/foaf/0.1#Person -->
 
 
-    <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Person">
+    <owl:Class rdf:about="http://xmlns.com/foaf/0.1#Person">
         <rdfs:comment xml:lang="en">The Person class represents people. Something is a Person if it is a person. We don&apos;t nitpic about whether they&apos;re alive, dead, real, or imaginary. (Definition taken from FOAF)</rdfs:comment>
         <rdfs:label xml:lang="en">Person</rdfs:label>
     </owl:Class>

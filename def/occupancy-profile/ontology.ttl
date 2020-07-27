@@ -792,7 +792,7 @@ xsd:time rdf:type rdfs:Datatype .
 
 ###  http://bimerr.iot.linkeddata.es/def/occupancy-profile#Movement
 :Movement rdf:type owl:Class ;
-          rdfs:subClassOf <http://xmlns.com/foaf/0.1/Person> ;
+          rdfs:subClassOf <http://xmlns.com/foaf/0.1#Person> ;
           rdfs:comment "The Movement class is used to represent the occupant's movements inside or between spaces."@en ;
           rdfs:label "Movement"@en .
 
@@ -834,7 +834,7 @@ xsd:time rdf:type rdfs:Datatype .
 
 ###  http://bimerr.iot.linkeddata.es/def/occupancy-profile#Occupant
 :Occupant rdf:type owl:Class ;
-          rdfs:subClassOf <http://xmlns.com/foaf/0.1/Person> ,
+          rdfs:subClassOf <http://xmlns.com/foaf/0.1#Person> ,
                           [ rdf:type owl:Restriction ;
                             owl:onProperty :hasBehavior ;
                             owl:someValuesFrom :Behavior
@@ -1110,8 +1110,8 @@ xsd:time rdf:type rdfs:Datatype .
                                         rdfs:label "Day of week"@en .
 
 
-###  http://xmlns.com/foaf/0.1/Person
-<http://xmlns.com/foaf/0.1/Person> rdf:type owl:Class ;
+###  http://xmlns.com/foaf/0.1#Person
+<http://xmlns.com/foaf/0.1#Person> rdf:type owl:Class ;
                                    rdfs:comment "The Person class represents people. Something is a Person if it is a person. We don't nitpic about whether they're alive, dead, real, or imaginary. (Definition taken from FOAF)"@en ;
                                    rdfs:label "Person"@en .
 

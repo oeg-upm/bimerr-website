@@ -720,7 +720,7 @@ _:genid33 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001
 # 
 # http://bimerr.iot.linkeddata.es/def/occupancy-profile#Movement
 <http://bimerr.iot.linkeddata.es/def/occupancy-profile#Movement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://bimerr.iot.linkeddata.es/def/occupancy-profile#Movement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://xmlns.com/foaf/0.1/Person> .
+<http://bimerr.iot.linkeddata.es/def/occupancy-profile#Movement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://xmlns.com/foaf/0.1#Person> .
 <http://bimerr.iot.linkeddata.es/def/occupancy-profile#Movement> <http://www.w3.org/2000/01/rdf-schema#comment> "The Movement class is used to represent the occupant's movements inside or between spaces."@en .
 <http://bimerr.iot.linkeddata.es/def/occupancy-profile#Movement> <http://www.w3.org/2000/01/rdf-schema#label> "Movement"@en .
 # 
@@ -757,7 +757,7 @@ _:genid35 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001
 # 
 # http://bimerr.iot.linkeddata.es/def/occupancy-profile#Occupant
 <http://bimerr.iot.linkeddata.es/def/occupancy-profile#Occupant> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://bimerr.iot.linkeddata.es/def/occupancy-profile#Occupant> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://xmlns.com/foaf/0.1/Person> .
+<http://bimerr.iot.linkeddata.es/def/occupancy-profile#Occupant> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://xmlns.com/foaf/0.1#Person> .
 <http://bimerr.iot.linkeddata.es/def/occupancy-profile#Occupant> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid36 .
 _:genid36 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 _:genid36 <http://www.w3.org/2002/07/owl#onProperty> <http://bimerr.iot.linkeddata.es/def/occupancy-profile#hasBehavior> .
@@ -1009,10 +1009,10 @@ _:genid64 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2004
 <http://www.w3.org/2006/time#DayOfWeek> <http://www.w3.org/2000/01/rdf-schema#comment> "The day of the week."@en .
 <http://www.w3.org/2006/time#DayOfWeek> <http://www.w3.org/2000/01/rdf-schema#label> "Day of week"@en .
 # 
-# http://xmlns.com/foaf/0.1/Person
-<http://xmlns.com/foaf/0.1/Person> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://xmlns.com/foaf/0.1/Person> <http://www.w3.org/2000/01/rdf-schema#comment> "The Person class represents people. Something is a Person if it is a person. We don't nitpic about whether they're alive, dead, real, or imaginary. (Definition taken from FOAF)"@en .
-<http://xmlns.com/foaf/0.1/Person> <http://www.w3.org/2000/01/rdf-schema#label> "Person"@en .
+# http://xmlns.com/foaf/0.1#Person
+<http://xmlns.com/foaf/0.1#Person> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://xmlns.com/foaf/0.1#Person> <http://www.w3.org/2000/01/rdf-schema#comment> "The Person class represents people. Something is a Person if it is a person. We don't nitpic about whether they're alive, dead, real, or imaginary. (Definition taken from FOAF)"@en .
+<http://xmlns.com/foaf/0.1#Person> <http://www.w3.org/2000/01/rdf-schema#label> "Person"@en .
 # 
 # https://w3id.org/def/saref4building#BuildingObject
 <https://w3id.org/def/saref4building#BuildingObject> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .

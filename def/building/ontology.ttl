@@ -7,20 +7,21 @@
 @base <http://bimerr.iot.linkeddata.es/def/building#> .
 
 <http://bimerr.iot.linkeddata.es/def/building#> rdf:type owl:Ontology ;
-                                                 <http://purl.org/dc/elements/1.1/creator> "Serge Chávez-Feria (Ontology Engineering Group, Universidad Politécnica de Madrid)" ;
-                                                 <http://purl.org/dc/elements/1.1/description> "The Building ontology has been developed to perform as the core module of the BIMERR project, containing information related to buidling topology, components, materials, and geometry. The geometry information is managed as information objects whitout entering in the details of the BIM model."@en ;
-                                                 <http://purl.org/dc/elements/1.1/license> "http://purl.org/NET/rdflicense/cc-by4.0"@en ;
-                                                 <http://purl.org/dc/elements/1.1/publisher> "http://www.oeg-upm.net/"@en ;
-                                                 <http://purl.org/dc/elements/1.1/title> "Building ontology"@en ;
-                                                 <http://purl.org/vocab/vann/preferredNamespacePrefix> "building" ;
-                                                 owl:versionInfo "0.0.3"@en .
+                                                 :preferredNamespacePrefix "building" ;
+                                                 <http://purl.org/dc/elements/1.1/creator> "The Building ontology has been developed to perform as the core module of the BIMERR project, containing information related to buidling topology, components, materials, and geometry. The geometry information is managed as information objects whitout entering in the details of the BIM model."@en ,
+                                                                                           "María Poveda-Villalón" ,
+                                                                                           "Serge Chávez-Feria" ;
+                                                 <http://purl.org/dc/elements/1.1/publisher> "http://purl.org/NET/rdflicense/cc-by4.0" ,
+                                                                                             "http://www.oeg-upm.net/" ;
+                                                 <http://purl.org/dc/elements/1.1/title> "Building Ontology" ;
+                                                 owl:versionInfo "0.0.5" .
 
 #################################################################
 #    Annotation properties
 #################################################################
 
-###  http://purl.org/dc/elements/1.1/created
-<http://purl.org/dc/elements/1.1/created> rdf:type owl:AnnotationProperty .
+###  http://bimerr.iot.linkeddata.es/def/building#preferredNamespacePrefix
+:preferredNamespacePrefix rdf:type owl:AnnotationProperty .
 
 
 ###  http://purl.org/dc/elements/1.1/creator
@@ -43,90 +44,56 @@
 <http://purl.org/dc/elements/1.1/title> rdf:type owl:AnnotationProperty .
 
 
-###  http://purl.org/vocab/vann/preferredNamespacePrefix
-<http://purl.org/vocab/vann/preferredNamespacePrefix> rdf:type owl:AnnotationProperty .
-
-
 #################################################################
 #    Object Properties
 #################################################################
 
 ###  http://bimerr.iot.linkeddata.es/def/building#hasApartment
 :hasApartment rdf:type owl:ObjectProperty ;
-              rdfs:subPropertyOf <https://w3id.org/bot#containsZone> ;
-              rdfs:comment "Relation to indicate that a storey has apartments."@en ;
-              rdfs:label "has apartment"@en .
+              rdfs:comment "Relation between a storey and the apartments it is composed of."@en ;
+              rdfs:label "has apartment" .
 
 
-###  http://bimerr.iot.linkeddata.es/def/building#hasLayer
-:hasLayer rdf:type owl:ObjectProperty ;
-          rdfs:subPropertyOf <https://w3id.org/bot#hasSubElement> ;
-          rdfs:domain :Construction ;
-          rdfs:range :Layer ;
-          rdfs:comment "Relation to link construction components (walls, floors, etc) with their internal layers."@en ;
-          rdfs:label "has layer"@en .
+###  http://bimerr.iot.linkeddata.es/def/building#includesElement
+:includesElement rdf:type owl:ObjectProperty ;
+                 rdfs:comment "Relationship that connects a system with an element or device."@en ;
+                 rdfs:label "includes element" .
 
 
-###  http://bimerr.iot.linkeddata.es/def/building#hasSubComponent
-:hasSubComponent rdf:type owl:ObjectProperty ;
-                 rdfs:subPropertyOf <https://w3id.org/bot#hasSubElement> ;
-                 rdfs:domain :Component ;
-                 rdfs:range :Component ;
-                 rdfs:comment "Relation to link building components (HVAC, doors, etc) with the sub-components they are conformed with."@en ;
-                 rdfs:label "has subcomponent"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/building#includesMaterial
-:includesMaterial rdf:type owl:ObjectProperty ;
-                  rdfs:subPropertyOf <https://w3id.org/bot#hasSubElement> ;
-                  rdfs:domain :Construction ;
-                  rdfs:range :Material ;
-                  rdfs:label "includes material"@en .
+###  http://bimerr.iot.linkeddata.es/def/building#isPartOfSystem
+:isPartOfSystem rdf:type owl:ObjectProperty ;
+                rdfs:comment "Relationship that indicates that an element or device is part of a system."@en ;
+                rdfs:label "is part of system" .
 
 
 ###  https://w3id.org/bot#containsZone
 <https://w3id.org/bot#containsZone> rdf:type owl:ObjectProperty ;
-                                    rdfs:domain <https://w3id.org/bot#Zone> ;
-                                    rdfs:range <https://w3id.org/bot#Zone> ;
-                                    rdfs:comment "Relation to buildings contained in a zone. The typical domains of bot:hasBuilding are instances of bot:Site."@en ;
-                                    rdfs:isDefinedBy <http://w3id.org/bot#> ;
-                                    rdfs:label "contains zone"@en .
+                                    rdfs:comment "Relationship to the subzones of a major zone. A space zone could for instance be contained in a storey zone which is further contained in a building zone."@en ;
+                                    rdfs:label "contains zone" .
 
 
 ###  https://w3id.org/bot#hasElement
 <https://w3id.org/bot#hasElement> rdf:type owl:ObjectProperty ;
-                                  rdfs:domain <https://w3id.org/bot#Zone> ;
-                                  rdfs:range <https://w3id.org/bot#Element> ;
-                                  rdfs:comment "Links a Zone to an Element that is contained in, or adjacent to, the Zone. The intended use of this relationship is not to be stated explicitly, but to be inferred from its sub-properties. It will, for example, allow one to query for all the doors of a building given that they have an adjacency to spaces of the building."@en ;
-                                  rdfs:isDefinedBy <http://w3id.org/bot#> ;
-                                  rdfs:label "has element"@en .
+                                  rdfs:comment "Links a Zone to an Element that is contained in, or adjacent to, the Zone."@en ;
+                                  rdfs:label "has element" .
 
 
 ###  https://w3id.org/bot#hasSpace
 <https://w3id.org/bot#hasSpace> rdf:type owl:ObjectProperty ;
-                                rdfs:domain <https://w3id.org/bot#Zone> ;
-                                rdfs:range <https://w3id.org/bot#Space> ;
-                                rdfs:comment "Relation to spaces contained in a zone. The typical domains of bot:hasSpace are instances of bot:Storey and bot:Building."@en ;
-                                rdfs:isDefinedBy <http://w3id.org/bot#> ;
-                                rdfs:label "has space"@en .
+                                rdfs:comment "Relation to spaces contained in a zone."@en ;
+                                rdfs:label "has space" .
 
 
 ###  https://w3id.org/bot#hasStorey
 <https://w3id.org/bot#hasStorey> rdf:type owl:ObjectProperty ;
-                                 rdfs:domain <https://w3id.org/bot#Zone> ;
-                                 rdfs:range <https://w3id.org/bot#Storey> ;
-                                 rdfs:comment "Relation to storeys contained in a zone. The typical domains of bot:hasStorey are instances of bot:Building."@en ;
-                                 rdfs:isDefinedBy <http://w3id.org/bot#> ;
-                                 rdfs:label "has storey"@en .
+                                 rdfs:comment "Relation to storeys contained in a zone."@en ;
+                                 rdfs:label "has storey" .
 
 
 ###  https://w3id.org/bot#hasSubElement
 <https://w3id.org/bot#hasSubElement> rdf:type owl:ObjectProperty ;
-                                     rdfs:domain <https://w3id.org/bot#Element> ;
-                                     rdfs:range <https://w3id.org/bot#Element> ;
-                                     rdfs:comment "Relation between an element a) and another element b) hosted by element a)."@en ;
-                                     rdfs:isDefinedBy <http://w3id.org/bot#> ;
-                                     rdfs:label "has sub-element"@en .
+                                     rdfs:comment "Relationship to indicate the subcomponents of elements"@en ;
+                                     rdfs:label "has sub element" .
 
 
 #################################################################
@@ -137,701 +104,233 @@
 :buildingAddress rdf:type owl:DatatypeProperty ;
                  rdfs:domain :Building ;
                  rdfs:range xsd:string ;
-                 rdfs:comment "Address of the building"@en ;
-                 rdfs:label "building address"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/building#hasSimple3DModel
-:hasSimple3DModel rdf:type owl:DatatypeProperty ;
-                  rdfs:label "has simple 3D model"@en .
+                 rdfs:comment "The postal address of the building"@en ;
+                 rdfs:label "building address" .
 
 
 ###  http://bimerr.iot.linkeddata.es/def/building#ifcIdentifier
 :ifcIdentifier rdf:type owl:DatatypeProperty ;
                rdfs:range xsd:string ;
-               rdfs:comment "Identifier within the IFC file."@en ;
-               rdfs:label "ifc identifier"@en .
+               rdfs:comment "Identifier used in the IFC model (Global Unique ID)."@en ;
+               rdfs:label "ifc identifier" .
 
 
 ###  http://bimerr.iot.linkeddata.es/def/building#maxOccupants
 :maxOccupants rdf:type owl:DatatypeProperty ;
               rdfs:range xsd:integer ;
-              rdfs:comment "Maximum limit range to describe the number of occupants inside a zone."@en ;
-              rdfs:label "max number occupants"@en .
+              rdfs:comment "Maximum number of occupants inside a building."@en ;
+              rdfs:label "max occupants" .
 
 
 ###  http://bimerr.iot.linkeddata.es/def/building#minOccupants
 :minOccupants rdf:type owl:DatatypeProperty ;
               rdfs:range xsd:integer ;
-              rdfs:comment "Minimum limit range to describe the number of occupants inside a zone."@en ;
-              rdfs:label "min number occupants"@en .
+              rdfs:comment "Minimum number of occupants inside a building."@en ;
+              rdfs:label "min occupants" .
 
 
 ###  http://www.w3.org/2003/01/geo/wgs84_pos#alt
 <http://www.w3.org/2003/01/geo/wgs84_pos#alt> rdf:type owl:DatatypeProperty ;
-                                              rdfs:comment "Attribute to indicate the altitud geolocalization coordinate of a building."@en ;
-                                              rdfs:isDefinedBy <http://www.w3.org/2003/01/geo/wgs84_pos#> ;
-                                              rdfs:label "altitud"@en .
+                                              rdfs:comment "Altitude geo location coordinate."@en ;
+                                              rdfs:label "altitude"@en .
 
 
 ###  http://www.w3.org/2003/01/geo/wgs84_pos#lat
 <http://www.w3.org/2003/01/geo/wgs84_pos#lat> rdf:type owl:DatatypeProperty ;
-                                              rdfs:comment "Attribute to indicate the latitud geolocalization coordinate of a building."@en ;
-                                              rdfs:isDefinedBy <http://www.w3.org/2003/01/geo/wgs84_pos#> ;
-                                              rdfs:label "latitud"@en .
+                                              rdfs:comment "Latitude geo location coordinate."@en ;
+                                              rdfs:label "latitude"@en .
 
 
 ###  http://www.w3.org/2003/01/geo/wgs84_pos#long
 <http://www.w3.org/2003/01/geo/wgs84_pos#long> rdf:type owl:DatatypeProperty ;
-                                               rdfs:comment "Attribute to indicate the longitud geolocalization coordinate of a building."@en ;
-                                               rdfs:isDefinedBy <http://www.w3.org/2003/01/geo/wgs84_pos#> ;
-                                               rdfs:label "longitud"@en .
+                                               rdfs:comment "Longitude geo location coordinate."@en ;
+                                               rdfs:label "longitude"@en .
+
+
+###  https://w3id.org/bot#hasSimple3DModel
+<https://w3id.org/bot#hasSimple3DModel> rdf:type owl:DatatypeProperty ;
+                                        rdfs:range xsd:string ;
+                                        rdfs:comment "Links any Zone or Element to a 3D Model encoded as a literal."@en ;
+                                        rdfs:label "has simple 3d model" .
 
 
 #################################################################
 #    Classes
 #################################################################
 
-###  http://bimerr.iot.linkeddata.es/def/building#AdhesiveAndFiller
-:AdhesiveAndFiller rdf:type owl:Class ;
-                   rdfs:subClassOf :Material ;
-                   rdfs:label "Adhesive"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/building#AdhesiveBridgesAndPreSplash
-:AdhesiveBridgesAndPreSplash rdf:type owl:Class ;
-                             rdfs:subClassOf :MasonryAndPlasterMortar ;
-                             rdfs:label "Adhesive bridges and pre-splash"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/building#AdobeMasonryUnfired
-:AdobeMasonryUnfired rdf:type owl:Class ;
-                     rdfs:subClassOf :Masonry ;
-                     rdfs:label "Adobe masonry (unfired)"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/building#AeratedConcreteMasonry
-:AeratedConcreteMasonry rdf:type owl:Class ;
-                        rdfs:subClassOf :Masonry ;
-                        rdfs:label "Aerated concrete masonry"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/building#Air
-:Air rdf:type owl:Class ;
-     rdfs:subClassOf :Material ;
-     rdfs:label "Air"@en .
-
-
 ###  http://bimerr.iot.linkeddata.es/def/building#Apartment
 :Apartment rdf:type owl:Class ;
            rdfs:subClassOf <https://w3id.org/bot#Zone> ,
                            [ rdf:type owl:Restriction ;
-                             owl:onProperty :hasSimple3DModel ;
-                             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                             owl:onProperty <https://w3id.org/bot#hasSpace> ;
+                             owl:allValuesFrom :Space
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :ifcIdentifier ;
+                             owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                              owl:onDataRange xsd:string
                            ] ;
-           rdfs:comment "A delimited zone within a storey which brings shelter to its residents."@en ;
-           rdfs:label "Apartment"@en ;
+           rdfs:comment "An apartment is a group of spaces, partial spaces or other zones."@en ;
+           rdfs:label "Apartment" ;
            rdfs:seeAlso "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcZone" .
 
 
 ###  http://bimerr.iot.linkeddata.es/def/building#BiomassBoiler
 :BiomassBoiler rdf:type owl:Class ;
-               rdfs:subClassOf :Component ;
-               rdfs:label "Biomass boiler"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/building#BrickMasonry
-:BrickMasonry rdf:type owl:Class ;
-              rdfs:subClassOf :Masonry ;
-              rdfs:label "Brick masonry"@en .
+               rdfs:subClassOf <https://w3id.org/def/saref4bldg#Boiler> ;
+               rdfs:label "Biomass Boiler" .
 
 
 ###  http://bimerr.iot.linkeddata.es/def/building#Building
 :Building rdf:type owl:Class ;
           rdfs:subClassOf <https://w3id.org/bot#Building> ,
                           [ rdf:type owl:Restriction ;
+                            owl:onProperty <https://w3id.org/bot#hasStorey> ;
+                            owl:allValuesFrom :Storey
+                          ] ,
+                          [ rdf:type owl:Restriction ;
                             owl:onProperty :ifcIdentifier ;
-                            owl:cardinality "1"^^xsd:nonNegativeInteger
-                          ] ,
-                          [ rdf:type owl:Restriction ;
-                            owl:onProperty :buildingAddress ;
-                            owl:maxCardinality "1"^^xsd:nonNegativeInteger
-                          ] ,
-                          [ rdf:type owl:Restriction ;
-                            owl:onProperty :hasSimple3DModel ;
-                            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                            owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                             owl:onDataRange xsd:string
-                          ] ,
-                          [ rdf:type owl:Restriction ;
-                            owl:onProperty <http://www.w3.org/2003/01/geo/wgs84_pos#alt> ;
-                            owl:maxCardinality "1"^^xsd:nonNegativeInteger
-                          ] ,
-                          [ rdf:type owl:Restriction ;
-                            owl:onProperty <http://www.w3.org/2003/01/geo/wgs84_pos#lat> ;
-                            owl:maxCardinality "1"^^xsd:nonNegativeInteger
-                          ] ,
-                          [ rdf:type owl:Restriction ;
-                            owl:onProperty <http://www.w3.org/2003/01/geo/wgs84_pos#long> ;
-                            owl:maxCardinality "1"^^xsd:nonNegativeInteger
                           ] ;
-          rdfs:comment "A building represents a structure that provides shelter for its occupants or contents and stands in one place. The building is also used to provide a basic element within the spatial structure hierarchy for the components of a building project (together with site, storey, and space). (Definition taken from IFC4x1 standard)"@en ;
-          rdfs:label "Building"@en ;
+          rdfs:comment "A building represents a structure that provides shelter for its occupants or contents and stands in one place. The building is also used to provide a basic element within the spatial structure hierarchy for the components of a building project (together with site, storey, and space)."@en ;
+          rdfs:label "Building" ;
           rdfs:seeAlso "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcBuilding" .
 
 
-###  http://bimerr.iot.linkeddata.es/def/building#BuildingBoard
-:BuildingBoard rdf:type owl:Class ;
-               rdfs:subClassOf :Material ;
-               rdfs:label "Building board"@en .
+###  http://bimerr.iot.linkeddata.es/def/building#BuildingElement
+:BuildingElement rdf:type owl:Class ;
+                 rdfs:subClassOf :Element ;
+                 rdfs:comment "The building element comprises all elements that are primarily part of the construction of a building, i.e., its structural and space separating system. Building elements are all physically existent and tangible things."@en ;
+                 rdfs:label "Building Element" ;
+                 rdfs:seeAlso "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcBuildingElement" .
 
 
-###  http://bimerr.iot.linkeddata.es/def/building#CeilingElement
-:CeilingElement rdf:type owl:Class ;
-                rdfs:subClassOf :Material ;
-                rdfs:label "Ceiling element"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/building#CelluloseFibreInsulationMaterial
-:CelluloseFibreInsulationMaterial rdf:type owl:Class ;
-                                  rdfs:subClassOf :InsulatingMaterialsFromRenewableRawMaterial ;
-                                  rdfs:label "Cellulose fibre insulation material"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/building#CementBoundEPSBoard
-:CementBoundEPSBoard rdf:type owl:Class ;
-                     rdfs:subClassOf :SyntheticInsulatingMaterial ;
-                     rdfs:label "Cement-bound EPS board"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/building#CementBoundLightweightConcreteSlab
-:CementBoundLightweightConcreteSlab rdf:type owl:Class ;
-                                    rdfs:subClassOf :BuildingBoard ;
-                                    rdfs:label "Cement-bound lightweight concrete slab"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/building#ClayBuildingBoard
-:ClayBuildingBoard rdf:type owl:Class ;
-                   rdfs:subClassOf :BuildingBoard ;
-                   rdfs:label "Clay building board"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/building#CoatingImpregnation
-:CoatingImpregnation rdf:type owl:Class ;
-                     rdfs:subClassOf :Material ;
-                     rdfs:label "Coating impregnation"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/building#CoconutFibreInsulatingMaterial
-:CoconutFibreInsulatingMaterial rdf:type owl:Class ;
-                                rdfs:subClassOf :InsulatingMaterialsFromRenewableRawMaterial ;
-                                rdfs:label "Coconut fibre insulating material"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/building#Component
-:Component rdf:type owl:Class ;
-           rdfs:subClassOf :Element ;
-           rdfs:comment "Represents assemblies or undividible building products."@en ;
-           rdfs:label "Component"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/building#Concrete
-:Concrete rdf:type owl:Class ;
-          rdfs:subClassOf :Material ;
-          rdfs:label "Concrete"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/building#ConcreteInWUQuality
-:ConcreteInWUQuality rdf:type owl:Class ;
-                     rdfs:subClassOf :Concrete ;
-                     rdfs:label "Concrete in WU quality"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/building#ConcreteMasonry
-:ConcreteMasonry rdf:type owl:Class ;
-                 rdfs:subClassOf :Masonry ;
-                 rdfs:label "Concrete masonry"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/building#ConcreteWithEPSAggregate
-:ConcreteWithEPSAggregate rdf:type owl:Class ;
-                          rdfs:subClassOf :Concrete ;
-                          rdfs:label "Concrete with EPS aggregate"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/building#ConcreteWithExpandedClayOrBrickChippingsAggregate
-:ConcreteWithExpandedClayOrBrickChippingsAggregate rdf:type owl:Class ;
-                                                   rdfs:subClassOf :Concrete ;
-                                                   rdfs:label "Concrete with expanded clay or brick chippings aggregate"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/building#ConcreteWithExpandedShaleAggregate
-:ConcreteWithExpandedShaleAggregate rdf:type owl:Class ;
-                                    rdfs:subClassOf :Concrete ;
-                                    rdfs:label "Concrete with expanded shale aggregate"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/building#ConcreteWithPumiceAggregate
-:ConcreteWithPumiceAggregate rdf:type owl:Class ;
-                             rdfs:subClassOf :Concrete ;
-                             rdfs:label "Concrete with pumice aggregate"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/building#ConcreteWithSlagPumiceAggregate
-:ConcreteWithSlagPumiceAggregate rdf:type owl:Class ;
-                                 rdfs:subClassOf :Concrete ;
-                                 rdfs:label "Concrete with slag pumice aggregate"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/building#ConcreteWithSulphateSlagCement
-:ConcreteWithSulphateSlagCement rdf:type owl:Class ;
-                                rdfs:subClassOf :Concrete ;
-                                rdfs:label "Concrete with sulphate slag cement"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/building#Construction
-:Construction rdf:type owl:Class ;
-              rdfs:subClassOf :Element ,
-                              [ rdf:type owl:Restriction ;
-                                owl:onProperty :ifcIdentifier ;
-                                owl:someValuesFrom xsd:string
-                              ] ;
-              rdfs:comment "Building component that is conformed by layers, such as a wall, roof, or floor."@en ;
-              rdfs:label "Construction"@en ;
-              rdfs:seeAlso "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#description_IfcMaterialLayerSet" .
-
-
-###  http://bimerr.iot.linkeddata.es/def/building#CorkInsulatingMaterial
-:CorkInsulatingMaterial rdf:type owl:Class ;
-                        rdfs:subClassOf :InsulatingMaterialsFromRenewableRawMaterial ;
-                        rdfs:label "Cork insulating material"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/building#CottonInsulationMaterial
-:CottonInsulationMaterial rdf:type owl:Class ;
-                          rdfs:subClassOf :InsulatingMaterialsFromRenewableRawMaterial ;
-                          rdfs:label "Cotton insulation material"@en .
+###  http://bimerr.iot.linkeddata.es/def/building#CoolingSystem
+:CoolingSystem rdf:type owl:Class ;
+               rdfs:subClassOf :System ;
+               rdfs:comment "System that aggregates cooling devices."@en ;
+               rdfs:label "Cooling System" .
 
 
 ###  http://bimerr.iot.linkeddata.es/def/building#Door
 :Door rdf:type owl:Class ;
-      rdfs:subClassOf :Component ;
-      rdfs:label "Door"@en ;
+      rdfs:subClassOf :BuildingElement ;
+      rdfs:comment "The door is a building element that is predominately used to provide controlled access for people and goods. It includes constructions with hinged, pivoted, sliding, and additionally revolving and folding operations. A door consists of a lining and one or several panels."@en ;
+      rdfs:label "Door" ;
       rdfs:seeAlso "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcDoor" .
 
 
-###  http://bimerr.iot.linkeddata.es/def/building#EPSInsulatingMaterial
-:EPSInsulatingMaterial rdf:type owl:Class ;
-                       rdfs:subClassOf :SyntheticInsulatingMaterial ;
-                       rdfs:label "EPS insulating material"@en .
+###  http://bimerr.iot.linkeddata.es/def/building#DuctSegment
+:DuctSegment rdf:type owl:Class ;
+             rdfs:subClassOf :FlowSegment ;
+             rdfs:comment "A duct segment is used to typically join two sections of duct network."@en ;
+             rdfs:label "Duct Segment" ;
+             rdfs:seeAlso "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcDuctSegment" .
 
 
 ###  http://bimerr.iot.linkeddata.es/def/building#Element
 :Element rdf:type owl:Class ;
          rdfs:subClassOf <https://w3id.org/bot#Element> ,
                          [ rdf:type owl:Restriction ;
-                           owl:onProperty :ifcIdentifier ;
-                           owl:cardinality "1"^^xsd:nonNegativeInteger
+                           owl:onProperty <https://w3id.org/bot#hasSubElement> ;
+                           owl:allValuesFrom :Element
                          ] ,
                          [ rdf:type owl:Restriction ;
-                           owl:onProperty :hasSimple3DModel ;
+                           owl:onProperty :isPartOfSystem ;
                            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                           owl:onClass :System
+                         ] ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty :ifcIdentifier ;
+                           owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                            owl:onDataRange xsd:string
                          ] ;
-         rdfs:comment "Building component or construction element which can be described by a set of properties."@en ;
-         rdfs:label "Element"@en ;
-         rdfs:seeAlso "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcBuildingElement" .
+         rdfs:comment "An element is a generalization of all components that make up an AEC product."@en ;
+         rdfs:label "Element" ;
+         rdfs:seeAlso "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcElement" .
 
 
-###  http://bimerr.iot.linkeddata.es/def/building#ExternalPlaster
-:ExternalPlaster rdf:type owl:Class ;
-                 rdfs:subClassOf :MasonryAndPlasterMortar ;
-                 rdfs:label "External plaster"@en .
+###  http://bimerr.iot.linkeddata.es/def/building#FenestrationSystem
+:FenestrationSystem rdf:type owl:Class ;
+                    rdfs:subClassOf :System ;
+                    rdfs:comment "System that aggregates fenestration elements."@en ;
+                    rdfs:label "Fenestration System" .
 
 
-###  http://bimerr.iot.linkeddata.es/def/building#Facade
-:Facade rdf:type owl:Class ;
-        rdfs:subClassOf :Construction ;
-        rdfs:label "Facade"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/building#FacadeCladding
-:FacadeCladding rdf:type owl:Class ;
-                rdfs:subClassOf :Material ;
-                rdfs:label "Facade cladding"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/building#FibreCementBoard
-:FibreCementBoard rdf:type owl:Class ;
-                  rdfs:subClassOf :BuildingBoard ;
-                  rdfs:label "Fibre cement board"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/building#Filler
-:Filler rdf:type owl:Class ;
-        rdfs:subClassOf :Material ;
-        rdfs:label "Filler"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/building#FillingBrick
-:FillingBrick rdf:type owl:Class ;
-              rdfs:subClassOf :BrickMasonry ;
-              rdfs:label "Filling brick"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/building#FilmProtectionMaterial
-:FilmProtectionMaterial rdf:type owl:Class ;
-                        rdfs:subClassOf :SealingSheetVapourBarrierFoil ;
-                        rdfs:label "Film protection material"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/building#FlaxInsulatingMaterial
-:FlaxInsulatingMaterial rdf:type owl:Class ;
-                        rdfs:subClassOf :InsulatingMaterialsFromRenewableRawMaterial ;
-                        rdfs:label "Flax insulating material"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/building#Floor
-:Floor rdf:type owl:Class ;
-       rdfs:subClassOf :Construction ;
-       rdfs:label "Floor"@en ;
-       rdfs:seeAlso "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcSlab" .
-
-
-###  http://bimerr.iot.linkeddata.es/def/building#FloorCovering
-:FloorCovering rdf:type owl:Class ;
-               rdfs:subClassOf :Material ;
-               rdfs:label "Floor covering"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/building#FoamGlassInsulationBoard
-:FoamGlassInsulationBoard rdf:type owl:Class ;
-                          rdfs:subClassOf :MineralInsulationMaterial ;
-                          rdfs:label "Foam glass insulation board"@en .
+###  http://bimerr.iot.linkeddata.es/def/building#FlowSegment
+:FlowSegment rdf:type owl:Class ;
+             rdfs:subClassOf <https://w3id.org/def/saref4bldg#DistributionFlowDevice> ;
+             rdfs:comment "Defines the occurrence of a segment of a flow distribution system."@en ;
+             rdfs:label "Flow Segment" ;
+             rdfs:seeAlso "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcFlowSegment" .
 
 
 ###  http://bimerr.iot.linkeddata.es/def/building#FossilBoiler
 :FossilBoiler rdf:type owl:Class ;
-              rdfs:subClassOf :Component ;
-              rdfs:label "Fossil boiler"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/building#Gas
-:Gas rdf:type owl:Class ;
-     rdfs:subClassOf :Material ;
-     rdfs:label "Gas"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/building#GlassWoolInsulatingMaterial
-:GlassWoolInsulatingMaterial rdf:type owl:Class ;
-                             rdfs:subClassOf :MineralInsulationMaterial ;
-                             rdfs:label "Glass wool insulating material"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/building#GrassFibreInsulationBoard
-:GrassFibreInsulationBoard rdf:type owl:Class ;
-                           rdfs:subClassOf :InsulatingMaterialsFromRenewableRawMaterial ;
-                           rdfs:label "Grass fibre insulation board"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/building#HeatFlowDownwards
-:HeatFlowDownwards rdf:type owl:Class ;
-                   rdfs:subClassOf :Air ;
-                   rdfs:label "Heat flow downwards"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/building#HeatFlowHorizontal
-:HeatFlowHorizontal rdf:type owl:Class ;
-                    rdfs:subClassOf :Air ;
-                    rdfs:label "Heat flow horizontal"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/building#HeatFlowUpwards
-:HeatFlowUpwards rdf:type owl:Class ;
-                 rdfs:subClassOf :Air ;
-                 rdfs:label "Heat flow upwards"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/building#HeatPump
-:HeatPump rdf:type owl:Class ;
-          rdfs:subClassOf :Component ;
-          rdfs:label "Heat pump"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/building#HeatingPipe
-:HeatingPipe rdf:type owl:Class ;
-             rdfs:subClassOf :Component ;
-             rdfs:label "Heating pipe"@en .
+              rdfs:subClassOf <https://w3id.org/def/saref4bldg#Boiler> ;
+              rdfs:label "Fossil Boiler" .
 
 
 ###  http://bimerr.iot.linkeddata.es/def/building#HeatingSystem
 :HeatingSystem rdf:type owl:Class ;
-               rdfs:subClassOf :Component ;
-               rdfs:label "Heating system"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/building#HempInsulatingMaterial
-:HempInsulatingMaterial rdf:type owl:Class ;
-                        rdfs:subClassOf :InsulatingMaterialsFromRenewableRawMaterial ;
-                        rdfs:label "Hemp insulating material"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/building#HighPerforatedBrickMasonry
-:HighPerforatedBrickMasonry rdf:type owl:Class ;
-                            rdfs:subClassOf :BrickMasonry ;
-                            rdfs:label "High perforated brick masonry"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/building#HotWaterTank
-:HotWaterTank rdf:type owl:Class ;
-              rdfs:subClassOf :Component ;
-              rdfs:label "Hot water tank"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/building#InsulatingMaterialsFromRenewableRawMaterial
-:InsulatingMaterialsFromRenewableRawMaterial rdf:type owl:Class ;
-                                             rdfs:subClassOf :InsulationMaterial ;
-                                             rdfs:label "Insulating materials from renewable raw material"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/building#InsulationMaterial
-:InsulationMaterial rdf:type owl:Class ;
-                    rdfs:subClassOf :Material ;
-                    rdfs:label "Insulation material"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/building#InteriorPlaster
-:InteriorPlaster rdf:type owl:Class ;
-                 rdfs:subClassOf :MasonryAndPlasterMortar ;
-                 rdfs:label "Interior plaster"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/building#Layer
-:Layer rdf:type owl:Class ;
-       rdfs:subClassOf :Element ;
-       rdfs:comment "A single and identifiable part of an element which is constructed of a number of layers (one or more). Each Layer has a constant thickness and is located relative to the referencing Construction element. (Definition adapted from IFC)"@en ;
-       rdfs:label "Layer"@en ;
-       rdfs:seeAlso "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#category_IfcMaterialLayer" .
-
-
-###  http://bimerr.iot.linkeddata.es/def/building#Masonry
-:Masonry rdf:type owl:Class ;
-         rdfs:subClassOf :Material ;
-         rdfs:label "Masonry"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/building#MasonryAndPlasterMortar
-:MasonryAndPlasterMortar rdf:type owl:Class ;
-                         rdfs:subClassOf :Material ;
-                         rdfs:label "Masonry and plaster mortar"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/building#Material
-:Material rdf:type owl:Class ;
-          rdfs:subClassOf :Element ;
-          rdfs:comment "A homogeneous or inhomogeneous substance that can be used to form elements (physical products or their components). (Definition taken from IFC)"@en ;
-          rdfs:label "Material"@en ;
-          rdfs:seeAlso "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcMaterial" .
-
-
-###  http://bimerr.iot.linkeddata.es/def/building#MineralFoamInsulationBoard
-:MineralFoamInsulationBoard rdf:type owl:Class ;
-                            rdfs:subClassOf :MineralInsulationMaterial ;
-                            rdfs:label "Mineral foam insulation board"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/building#MineralInsulationMaterial
-:MineralInsulationMaterial rdf:type owl:Class ;
-                           rdfs:subClassOf :InsulationMaterial ;
-                           rdfs:label "Mineral insulation material"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/building#Mortar
-:Mortar rdf:type owl:Class ;
-        rdfs:subClassOf :MasonryAndPlasterMortar ;
-        rdfs:label "Mortar"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/building#NaturalStone
-:NaturalStone rdf:type owl:Class ;
-              rdfs:subClassOf :Material ;
-              rdfs:label "Natural stone"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/building#NaturalStoneMasonry
-:NaturalStoneMasonry rdf:type owl:Class ;
-                     rdfs:subClassOf :Masonry ;
-                     rdfs:label "Natural stone masonry"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/building#NormalConcrete
-:NormalConcrete rdf:type owl:Class ;
-                rdfs:subClassOf :Concrete ;
-                rdfs:label "Normal concrete"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/building#PURPIRInsulationBoard
-:PURPIRInsulationBoard rdf:type owl:Class ;
-                       rdfs:subClassOf :SyntheticInsulatingMaterial ;
-                       rdfs:label "PUR/PIR insulation board"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/building#PerliteInsulationBoard
-:PerliteInsulationBoard rdf:type owl:Class ;
-                        rdfs:subClassOf :MineralInsulationMaterial ;
-                        rdfs:label "Perlite insulation board"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/building#PhenolicResinFoamBoard
-:PhenolicResinFoamBoard rdf:type owl:Class ;
-                        rdfs:subClassOf :SyntheticInsulatingMaterial ;
-                        rdfs:label "Phenolic resin foam board"@en .
+               rdfs:subClassOf :System ;
+               rdfs:comment "System that aggregates heating devices."@en ;
+               rdfs:label "Heating System" .
 
 
 ###  http://bimerr.iot.linkeddata.es/def/building#PhotovoltaicSystem
 :PhotovoltaicSystem rdf:type owl:Class ;
-                    rdfs:subClassOf :Component ;
-                    rdfs:label "Photovoltaic system"@en .
+                    rdfs:subClassOf :System ;
+                    rdfs:comment "System that aggregates photovoltaic devices."@en ;
+                    rdfs:label "Photovoltaic System" .
 
 
-###  http://bimerr.iot.linkeddata.es/def/building#PlasterBase
-:PlasterBase rdf:type owl:Class ;
-             rdfs:subClassOf :MasonryAndPlasterMortar ;
-             rdfs:label "Plaster base"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/building#Platerboard
-:Platerboard rdf:type owl:Class ;
-             rdfs:subClassOf :BuildingBoard ;
-             rdfs:label "Plasterboard"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/building#PolyesterFibreInsulatingMaterial
-:PolyesterFibreInsulatingMaterial rdf:type owl:Class ;
-                                  rdfs:subClassOf :SyntheticInsulatingMaterial ;
-                                  rdfs:label "Polyester fibre insulating material"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/building#PolyethyleneInsulatingMaterial
-:PolyethyleneInsulatingMaterial rdf:type owl:Class ;
-                                rdfs:subClassOf :SyntheticInsulatingMaterial ;
-                                rdfs:label "Polyethylene (PE) insulating material"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/building#Radiator
-:Radiator rdf:type owl:Class ;
-          rdfs:subClassOf :Component .
-
-
-###  http://bimerr.iot.linkeddata.es/def/building#ReedInsulationPanel
-:ReedInsulationPanel rdf:type owl:Class ;
-                     rdfs:subClassOf :InsulatingMaterialsFromRenewableRawMaterial ;
-                     rdfs:label "Reed insulation panel"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/building#ReinforcedConcreteNormalConcreteWithReinforcement
-:ReinforcedConcreteNormalConcreteWithReinforcement rdf:type owl:Class ;
-                                                   rdfs:subClassOf :Concrete ;
-                                                   rdfs:label "Reinforced concrete / normal concrete with reinforcement"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/building#RockWoolInsulationMaterial
-:RockWoolInsulationMaterial rdf:type owl:Class ;
-                            rdfs:subClassOf :MineralInsulationMaterial ;
-                            rdfs:label "Rock wool insulation material"@en .
+###  http://bimerr.iot.linkeddata.es/def/building#PipeSegment
+:PipeSegment rdf:type owl:Class ;
+             rdfs:subClassOf :FlowSegment ;
+             rdfs:comment "A pipe segment is used to typically join two sections of a piping network."@en ;
+             rdfs:label "Pipe Segment" ;
+             rdfs:seeAlso "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcPipeSegment" .
 
 
 ###  http://bimerr.iot.linkeddata.es/def/building#Roof
 :Roof rdf:type owl:Class ;
-      rdfs:subClassOf :Construction ;
-      rdfs:label "Roof"@en ;
+      rdfs:subClassOf :BuildingElement ;
+      rdfs:comment "A roof is the covering of the top part of a building, it protects the building against the effects of wheather."@en ;
+      rdfs:label "Roof" ;
       rdfs:seeAlso "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcRoof" .
 
 
-###  http://bimerr.iot.linkeddata.es/def/building#RoofCovery
-:RoofCovery rdf:type owl:Class ;
-            rdfs:subClassOf :Material ;
-            rdfs:label "Roof covery"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/building#RoofElement
-:RoofElement rdf:type owl:Class ;
-             rdfs:subClassOf :Material ;
-             rdfs:label "Roof element"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/building#SandLimeBrickwork
-:SandLimeBrickwork rdf:type owl:Class ;
-                   rdfs:subClassOf :Masonry ;
-                   rdfs:label "Sand-lime brickwork"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/building#Screed
-:Screed rdf:type owl:Class ;
-        rdfs:subClassOf :Material ;
-        rdfs:label "Screed"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/building#SealantsAndAdhesive
-:SealantsAndAdhesive rdf:type owl:Class ;
-                     rdfs:subClassOf :Material ;
-                     rdfs:label "Sealant and adhesive"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/building#SealingSheet
-:SealingSheet rdf:type owl:Class ;
-              rdfs:subClassOf :SealingSheetVapourBarrierFoil ;
-              rdfs:label "Sealing sheet"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/building#SealingSheetVapourBarrierFoil
-:SealingSheetVapourBarrierFoil rdf:type owl:Class ;
-                               rdfs:subClassOf :Material ;
-                               rdfs:label "Sealing sheet vapour barrier foil"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/building#SheepWoolInsulation
-:SheepWoolInsulation rdf:type owl:Class ;
-                     rdfs:subClassOf :InsulatingMaterialsFromRenewableRawMaterial ;
-                     rdfs:label "Sheep wool insulation"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/building#SheetsOfBondedLightweightAggregate
-:SheetsOfBondedLightweightAggregate rdf:type owl:Class ;
-                                    rdfs:subClassOf :BuildingBoard ;
-                                    rdfs:label "Sheets of bonded lightweight aggregate"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/building#SlottedBrickMasonry
-:SlottedBrickMasonry rdf:type owl:Class ;
-                     rdfs:subClassOf :BrickMasonry ;
-                     rdfs:label "Slotted brick masonry"@en .
+###  http://bimerr.iot.linkeddata.es/def/building#Slab
+:Slab rdf:type owl:Class ;
+      rdfs:subClassOf :BuildingElement ;
+      rdfs:comment "A slab is a component of the construction that normally encloses a space vertically. The slab may provide the lower support (floor) or upper construction (roof slab) in any space in a building."@en ;
+      rdfs:label "Slab" ;
+      rdfs:seeAlso "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcSlab" .
 
 
 ###  http://bimerr.iot.linkeddata.es/def/building#SolarSystem
 :SolarSystem rdf:type owl:Class ;
-             rdfs:subClassOf :Component ;
-             rdfs:label "Solar system"@en .
+             rdfs:subClassOf :System ;
+             rdfs:comment "System that aggregates solar devices."@en ;
+             rdfs:label "Solar System" .
 
 
 ###  http://bimerr.iot.linkeddata.es/def/building#Space
 :Space rdf:type owl:Class ;
        rdfs:subClassOf <https://w3id.org/bot#Space> ,
                        [ rdf:type owl:Restriction ;
-                         owl:onProperty :maxOccupants ;
-                         owl:minCardinality "1"^^xsd:nonNegativeInteger
+                         owl:onProperty <https://w3id.org/bot#hasElement> ;
+                         owl:allValuesFrom :Element
                        ] ,
                        [ rdf:type owl:Restriction ;
                          owl:onProperty :ifcIdentifier ;
-                         owl:cardinality "1"^^xsd:nonNegativeInteger
-                       ] ,
-                       [ rdf:type owl:Restriction ;
-                         owl:onProperty :hasSimple3DModel ;
-                         owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                         owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                          owl:onDataRange xsd:string
                        ] ;
-       rdfs:comment "A space is (if specified) associated to a building storey (or in case of exterior spaces to a site). A space may span over several connected spaces. Therefore a space group provides for a collection of spaces included in a storey. A space can also be decomposed in parts, where each part defines a partial space. (Definition taken from IFC standard)"@en ;
-       rdfs:label "Space"@en ;
+       rdfs:comment "A space represents an area or volume bounded actually or theoretically. Spaces are areas or volumes that provide for certain functions within a building."@en ;
+       rdfs:label "Space" ;
        rdfs:seeAlso "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcSpace" .
 
 
@@ -839,188 +338,215 @@
 :Storey rdf:type owl:Class ;
         rdfs:subClassOf <https://w3id.org/bot#Storey> ,
                         [ rdf:type owl:Restriction ;
-                          owl:onProperty :ifcIdentifier ;
-                          owl:cardinality "1"^^xsd:nonNegativeInteger
+                          owl:onProperty <https://w3id.org/bot#containsZone> ;
+                          owl:someValuesFrom :Apartment
                         ] ,
                         [ rdf:type owl:Restriction ;
-                          owl:onProperty :hasSimple3DModel ;
-                          owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                          owl:onProperty :hasApartment ;
+                          owl:allValuesFrom :Apartment
+                        ] ,
+                        [ rdf:type owl:Restriction ;
+                          owl:onProperty :ifcIdentifier ;
+                          owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                           owl:onDataRange xsd:string
                         ] ;
-        rdfs:comment "A storey is (if specified) associated to a building. A storey may span over several connected storeys. Therefore storey complex provides for a collection of storeys included in a building. A storey can also be decomposed in (horizontical) parts, where each part defines a partial storey. (Definition taken from IFC standard)"@en ;
-        rdfs:label "Storey"@en ;
+        rdfs:comment "The building storey has an elevation and typically represents a (nearly) horizontal aggregation of spaces that are vertically bound."@en ;
+        rdfs:label "Storey" ;
         rdfs:seeAlso "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcBuildingStorey" .
 
 
-###  http://bimerr.iot.linkeddata.es/def/building#StrawInsulationMaterial
-:StrawInsulationMaterial rdf:type owl:Class ;
-                         rdfs:subClassOf :InsulatingMaterialsFromRenewableRawMaterial ;
-                         rdfs:label "Straw insulation material"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/building#StructuralSolidWood
-:StructuralSolidWood rdf:type owl:Class ;
-                     rdfs:subClassOf :Material ;
-                     rdfs:label "Structural solid wood"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/building#SyntheticInsulatingMaterial
-:SyntheticInsulatingMaterial rdf:type owl:Class ;
-                             rdfs:subClassOf :InsulationMaterial ;
-                             rdfs:label "Synthetic insulating material"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/building#TippingAndAggregate
-:TippingAndAggregate rdf:type owl:Class ;
-                     rdfs:subClassOf :Material ;
-                     rdfs:label "Tipping and aggregate"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/building#VacuumInsulationPanel
-:VacuumInsulationPanel rdf:type owl:Class ;
-                       rdfs:subClassOf :MineralInsulationMaterial ;
-                       rdfs:label "Vacuum insulation panel"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/building#VapourBarrierAndBrake
-:VapourBarrierAndBrake rdf:type owl:Class ;
-                       rdfs:subClassOf :SealingSheetVapourBarrierFoil ;
-                       rdfs:label "Vapour barrier and brake"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/building#VentilationAccessory
-:VentilationAccessory rdf:type owl:Class ;
-                      rdfs:subClassOf :Component ;
-                      rdfs:label "Ventilation accessory"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/building#VentilationPipe
-:VentilationPipe rdf:type owl:Class ;
-                 rdfs:subClassOf :Component ;
-                 rdfs:label "Ventilation pipe"@en .
+###  http://bimerr.iot.linkeddata.es/def/building#System
+:System rdf:type owl:Class ;
+        rdfs:subClassOf [ rdf:type owl:Restriction ;
+                          owl:onProperty :includesElement ;
+                          owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                          owl:onClass :Element
+                        ] ;
+        rdfs:label "System" .
 
 
 ###  http://bimerr.iot.linkeddata.es/def/building#VentilationSystem
 :VentilationSystem rdf:type owl:Class ;
-                   rdfs:subClassOf :Component ;
-                   rdfs:label "Ventillation system"@en .
+                   rdfs:subClassOf :System ;
+                   rdfs:comment "System that aggregates ventilation devices."@en ;
+                   rdfs:label "Ventilation System" .
 
 
-###  http://bimerr.iot.linkeddata.es/def/building#VentilationUnit
-:VentilationUnit rdf:type owl:Class ;
-                 rdfs:subClassOf :Component ;
-                 rdfs:label "Ventilation unit"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/building#WallElement
-:WallElement rdf:type owl:Class ;
-             rdfs:subClassOf :Component ;
-             rdfs:label "Wall element"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/building#WallPaintAndCovering
-:WallPaintAndCovering rdf:type owl:Class ;
-                      rdfs:subClassOf :Material ;
-                      rdfs:label "Wall paint and covering"@en .
+###  http://bimerr.iot.linkeddata.es/def/building#Wall
+:Wall rdf:type owl:Class ;
+      rdfs:subClassOf :BuildingElement ;
+      rdfs:comment "The wall represents a vertical construction that bounds or subdivides spaces. Wall are usually vertical, or nearly vertical, planar elements, often designed to bear structural loads. A wall is however not required to be load bearing."@en ;
+      rdfs:label "Wall" ;
+      rdfs:seeAlso "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcWall" .
 
 
 ###  http://bimerr.iot.linkeddata.es/def/building#Window
 :Window rdf:type owl:Class ;
-        rdfs:subClassOf :Component ;
-        rdfs:label "Window"@en ;
+        rdfs:subClassOf :BuildingElement ;
+        rdfs:comment "The window is a building element that is predominately used to provide natural light and fresh air. It includes vertical opening but also horizontal opening such as skylights or light domes. It includes constructions with swinging, pivoting, sliding, or revolving panels and fixed panels. A window consists of a lining and one or several panels."@en ;
+        rdfs:label "Window" ;
         rdfs:seeAlso "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcWindow" .
-
-
-###  http://bimerr.iot.linkeddata.es/def/building#WindowFrame
-:WindowFrame rdf:type owl:Class ;
-             rdfs:subClassOf :Component ;
-             rdfs:label "Window frame"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/building#WindowGlazing
-:WindowGlazing rdf:type owl:Class ;
-               rdfs:subClassOf :Component ;
-               rdfs:label "Window glazing"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/building#WoodAndWoodBasedPanel
-:WoodAndWoodBasedPanel rdf:type owl:Class ;
-                       rdfs:subClassOf :BuildingBoard ;
-                       rdfs:label "Wood and wood based panel"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/building#WoodChipInsulationBoard
-:WoodChipInsulationBoard rdf:type owl:Class ;
-                         rdfs:subClassOf :MineralInsulationMaterial ;
-                         rdfs:label "Wood chip insulation board"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/building#WoodFibreInsulatingMaterial
-:WoodFibreInsulatingMaterial rdf:type owl:Class ;
-                             rdfs:subClassOf :InsulatingMaterialsFromRenewableRawMaterial ;
-                             rdfs:label "Wood fibre insulating material"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/building#WoodShavingLooseSawdust
-:WoodShavingLooseSawdust rdf:type owl:Class ;
-                         rdfs:subClassOf :InsulatingMaterialsFromRenewableRawMaterial ;
-                         rdfs:label "Wood shaving (loose), sawdust"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/building#WoodWoolInsulationBoard
-:WoodWoolInsulationBoard rdf:type owl:Class ;
-                         rdfs:subClassOf :MineralInsulationMaterial ;
-                         rdfs:label "Wood wool insulation board"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/building#WoodWoolMultiLayerInsulationBoard
-:WoodWoolMultiLayerInsulationBoard rdf:type owl:Class ;
-                                   rdfs:subClassOf :MineralInsulationMaterial ;
-                                   rdfs:label "Wood-wool multi-layer insulation board"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/building#XPSInsulationBoard
-:XPSInsulationBoard rdf:type owl:Class ;
-                    rdfs:subClassOf :SyntheticInsulatingMaterial ;
-                    rdfs:label "XPS insulation board"@en .
 
 
 ###  https://w3id.org/bot#Building
 <https://w3id.org/bot#Building> rdf:type owl:Class ;
-                                rdfs:subClassOf <https://w3id.org/bot#Zone> ;
-                                rdfs:comment "An independent unit of the built environment with a characteristic spatial structure, intended to serve at least one function or user activity [ISO-12006]."@en ;
-                                rdfs:isDefinedBy <http://w3id.org/bot#> ;
-                                rdfs:label "bot:Building"@en .
+                                rdfs:label "Building" .
 
 
 ###  https://w3id.org/bot#Element
 <https://w3id.org/bot#Element> rdf:type owl:Class ;
-                               rdfs:comment "Constituent of a construction entity with a characteristic technical function, form or position [[ISO-12006], 3.4.7]."@en ;
-                               rdfs:isDefinedBy <http://w3id.org/bot#> ;
-                               rdfs:label "bot:Element"@en .
+                               rdfs:label "Element" .
 
 
 ###  https://w3id.org/bot#Space
 <https://w3id.org/bot#Space> rdf:type owl:Class ;
-                             rdfs:subClassOf <https://w3id.org/bot#Zone> ;
-                             rdfs:comment "A part of the physical world or a virtual world whose 3D spatial extent is bounded actually or theoretically, and provides for certain functions within the zone it is contained in."@en ;
-                             rdfs:isDefinedBy <http://w3id.org/bot#> ;
-                             rdfs:label "bot:Space"@en .
+                             rdfs:label "Space" .
 
 
 ###  https://w3id.org/bot#Storey
 <https://w3id.org/bot#Storey> rdf:type owl:Class ;
-                              rdfs:subClassOf <https://w3id.org/bot#Zone> ;
-                              rdfs:comment "A level part of a building."@en ;
-                              rdfs:isDefinedBy <http://w3id.org/bot#> ;
-                              rdfs:label "bot:Storey"@en .
+                              rdfs:label "Storey" .
 
 
 ###  https://w3id.org/bot#Zone
 <https://w3id.org/bot#Zone> rdf:type owl:Class ;
-                            rdfs:comment "A part of the physical world or a virtual world that is inherently both located in this world and having a 3D spatial extent."@en ;
-                            rdfs:isDefinedBy <http://w3id.org/bot#> ;
-                            rdfs:label "bot:Zone"@en .
+                            rdfs:label "Zone" .
+
+
+###  https://w3id.org/def/saref4bldg#Boiler
+<https://w3id.org/def/saref4bldg#Boiler> rdf:type owl:Class ;
+                                         rdfs:subClassOf <https://w3id.org/def/saref4bldg#EnergyConversionDevice> ;
+                                         rdfs:comment "A boiler is a closed, pressure-rated vessel in which water or other fluid is heated using an energy source such as natural gas, heating oil, or electricity. The fluid in the vessel is then circulated out of the boiler for use in various processes or heating applications."@en ;
+                                         rdfs:label "Boiler" ;
+                                         rdfs:seeAlso "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcBoiler"@en .
+
+
+###  https://w3id.org/def/saref4bldg#DistributionDevice
+<https://w3id.org/def/saref4bldg#DistributionDevice> rdf:type owl:Class ;
+                                                     rdfs:subClassOf :Element ;
+                                                     rdfs:comment "A generalization of all elements that participate in a distribution system."@en ;
+                                                     rdfs:label "Distribution Device"@en ;
+                                                     rdfs:seeAlso "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcDistributionElement"@en .
+
+
+###  https://w3id.org/def/saref4bldg#DistributionFlowDevice
+<https://w3id.org/def/saref4bldg#DistributionFlowDevice> rdf:type owl:Class ;
+                                                         rdfs:subClassOf <https://w3id.org/def/saref4bldg#DistributionDevice> ;
+                                                         rdfs:comment "Defines occurrence elements of a distribution system that facilitate the distribution of energy or matter, such as air, water or power."@en ;
+                                                         rdfs:label "Distribution Flow Device" ;
+                                                         rdfs:seeAlso "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcDistributionFlowElement" .
+
+
+###  https://w3id.org/def/saref4bldg#EnergyConversionDevice
+<https://w3id.org/def/saref4bldg#EnergyConversionDevice> rdf:type owl:Class ;
+                                                         rdfs:subClassOf <https://w3id.org/def/saref4bldg#DistributionFlowDevice> ;
+                                                         rdfs:comment "Defines the occurrence of a device used to perform energy conversion or heat transfer and typically participates in a flow distribution system."@en ;
+                                                         rdfs:label "Energy Conversion Device" ;
+                                                         rdfs:seeAlso "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcEnergyConversionDevice" .
+
+
+###  https://w3id.org/def/saref4bldg#Fan
+<https://w3id.org/def/saref4bldg#Fan> rdf:type owl:Class ;
+                                      rdfs:subClassOf <https://w3id.org/def/saref4bldg#FlowMovingDevice> ;
+                                      rdfs:comment "A fan is a device which imparts mechanical work on a gas. A typical usage of a fan is to induce airflow in a building services air distribution system."@en ;
+                                      rdfs:label "Fan" ;
+                                      rdfs:seeAlso "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcFan" .
+
+
+###  https://w3id.org/def/saref4bldg#FlowController
+<https://w3id.org/def/saref4bldg#FlowController> rdf:type owl:Class ;
+                                                 rdfs:subClassOf <https://w3id.org/def/saref4bldg#DistributionFlowDevice> ;
+                                                 rdfs:comment "Defines the occurrence of elements of a distribution system that are used to regulate flow through a distribution system. Examples include dampers, valves, switches, and relays."@en ;
+                                                 rdfs:label "Flow Controller" ;
+                                                 rdfs:seeAlso "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcFlowController" .
+
+
+###  https://w3id.org/def/saref4bldg#FlowMovingDevice
+<https://w3id.org/def/saref4bldg#FlowMovingDevice> rdf:type owl:Class ;
+                                                   rdfs:subClassOf <https://w3id.org/def/saref4bldg#DistributionFlowDevice> ;
+                                                   rdfs:comment "Defines the occurrence of an apparatus used to distribute, circulate or perform conveyance of fluids, including liquids and gases (such as a pump or fan), and typically participates in a flow distribution system."@en ;
+                                                   rdfs:label "Flow Moving Device" ;
+                                                   rdfs:seeAlso "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcFlowMovingDevice" .
+
+
+###  https://w3id.org/def/saref4bldg#FlowStorageDevice
+<https://w3id.org/def/saref4bldg#FlowStorageDevice> rdf:type owl:Class ;
+                                                    rdfs:subClassOf <https://w3id.org/def/saref4bldg#DistributionFlowDevice> ;
+                                                    rdfs:comment "Defines the occurrence of a device that participates in a distribution system and is used for temporary storage (such as a tank)."@en ;
+                                                    rdfs:label "Flow Storage Device" ;
+                                                    rdfs:seeAlso "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcFlowStorageDevice" .
+
+
+###  https://w3id.org/def/saref4bldg#FlowTerminal
+<https://w3id.org/def/saref4bldg#FlowTerminal> rdf:type owl:Class ;
+                                               rdfs:subClassOf <https://w3id.org/def/saref4bldg#DistributionFlowDevice> ;
+                                               rdfs:comment "Defines the occurrence of a permanently attached element that acts as a terminus or beginning of a distribution system (such as an air outlet, drain, water closet, or sink). A terminal is typically a point at which a system interfaces with an external environment."@en ;
+                                               rdfs:label "Flow Terminal" ;
+                                               rdfs:seeAlso "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcFlowTerminal" .
+
+
+###  https://w3id.org/def/saref4bldg#HeatExchanger
+<https://w3id.org/def/saref4bldg#HeatExchanger> rdf:type owl:Class ;
+                                                rdfs:subClassOf <https://w3id.org/def/saref4bldg#EnergyConversionDevice> ;
+                                                rdfs:comment "A heat exchanger is a device used to provide heat transfer between non-mixing media such as plate and shell and tube heat exchangers."@en ;
+                                                rdfs:label "Heat Exchanger" ;
+                                                rdfs:seeAlso "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcHeatExchanger"@en .
+
+
+###  https://w3id.org/def/saref4bldg#Outlet
+<https://w3id.org/def/saref4bldg#Outlet> rdf:type owl:Class ;
+                                         rdfs:subClassOf <https://w3id.org/def/saref4bldg#FlowTerminal> ;
+                                         rdfs:comment "An outlet is a device installed at a point to receive one or more inserted plugs for electrical power or communications."@en ;
+                                         rdfs:label "Outlet" ;
+                                         rdfs:seeAlso "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcOutlet" .
+
+
+###  https://w3id.org/def/saref4bldg#Pump
+<https://w3id.org/def/saref4bldg#Pump> rdf:type owl:Class ;
+                                       rdfs:subClassOf <https://w3id.org/def/saref4bldg#FlowMovingDevice> ;
+                                       rdfs:comment "A pump is a device which imparts mechanical work on fluids or slurries to move them through a channel or pipeline. A typical use of a pump is to circulate chilled water or heating hot water in a building services distribution system."@en ;
+                                       rdfs:label "Pump" ;
+                                       rdfs:seeAlso "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcPump" .
+
+
+###  https://w3id.org/def/saref4bldg#SolarDevice
+<https://w3id.org/def/saref4bldg#SolarDevice> rdf:type owl:Class ;
+                                              rdfs:subClassOf <https://w3id.org/def/saref4bldg#EnergyConversionDevice> ;
+                                              rdfs:comment "A solar device converts solar radiation into other energy such as electric current or thermal energy."@en ;
+                                              rdfs:label "Solar Device" ;
+                                              rdfs:seeAlso "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcSolarDevice"@en .
+
+
+###  https://w3id.org/def/saref4bldg#SpaceHeater
+<https://w3id.org/def/saref4bldg#SpaceHeater> rdf:type owl:Class ;
+                                              rdfs:subClassOf <https://w3id.org/def/saref4bldg#FlowTerminal> ;
+                                              rdfs:comment "Space heaters utilize a combination of radiation and/or natural convection using a heating source such as electricity, steam or hot water to heat a limited space or area. Examples of space heaters include radiators, convectors, baseboard and finned-tube heaters."@en ;
+                                              rdfs:label "Space Heater" ;
+                                              rdfs:seeAlso "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcSpaceHeater" .
+
+
+###  https://w3id.org/def/saref4bldg#SwitchingDevice
+<https://w3id.org/def/saref4bldg#SwitchingDevice> rdf:type owl:Class ;
+                                                  rdfs:subClassOf <https://w3id.org/def/saref4bldg#FlowController> ;
+                                                  rdfs:comment "A switch is used in a cable distribution system (electrical circuit) to control or modulate the flow of electricity."@en ;
+                                                  rdfs:label "Switching Device" ;
+                                                  rdfs:seeAlso "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcSwitchingDevice"@en .
+
+
+###  https://w3id.org/def/saref4bldg#Tank
+<https://w3id.org/def/saref4bldg#Tank> rdf:type owl:Class ;
+                                       rdfs:subClassOf <https://w3id.org/def/saref4bldg#FlowStorageDevice> ;
+                                       rdfs:comment "A tank is a vessel or container in which a fluid or gas is stored for later use."@en ;
+                                       rdfs:label "Tank" ;
+                                       rdfs:seeAlso "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcTank" .
+
+
+###  https://w3id.org/def/saref4bldg#TubeBundle
+<https://w3id.org/def/saref4bldg#TubeBundle> rdf:type owl:Class ;
+                                             rdfs:subClassOf <https://w3id.org/def/saref4bldg#EnergyConversionDevice> ;
+                                             rdfs:comment "A tube bundle is a device consisting of tubes and bundles of tubes used for heat transfer and contained typically within other energy conversion devices, such as a chiller or coil."@en ;
+                                             rdfs:label "Tube Bundle" ;
+                                             rdfs:seeAlso "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcTubeBundle"@en .
 
 
 ###  Generated by the OWL API (version 5.1.11) https://github.com/owlcs/owlapi/

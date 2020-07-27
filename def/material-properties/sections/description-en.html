@@ -1,6 +1,36 @@
 <h2 id="desc" class="list">Material properties ontology: Description <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
 
-<p>Figure 1 presents an overview of the classes and the properties included in the Material Properties ontology.</p>
+<p>Figure 1 presents an overview of the classes, relations and attributes included in the Material Properties ontology. As the purpose of the ontology is
+    the description of elements within the construction industry, we reuse the concept <code>building:Element</code> from the Building Ontology of the BIMERR
+    Network. The <code>building:Element</code> class encapsulates more specific elements relevant from the energy efficiency perspective such as a doors, windows,
+    or HVAC components. The Building Ontology at the same time reused the <a href="https://ontoology.linkeddata.es/publish/saref4bldg/index-en.html">SAREF4Building 
+    Ontology</a> to construct this classification. The material composition of building elements follows the structure stated in IFC 4.1, where an element may have
+    a construction of type <code>props:MaterialLayerSet</code>, <code>props:MaterialProfileSet</code>, or <code>props:MaterialConstituentSet</code>. An example
+    of an element having a material layer set constitution is a wall, which is conformed by a set of layers. These construction types can be further decomposed into
+    <code>props:MaterialLayer</code>, <code>props:MaterialProfile</code>, and <code>props:MaterialConstituent</code> respectively, where each of this entities 
+    have a set of materials related.
+</p>The classes mentioned before have properties and measurements related to them. For this purpose we reutilize the artifacts provided by the SAREF ontology. 
+As we can see on Figure 1, a <code>saref:FeatureOfInterest</code> is related to the concepts <code>saref:Property</code> and <code>saref:Measurement</code>, by 
+means of the relations <code>saref:hasProperty</code> and <code>saref:hasMeasurement</code>. Instead of making the classes of our ontology directly 
+subclasses of the concept <code>saref:FeatureOfInterest</code>, we create restrictions between our classes with the saref properties. This decision 
+gives more flexibility to the model at the model of representing data. For instance, an individual ofthe class <code>props:Material</code> may not have 
+properties associated, so it is not an instance of the concept <code>saref:FeatureOfInterest</code>.</p>
 
-<center><img src="resources/images/diagram.jpg" alt="General overview of the Material Properties ontology." width="95%">   <figcaption><b>Figure 1.</b> - General overview of the Material Properties ontology main classes and properties.</figcaption></center>
+<p>In order to provide provenance information regarding where the material property definitions, and the specific values come from, we added
+    the object properties <code>props:isPropertyFromDatabase</code> and <code>props:isPropertyValueDatabase</code>. These relations point to the source 
+    databases used to extract that information. Finally, even though the model allow the user to indicate the unit of measure for each measurement, 
+    the databases include default units of measure for the properties. This fact is represented by the reused object property <code>om-2:commonlyHasUnit</code>.
 
+</p>
+
+<center><img src="resources/images/diagram.svg" alt="General overview of the Material Properties ontology." width="95%">   <figcaption><b>Figure 1.</b> - General overview of the Material Properties ontology main classes and properties.</figcaption></center>
+<br>
+
+<h3 id="example" class="list">Instantiation of the Model<span class="backlink"> back to <a href="#toc">ToC</a></span></h3>
+
+<p>Figure 2 presents an example of how to use the ontology. A brick
+identified as <code>data:BrickMasonry_01</code> has a density of 1922.0 Kg/m3. The density property is defined in
+the databases BAUBOOK, ASHRAE and OKOBAUDAT, and the specific value of 1922 Kg/m3 is taken from the latter.
+
+<center><img src="resources/images/example.svg" alt="General overview of the Material Properties ontology.">   <figcaption><b>Figure 2.</b> - Example of the Material Properties Ontology.</figcaption></center>
+<br>
