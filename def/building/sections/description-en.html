@@ -1,18 +1,44 @@
 <h2 id="desc" class="list">Building ontology: Description <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
 
-<p>Figure 1 presents an overview of the classes and the properties included in the Building ontology. The ontology reuses the structure proposed in the BOT ontology to then extend
-this definition to allocate new relations and attributes specific for the BIMERR project. For instance, we created the concept building:Space to add the attributes building:maxOccupants
-and building:minOccupants, which are Datatype properties required by other domains to generate occupancy profiles.</p>
+<p>
+    Figure 1 presents an overview of the classes and the properties included in the Building ontology. The topological elements included in the model are:
+    <code>building:Building</code>, <code>building:Storey</code>, <code>building:Apartment</code>, <code>building:Space</code>, and <code>building:Element</code>.
+    Each of these elements should have an IFC Identifier that uniquely identify them in the IFC model. It is also posible to attach a 3D geometric representation
+    to these entities by means of the <code>bot:hasSimple3DModel</code> relationship. The model builds around the root concept <code>building:Building</code>, 
+    that incorporates attributes to indicate its physical location whether by means of a postal address (<code>building:buildingAddress</code>) or by geospatial 
+    coordinates (<code>wgs84_pos:long</code>, <code>wgs84_pos:lat</code>, and <code>wgs84_pos:alt</code>). The relationships between the topological elements 
+    are taken directly from BOT. A building may have several stories, which in turn may contain one or more residential apartments. In order to add more 
+    expresiveness to the model, we decided to include the relationship <code>building:hasApartment</code>, sub-property of the general object 
+    property <code>bot:containsZone</code>, between the concepts <code>building:Storey</code> and <code>building:Apartment</code>. An apartment has different 
+    spaces such as a living room, a kitchen or bedroom, and these spaces are conformed by building components that delimit the zone itself 
+    (<code>building:Door</code> or <code>building:Wall</code>) or by energy related equipments (<code>building:SpaceHeater</code> 
+    or <code>building:Fan</code>).
+</p>
 
-<p>Another important point, is the extension of the term bot:Element, which supports three main sub-classes of building elements: building:Compoent, building:Construction, and building:Layer.
-A building:Component refers in general to MEP devices such as spaces heaters. The class building:Construction represents all the building elements conformed by layers such as floors, or
-roofs. Finally, the building:Layer concept represents the internal layers of those construction components. A layer can be composed by several materials, where each material has a set of
-physical properties, modelled by the <a href="https://bimerr.iot.linkeddata.es/def/material-properties/">Materials Properties Ontology</a>, which is another module of the BIMERR project.</p>
+<p>
+    Another aspect of the model is the classification of elements that typically intervene in building renovation projects focused on energy efficiency. 
+    Usually these elements have an impact over the energy performance of buildings. The elements classification used in this ontology
+    (concepts under the super-class <code>building:Element</code> in the Figure 1) follows the structure proposed by the IFC 4.1 standard. 
+    For the elements under the <code>s4bldg:DistributionDevice</code> branch we reutilized the SAREF4Building Ontology that already 
+    incorporates these classes, and just added extra concepts needed for our purposes. Finally, the model allows the aggregation 
+    of these elements by systems. Some relevant systems included in the ontology are: <code>building:CoolingSystem</code>, 
+    <code>building:HeatingSystem</code>, or <code>building:PhotovoltaicSystem</code>.
 
-<center><img src="resources/images/ontology.jpg" alt="General overview of the Building ontology." width="95%">   <figcaption><b>Figure 1. -</b> General overview of the Building ontology main classes and properties.</figcaption></center>
+</p>
+
+<center><img src="resources/images/ontology.svg" alt="General overview of the Building ontology." width="95%">   <figcaption><b>Figure 1. -</b> General overview of the Building ontology main classes and properties.</figcaption></center>
 
 
-<p>Figure 2 presents an overview of the building components and construction taxonomy. This figure shows just a glimpse of the general components and materials classification tree introduced in this model.
-All the subelements can be shown directly in the ontology file.</p>
+<h3 id="desc" class="list">Instantiation of the Model<span class="backlink"> back to <a href="#toc">ToC</a></span></h3>
 
-<center><img src="resources/images/component_taxonomy.jpg" alt="General overview of the Building Component Taxonomy." width="95%">   <figcaption><b>Figure 2. -</b> General overview of the Building Component Taxonomy.</figcaption></center>
+<p>
+    Figure 2 presents an example of how to use the ontology. The building instance identified in the model as <code>data:BuildingPilot01</code> has the IFC
+    idenfitier "ID001", and its 3D model its given by the file "building_pilot01.ifc". The building has two stories (<code>data:BuildingPilot01Storey01</code>
+    and <code>data:BuildingPilot01Storey02</code>), where the first one has a related 3D representation called "building_pilot01_storey01.ifc" and the IFC Identifier
+    "ST0001". The first storey also contains the apartment <code>data:BuildingPilot01Storey01Apartment01</code>, which includes a kitchen 
+    (<code>data:Apartment01Kitchen01</code>) and a bedroom (<code>data:Apartment01Bedroom01</code>). The bedroom has a door (<code>data:Door01</code>) and
+    and a space heater (<code>data:SpaceHeater01</code>).
+
+</p>
+
+<center><img src="resources/images/building_example.svg" alt="Example of the Building ontology." width="95%">   <figcaption><b>Figure 2. -</b> Example of the Building Ontology.</figcaption></center>

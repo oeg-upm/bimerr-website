@@ -1116,7 +1116,7 @@
     "@value" : "Movement"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://xmlns.com/foaf/0.1/Person"
+    "@id" : "http://xmlns.com/foaf/0.1#Person"
   } ]
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/occupancy-profile#MovementModel",
@@ -1196,7 +1196,7 @@
     "@value" : "Occupant"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://xmlns.com/foaf/0.1/Person"
+    "@id" : "http://xmlns.com/foaf/0.1#Person"
   }, {
     "@id" : "_:genid36"
   }, {
@@ -2434,7 +2434,7 @@
   "@id" : "http://www.w3.org/2006/time#Wednesday",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://www.w3.org/2006/time#DayOfWeek" ]
 }, {
-  "@id" : "http://xmlns.com/foaf/0.1/Person",
+  "@id" : "http://xmlns.com/foaf/0.1#Person",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
