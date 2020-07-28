@@ -14,7 +14,6 @@
         <script type="text/javascript" src="vocab/js/jquery.stickytableheaders.js"></script>
         <script type="text/javascript" src="vocab/js/jquery-ui.js"></script>
         <script type="text/javascript" src="vocab/js/bootstrap.js"></script>
-        <script type="text/javascript" src="js/sketch.js"></script>
         <link rel="stylesheet" href="vocab/css/jquery-ui.css"></link>
         <script type="text/javascript" id="js">
             $(document).ready(function() 
@@ -35,46 +34,40 @@
             padding-top: 60px;
             padding-bottom: 40px;
           }
-          #dm-buttons {
-            padding-top: 10px;
-          }
         </style>
     </head>
     
     <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
+        <div class="container">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+          </div>
+          <div class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+              <li class="active"><a href="index.html">Ontologies</a></li>
+              <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Ontology testing</a>
+                <ul class="dropdown-menu">
+                  <li ><a>Development requirements (TBD)</a></li>
+                  <li ><a>Validate the ontologies (TBD)</a></li>
+                </ul>
+              </li>
+              <li class="active"><a href="enriched.html">Enriched Ontologies</a></li>
+              <li class="active"><a href="triplet_store.html">Knowledge Graph Generator</a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
         </div>
-        <div class="collapse navbar-collapse">
-          <ul class="nav navbar-nav">
-            <li class="active"><a href="index.html">Ontologies</a></li>
-            <li class="active"><a href="enriched.html">Enriched Ontologies</a></li>
-            <li><a href="#">Knowledge Graph Generator</a></li>
-            <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Ontology testing</a>
-              <ul class="dropdown-menu">
-                <li ><a>Development requirements (TBD)</a></li>
-                <li ><a>Validate the ontologies (TBD)</a></li>
-              </ul>
-            </li>
-          </ul>
-        </div><!--/.nav-collapse -->
-      </div>
-     </div>
+       </div>
 
     <body class="body">
-        <h1>Enriched Ontologies</h1>
+        <h1>Knowledge Graph Generator</h1>
 
-        <p>This section provides a list of the ontologies enriched with additional annotation
-        properties in order to support the transformation to the data model
-        required by the BIMERR Interoperability Framework. The BO2DM web service takes this models and generate the 
-        appropiate transformation, for more information take a look at the
-        <a href="https://converter.bimerr.iot.linkeddata.es/swagger/">API's documentation</a>.</p>
+        <p>The Knowledge Graph Generator (KGG) is one of the components of the BIMERR Interoperability Framework (BIF) that is responsible for the
+            generation, storing, and management of building-related data in RDF.
         
         <h2>Models Available</h2>
 
@@ -83,33 +76,26 @@
             <tr>
             <th class="col-md-2">Original Ontology</th>
             <th class="col-md-3">Enriched Version</th>
-            <th class="col-md-2">Data Model</th>
             </tr>
             </thead>
             <tbody>
             <tr id="tr1">
               <td><a href ="http://bimerr.iot.linkeddata.es/def/occupancy-profile" target="_blank">Occupancy Profile Ontology</a></td>
               <td><a href="ontologies/op_enriched.ttl">Occupancy Profile Ontology Enriched</a></td>
-              <td><button id="dm-op" type="button" onclick="showDataModel('op')" class="btn btn-default">Get Data Model</a></td>
             </tr>
             <tr id="tr2">
                 <td><a href ="http://bimerr.iot.linkeddata.es/def/key-performance-indicator" target="_blank">Key Performance Indicator Ontology</a></td>
                 <td><a href="ontologies/kpi_enriched.ttl">Key Performance Indicator Ontology Enriched</a></td>
-                <td><button id="dm-op" type="button" onclick="showDataModel('kpi')" class="btn btn-default">Get Data Model</a></td>
+            </tr>
+            <tr id="tr2">
+                <td><a href ="http://bimerr.iot.linkeddata.es/def/sensor-data" target="_blank">Sensor Data Ontology</a></td>
+                <td><a>Sensor Data Ontology Enriched</a></td>
             </tr>
             <tr id="tr2">
                 <td><a href ="http://bimerr.iot.linkeddata.es/def/building" target="_blank">Building Ontology</a></td>
                 <td><a href="ontologies/building_enriched.ttl">Building Ontology Enriched</a></td>
-                <td><button id="dm-op" type="button" onclick="showDataModel('building')" class="btn btn-default">Get Data Model</a></td>
             </tr>
         </table>
-
-        <div id="dm-result"></div>
-
-        <div id="dm-buttons" style="display: none;" class="container-fluid">
-          <button type="button" id="hide-dm" class="btn btn-primary">Hide</button>
-          <a role="button" id="download-dm" class="btn btn-primary">Download</a>
-        </div>
 
         <h2>Metadata</h2>
         <p>
@@ -137,10 +123,6 @@
           </footer>
         </div> <!-- /container -->
     
-
-
-
-
     </body>
 
     </html>
