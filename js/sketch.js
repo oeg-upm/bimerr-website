@@ -2,7 +2,7 @@ function showDataModel(domain) {
 
     var filename = domain + "_dm.json";
     
-    var dm_result = document.getElementById("dm-result");
+    var dm_result = document.getElementById("json");
 
     dm_result.innerHTML = "";
 
@@ -19,17 +19,18 @@ function showDataModel(domain) {
     download_button.setAttribute("download", filename)
 
 
-    dm_result.setAttribute("style","overflow:auto;height:200px;border:solid black");
+    dm_result.setAttribute("style","overflow:auto;height:300px;border:solid black");
 
     var dm = new XMLHttpRequest();
     dm.overrideMimeType("application/json");
     dm.open("GET", "data_models/" + filename, true);
     dm.onreadystatechange = function () {
         if (this.readyState==4 && this.status=="200"){
-            console.log(dm.responseText);
             var response_json = dm.responseText;
-            var response_string = JSON.stringify(JSON.parse(response_json), null, 1);
+            var response_string = JSON.stringify(JSON.parse(response_json), null, 2);
+            console.log(response_string);
             dm_result.innerHTML = response_string;
+            //var pre_json = document.getElementById("json").innerHTML = response_string;
             buttons.style.display = "block";
         }
     }
