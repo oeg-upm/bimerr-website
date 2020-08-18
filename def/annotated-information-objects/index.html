@@ -2,11 +2,11 @@
 <html>
 <head>
 <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
-<link rel="stylesheet" href="resources/primer.css" media="screen" />    <link rel="stylesheet" href="resources/rec.css" media="screen" />    <link rel="stylesheet" href="resources/extra.css" media="screen" />    <link rel="stylesheet" href="resources/owl.css" media="screen" />
+ <link rel="stylesheet" href="resources/primer.css" media="screen" />    <link rel="stylesheet" href="resources/rec.css" media="screen" />    <link rel="stylesheet" href="resources/extra.css" media="screen" />    <link rel="stylesheet" href="resources/owl.css" media="screen" />    <title>Annotated Information Objects Ontology</title>
 
- <title>Material properties ontology</title>
+
 <!-- SCHEMA.ORG METADATA -->
-<script type="application/ld+json">{"@context":"http://schema.org","@type":"TechArticle","url":"http://bimerr.iot.linkeddata.es/def/material-properties#","image":"http://vowl.visualdataweb.org/webvowl/#iri=http://bimerr.iot.linkeddata.es/def/material-properties#","name":"Material properties ontology", "headline":"The material properties ontology provides the vocabulary to describe physical properties related to components, materials and layer in a building context. The ontology follows the L2 level modelling strategy proposed by the W3C LBD community group for the creation of properties. The L2 level states the usage of an intermediate instance for each property which encodes both the numerical value and the unit of measure.", "datePublished":"Mon May 18 17:43:21 CEST 2020", "version":"0.0.1", "author":[{"@type":"Person","name":"María Poveda-Villalón (Ontology Engineering Group, Universidad Politécnica de Madrid)"},{"@type":"Person","name":"Serge Chávez-Feria (Ontology Engineering Group, Universidad Politécnica de Madrid)"}]}</script>
+<script type="application/ld+json">{"@context":"http://schema.org","@type":"TechArticle","url":"http://bimerr.iot.linkeddata.es/def/annotated-information-objects#","image":"http://vowl.visualdataweb.org/webvowl/#iri=http://bimerr.iot.linkeddata.es/def/annotated-information-objects#","name":"Annotated Information Objects Ontology", "headline":"Document describing the ontology http://bimerr.iot.linkeddata.es/def/annotated-information-objects#", "datePublished":"Tue Aug 18 10:25:22 CEST 2020", "version":"0.0.2", "author":[{"@type":"Person","name":"María Poveda-Villalón"},{"@type":"Person","name":"Serge Chávez-Feria"}]}</script>
 
 <script src="resources/jquery.js"></script> 
 <script src="resources/marked.min.js"></script> 
@@ -59,23 +59,22 @@ function loadTOC(){
 <div class="container">
 <div class="head">
 <div style="float:right">language <a href="index-en.html"><b>en</b></a> </div>
-<h1>Material properties ontology</h1>
+<h1>Annotated Information Objects Ontology</h1>
 
 
 <dl>
 <dt>Ontology URI:</dt>
-<dd>http://bimerr.iot.linkeddata.es/def/material-properties#</dd>
+<dd>http://bimerr.iot.linkeddata.es/def/annotated-information-objects#</dd>
 <dt>Revision:</dt>
-<dd>0.0.7</dd>
+<dd>0.0.2</dd>
 <dt>Authors:</dt>
-<dd><a href="https://w3id.org/people/mpoveda">María Poveda-Villalón</a> (Ontology Engineering Group, Universidad Politécnica de Madrid)</dd><dd><a href="https://w3id.org/people/serge">Serge Chávez-Feria</a> (Ontology Engineering Group, Universidad Politécnica de Madrid)</dd>
-
+<dd><a href="http://w3id.org/people/serge">Serge Chávez-Feria</a> (Ontology Engineering Group, Universidad Politécnica de Madrid)</dd>
+<dd><a href="http://w3id.org/people/mpoveda">María Poveda Villalón</a> (Ontology Engineering Group, Universidad Politécnica de Madrid)</dd>
 <dt>Publisher:</dt>
 <dd><a href="http://www.oeg-upm.net/">http://www.oeg-upm.net/</a></dd>
-<dt>Download serialization:</dt><dd><span><a href="ontology.json" target="_blank"><img src="https://img.shields.io/badge/Format-JSON_LD-blue.svg" alt="JSON-LD" /></a> </span><span><a href="ontology.xml" target="_blank"><img src="https://img.shields.io/badge/Format-RDF/XML-blue.svg" alt="RDF/XML" /></a> </span><span><a href="ontology.nt" target="_blank"><img src="https://img.shields.io/badge/Format-N_Triples-blue.svg" alt="N-Triples" /></a> </span><span><a href="ontology.ttl" target="_blank"><img src="https://img.shields.io/badge/Format-TTL-blue.svg" alt="TTL" /></a> </span></dd><dt>License: </dt>
-<dd><a href="http://purl.org/NET/rdflicense/cc-by4.0" target="_blank"><img src="https://img.shields.io/badge/License-http://purl.org/NET/rdflicense/cc_by4.0-blue.svg" alt="http://purl.org/NET/rdflicense/cc-by4.0" /></a>
+<dt>Download serialization:</dt><dd><span><a href="ontology.json" target="_blank"><img src="https://img.shields.io/badge/Format-JSON_LD-blue.svg" alt="JSON-LD" /></a> </span><span><a href="ontology.xml" target="_blank"><img src="https://img.shields.io/badge/Format-RDF/XML-blue.svg" alt="RDF/XML" /></a> </span><span><a href="ontology.nt" target="_blank"><img src="https://img.shields.io/badge/Format-N_Triples-blue.svg" alt="N-Triples" /></a> </span><span><a href="ontology.ttl" target="_blank"><img src="https://img.shields.io/badge/Format-TTL-blue.svg" alt="TTL" /></a> </span></dd><dt>License: </dt><dd><a href="http://purl.org/NET/rdflicense/cc-by4.0" target="_blank"><img src="https://img.shields.io/badge/License-http://purl.org/NET/rdflicense/cc_by4.0-blue.svg" alt="http://purl.org/NET/rdflicense/cc-by4.0" /></a>
 </dd><!-- <dt>Evaluation:</dt><dd><a href="OOPSEvaluation/OOPSeval.html#" target="_blank"><img src="https://img.shields.io/badge/Evaluate_with-OOPS! (OntOlogy Pitfall Scanner!)-blue.svg" alt="Evaluate with OOPS!" /></a></dd> --><dt>Cite as:</dt>
-<dd>María Poveda-Villalón (Ontology Engineering Group, Universidad Politécnica de Madrid),Serge Chávez-Feria (Ontology Engineering Group, Universidad Politécnica de Madrid). Material properties ontology. Revision: 0.0.7.</dd>
+<dd>María Poveda-Villalón,Serge Chávez-Feria. Annotated Information Objects Ontology. Revision: 0.0.2.</dd>
 </dl>
 
 <a href="provenance/provenance-en.html" target="_blank">Provenance of this page</a><hr/>
@@ -95,6 +94,7 @@ function loadTOC(){
 <p>
 The authors would like to thank <a href="http://www.essepuntato.it/">Silvio Peroni</a> for developing <a href="http://www.essepuntato.it/lode">LODE</a>, a Live OWL Documentation Environment, which is used for representing the Cross Referencing Section of this document and <a href="https://w3id.org/people/dgarijo">Daniel Garijo</a> for developing <a href="https://github.com/dgarijo/Widoco">Widoco</a>, the program used to create the template used in this documentation.</p>
 </div>
+
 
 </div>
 </body>

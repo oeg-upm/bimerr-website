@@ -48,16 +48,6 @@
 <http://bimerr.iot.linkeddata.es/def/building#hasApartment> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation between a storey and the apartments it is composed of."@en .
 <http://bimerr.iot.linkeddata.es/def/building#hasApartment> <http://www.w3.org/2000/01/rdf-schema#label> "has apartment" .
 # 
-# http://bimerr.iot.linkeddata.es/def/building#includesElement
-<http://bimerr.iot.linkeddata.es/def/building#includesElement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://bimerr.iot.linkeddata.es/def/building#includesElement> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship that connects a system with an element or device."@en .
-<http://bimerr.iot.linkeddata.es/def/building#includesElement> <http://www.w3.org/2000/01/rdf-schema#label> "includes element" .
-# 
-# http://bimerr.iot.linkeddata.es/def/building#isPartOfSystem
-<http://bimerr.iot.linkeddata.es/def/building#isPartOfSystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://bimerr.iot.linkeddata.es/def/building#isPartOfSystem> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship that indicates that an element or device is part of a system."@en .
-<http://bimerr.iot.linkeddata.es/def/building#isPartOfSystem> <http://www.w3.org/2000/01/rdf-schema#label> "is part of system" .
-# 
 # https://w3id.org/bot#containsZone
 <https://w3id.org/bot#containsZone> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/bot#containsZone> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship to the subzones of a major zone. A space zone could for instance be contained in a storey zone which is further contained in a building zone."@en .
@@ -98,6 +88,17 @@
 <http://bimerr.iot.linkeddata.es/def/building#buildingAddress> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
 <http://bimerr.iot.linkeddata.es/def/building#buildingAddress> <http://www.w3.org/2000/01/rdf-schema#comment> "The postal address of the building"@en .
 <http://bimerr.iot.linkeddata.es/def/building#buildingAddress> <http://www.w3.org/2000/01/rdf-schema#label> "building address" .
+# 
+# http://bimerr.iot.linkeddata.es/def/building#hasObXMLFile
+<http://bimerr.iot.linkeddata.es/def/building#hasObXMLFile> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://bimerr.iot.linkeddata.es/def/building#hasObXMLFile> <http://www.w3.org/2000/01/rdf-schema#domain> <http://bimerr.iot.linkeddata.es/def/building#Space> .
+<http://bimerr.iot.linkeddata.es/def/building#hasObXMLFile> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship to indicate the path of the obXML file for an specific space."@en .
+<http://bimerr.iot.linkeddata.es/def/building#hasObXMLFile> <http://www.w3.org/2000/01/rdf-schema#label> "has obXML file"@en .
+# 
+# http://bimerr.iot.linkeddata.es/def/building#identifierInDatabase
+<http://bimerr.iot.linkeddata.es/def/building#identifierInDatabase> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://bimerr.iot.linkeddata.es/def/building#identifierInDatabase> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates the ID of the building element in the BIMERR materials and component database."@en .
+<http://bimerr.iot.linkeddata.es/def/building#identifierInDatabase> <http://www.w3.org/2000/01/rdf-schema#label> "identifier in database"@en .
 # 
 # http://bimerr.iot.linkeddata.es/def/building#ifcIdentifier
 <http://bimerr.iot.linkeddata.es/def/building#ifcIdentifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
@@ -152,13 +153,17 @@
 <http://bimerr.iot.linkeddata.es/def/building#Apartment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/bot#Zone> .
 <http://bimerr.iot.linkeddata.es/def/building#Apartment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid1 .
 _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid1 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/bot#hasSpace> .
-_:genid1 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://bimerr.iot.linkeddata.es/def/building#Space> .
+_:genid1 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/bot#hasElement> .
+_:genid1 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/bot#Element> .
 <http://bimerr.iot.linkeddata.es/def/building#Apartment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid2 .
 _:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid2 <http://www.w3.org/2002/07/owl#onProperty> <http://bimerr.iot.linkeddata.es/def/building#ifcIdentifier> .
-_:genid2 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid2 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#string> .
+_:genid2 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/bot#hasSpace> .
+_:genid2 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://bimerr.iot.linkeddata.es/def/building#Space> .
+<http://bimerr.iot.linkeddata.es/def/building#Apartment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid3 .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid3 <http://www.w3.org/2002/07/owl#onProperty> <http://bimerr.iot.linkeddata.es/def/building#ifcIdentifier> .
+_:genid3 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid3 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#string> .
 <http://bimerr.iot.linkeddata.es/def/building#Apartment> <http://www.w3.org/2000/01/rdf-schema#comment> "An apartment is a group of spaces, partial spaces or other zones."@en .
 <http://bimerr.iot.linkeddata.es/def/building#Apartment> <http://www.w3.org/2000/01/rdf-schema#label> "Apartment" .
 <http://bimerr.iot.linkeddata.es/def/building#Apartment> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcZone" .
@@ -171,15 +176,19 @@ _:genid2 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XML
 # http://bimerr.iot.linkeddata.es/def/building#Building
 <http://bimerr.iot.linkeddata.es/def/building#Building> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://bimerr.iot.linkeddata.es/def/building#Building> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/bot#Building> .
-<http://bimerr.iot.linkeddata.es/def/building#Building> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid3 .
-_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid3 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/bot#hasStorey> .
-_:genid3 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://bimerr.iot.linkeddata.es/def/building#Storey> .
 <http://bimerr.iot.linkeddata.es/def/building#Building> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid4 .
 _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid4 <http://www.w3.org/2002/07/owl#onProperty> <http://bimerr.iot.linkeddata.es/def/building#ifcIdentifier> .
-_:genid4 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid4 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#string> .
+_:genid4 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/bot#hasElement> .
+_:genid4 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/bot#Element> .
+<http://bimerr.iot.linkeddata.es/def/building#Building> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid5 .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid5 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/bot#hasStorey> .
+_:genid5 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://bimerr.iot.linkeddata.es/def/building#Storey> .
+<http://bimerr.iot.linkeddata.es/def/building#Building> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid6 .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid6 <http://www.w3.org/2002/07/owl#onProperty> <http://bimerr.iot.linkeddata.es/def/building#ifcIdentifier> .
+_:genid6 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid6 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#string> .
 <http://bimerr.iot.linkeddata.es/def/building#Building> <http://www.w3.org/2000/01/rdf-schema#comment> "A building represents a structure that provides shelter for its occupants or contents and stands in one place. The building is also used to provide a basic element within the spatial structure hierarchy for the components of a building project (together with site, storey, and space)."@en .
 <http://bimerr.iot.linkeddata.es/def/building#Building> <http://www.w3.org/2000/01/rdf-schema#label> "Building" .
 <http://bimerr.iot.linkeddata.es/def/building#Building> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcBuilding" .
@@ -190,12 +199,6 @@ _:genid4 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XML
 <http://bimerr.iot.linkeddata.es/def/building#BuildingElement> <http://www.w3.org/2000/01/rdf-schema#comment> "The building element comprises all elements that are primarily part of the construction of a building, i.e., its structural and space separating system. Building elements are all physically existent and tangible things."@en .
 <http://bimerr.iot.linkeddata.es/def/building#BuildingElement> <http://www.w3.org/2000/01/rdf-schema#label> "Building Element" .
 <http://bimerr.iot.linkeddata.es/def/building#BuildingElement> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcBuildingElement" .
-# 
-# http://bimerr.iot.linkeddata.es/def/building#CoolingSystem
-<http://bimerr.iot.linkeddata.es/def/building#CoolingSystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://bimerr.iot.linkeddata.es/def/building#CoolingSystem> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://bimerr.iot.linkeddata.es/def/building#System> .
-<http://bimerr.iot.linkeddata.es/def/building#CoolingSystem> <http://www.w3.org/2000/01/rdf-schema#comment> "System that aggregates cooling devices."@en .
-<http://bimerr.iot.linkeddata.es/def/building#CoolingSystem> <http://www.w3.org/2000/01/rdf-schema#label> "Cooling System" .
 # 
 # http://bimerr.iot.linkeddata.es/def/building#Door
 <http://bimerr.iot.linkeddata.es/def/building#Door> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -214,29 +217,23 @@ _:genid4 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XML
 # http://bimerr.iot.linkeddata.es/def/building#Element
 <http://bimerr.iot.linkeddata.es/def/building#Element> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://bimerr.iot.linkeddata.es/def/building#Element> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/bot#Element> .
-<http://bimerr.iot.linkeddata.es/def/building#Element> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid5 .
-_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid5 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/bot#hasSubElement> .
-_:genid5 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://bimerr.iot.linkeddata.es/def/building#Element> .
-<http://bimerr.iot.linkeddata.es/def/building#Element> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid6 .
-_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid6 <http://www.w3.org/2002/07/owl#onProperty> <http://bimerr.iot.linkeddata.es/def/building#isPartOfSystem> .
-_:genid6 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid6 <http://www.w3.org/2002/07/owl#onClass> <http://bimerr.iot.linkeddata.es/def/building#System> .
 <http://bimerr.iot.linkeddata.es/def/building#Element> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid7 .
 _:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid7 <http://www.w3.org/2002/07/owl#onProperty> <http://bimerr.iot.linkeddata.es/def/building#ifcIdentifier> .
-_:genid7 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid7 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#string> .
+_:genid7 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/bot#hasSubElement> .
+_:genid7 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://bimerr.iot.linkeddata.es/def/building#Element> .
+<http://bimerr.iot.linkeddata.es/def/building#Element> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid8 .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid8 <http://www.w3.org/2002/07/owl#onProperty> <http://bimerr.iot.linkeddata.es/def/building#ifcIdentifier> .
+_:genid8 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid8 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#string> .
+<http://bimerr.iot.linkeddata.es/def/building#Element> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid9 .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid9 <http://www.w3.org/2002/07/owl#onProperty> <http://bimerr.iot.linkeddata.es/def/building#identifierInDatabase> .
+_:genid9 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid9 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#string> .
 <http://bimerr.iot.linkeddata.es/def/building#Element> <http://www.w3.org/2000/01/rdf-schema#comment> "An element is a generalization of all components that make up an AEC product."@en .
 <http://bimerr.iot.linkeddata.es/def/building#Element> <http://www.w3.org/2000/01/rdf-schema#label> "Element" .
 <http://bimerr.iot.linkeddata.es/def/building#Element> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcElement" .
-# 
-# http://bimerr.iot.linkeddata.es/def/building#FenestrationSystem
-<http://bimerr.iot.linkeddata.es/def/building#FenestrationSystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://bimerr.iot.linkeddata.es/def/building#FenestrationSystem> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://bimerr.iot.linkeddata.es/def/building#System> .
-<http://bimerr.iot.linkeddata.es/def/building#FenestrationSystem> <http://www.w3.org/2000/01/rdf-schema#comment> "System that aggregates fenestration elements."@en .
-<http://bimerr.iot.linkeddata.es/def/building#FenestrationSystem> <http://www.w3.org/2000/01/rdf-schema#label> "Fenestration System" .
 # 
 # http://bimerr.iot.linkeddata.es/def/building#FlowSegment
 <http://bimerr.iot.linkeddata.es/def/building#FlowSegment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -249,18 +246,6 @@ _:genid7 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XML
 <http://bimerr.iot.linkeddata.es/def/building#FossilBoiler> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://bimerr.iot.linkeddata.es/def/building#FossilBoiler> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/def/saref4bldg#Boiler> .
 <http://bimerr.iot.linkeddata.es/def/building#FossilBoiler> <http://www.w3.org/2000/01/rdf-schema#label> "Fossil Boiler" .
-# 
-# http://bimerr.iot.linkeddata.es/def/building#HeatingSystem
-<http://bimerr.iot.linkeddata.es/def/building#HeatingSystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://bimerr.iot.linkeddata.es/def/building#HeatingSystem> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://bimerr.iot.linkeddata.es/def/building#System> .
-<http://bimerr.iot.linkeddata.es/def/building#HeatingSystem> <http://www.w3.org/2000/01/rdf-schema#comment> "System that aggregates heating devices."@en .
-<http://bimerr.iot.linkeddata.es/def/building#HeatingSystem> <http://www.w3.org/2000/01/rdf-schema#label> "Heating System" .
-# 
-# http://bimerr.iot.linkeddata.es/def/building#PhotovoltaicSystem
-<http://bimerr.iot.linkeddata.es/def/building#PhotovoltaicSystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://bimerr.iot.linkeddata.es/def/building#PhotovoltaicSystem> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://bimerr.iot.linkeddata.es/def/building#System> .
-<http://bimerr.iot.linkeddata.es/def/building#PhotovoltaicSystem> <http://www.w3.org/2000/01/rdf-schema#comment> "System that aggregates photovoltaic devices."@en .
-<http://bimerr.iot.linkeddata.es/def/building#PhotovoltaicSystem> <http://www.w3.org/2000/01/rdf-schema#label> "Photovoltaic System" .
 # 
 # http://bimerr.iot.linkeddata.es/def/building#PipeSegment
 <http://bimerr.iot.linkeddata.es/def/building#PipeSegment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -283,24 +268,23 @@ _:genid7 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XML
 <http://bimerr.iot.linkeddata.es/def/building#Slab> <http://www.w3.org/2000/01/rdf-schema#label> "Slab" .
 <http://bimerr.iot.linkeddata.es/def/building#Slab> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcSlab" .
 # 
-# http://bimerr.iot.linkeddata.es/def/building#SolarSystem
-<http://bimerr.iot.linkeddata.es/def/building#SolarSystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://bimerr.iot.linkeddata.es/def/building#SolarSystem> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://bimerr.iot.linkeddata.es/def/building#System> .
-<http://bimerr.iot.linkeddata.es/def/building#SolarSystem> <http://www.w3.org/2000/01/rdf-schema#comment> "System that aggregates solar devices."@en .
-<http://bimerr.iot.linkeddata.es/def/building#SolarSystem> <http://www.w3.org/2000/01/rdf-schema#label> "Solar System" .
-# 
 # http://bimerr.iot.linkeddata.es/def/building#Space
 <http://bimerr.iot.linkeddata.es/def/building#Space> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://bimerr.iot.linkeddata.es/def/building#Space> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/bot#Space> .
-<http://bimerr.iot.linkeddata.es/def/building#Space> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid8 .
-_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid8 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/bot#hasElement> .
-_:genid8 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://bimerr.iot.linkeddata.es/def/building#Element> .
-<http://bimerr.iot.linkeddata.es/def/building#Space> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid9 .
-_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid9 <http://www.w3.org/2002/07/owl#onProperty> <http://bimerr.iot.linkeddata.es/def/building#ifcIdentifier> .
-_:genid9 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid9 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#string> .
+<http://bimerr.iot.linkeddata.es/def/building#Space> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid10 .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid10 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/bot#hasElement> .
+_:genid10 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://bimerr.iot.linkeddata.es/def/building#Element> .
+<http://bimerr.iot.linkeddata.es/def/building#Space> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid11 .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid11 <http://www.w3.org/2002/07/owl#onProperty> <http://bimerr.iot.linkeddata.es/def/building#hasObXMLFile> .
+_:genid11 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid11 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#string> .
+<http://bimerr.iot.linkeddata.es/def/building#Space> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid12 .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid12 <http://www.w3.org/2002/07/owl#onProperty> <http://bimerr.iot.linkeddata.es/def/building#ifcIdentifier> .
+_:genid12 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid12 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#string> .
 <http://bimerr.iot.linkeddata.es/def/building#Space> <http://www.w3.org/2000/01/rdf-schema#comment> "A space represents an area or volume bounded actually or theoretically. Spaces are areas or volumes that provide for certain functions within a building."@en .
 <http://bimerr.iot.linkeddata.es/def/building#Space> <http://www.w3.org/2000/01/rdf-schema#label> "Space" .
 <http://bimerr.iot.linkeddata.es/def/building#Space> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcSpace" .
@@ -308,37 +292,26 @@ _:genid9 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XML
 # http://bimerr.iot.linkeddata.es/def/building#Storey
 <http://bimerr.iot.linkeddata.es/def/building#Storey> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://bimerr.iot.linkeddata.es/def/building#Storey> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/bot#Storey> .
-<http://bimerr.iot.linkeddata.es/def/building#Storey> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid10 .
-_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid10 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/bot#containsZone> .
-_:genid10 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://bimerr.iot.linkeddata.es/def/building#Apartment> .
-<http://bimerr.iot.linkeddata.es/def/building#Storey> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid11 .
-_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid11 <http://www.w3.org/2002/07/owl#onProperty> <http://bimerr.iot.linkeddata.es/def/building#hasApartment> .
-_:genid11 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://bimerr.iot.linkeddata.es/def/building#Apartment> .
-<http://bimerr.iot.linkeddata.es/def/building#Storey> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid12 .
-_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid12 <http://www.w3.org/2002/07/owl#onProperty> <http://bimerr.iot.linkeddata.es/def/building#ifcIdentifier> .
-_:genid12 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid12 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#string> .
+<http://bimerr.iot.linkeddata.es/def/building#Storey> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid13 .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid13 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/bot#containsZone> .
+_:genid13 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://bimerr.iot.linkeddata.es/def/building#Apartment> .
+<http://bimerr.iot.linkeddata.es/def/building#Storey> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid14 .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid14 <http://www.w3.org/2002/07/owl#onProperty> <http://bimerr.iot.linkeddata.es/def/building#hasApartment> .
+_:genid14 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://bimerr.iot.linkeddata.es/def/building#Apartment> .
+<http://bimerr.iot.linkeddata.es/def/building#Storey> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid15 .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid15 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/bot#hasElement> .
+_:genid15 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/bot#Element> .
+<http://bimerr.iot.linkeddata.es/def/building#Storey> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid16 .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid16 <http://www.w3.org/2002/07/owl#onProperty> <http://bimerr.iot.linkeddata.es/def/building#ifcIdentifier> .
+_:genid16 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid16 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#string> .
 <http://bimerr.iot.linkeddata.es/def/building#Storey> <http://www.w3.org/2000/01/rdf-schema#comment> "The building storey has an elevation and typically represents a (nearly) horizontal aggregation of spaces that are vertically bound."@en .
 <http://bimerr.iot.linkeddata.es/def/building#Storey> <http://www.w3.org/2000/01/rdf-schema#label> "Storey" .
 <http://bimerr.iot.linkeddata.es/def/building#Storey> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcBuildingStorey" .
-# 
-# http://bimerr.iot.linkeddata.es/def/building#System
-<http://bimerr.iot.linkeddata.es/def/building#System> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://bimerr.iot.linkeddata.es/def/building#System> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid13 .
-_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid13 <http://www.w3.org/2002/07/owl#onProperty> <http://bimerr.iot.linkeddata.es/def/building#includesElement> .
-_:genid13 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid13 <http://www.w3.org/2002/07/owl#onClass> <http://bimerr.iot.linkeddata.es/def/building#Element> .
-<http://bimerr.iot.linkeddata.es/def/building#System> <http://www.w3.org/2000/01/rdf-schema#label> "System" .
-# 
-# http://bimerr.iot.linkeddata.es/def/building#VentilationSystem
-<http://bimerr.iot.linkeddata.es/def/building#VentilationSystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://bimerr.iot.linkeddata.es/def/building#VentilationSystem> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://bimerr.iot.linkeddata.es/def/building#System> .
-<http://bimerr.iot.linkeddata.es/def/building#VentilationSystem> <http://www.w3.org/2000/01/rdf-schema#comment> "System that aggregates ventilation devices."@en .
-<http://bimerr.iot.linkeddata.es/def/building#VentilationSystem> <http://www.w3.org/2000/01/rdf-schema#label> "Ventilation System" .
 # 
 # http://bimerr.iot.linkeddata.es/def/building#Wall
 <http://bimerr.iot.linkeddata.es/def/building#Wall> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .

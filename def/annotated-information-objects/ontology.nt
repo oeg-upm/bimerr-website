@@ -1,0 +1,204 @@
+<http://bimerr.iot.linkeddata.es/def/annotated-information-objects#> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://bimerr.iot.linkeddata.es/def/annotated-information-objects#> <http://purl.org/dc/elements/1.1/creator> "María Poveda-Villalón" .
+<http://bimerr.iot.linkeddata.es/def/annotated-information-objects#> <http://purl.org/dc/elements/1.1/creator> "Serge Chávez-Feria" .
+<http://bimerr.iot.linkeddata.es/def/annotated-information-objects#> <http://purl.org/dc/elements/1.1/title> "Annotated Information Objects Ontology"@en .
+<http://bimerr.iot.linkeddata.es/def/annotated-information-objects#> <http://www.w3.org/2000/01/rdf-schema#comment> "The Annotated Information Objects ontology aims to represent information objects like images or text annotations describing different aspects of the building elements. The main purpose of the ontology is to support the report of issues or comments with respect to the building elements during the auditing or construction phases of the renovation activities. The ontology take the Building Collaboration Format (BCF) as basis, that is a BuildingSmart Standard that allows the exchange of additional information with respect to the BIM model."@en .
+<http://bimerr.iot.linkeddata.es/def/annotated-information-objects#> <http://www.w3.org/2002/07/owl#versionInfo> "0.0.2" .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/dc/elements/1.1/creator
+<http://purl.org/dc/elements/1.1/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/elements/1.1/title
+<http://purl.org/dc/elements/1.1/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# http://bimerr.iot.linkeddata.es/def/annotated-information-objects#hasAnnotation
+<http://bimerr.iot.linkeddata.es/def/annotated-information-objects#hasAnnotation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://bimerr.iot.linkeddata.es/def/annotated-information-objects#hasAnnotation> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates a building element with an annotation."@en .
+<http://bimerr.iot.linkeddata.es/def/annotated-information-objects#hasAnnotation> <http://www.w3.org/2000/01/rdf-schema#label> "has annotation" .
+# 
+# http://bimerr.iot.linkeddata.es/def/annotated-information-objects#hasFile
+<http://bimerr.iot.linkeddata.es/def/annotated-information-objects#hasFile> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://bimerr.iot.linkeddata.es/def/annotated-information-objects#hasFile> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates an annotation with the files generated during the process of reporting and issue or making a comment."@en .
+<http://bimerr.iot.linkeddata.es/def/annotated-information-objects#hasFile> <http://www.w3.org/2000/01/rdf-schema#label> "has file" .
+# 
+# http://bimerr.iot.linkeddata.es/def/annotated-information-objects#hasStatus
+<http://bimerr.iot.linkeddata.es/def/annotated-information-objects#hasStatus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://bimerr.iot.linkeddata.es/def/annotated-information-objects#hasStatus> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates an annotation with an specific status."@en .
+<http://bimerr.iot.linkeddata.es/def/annotated-information-objects#hasStatus> <http://www.w3.org/2000/01/rdf-schema#label> "has status" .
+# 
+# http://bimerr.iot.linkeddata.es/def/annotated-information-objects#hasTopic
+<http://bimerr.iot.linkeddata.es/def/annotated-information-objects#hasTopic> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://bimerr.iot.linkeddata.es/def/annotated-information-objects#hasTopic> <http://www.w3.org/2000/01/rdf-schema#comment> "Related an annotation with an specific topic."@en .
+<http://bimerr.iot.linkeddata.es/def/annotated-information-objects#hasTopic> <http://www.w3.org/2000/01/rdf-schema#label> "has topic" .
+# 
+# http://bimerr.iot.linkeddata.es/def/annotated-information-objects#relatedToAnnotation
+<http://bimerr.iot.linkeddata.es/def/annotated-information-objects#relatedToAnnotation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://bimerr.iot.linkeddata.es/def/annotated-information-objects#relatedToAnnotation> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship that allows the referencing of other annotations."@en .
+<http://bimerr.iot.linkeddata.es/def/annotated-information-objects#relatedToAnnotation> <http://www.w3.org/2000/01/rdf-schema#label> "related to annotation" .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# http://bimerr.iot.linkeddata.es/def/annotated-information-objects#creationAuthor
+<http://bimerr.iot.linkeddata.es/def/annotated-information-objects#creationAuthor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://bimerr.iot.linkeddata.es/def/annotated-information-objects#creationAuthor> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://bimerr.iot.linkeddata.es/def/annotated-information-objects#creationAuthor> <http://www.w3.org/2000/01/rdf-schema#comment> "Used to indicate the creator of the annotation."@en .
+<http://bimerr.iot.linkeddata.es/def/annotated-information-objects#creationAuthor> <http://www.w3.org/2000/01/rdf-schema#label> "creation author" .
+# 
+# http://bimerr.iot.linkeddata.es/def/annotated-information-objects#creationDate
+<http://bimerr.iot.linkeddata.es/def/annotated-information-objects#creationDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://bimerr.iot.linkeddata.es/def/annotated-information-objects#creationDate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://bimerr.iot.linkeddata.es/def/annotated-information-objects#creationDate> <http://www.w3.org/2000/01/rdf-schema#comment> "Used to indicate the date the annotation was created."@en .
+<http://bimerr.iot.linkeddata.es/def/annotated-information-objects#creationDate> <http://www.w3.org/2000/01/rdf-schema#label> "creation date" .
+# 
+# http://bimerr.iot.linkeddata.es/def/annotated-information-objects#filename
+<http://bimerr.iot.linkeddata.es/def/annotated-information-objects#filename> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://bimerr.iot.linkeddata.es/def/annotated-information-objects#filename> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://bimerr.iot.linkeddata.es/def/annotated-information-objects#filename> <http://www.w3.org/2000/01/rdf-schema#comment> "Path of the file in the system."@en .
+<http://bimerr.iot.linkeddata.es/def/annotated-information-objects#filename> <http://www.w3.org/2000/01/rdf-schema#label> "filename" .
+# 
+# http://bimerr.iot.linkeddata.es/def/annotated-information-objects#modificationAuthor
+<http://bimerr.iot.linkeddata.es/def/annotated-information-objects#modificationAuthor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://bimerr.iot.linkeddata.es/def/annotated-information-objects#modificationAuthor> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://bimerr.iot.linkeddata.es/def/annotated-information-objects#modificationAuthor> <http://www.w3.org/2000/01/rdf-schema#comment> "Used to indicate the last modificator of the annotation."@en .
+<http://bimerr.iot.linkeddata.es/def/annotated-information-objects#modificationAuthor> <http://www.w3.org/2000/01/rdf-schema#label> "modification author" .
+# 
+# http://bimerr.iot.linkeddata.es/def/annotated-information-objects#modificationDate
+<http://bimerr.iot.linkeddata.es/def/annotated-information-objects#modificationDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://bimerr.iot.linkeddata.es/def/annotated-information-objects#modificationDate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://bimerr.iot.linkeddata.es/def/annotated-information-objects#modificationDate> <http://www.w3.org/2000/01/rdf-schema#comment> "Used to indicate the date the annotation was modified."@en .
+<http://bimerr.iot.linkeddata.es/def/annotated-information-objects#modificationDate> <http://www.w3.org/2000/01/rdf-schema#label> "modification date" .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://bimerr.iot.linkeddata.es/def/annotated-information-objects#Annotation
+<http://bimerr.iot.linkeddata.es/def/annotated-information-objects#Annotation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://bimerr.iot.linkeddata.es/def/annotated-information-objects#Annotation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid1 .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid1 <http://www.w3.org/2002/07/owl#onProperty> <http://bimerr.iot.linkeddata.es/def/annotated-information-objects#hasFile> .
+_:genid1 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://bimerr.iot.linkeddata.es/def/annotated-information-objects#File> .
+<http://bimerr.iot.linkeddata.es/def/annotated-information-objects#Annotation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid2 .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid2 <http://www.w3.org/2002/07/owl#onProperty> <http://bimerr.iot.linkeddata.es/def/annotated-information-objects#hasStatus> .
+_:genid2 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://bimerr.iot.linkeddata.es/def/annotated-information-objects#Status> .
+<http://bimerr.iot.linkeddata.es/def/annotated-information-objects#Annotation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid3 .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid3 <http://www.w3.org/2002/07/owl#onProperty> <http://bimerr.iot.linkeddata.es/def/annotated-information-objects#hasTopic> .
+_:genid3 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://bimerr.iot.linkeddata.es/def/annotated-information-objects#Topic> .
+<http://bimerr.iot.linkeddata.es/def/annotated-information-objects#Annotation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid4 .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid4 <http://www.w3.org/2002/07/owl#onProperty> <http://bimerr.iot.linkeddata.es/def/annotated-information-objects#relatedToAnnotation> .
+_:genid4 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://bimerr.iot.linkeddata.es/def/annotated-information-objects#Annotation> .
+<http://bimerr.iot.linkeddata.es/def/annotated-information-objects#Annotation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid5 .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid5 <http://www.w3.org/2002/07/owl#onProperty> <http://bimerr.iot.linkeddata.es/def/annotated-information-objects#creationDate> .
+_:genid5 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid5 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://bimerr.iot.linkeddata.es/def/annotated-information-objects#Annotation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid6 .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid6 <http://www.w3.org/2002/07/owl#onProperty> <http://bimerr.iot.linkeddata.es/def/annotated-information-objects#modificationDate> .
+_:genid6 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid6 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://bimerr.iot.linkeddata.es/def/annotated-information-objects#Annotation> <http://www.w3.org/2000/01/rdf-schema#comment> "Annotations made with respect to a building element. This annotations could include text or images."@en .
+<http://bimerr.iot.linkeddata.es/def/annotated-information-objects#Annotation> <http://www.w3.org/2000/01/rdf-schema#label> "Annotation" .
+# 
+# http://bimerr.iot.linkeddata.es/def/annotated-information-objects#File
+<http://bimerr.iot.linkeddata.es/def/annotated-information-objects#File> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://bimerr.iot.linkeddata.es/def/annotated-information-objects#File> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid7 .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid7 <http://www.w3.org/2002/07/owl#onProperty> <http://bimerr.iot.linkeddata.es/def/annotated-information-objects#filename> .
+_:genid7 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid7 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#string> .
+<http://bimerr.iot.linkeddata.es/def/annotated-information-objects#File> <http://www.w3.org/2000/01/rdf-schema#comment> "Class that represents the file attached to the annotation, this file can be an image or text."@en .
+<http://bimerr.iot.linkeddata.es/def/annotated-information-objects#File> <http://www.w3.org/2000/01/rdf-schema#label> "File" .
+# 
+# http://bimerr.iot.linkeddata.es/def/annotated-information-objects#Status
+<http://bimerr.iot.linkeddata.es/def/annotated-information-objects#Status> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://bimerr.iot.linkeddata.es/def/annotated-information-objects#Status> <http://www.w3.org/2000/01/rdf-schema#comment> "The status of the annotation. Four statuses are considered by default: Closed, InProgress, Open, and ReOpened."@en .
+<http://bimerr.iot.linkeddata.es/def/annotated-information-objects#Status> <http://www.w3.org/2000/01/rdf-schema#label> "Status" .
+# 
+# http://bimerr.iot.linkeddata.es/def/annotated-information-objects#Topic
+<http://bimerr.iot.linkeddata.es/def/annotated-information-objects#Topic> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://bimerr.iot.linkeddata.es/def/annotated-information-objects#Topic> <http://www.w3.org/2000/01/rdf-schema#comment> "Topics to label the annotations according to their types. Four topics are considered: Comment, Issue, Request, and Solution."@en .
+<http://bimerr.iot.linkeddata.es/def/annotated-information-objects#Topic> <http://www.w3.org/2000/01/rdf-schema#label> "Topic" .
+# 
+# http://bimerr.iot.linkeddata.es/def/building#Element
+<http://bimerr.iot.linkeddata.es/def/building#Element> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://bimerr.iot.linkeddata.es/def/building#Element> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid8 .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid8 <http://www.w3.org/2002/07/owl#onProperty> <http://bimerr.iot.linkeddata.es/def/annotated-information-objects#hasAnnotation> .
+_:genid8 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://bimerr.iot.linkeddata.es/def/annotated-information-objects#Annotation> .
+<http://bimerr.iot.linkeddata.es/def/building#Element> <http://www.w3.org/2000/01/rdf-schema#label> "Element" .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Individuals
+# #
+# #################################################################
+# 
+# 
+# http://bimerr.iot.linkeddata.es/def/annotated-information-objects#Closed
+<http://bimerr.iot.linkeddata.es/def/annotated-information-objects#Closed> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://bimerr.iot.linkeddata.es/def/annotated-information-objects#Closed> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://bimerr.iot.linkeddata.es/def/annotated-information-objects#Status> .
+# 
+# http://bimerr.iot.linkeddata.es/def/annotated-information-objects#Comment
+<http://bimerr.iot.linkeddata.es/def/annotated-information-objects#Comment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://bimerr.iot.linkeddata.es/def/annotated-information-objects#Comment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://bimerr.iot.linkeddata.es/def/annotated-information-objects#Topic> .
+# 
+# http://bimerr.iot.linkeddata.es/def/annotated-information-objects#InProgress
+<http://bimerr.iot.linkeddata.es/def/annotated-information-objects#InProgress> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://bimerr.iot.linkeddata.es/def/annotated-information-objects#InProgress> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://bimerr.iot.linkeddata.es/def/annotated-information-objects#Status> .
+# 
+# http://bimerr.iot.linkeddata.es/def/annotated-information-objects#Issue
+<http://bimerr.iot.linkeddata.es/def/annotated-information-objects#Issue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://bimerr.iot.linkeddata.es/def/annotated-information-objects#Issue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://bimerr.iot.linkeddata.es/def/annotated-information-objects#Topic> .
+# 
+# http://bimerr.iot.linkeddata.es/def/annotated-information-objects#Open
+<http://bimerr.iot.linkeddata.es/def/annotated-information-objects#Open> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://bimerr.iot.linkeddata.es/def/annotated-information-objects#Open> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://bimerr.iot.linkeddata.es/def/annotated-information-objects#Status> .
+# 
+# http://bimerr.iot.linkeddata.es/def/annotated-information-objects#ReOpened
+<http://bimerr.iot.linkeddata.es/def/annotated-information-objects#ReOpened> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://bimerr.iot.linkeddata.es/def/annotated-information-objects#ReOpened> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://bimerr.iot.linkeddata.es/def/annotated-information-objects#Status> .
+# 
+# http://bimerr.iot.linkeddata.es/def/annotated-information-objects#Request
+<http://bimerr.iot.linkeddata.es/def/annotated-information-objects#Request> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://bimerr.iot.linkeddata.es/def/annotated-information-objects#Request> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://bimerr.iot.linkeddata.es/def/annotated-information-objects#Topic> .
+# 
+# http://bimerr.iot.linkeddata.es/def/annotated-information-objects#Solution
+<http://bimerr.iot.linkeddata.es/def/annotated-information-objects#Solution> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://bimerr.iot.linkeddata.es/def/annotated-information-objects#Solution> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://bimerr.iot.linkeddata.es/def/annotated-information-objects#Topic> .
+# 
+# Generated by the OWL API (version 5.1.11) https://github.com/owlcs/owlapi/

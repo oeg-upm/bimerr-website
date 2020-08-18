@@ -97,26 +97,6 @@
     
 
 
-    <!-- http://bimerr.iot.linkeddata.es/def/building#includesElement -->
-
-
-    <owl:ObjectProperty rdf:about="http://bimerr.iot.linkeddata.es/def/building#includesElement">
-        <rdfs:comment xml:lang="en">Relationship that connects a system with an element or device.</rdfs:comment>
-        <rdfs:label>includes element</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://bimerr.iot.linkeddata.es/def/building#isPartOfSystem -->
-
-
-    <owl:ObjectProperty rdf:about="http://bimerr.iot.linkeddata.es/def/building#isPartOfSystem">
-        <rdfs:comment xml:lang="en">Relationship that indicates that an element or device is part of a system.</rdfs:comment>
-        <rdfs:label>is part of system</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
     <!-- https://w3id.org/bot#containsZone -->
 
 
@@ -187,6 +167,27 @@
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment xml:lang="en">The postal address of the building</rdfs:comment>
         <rdfs:label>building address</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://bimerr.iot.linkeddata.es/def/building#hasObXMLFile -->
+
+
+    <owl:DatatypeProperty rdf:about="http://bimerr.iot.linkeddata.es/def/building#hasObXMLFile">
+        <rdfs:domain rdf:resource="http://bimerr.iot.linkeddata.es/def/building#Space"/>
+        <rdfs:comment xml:lang="en">Relationship to indicate the path of the obXML file for an specific space.</rdfs:comment>
+        <rdfs:label xml:lang="en">has obXML file</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://bimerr.iot.linkeddata.es/def/building#identifierInDatabase -->
+
+
+    <owl:DatatypeProperty rdf:about="http://bimerr.iot.linkeddata.es/def/building#identifierInDatabase">
+        <rdfs:comment xml:lang="en">Indicates the ID of the building element in the BIMERR materials and component database.</rdfs:comment>
+        <rdfs:label xml:lang="en">identifier in database</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -284,6 +285,12 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/bot#Zone"/>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/bot#hasElement"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/bot#Element"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/bot#hasSpace"/>
                 <owl:allValuesFrom rdf:resource="http://bimerr.iot.linkeddata.es/def/building#Space"/>
             </owl:Restriction>
@@ -319,6 +326,12 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/bot#Building"/>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/bot#hasElement"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/bot#Element"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/bot#hasStorey"/>
                 <owl:allValuesFrom rdf:resource="http://bimerr.iot.linkeddata.es/def/building#Storey"/>
             </owl:Restriction>
@@ -345,17 +358,6 @@
         <rdfs:comment xml:lang="en">The building element comprises all elements that are primarily part of the construction of a building, i.e., its structural and space separating system. Building elements are all physically existent and tangible things.</rdfs:comment>
         <rdfs:label>Building Element</rdfs:label>
         <rdfs:seeAlso>http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcBuildingElement</rdfs:seeAlso>
-    </owl:Class>
-    
-
-
-    <!-- http://bimerr.iot.linkeddata.es/def/building#CoolingSystem -->
-
-
-    <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/building#CoolingSystem">
-        <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/building#System"/>
-        <rdfs:comment xml:lang="en">System that aggregates cooling devices.</rdfs:comment>
-        <rdfs:label>Cooling System</rdfs:label>
     </owl:Class>
     
 
@@ -397,32 +399,21 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://bimerr.iot.linkeddata.es/def/building#isPartOfSystem"/>
-                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
-                <owl:onClass rdf:resource="http://bimerr.iot.linkeddata.es/def/building#System"/>
+                <owl:onProperty rdf:resource="http://bimerr.iot.linkeddata.es/def/building#ifcIdentifier"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://bimerr.iot.linkeddata.es/def/building#ifcIdentifier"/>
-                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onProperty rdf:resource="http://bimerr.iot.linkeddata.es/def/building#identifierInDatabase"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
                 <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">An element is a generalization of all components that make up an AEC product.</rdfs:comment>
         <rdfs:label>Element</rdfs:label>
         <rdfs:seeAlso>http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcElement</rdfs:seeAlso>
-    </owl:Class>
-    
-
-
-    <!-- http://bimerr.iot.linkeddata.es/def/building#FenestrationSystem -->
-
-
-    <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/building#FenestrationSystem">
-        <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/building#System"/>
-        <rdfs:comment xml:lang="en">System that aggregates fenestration elements.</rdfs:comment>
-        <rdfs:label>Fenestration System</rdfs:label>
     </owl:Class>
     
 
@@ -445,28 +436,6 @@
     <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/building#FossilBoiler">
         <rdfs:subClassOf rdf:resource="https://w3id.org/def/saref4bldg#Boiler"/>
         <rdfs:label>Fossil Boiler</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://bimerr.iot.linkeddata.es/def/building#HeatingSystem -->
-
-
-    <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/building#HeatingSystem">
-        <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/building#System"/>
-        <rdfs:comment xml:lang="en">System that aggregates heating devices.</rdfs:comment>
-        <rdfs:label>Heating System</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://bimerr.iot.linkeddata.es/def/building#PhotovoltaicSystem -->
-
-
-    <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/building#PhotovoltaicSystem">
-        <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/building#System"/>
-        <rdfs:comment xml:lang="en">System that aggregates photovoltaic devices.</rdfs:comment>
-        <rdfs:label>Photovoltaic System</rdfs:label>
     </owl:Class>
     
 
@@ -507,17 +476,6 @@
     
 
 
-    <!-- http://bimerr.iot.linkeddata.es/def/building#SolarSystem -->
-
-
-    <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/building#SolarSystem">
-        <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/building#System"/>
-        <rdfs:comment xml:lang="en">System that aggregates solar devices.</rdfs:comment>
-        <rdfs:label>Solar System</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- http://bimerr.iot.linkeddata.es/def/building#Space -->
 
 
@@ -527,6 +485,13 @@
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/bot#hasElement"/>
                 <owl:allValuesFrom rdf:resource="http://bimerr.iot.linkeddata.es/def/building#Element"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://bimerr.iot.linkeddata.es/def/building#hasObXMLFile"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -562,6 +527,12 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/bot#hasElement"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/bot#Element"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="http://bimerr.iot.linkeddata.es/def/building#ifcIdentifier"/>
                 <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
                 <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
@@ -570,33 +541,6 @@
         <rdfs:comment xml:lang="en">The building storey has an elevation and typically represents a (nearly) horizontal aggregation of spaces that are vertically bound.</rdfs:comment>
         <rdfs:label>Storey</rdfs:label>
         <rdfs:seeAlso>http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcBuildingStorey</rdfs:seeAlso>
-    </owl:Class>
-    
-
-
-    <!-- http://bimerr.iot.linkeddata.es/def/building#System -->
-
-
-    <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/building#System">
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://bimerr.iot.linkeddata.es/def/building#includesElement"/>
-                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
-                <owl:onClass rdf:resource="http://bimerr.iot.linkeddata.es/def/building#Element"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:label>System</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://bimerr.iot.linkeddata.es/def/building#VentilationSystem -->
-
-
-    <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/building#VentilationSystem">
-        <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/building#System"/>
-        <rdfs:comment xml:lang="en">System that aggregates ventilation devices.</rdfs:comment>
-        <rdfs:label>Ventilation System</rdfs:label>
     </owl:Class>
     
 

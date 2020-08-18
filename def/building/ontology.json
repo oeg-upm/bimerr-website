@@ -2,28 +2,32 @@
   "@id" : "_:genid1",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "http://bimerr.iot.linkeddata.es/def/building#Space"
+    "@id" : "https://w3id.org/bot#Element"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/bot#hasSpace"
+    "@id" : "https://w3id.org/bot#hasElement"
   } ]
 }, {
   "@id" : "_:genid10",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/bot#containsZone"
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/building#Element"
   } ],
-  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "http://bimerr.iot.linkeddata.es/def/building#Apartment"
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/bot#hasElement"
   } ]
 }, {
   "@id" : "_:genid11",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "http://bimerr.iot.linkeddata.es/def/building#Apartment"
+  "http://www.w3.org/2002/07/owl#minQualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onDataRange" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://bimerr.iot.linkeddata.es/def/building#hasApartment"
+    "@id" : "http://bimerr.iot.linkeddata.es/def/building#hasObXMLFile"
   } ]
 }, {
   "@id" : "_:genid12",
@@ -41,18 +45,32 @@
 }, {
   "@id" : "_:genid13",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#minQualifiedCardinality" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-    "@value" : "1"
-  } ],
-  "http://www.w3.org/2002/07/owl#onClass" : [ {
-    "@id" : "http://bimerr.iot.linkeddata.es/def/building#Element"
-  } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://bimerr.iot.linkeddata.es/def/building#includesElement"
+    "@id" : "https://w3id.org/bot#containsZone"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/building#Apartment"
   } ]
 }, {
-  "@id" : "_:genid2",
+  "@id" : "_:genid14",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/building#Apartment"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/building#hasApartment"
+  } ]
+}, {
+  "@id" : "_:genid15",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "https://w3id.org/bot#Element"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/bot#hasElement"
+  } ]
+}, {
+  "@id" : "_:genid16",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#minQualifiedCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
@@ -65,7 +83,38 @@
     "@id" : "http://bimerr.iot.linkeddata.es/def/building#ifcIdentifier"
   } ]
 }, {
+  "@id" : "_:genid2",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/building#Space"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/bot#hasSpace"
+  } ]
+}, {
   "@id" : "_:genid3",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#minQualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onDataRange" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/building#ifcIdentifier"
+  } ]
+}, {
+  "@id" : "_:genid4",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "https://w3id.org/bot#Element"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/bot#hasElement"
+  } ]
+}, {
+  "@id" : "_:genid5",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "http://bimerr.iot.linkeddata.es/def/building#Storey"
@@ -74,7 +123,7 @@
     "@id" : "https://w3id.org/bot#hasStorey"
   } ]
 }, {
-  "@id" : "_:genid4",
+  "@id" : "_:genid6",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#minQualifiedCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
@@ -87,7 +136,7 @@
     "@id" : "http://bimerr.iot.linkeddata.es/def/building#ifcIdentifier"
   } ]
 }, {
-  "@id" : "_:genid5",
+  "@id" : "_:genid7",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "http://bimerr.iot.linkeddata.es/def/building#Element"
@@ -96,52 +145,30 @@
     "@id" : "https://w3id.org/bot#hasSubElement"
   } ]
 }, {
-  "@id" : "_:genid6",
+  "@id" : "_:genid8",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#minQualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onDataRange" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/building#ifcIdentifier"
+  } ]
+}, {
+  "@id" : "_:genid9",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#maxQualifiedCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
     "@value" : "1"
   } ],
-  "http://www.w3.org/2002/07/owl#onClass" : [ {
-    "@id" : "http://bimerr.iot.linkeddata.es/def/building#System"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://bimerr.iot.linkeddata.es/def/building#isPartOfSystem"
-  } ]
-}, {
-  "@id" : "_:genid7",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#minQualifiedCardinality" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-    "@value" : "1"
-  } ],
   "http://www.w3.org/2002/07/owl#onDataRange" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://bimerr.iot.linkeddata.es/def/building#ifcIdentifier"
-  } ]
-}, {
-  "@id" : "_:genid8",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "http://bimerr.iot.linkeddata.es/def/building#Element"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/bot#hasElement"
-  } ]
-}, {
-  "@id" : "_:genid9",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#minQualifiedCardinality" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-    "@value" : "1"
-  } ],
-  "http://www.w3.org/2002/07/owl#onDataRange" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#string"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://bimerr.iot.linkeddata.es/def/building#ifcIdentifier"
+    "@id" : "http://bimerr.iot.linkeddata.es/def/building#identifierInDatabase"
   } ]
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/building#",
@@ -187,6 +214,8 @@
     "@id" : "_:genid1"
   }, {
     "@id" : "_:genid2"
+  }, {
+    "@id" : "_:genid3"
   } ]
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/building#BiomassBoiler",
@@ -213,9 +242,11 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/bot#Building"
   }, {
-    "@id" : "_:genid3"
-  }, {
     "@id" : "_:genid4"
+  }, {
+    "@id" : "_:genid5"
+  }, {
+    "@id" : "_:genid6"
   } ]
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/building#BuildingElement",
@@ -232,19 +263,6 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://bimerr.iot.linkeddata.es/def/building#Element"
-  } ]
-}, {
-  "@id" : "http://bimerr.iot.linkeddata.es/def/building#CoolingSystem",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "System that aggregates cooling devices."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Cooling System"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://bimerr.iot.linkeddata.es/def/building#System"
   } ]
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/building#Door",
@@ -294,24 +312,11 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/bot#Element"
   }, {
-    "@id" : "_:genid5"
-  }, {
-    "@id" : "_:genid6"
-  }, {
     "@id" : "_:genid7"
-  } ]
-}, {
-  "@id" : "http://bimerr.iot.linkeddata.es/def/building#FenestrationSystem",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "System that aggregates fenestration elements."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Fenestration System"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://bimerr.iot.linkeddata.es/def/building#System"
+  }, {
+    "@id" : "_:genid8"
+  }, {
+    "@id" : "_:genid9"
   } ]
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/building#FlowSegment",
@@ -337,32 +342,6 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/def/saref4bldg#Boiler"
-  } ]
-}, {
-  "@id" : "http://bimerr.iot.linkeddata.es/def/building#HeatingSystem",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "System that aggregates heating devices."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Heating System"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://bimerr.iot.linkeddata.es/def/building#System"
-  } ]
-}, {
-  "@id" : "http://bimerr.iot.linkeddata.es/def/building#PhotovoltaicSystem",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "System that aggregates photovoltaic devices."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Photovoltaic System"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://bimerr.iot.linkeddata.es/def/building#System"
   } ]
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/building#PipeSegment",
@@ -413,19 +392,6 @@
     "@id" : "http://bimerr.iot.linkeddata.es/def/building#BuildingElement"
   } ]
 }, {
-  "@id" : "http://bimerr.iot.linkeddata.es/def/building#SolarSystem",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "System that aggregates solar devices."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Solar System"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://bimerr.iot.linkeddata.es/def/building#System"
-  } ]
-}, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/building#Space",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -441,9 +407,11 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/bot#Space"
   }, {
-    "@id" : "_:genid8"
+    "@id" : "_:genid10"
   }, {
-    "@id" : "_:genid9"
+    "@id" : "_:genid11"
+  }, {
+    "@id" : "_:genid12"
   } ]
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/building#Storey",
@@ -461,33 +429,13 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/bot#Storey"
   }, {
-    "@id" : "_:genid10"
-  }, {
-    "@id" : "_:genid11"
-  }, {
-    "@id" : "_:genid12"
-  } ]
-}, {
-  "@id" : "http://bimerr.iot.linkeddata.es/def/building#System",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "System"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "_:genid13"
-  } ]
-}, {
-  "@id" : "http://bimerr.iot.linkeddata.es/def/building#VentilationSystem",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "System that aggregates ventilation devices."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Ventilation System"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://bimerr.iot.linkeddata.es/def/building#System"
+  }, {
+    "@id" : "_:genid14"
+  }, {
+    "@id" : "_:genid15"
+  }, {
+    "@id" : "_:genid16"
   } ]
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/building#Wall",
@@ -548,6 +496,31 @@
     "@value" : "has apartment"
   } ]
 }, {
+  "@id" : "http://bimerr.iot.linkeddata.es/def/building#hasObXMLFile",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Relationship to indicate the path of the obXML file for an specific space."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/building#Space"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has obXML file"
+  } ]
+}, {
+  "@id" : "http://bimerr.iot.linkeddata.es/def/building#identifierInDatabase",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Indicates the ID of the building element in the BIMERR materials and component database."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "identifier in database"
+  } ]
+}, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/building#ifcIdentifier",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -559,26 +532,6 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
-  } ]
-}, {
-  "@id" : "http://bimerr.iot.linkeddata.es/def/building#includesElement",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "Relationship that connects a system with an element or device."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "includes element"
-  } ]
-}, {
-  "@id" : "http://bimerr.iot.linkeddata.es/def/building#isPartOfSystem",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "Relationship that indicates that an element or device is part of a system."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "is part of system"
   } ]
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/building#maxOccupants",

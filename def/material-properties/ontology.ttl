@@ -9,11 +9,11 @@
 <http://bimerr.iot.linkeddata.es/def/material-properties#> rdf:type owl:Ontology ;
                                                             <http://purl.org/dc/elements/1.1/creator> "María Poveda-Villalón (Ontology Engineering Group, Universidad Politécnica de Madrid)" ,
                                                                                                       "Serge Chávez-Feria (Ontology Engineering Group, Universidad Politécnica de Madrid)" ;
-                                                            <http://purl.org/dc/elements/1.1/description> "The material properties ontology provides the vocabulary to describe physical properties related to components, materials and layer in a building context."@en ;
+                                                            <http://purl.org/dc/elements/1.1/description> "The material properties ontology provides the vocabulary to describe the composition of building elements."@en ;
                                                             <http://purl.org/dc/elements/1.1/publisher> "http://www.oeg-upm.net/" ;
                                                             <http://purl.org/dc/elements/1.1/title> "Material properties ontology"@en ;
-                                                            <http://purl.org/vocab/vann/preferredNamespacePrefix> "props" ;
-                                                            owl:versionInfo "0.0.5" .
+                                                            <http://purl.org/vocab/vann/preferredNamespacePrefix> "mat" ;
+                                                            owl:versionInfo "0.0.7" .
 
 #################################################################
 #    Annotation properties
@@ -47,16 +47,16 @@
 #    Object Properties
 #################################################################
 
-###  http://bimerr.iot.linkeddata.es/def/material-properties#hasConstruction
-:hasConstruction rdf:type owl:ObjectProperty ;
-                 rdfs:comment "Relation between a building element and its construction. This construction can be a layer set, a profile set, or a constituent set. For example, a window has two construction individuals: The Lining and the Glazing."@en ;
-                 rdfs:label "has construction"@en .
-
-
 ###  http://bimerr.iot.linkeddata.es/def/material-properties#hasMaterial
 :hasMaterial rdf:type owl:ObjectProperty ;
              rdfs:comment "Relation between a construction component (Layer, profile, constituent) and the materials that define them."@en ;
              rdfs:label "has material"@en .
+
+
+###  http://bimerr.iot.linkeddata.es/def/material-properties#hasMaterialCategory
+:hasMaterialCategory rdf:type owl:ObjectProperty ;
+                     rdfs:comment "Relationship to indicate the category of an specific material."@en ;
+                     rdfs:label "has material category"@en .
 
 
 ###  http://bimerr.iot.linkeddata.es/def/material-properties#hasMaterialConstituent
@@ -65,10 +65,22 @@
                         rdfs:label "has material constituent"@en .
 
 
+###  http://bimerr.iot.linkeddata.es/def/material-properties#hasMaterialConstituentSet
+:hasMaterialConstituentSet rdf:type owl:ObjectProperty ;
+                           rdfs:comment "Relation between an element and its construction based in material constituents."@en ;
+                           rdfs:label "has material constituent set"@en .
+
+
 ###  http://bimerr.iot.linkeddata.es/def/material-properties#hasMaterialLayer
 :hasMaterialLayer rdf:type owl:ObjectProperty ;
                   rdfs:comment "A relation between a layer set and the specific material layers."@en ;
                   rdfs:label "has material layer"@en .
+
+
+###  http://bimerr.iot.linkeddata.es/def/material-properties#hasMaterialLayerSet
+:hasMaterialLayerSet rdf:type owl:ObjectProperty ;
+                     rdfs:comment "Relation between an element and its construction based in material layers."@en ;
+                     rdfs:label "has material layer set"@en .
 
 
 ###  http://bimerr.iot.linkeddata.es/def/material-properties#hasMaterialProfile
@@ -77,50 +89,40 @@
                     rdfs:label "has material profile"@en .
 
 
-###  http://bimerr.iot.linkeddata.es/def/material-properties#hasMeasurement
-:hasMeasurement rdf:type owl:ObjectProperty ;
-                rdfs:domain <https://saref.etsi.org/core/FeatureOfInterest> ;
-                rdfs:range <https://saref.etsi.org/core/Measurement> ;
-                rdfs:comment "A relationship between a feature of interest and a measurement about it."@en ;
-                rdfs:label "has measurement"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/material-properties#isMeasuredIn
-:isMeasuredIn rdf:type owl:ObjectProperty ;
-              rdfs:comment "A relationship identifying the unit of measure used for a certain entity."@en ;
-              rdfs:label "is measured in"@en .
+###  http://bimerr.iot.linkeddata.es/def/material-properties#hasMaterialProfileSet
+:hasMaterialProfileSet rdf:type owl:ObjectProperty ;
+                       rdfs:comment "Relation between an element and its construction based in material profiles."@en ;
+                       rdfs:label "has material profile set"@en .
 
 
 ###  http://bimerr.iot.linkeddata.es/def/material-properties#isPropertyFromDatabase
 :isPropertyFromDatabase rdf:type owl:ObjectProperty ;
-                        rdfs:comment "Relates a material's property with the database where it is defined."@en ;
+                        rdfs:comment "A relationship identifying in which database the property is defined."@en ;
                         rdfs:label "is property from database"@en .
 
 
 ###  http://bimerr.iot.linkeddata.es/def/material-properties#isPropertyValueFromDatabase
 :isPropertyValueFromDatabase rdf:type owl:ObjectProperty ;
-                             rdfs:comment "Relates a property value with the database where it comes from."@en ;
+                             rdfs:comment "A relationship identifying in which database the property value is defined."@en ;
                              rdfs:label "is property value from database"@en .
 
 
-###  http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit
-<http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit> rdf:type owl:ObjectProperty ;
-                                                                            rdfs:comment "This property indicates a commonly-used unit."@en ;
-                                                                            rdfs:label "commonly has unit"@en .
+###  https://saref.etsi.org/core/hasMeasurement
+<https://saref.etsi.org/core/hasMeasurement> rdf:type owl:ObjectProperty ;
+                                             rdfs:comment "A relationship between a feature of interest and a measurement about it."@en ;
+                                             rdfs:label "has measurement"@en .
 
 
 ###  https://saref.etsi.org/core/hasProperty
 <https://saref.etsi.org/core/hasProperty> rdf:type owl:ObjectProperty ;
-                                          rdfs:domain <https://saref.etsi.org/core/FeatureOfInterest> ;
-                                          rdfs:range <https://saref.etsi.org/core/Property> ;
                                           rdfs:comment "A relationship between a feature of interest and a property of that feature."@en ;
                                           rdfs:label "has property"@en .
 
 
-###  https://saref.etsi.org/core/relatesToMeasurement
-<https://saref.etsi.org/core/relatesToMeasurement> rdf:type owl:ObjectProperty ;
-                                                   rdfs:comment "A relationship between a property and the measurements it relates to."@en ;
-                                                   rdfs:label "relates to measurement"@en .
+###  https://saref.etsi.org/core/isMeasuredIn
+<https://saref.etsi.org/core/isMeasuredIn> rdf:type owl:ObjectProperty ;
+                                           rdfs:comment "A relationship identifying the unit of measure used for a certain entity."@en ;
+                                           rdfs:label "is measured in"@en .
 
 
 ###  https://saref.etsi.org/core/relatesToProperty
@@ -133,6 +135,18 @@
 #    Data properties
 #################################################################
 
+###  http://bimerr.iot.linkeddata.es/def/material-properties#identifierInDatabase
+:identifierInDatabase rdf:type owl:DatatypeProperty ;
+                      rdfs:comment "A relationship to indicate the identifier used in the source database"@en ;
+                      rdfs:label "identifier in database"@en .
+
+
+###  http://www.w3.org/2004/02/skos/core#prefLabel
+<http://www.w3.org/2004/02/skos/core#prefLabel> rdf:type owl:DatatypeProperty ;
+                                                rdfs:comment "relationship between a concept and its preferred label"@en ;
+                                                rdfs:label "pref label"@en .
+
+
 ###  https://saref.etsi.org/core/hasValue
 <https://saref.etsi.org/core/hasValue> rdf:type owl:DatatypeProperty ;
                                        rdfs:comment "A relationship defining the value of a certain property, e.g., energy or power. Note that, even if numeric values are expected to enable reasoning, measurement values could use other datatypes."@en ;
@@ -143,411 +157,402 @@
 #    Classes
 #################################################################
 
-###  http://bimerr.iot.linkeddata.es/def/building#BiomassBoiler
-<http://bimerr.iot.linkeddata.es/def/building#BiomassBoiler> rdf:type owl:Class ;
-                                                             rdfs:subClassOf <https://w3id.org/def/saref4bldg#Boiler> ;
-                                                             rdfs:label "Biomass Boiler"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/building#BuildingElement
-<http://bimerr.iot.linkeddata.es/def/building#BuildingElement> rdf:type owl:Class ;
-                                                               rdfs:subClassOf <http://bimerr.iot.linkeddata.es/def/building#Element> ;
-                                                               rdfs:comment "The building element comprises all elements that are primarily part of the construction of a building, i.e., its structural and space separating system. Building elements are all physically existent and tangible things."@en ;
-                                                               rdfs:label "Building Element"@en ;
-                                                               rdfs:seeAlso "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcBuildingElement" .
-
-
-###  http://bimerr.iot.linkeddata.es/def/building#Door
-<http://bimerr.iot.linkeddata.es/def/building#Door> rdf:type owl:Class ;
-                                                    rdfs:subClassOf <http://bimerr.iot.linkeddata.es/def/building#BuildingElement> ;
-                                                    rdfs:comment "The door is a building element that is predominately used to provide controlled access for people and goods. It includes constructions with hinged, pivoted, sliding, and additionally revolving and folding operations. A door consists of a lining and one or several panels."@en ;
-                                                    rdfs:label "Door"@en ;
-                                                    rdfs:seeAlso "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcDoor" .
-
-
-###  http://bimerr.iot.linkeddata.es/def/building#DuctSegment
-<http://bimerr.iot.linkeddata.es/def/building#DuctSegment> rdf:type owl:Class ;
-                                                           rdfs:subClassOf <http://bimerr.iot.linkeddata.es/def/building#FlowSegment> ;
-                                                           rdfs:comment "A duct segment is used to typically join two sections of duct network."@en ;
-                                                           rdfs:label "Duct Segment"@en ;
-                                                           rdfs:seeAlso "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcDuctSegment" .
-
-
 ###  http://bimerr.iot.linkeddata.es/def/building#Element
 <http://bimerr.iot.linkeddata.es/def/building#Element> rdf:type owl:Class ;
                                                        rdfs:subClassOf [ rdf:type owl:Restriction ;
-                                                                         owl:onProperty :hasConstruction ;
-                                                                         owl:allValuesFrom [ rdf:type owl:Class ;
-                                                                                             owl:unionOf ( :MaterialConstituentSet
-                                                                                                           :MaterialLayerSet
-                                                                                                           :MaterialProfileSet
-                                                                                                         )
-                                                                                           ]
+                                                                         owl:onProperty :hasMaterial ;
+                                                                         owl:allValuesFrom :Material
                                                                        ] ,
                                                                        [ rdf:type owl:Restriction ;
-                                                                         owl:onProperty :hasMeasurement ;
-                                                                         owl:allValuesFrom <https://saref.etsi.org/core/Measurement>
+                                                                         owl:onProperty :hasMaterialConstituentSet ;
+                                                                         owl:allValuesFrom :MaterialConstituentSet
                                                                        ] ,
                                                                        [ rdf:type owl:Restriction ;
-                                                                         owl:onProperty <https://saref.etsi.org/core/hasProperty> ;
-                                                                         owl:allValuesFrom <https://saref.etsi.org/core/Property>
+                                                                         owl:onProperty :hasMaterialLayerSet ;
+                                                                         owl:allValuesFrom :MaterialLayerSet
+                                                                       ] ,
+                                                                       [ rdf:type owl:Restriction ;
+                                                                         owl:onProperty :hasMaterialProfileSet ;
+                                                                         owl:allValuesFrom :MaterialProfileSet
                                                                        ] ;
                                                        rdfs:comment "An element is a generalization of all components that make up an AEC product."@en ;
                                                        rdfs:label "Element"@en ;
                                                        rdfs:seeAlso "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcElement"@en .
 
 
-###  http://bimerr.iot.linkeddata.es/def/building#FlowSegment
-<http://bimerr.iot.linkeddata.es/def/building#FlowSegment> rdf:type owl:Class ;
-                                                           rdfs:subClassOf <https://w3id.org/def/saref4bldg#DistributionFlowDevice> ;
-                                                           rdfs:comment "Defines the occurrence of a segment of a flow distribution system."@en ;
-                                                           rdfs:label "Flow Segment"@en ;
-                                                           rdfs:seeAlso "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcFlowSegment" .
+###  http://bimerr.iot.linkeddata.es/def/material-properties#Accesories
+:Accesories rdf:type owl:Class ;
+            rdfs:subClassOf :VentillationSystem .
 
 
-###  http://bimerr.iot.linkeddata.es/def/building#FossilBoiler
-<http://bimerr.iot.linkeddata.es/def/building#FossilBoiler> rdf:type owl:Class ;
-                                                            rdfs:subClassOf <https://w3id.org/def/saref4bldg#Boiler> ;
-                                                            rdfs:label "Fossil Boiler"@en .
+###  http://bimerr.iot.linkeddata.es/def/material-properties#AdhesiveBridgesAndPreSpray
+:AdhesiveBridgesAndPreSpray rdf:type owl:Class ;
+                            rdfs:subClassOf :MasonryAndPlasterMortar .
 
 
-###  http://bimerr.iot.linkeddata.es/def/building#PipeSegment
-<http://bimerr.iot.linkeddata.es/def/building#PipeSegment> rdf:type owl:Class ;
-                                                           rdfs:subClassOf <http://bimerr.iot.linkeddata.es/def/building#FlowSegment> ;
-                                                           rdfs:comment "A pipe segment is used to typically join two sections of a piping network."@en ;
-                                                           rdfs:label "Pipe Segment"@en ;
-                                                           rdfs:seeAlso "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcPipeSegment" .
-
-
-###  http://bimerr.iot.linkeddata.es/def/building#Roof
-<http://bimerr.iot.linkeddata.es/def/building#Roof> rdf:type owl:Class ;
-                                                    rdfs:subClassOf <http://bimerr.iot.linkeddata.es/def/building#BuildingElement> ;
-                                                    rdfs:comment "A roof is the covering of the top part of a building, it protects the building against the effects of wheather."@en ;
-                                                    rdfs:label "Roof"@en ;
-                                                    rdfs:seeAlso "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcRoof" .
-
-
-###  http://bimerr.iot.linkeddata.es/def/building#Slab
-<http://bimerr.iot.linkeddata.es/def/building#Slab> rdf:type owl:Class ;
-                                                    rdfs:subClassOf <http://bimerr.iot.linkeddata.es/def/building#BuildingElement> ;
-                                                    rdfs:comment "A slab is a component of the construction that normally encloses a space vertically. The slab may provide the lower support (floor) or upper construction (roof slab) in any space in a building."@en ;
-                                                    rdfs:label "Slab"@en ;
-                                                    rdfs:seeAlso "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcSlab" .
-
-
-###  http://bimerr.iot.linkeddata.es/def/building#Wall
-<http://bimerr.iot.linkeddata.es/def/building#Wall> rdf:type owl:Class ;
-                                                    rdfs:subClassOf <http://bimerr.iot.linkeddata.es/def/building#BuildingElement> ;
-                                                    rdfs:comment "The wall represents a vertical construction that bounds or subdivides spaces. Wall are usually vertical, or nearly vertical, planar elements, often designed to bear structural loads. A wall is however not required to be load bearing."@en ;
-                                                    rdfs:label "Wall"@en ;
-                                                    rdfs:seeAlso "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcWall" .
-
-
-###  http://bimerr.iot.linkeddata.es/def/building#Window
-<http://bimerr.iot.linkeddata.es/def/building#Window> rdf:type owl:Class ;
-                                                      rdfs:subClassOf <http://bimerr.iot.linkeddata.es/def/building#BuildingElement> ;
-                                                      rdfs:comment "The window is a building element that is predominately used to provide natural light and fresh air. It includes vertical opening but also horizontal opening such as skylights or light domes. It includes constructions with swinging, pivoting, sliding, or revolving panels and fixed panels. A window consists of a lining and one or several panels."@en ;
-                                                      rdfs:label "Window"@en ;
-                                                      rdfs:seeAlso "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcWindow" .
-
-
-###  http://bimerr.iot.linkeddata.es/def/material-properties#AdhesiveAndFiller
-:AdhesiveAndFiller rdf:type owl:Class ;
-                   rdfs:subClassOf :Material ;
-                   rdfs:label "Adhesive and Filler"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/material-properties#AdhesiveBridgesAndPreSplash
-:AdhesiveBridgesAndPreSplash rdf:type owl:Class ;
-                             rdfs:subClassOf :MasonryAndPlasterMortar ;
-                             rdfs:label "Adhesive bridges and pre-splash"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/material-properties#AdobeMasonryUnfired
-:AdobeMasonryUnfired rdf:type owl:Class ;
-                     rdfs:subClassOf :Masonry ;
-                     rdfs:label "Adobe masonry (unfired)"@en .
+###  http://bimerr.iot.linkeddata.es/def/material-properties#AdhesivesAndFillers
+:AdhesivesAndFillers rdf:type owl:Class ;
+                     rdfs:subClassOf :Material .
 
 
 ###  http://bimerr.iot.linkeddata.es/def/material-properties#AeratedConcreteMasonry
 :AeratedConcreteMasonry rdf:type owl:Class ;
-                        rdfs:subClassOf :Masonry ;
-                        rdfs:label "Aerated concrete masonry"@en .
+                        rdfs:subClassOf :Masonry .
 
 
 ###  http://bimerr.iot.linkeddata.es/def/material-properties#Air
 :Air rdf:type owl:Class ;
-     rdfs:subClassOf :Material ;
-     rdfs:label "Air"@en .
+     rdfs:subClassOf :Material .
+
+
+###  http://bimerr.iot.linkeddata.es/def/material-properties#AsphaltPavements
+:AsphaltPavements rdf:type owl:Class ;
+                  rdfs:subClassOf :OutdoorFacilities .
+
+
+###  http://bimerr.iot.linkeddata.es/def/material-properties#BiomassBoiler
+:BiomassBoiler rdf:type owl:Class ;
+               rdfs:subClassOf :HeatingSystems .
+
+
+###  http://bimerr.iot.linkeddata.es/def/material-properties#BitumenAdhesivesSealantsAndFillers
+:BitumenAdhesivesSealantsAndFillers rdf:type owl:Class ;
+                                    rdfs:subClassOf :SealantsAndAdhesives .
+
+
+###  http://bimerr.iot.linkeddata.es/def/material-properties#BitumenCoatings
+:BitumenCoatings rdf:type owl:Class ;
+                 rdfs:subClassOf :SealantsAndAdhesives .
+
+
+###  http://bimerr.iot.linkeddata.es/def/material-properties#BitumenGroutingCompounds
+:BitumenGroutingCompounds rdf:type owl:Class ;
+                          rdfs:subClassOf :SealantsAndAdhesives .
 
 
 ###  http://bimerr.iot.linkeddata.es/def/material-properties#BrickMasonry
 :BrickMasonry rdf:type owl:Class ;
-              rdfs:subClassOf :Masonry ;
-              rdfs:label "Brick masonry"@en .
+              rdfs:subClassOf :Masonry .
 
 
-###  http://bimerr.iot.linkeddata.es/def/material-properties#BuildingBoard
-:BuildingBoard rdf:type owl:Class ;
-               rdfs:subClassOf :Material ;
-               rdfs:label "Building board"@en .
+###  http://bimerr.iot.linkeddata.es/def/material-properties#BuildingBoards
+:BuildingBoards rdf:type owl:Class ;
+                rdfs:subClassOf :Material .
 
 
-###  http://bimerr.iot.linkeddata.es/def/material-properties#CeilingAndRoofElement
-:CeilingAndRoofElement rdf:type owl:Class ;
-                       rdfs:subClassOf :Material ;
-                       rdfs:label "Ceiling and roof element"@en .
+###  http://bimerr.iot.linkeddata.es/def/material-properties#BuildingOperation
+:BuildingOperation rdf:type owl:Class ;
+                   rdfs:subClassOf :Processes .
 
 
-###  http://bimerr.iot.linkeddata.es/def/material-properties#CelluloseFibreInsulationMaterial
-:CelluloseFibreInsulationMaterial rdf:type owl:Class ;
-                                  rdfs:subClassOf :InsulatingMaterialsFromRenewableRawMaterial ;
-                                  rdfs:label "Cellulose fibre insulation material"@en .
+###  http://bimerr.iot.linkeddata.es/def/material-properties#BuildingServices
+:BuildingServices rdf:type owl:Class ;
+                  rdfs:subClassOf :Material .
 
 
-###  http://bimerr.iot.linkeddata.es/def/material-properties#CementBoundEPSBoard
-:CementBoundEPSBoard rdf:type owl:Class ;
-                     rdfs:subClassOf :SyntheticInsulatingMaterial ;
-                     rdfs:label "Cement-bound EPS board"@en .
+###  http://bimerr.iot.linkeddata.es/def/material-properties#CalciumSilicateInsulationBoard
+:CalciumSilicateInsulationBoard rdf:type owl:Class ;
+                                rdfs:subClassOf :MineralInsulationMaterials .
+
+
+###  http://bimerr.iot.linkeddata.es/def/material-properties#CeilingAndRoofElements
+:CeilingAndRoofElements rdf:type owl:Class ;
+                        rdfs:subClassOf :Material .
+
+
+###  http://bimerr.iot.linkeddata.es/def/material-properties#CelluloseFibreInsulatingMaterials
+:CelluloseFibreInsulatingMaterials rdf:type owl:Class ;
+                                   rdfs:subClassOf :InsulatingMaterialsFromRenewableRawMaterials .
+
+
+###  http://bimerr.iot.linkeddata.es/def/material-properties#CementBoundEPSBoards
+:CementBoundEPSBoards rdf:type owl:Class ;
+                      rdfs:subClassOf :SyntheticInsulatingMaterials .
 
 
 ###  http://bimerr.iot.linkeddata.es/def/material-properties#CementBoundLightweightConcreteSlab
 :CementBoundLightweightConcreteSlab rdf:type owl:Class ;
-                                    rdfs:subClassOf :BuildingBoard ;
-                                    rdfs:label "Cement-bound lightweight concrete slab"@en .
+                                    rdfs:subClassOf :BuildingBoards .
 
 
-###  http://bimerr.iot.linkeddata.es/def/material-properties#ClayBuildingBoard
-:ClayBuildingBoard rdf:type owl:Class ;
-                   rdfs:subClassOf :BuildingBoard ;
-                   rdfs:label "Clay building board"@en .
+###  http://bimerr.iot.linkeddata.es/def/material-properties#ChipboardConcreteWallElements
+:ChipboardConcreteWallElements rdf:type owl:Class ;
+                               rdfs:subClassOf :WallElements .
 
 
-###  http://bimerr.iot.linkeddata.es/def/material-properties#CoatingAndImpregnation
-:CoatingAndImpregnation rdf:type owl:Class ;
-                        rdfs:subClassOf :Material ;
-                        rdfs:label "Coating and impregnation"@en .
+###  http://bimerr.iot.linkeddata.es/def/material-properties#ClayBuildingBoards
+:ClayBuildingBoards rdf:type owl:Class ;
+                    rdfs:subClassOf :BuildingBoards .
 
 
-###  http://bimerr.iot.linkeddata.es/def/material-properties#CoconutFibreInsulatingMaterial
-:CoconutFibreInsulatingMaterial rdf:type owl:Class ;
-                                rdfs:subClassOf :InsulatingMaterialsFromRenewableRawMaterial ;
-                                rdfs:label "Coconut fibre insulating material"@en .
+###  http://bimerr.iot.linkeddata.es/def/material-properties#CoatingsAndImpregnations
+:CoatingsAndImpregnations rdf:type owl:Class ;
+                          rdfs:subClassOf :Material .
 
 
-###  http://bimerr.iot.linkeddata.es/def/material-properties#Concrete
-:Concrete rdf:type owl:Class ;
-          rdfs:subClassOf :Material ;
-          rdfs:label "Concrete"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/material-properties#ConcreteInWUQuality
-:ConcreteInWUQuality rdf:type owl:Class ;
-                     rdfs:subClassOf :Concrete ;
-                     rdfs:label "Concrete in WU quality"@en .
+###  http://bimerr.iot.linkeddata.es/def/material-properties#CoconutFobreInsulatingMaterials
+:CoconutFobreInsulatingMaterials rdf:type owl:Class ;
+                                 rdfs:subClassOf :InsulatingMaterialsFromRenewableRawMaterials .
 
 
 ###  http://bimerr.iot.linkeddata.es/def/material-properties#ConcreteMasonry
 :ConcreteMasonry rdf:type owl:Class ;
-                 rdfs:subClassOf :Masonry ;
-                 rdfs:label "Concrete masonry"@en .
+                 rdfs:subClassOf :Masonry .
 
 
-###  http://bimerr.iot.linkeddata.es/def/material-properties#ConcreteWithEPSAggregate
-:ConcreteWithEPSAggregate rdf:type owl:Class ;
-                          rdfs:subClassOf :Concrete ;
-                          rdfs:label "Concrete with EPS aggregate"@en .
+###  http://bimerr.iot.linkeddata.es/def/material-properties#ConcretesInWUQuality
+:ConcretesInWUQuality rdf:type owl:Class ;
+                      rdfs:subClassOf :InSituConcretes .
 
 
-###  http://bimerr.iot.linkeddata.es/def/material-properties#ConcreteWithExpandedClayOrBrickChippingsAggregate
-:ConcreteWithExpandedClayOrBrickChippingsAggregate rdf:type owl:Class ;
-                                                   rdfs:subClassOf :Concrete ;
-                                                   rdfs:label "Concrete with expanded clay or brick chippings aggregate"@en .
+###  http://bimerr.iot.linkeddata.es/def/material-properties#ConcretesWithEPSAggregate
+:ConcretesWithEPSAggregate rdf:type owl:Class ;
+                           rdfs:subClassOf :InSituConcretes .
 
 
-###  http://bimerr.iot.linkeddata.es/def/material-properties#ConcreteWithExpandedShaleAggregate
-:ConcreteWithExpandedShaleAggregate rdf:type owl:Class ;
-                                    rdfs:subClassOf :Concrete ;
-                                    rdfs:label "Concrete with expanded shale aggregate"@en .
+###  http://bimerr.iot.linkeddata.es/def/material-properties#ConcretesWithExpandedClayOrBrickChippingsAggregate
+:ConcretesWithExpandedClayOrBrickChippingsAggregate rdf:type owl:Class ;
+                                                    rdfs:subClassOf :InSituConcretes .
 
 
-###  http://bimerr.iot.linkeddata.es/def/material-properties#ConcreteWithPumiceAggregate
-:ConcreteWithPumiceAggregate rdf:type owl:Class ;
-                             rdfs:subClassOf :Concrete ;
-                             rdfs:label "Concrete with pumice aggregate"@en .
+###  http://bimerr.iot.linkeddata.es/def/material-properties#ConcretesWithExpandedShaleAggregate
+:ConcretesWithExpandedShaleAggregate rdf:type owl:Class ;
+                                     rdfs:subClassOf :InSituConcretes .
 
 
-###  http://bimerr.iot.linkeddata.es/def/material-properties#ConcreteWithSlagPumiceAggregate
-:ConcreteWithSlagPumiceAggregate rdf:type owl:Class ;
-                                 rdfs:subClassOf :Concrete ;
-                                 rdfs:label "Concrete with slag pumice aggregate"@en .
+###  http://bimerr.iot.linkeddata.es/def/material-properties#ConcretesWithPumiceAggregate
+:ConcretesWithPumiceAggregate rdf:type owl:Class ;
+                              rdfs:subClassOf :InSituConcretes .
 
 
-###  http://bimerr.iot.linkeddata.es/def/material-properties#ConcreteWithSulphateSlagCement
-:ConcreteWithSulphateSlagCement rdf:type owl:Class ;
-                                rdfs:subClassOf :Concrete ;
-                                rdfs:label "Concrete with sulphate slag cement"@en .
+###  http://bimerr.iot.linkeddata.es/def/material-properties#ConcretesWithSlagPumiceAggregate
+:ConcretesWithSlagPumiceAggregate rdf:type owl:Class ;
+                                  rdfs:subClassOf :InSituConcretes .
 
 
-###  http://bimerr.iot.linkeddata.es/def/material-properties#CorkInsulatingMaterial
-:CorkInsulatingMaterial rdf:type owl:Class ;
-                        rdfs:subClassOf :InsulatingMaterialsFromRenewableRawMaterial ;
-                        rdfs:label "Cork insulating material"@en .
+###  http://bimerr.iot.linkeddata.es/def/material-properties#ConcretesWithSulphateSlagCement
+:ConcretesWithSulphateSlagCement rdf:type owl:Class ;
+                                 rdfs:subClassOf :InSituConcretes .
 
 
-###  http://bimerr.iot.linkeddata.es/def/material-properties#CottonInsulationMaterial
-:CottonInsulationMaterial rdf:type owl:Class ;
-                          rdfs:subClassOf :InsulatingMaterialsFromRenewableRawMaterial ;
-                          rdfs:label "Cotton insulation material"@en .
+###  http://bimerr.iot.linkeddata.es/def/material-properties#ConstructiveSolidWood
+:ConstructiveSolidWood rdf:type owl:Class ;
+                       rdfs:subClassOf :Material .
 
 
-###  http://bimerr.iot.linkeddata.es/def/material-properties#EPSInsulatingMaterial
-:EPSInsulatingMaterial rdf:type owl:Class ;
-                       rdfs:subClassOf :SyntheticInsulatingMaterial ;
-                       rdfs:label "EPS insulating material"@en .
+###  http://bimerr.iot.linkeddata.es/def/material-properties#CorkInsulatingMaterials
+:CorkInsulatingMaterials rdf:type owl:Class ;
+                         rdfs:subClassOf :InsulatingMaterialsFromRenewableRawMaterials .
 
 
-###  http://bimerr.iot.linkeddata.es/def/material-properties#ElasticFloorCovering
-:ElasticFloorCovering rdf:type owl:Class ;
-                      rdfs:subClassOf :FloorCovering ;
-                      rdfs:label "Elastic floor covering."@en .
+###  http://bimerr.iot.linkeddata.es/def/material-properties#CottonInsulationMaterials
+:CottonInsulationMaterials rdf:type owl:Class ;
+                           rdfs:subClassOf :InsulatingMaterialsFromRenewableRawMaterials .
+
+
+###  http://bimerr.iot.linkeddata.es/def/material-properties#Disposal
+:Disposal rdf:type owl:Class ;
+          rdfs:subClassOf :Processes .
+
+
+###  http://bimerr.iot.linkeddata.es/def/material-properties#Doors
+:Doors rdf:type owl:Class ;
+       rdfs:subClassOf :Material .
+
+
+###  http://bimerr.iot.linkeddata.es/def/material-properties#EPSInsulation
+:EPSInsulation rdf:type owl:Class ;
+               rdfs:subClassOf :SyntheticInsulatingMaterials .
+
+
+###  http://bimerr.iot.linkeddata.es/def/material-properties#ElectricalCables
+:ElectricalCables rdf:type owl:Class ;
+                  rdfs:subClassOf :ElectricalInstallation .
+
+
+###  http://bimerr.iot.linkeddata.es/def/material-properties#ElectricalInstallation
+:ElectricalInstallation rdf:type owl:Class ;
+                        rdfs:subClassOf :BuildingServices .
 
 
 ###  http://bimerr.iot.linkeddata.es/def/material-properties#ExternalPlaster
 :ExternalPlaster rdf:type owl:Class ;
-                 rdfs:subClassOf :MasonryAndPlasterMortar ;
-                 rdfs:label "External plaster"@en .
+                 rdfs:subClassOf :MasonryAndPlasterMortar .
 
 
-###  http://bimerr.iot.linkeddata.es/def/material-properties#FacadeCladding
-:FacadeCladding rdf:type owl:Class ;
-                rdfs:subClassOf :Material ;
-                rdfs:label "Facade cladding"@en .
+###  http://bimerr.iot.linkeddata.es/def/material-properties#FacadeCladdings
+:FacadeCladdings rdf:type owl:Class ;
+                 rdfs:subClassOf :Material .
 
 
-###  http://bimerr.iot.linkeddata.es/def/material-properties#FibreCementBoard
-:FibreCementBoard rdf:type owl:Class ;
-                  rdfs:subClassOf :BuildingBoard ;
-                  rdfs:label "Fibre cement board"@en .
+###  http://bimerr.iot.linkeddata.es/def/material-properties#FibreCementBoardsInterior
+:FibreCementBoardsInterior rdf:type owl:Class ;
+                           rdfs:subClassOf :BuildingBoards .
 
 
-###  http://bimerr.iot.linkeddata.es/def/material-properties#FillingBrick
-:FillingBrick rdf:type owl:Class ;
-              rdfs:subClassOf :BrickMasonry ;
-              rdfs:label "Filling brick"@en .
+###  http://bimerr.iot.linkeddata.es/def/material-properties#FillingBricks
+:FillingBricks rdf:type owl:Class ;
+               rdfs:subClassOf :BrickMasonry .
 
 
-###  http://bimerr.iot.linkeddata.es/def/material-properties#FilmProtectionMaterial
-:FilmProtectionMaterial rdf:type owl:Class ;
-                        rdfs:subClassOf :SealingSheetVapourBarrierFoil ;
-                        rdfs:label "Film protection material"@en .
+###  http://bimerr.iot.linkeddata.es/def/material-properties#FilmProtectionMaterials
+:FilmProtectionMaterials rdf:type owl:Class ;
+                         rdfs:subClassOf :SealingSheetVapourBarrierFoils .
 
 
-###  http://bimerr.iot.linkeddata.es/def/material-properties#FlaxInsulatingMaterial
-:FlaxInsulatingMaterial rdf:type owl:Class ;
-                        rdfs:subClassOf :InsulatingMaterialsFromRenewableRawMaterial ;
-                        rdfs:label "Flax insulating material"@en .
+###  http://bimerr.iot.linkeddata.es/def/material-properties#FlaxInsulatingMaterials
+:FlaxInsulatingMaterials rdf:type owl:Class ;
+                         rdfs:subClassOf :InsulatingMaterialsFromRenewableRawMaterials .
 
 
-###  http://bimerr.iot.linkeddata.es/def/material-properties#FloorCovering
-:FloorCovering rdf:type owl:Class ;
-               rdfs:subClassOf :Material ;
-               rdfs:label "Floor covering"@en .
+###  http://bimerr.iot.linkeddata.es/def/material-properties#FloorCoveringAndSkirtingBoards
+:FloorCoveringAndSkirtingBoards rdf:type owl:Class ;
+                                rdfs:subClassOf :Material .
 
 
-###  http://bimerr.iot.linkeddata.es/def/material-properties#FoamGlassInsulationBoard
-:FoamGlassInsulationBoard rdf:type owl:Class ;
-                          rdfs:subClassOf :MineralInsulationMaterial ;
-                          rdfs:label "Foam glass insulation board"@en .
+###  http://bimerr.iot.linkeddata.es/def/material-properties#FloorCoveringCapableOfInfiltration
+:FloorCoveringCapableOfInfiltration rdf:type owl:Class ;
+                                    rdfs:subClassOf :OutdoorFacilities .
 
 
-###  http://bimerr.iot.linkeddata.es/def/material-properties#Gas
-:Gas rdf:type owl:Class ;
-     rdfs:subClassOf :Material ;
-     rdfs:label "Gas"@en .
+###  http://bimerr.iot.linkeddata.es/def/material-properties#FoamGlassInsulationBoards
+:FoamGlassInsulationBoards rdf:type owl:Class ;
+                           rdfs:subClassOf :MineralInsulationMaterials .
 
 
-###  http://bimerr.iot.linkeddata.es/def/material-properties#GlassWoolInsulatingMaterial
-:GlassWoolInsulatingMaterial rdf:type owl:Class ;
-                             rdfs:subClassOf :MineralInsulationMaterial ;
-                             rdfs:label "Glass wool insulating material"@en .
+###  http://bimerr.iot.linkeddata.es/def/material-properties#FossilHeatingBoilers
+:FossilHeatingBoilers rdf:type owl:Class ;
+                      rdfs:subClassOf :HeatingSystems .
 
 
-###  http://bimerr.iot.linkeddata.es/def/material-properties#GrassFibreInsulationBoard
-:GrassFibreInsulationBoard rdf:type owl:Class ;
-                           rdfs:subClassOf :InsulatingMaterialsFromRenewableRawMaterial ;
-                           rdfs:label "Grass fibre insulation board"@en .
+###  http://bimerr.iot.linkeddata.es/def/material-properties#Gases
+:Gases rdf:type owl:Class ;
+       rdfs:subClassOf :Material .
+
+
+###  http://bimerr.iot.linkeddata.es/def/material-properties#GlassWoolInsulatingMaterials
+:GlassWoolInsulatingMaterials rdf:type owl:Class ;
+                              rdfs:subClassOf :MineralInsulationMaterials .
+
+
+###  http://bimerr.iot.linkeddata.es/def/material-properties#Glazings
+:Glazings rdf:type owl:Class ;
+          rdfs:subClassOf :WindowsAndComponents .
+
+
+###  http://bimerr.iot.linkeddata.es/def/material-properties#GrassFibreInsulationBoards
+:GrassFibreInsulationBoards rdf:type owl:Class ;
+                            rdfs:subClassOf :InsulatingMaterialsFromRenewableRawMaterials .
 
 
 ###  http://bimerr.iot.linkeddata.es/def/material-properties#HeatFlowDownwards
 :HeatFlowDownwards rdf:type owl:Class ;
-                   rdfs:subClassOf :Air ;
-                   rdfs:label "Heat flow downwards"@en .
+                   rdfs:subClassOf :Air .
 
 
 ###  http://bimerr.iot.linkeddata.es/def/material-properties#HeatFlowHorizontal
 :HeatFlowHorizontal rdf:type owl:Class ;
-                    rdfs:subClassOf :Air ;
-                    rdfs:label "Heat flow horizontal"@en .
+                    rdfs:subClassOf :Air .
 
 
 ###  http://bimerr.iot.linkeddata.es/def/material-properties#HeatFlowUpwards
 :HeatFlowUpwards rdf:type owl:Class ;
-                 rdfs:subClassOf :Air ;
-                 rdfs:label "Heat flow upwards"@en .
+                 rdfs:subClassOf :Air .
 
 
-###  http://bimerr.iot.linkeddata.es/def/material-properties#HempInsulatingMaterial
-:HempInsulatingMaterial rdf:type owl:Class ;
-                        rdfs:subClassOf :InsulatingMaterialsFromRenewableRawMaterial ;
-                        rdfs:label "Hemp insulating material"@en .
+###  http://bimerr.iot.linkeddata.es/def/material-properties#HeatPumps
+:HeatPumps rdf:type owl:Class ;
+           rdfs:subClassOf :HeatingSystems .
+
+
+###  http://bimerr.iot.linkeddata.es/def/material-properties#HeatingPipe
+:HeatingPipe rdf:type owl:Class ;
+             rdfs:subClassOf :HeatingSystems .
+
+
+###  http://bimerr.iot.linkeddata.es/def/material-properties#HeatingSystems
+:HeatingSystems rdf:type owl:Class ;
+                rdfs:subClassOf :BuildingServices .
+
+
+###  http://bimerr.iot.linkeddata.es/def/material-properties#HempInsulatingMaterials
+:HempInsulatingMaterials rdf:type owl:Class ;
+                         rdfs:subClassOf :InsulatingMaterialsFromRenewableRawMaterials .
 
 
 ###  http://bimerr.iot.linkeddata.es/def/material-properties#HighPerforatedBrickMasonry
 :HighPerforatedBrickMasonry rdf:type owl:Class ;
-                            rdfs:subClassOf :BrickMasonry ;
-                            rdfs:label "High perforated brick masonry"@en .
+                            rdfs:subClassOf :BrickMasonry .
 
 
-###  http://bimerr.iot.linkeddata.es/def/material-properties#InsulatingMaterialsFromRenewableRawMaterial
-:InsulatingMaterialsFromRenewableRawMaterial rdf:type owl:Class ;
-                                             rdfs:subClassOf :InsulationMaterial ;
-                                             rdfs:label "Insulating materials from renewable raw material"@en .
+###  http://bimerr.iot.linkeddata.es/def/material-properties#HotWaterTank
+:HotWaterTank rdf:type owl:Class ;
+              rdfs:subClassOf :BuildingServices .
 
 
-###  http://bimerr.iot.linkeddata.es/def/material-properties#InsulationMaterial
-:InsulationMaterial rdf:type owl:Class ;
-                    rdfs:subClassOf :Material ;
-                    rdfs:label "Insulation material"@en .
+###  http://bimerr.iot.linkeddata.es/def/material-properties#IBOCharecterizationFactors
+:IBOCharecterizationFactors rdf:type owl:Class ;
+                            rdfs:subClassOf :BuildingOperation .
+
+
+###  http://bimerr.iot.linkeddata.es/def/material-properties#InSituConcretes
+:InSituConcretes rdf:type owl:Class ;
+                 rdfs:subClassOf :Material .
+
+
+###  http://bimerr.iot.linkeddata.es/def/material-properties#InsulatingMaterials
+:InsulatingMaterials rdf:type owl:Class ;
+                     rdfs:subClassOf :Material .
+
+
+###  http://bimerr.iot.linkeddata.es/def/material-properties#InsulatingMaterialsFromRenewableRawMaterials
+:InsulatingMaterialsFromRenewableRawMaterials rdf:type owl:Class ;
+                                              rdfs:subClassOf :InsulatingMaterials .
 
 
 ###  http://bimerr.iot.linkeddata.es/def/material-properties#InteriorPlaster
 :InteriorPlaster rdf:type owl:Class ;
-                 rdfs:subClassOf :MasonryAndPlasterMortar ;
-                 rdfs:label "Interior plaster"@en .
+                 rdfs:subClassOf :MasonryAndPlasterMortar .
+
+
+###  http://bimerr.iot.linkeddata.es/def/material-properties#LinearThermalBridgeCoefficientPSIValue
+:LinearThermalBridgeCoefficientPSIValue rdf:type owl:Class ;
+                                        rdfs:subClassOf :WindowsAndComponents .
+
+
+###  http://bimerr.iot.linkeddata.es/def/material-properties#LiquidFoils
+:LiquidFoils rdf:type owl:Class ;
+             rdfs:subClassOf :SealantsAndAdhesives .
+
+
+###  http://bimerr.iot.linkeddata.es/def/material-properties#MachiningProcesses
+:MachiningProcesses rdf:type owl:Class ;
+                    rdfs:subClassOf :Processes .
 
 
 ###  http://bimerr.iot.linkeddata.es/def/material-properties#Masonry
 :Masonry rdf:type owl:Class ;
-         rdfs:subClassOf :Material ;
-         rdfs:label "Masonry"@en .
+         rdfs:subClassOf :Material .
 
 
 ###  http://bimerr.iot.linkeddata.es/def/material-properties#MasonryAndPlasterMortar
 :MasonryAndPlasterMortar rdf:type owl:Class ;
-                         rdfs:subClassOf :Material ;
-                         rdfs:label "Masonry and plaster mortar"@en .
+                         rdfs:subClassOf :Material .
 
 
 ###  http://bimerr.iot.linkeddata.es/def/material-properties#Material
 :Material rdf:type owl:Class ;
           rdfs:subClassOf [ rdf:type owl:Restriction ;
-                            owl:onProperty :hasMeasurement ;
+                            owl:onProperty <https://saref.etsi.org/core/hasMeasurement> ;
                             owl:allValuesFrom <https://saref.etsi.org/core/Measurement>
                           ] ,
                           [ rdf:type owl:Restriction ;
                             owl:onProperty <https://saref.etsi.org/core/hasProperty> ;
                             owl:allValuesFrom <https://saref.etsi.org/core/Property>
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :identifierInDatabase ;
+                            owl:allValuesFrom xsd:string
                           ] ;
           rdfs:comment "A homogeneous or inhomogeneous substance that can be used to form elements (physical products or their components). (Definition taken from IFC)"@en ;
           rdfs:label "Material"@en ;
@@ -559,14 +564,6 @@
                      rdfs:subClassOf [ rdf:type owl:Restriction ;
                                        owl:onProperty :hasMaterial ;
                                        owl:allValuesFrom :Material
-                                     ] ,
-                                     [ rdf:type owl:Restriction ;
-                                       owl:onProperty :hasMeasurement ;
-                                       owl:allValuesFrom <https://saref.etsi.org/core/Measurement>
-                                     ] ,
-                                     [ rdf:type owl:Restriction ;
-                                       owl:onProperty <https://saref.etsi.org/core/hasProperty> ;
-                                       owl:allValuesFrom <https://saref.etsi.org/core/Property>
                                      ] ;
                      rdfs:comment "A single and identifiable part of an element which is constructed of a number of part (one or more) each having an individual material."@en ;
                      rdfs:label "Material constituent"@en ;
@@ -576,14 +573,6 @@
 ###  http://bimerr.iot.linkeddata.es/def/material-properties#MaterialConstituentSet
 :MaterialConstituentSet rdf:type owl:Class ;
                         rdfs:subClassOf [ rdf:type owl:Restriction ;
-                                          owl:onProperty :hasMeasurement ;
-                                          owl:allValuesFrom <https://saref.etsi.org/core/Measurement>
-                                        ] ,
-                                        [ rdf:type owl:Restriction ;
-                                          owl:onProperty <https://saref.etsi.org/core/hasProperty> ;
-                                          owl:allValuesFrom <https://saref.etsi.org/core/Property>
-                                        ] ,
-                                        [ rdf:type owl:Restriction ;
                                           owl:onProperty :hasMaterialConstituent ;
                                           owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                                           owl:onClass :MaterialConstituent
@@ -596,7 +585,7 @@
 ###  http://bimerr.iot.linkeddata.es/def/material-properties#MaterialDatabase
 :MaterialDatabase rdf:type owl:Class ;
                   rdfs:comment "Represents the set of available databases for building materials."@en ;
-                  rdfs:label "Material database"@en .
+                  rdfs:label "Material Database"@en .
 
 
 ###  http://bimerr.iot.linkeddata.es/def/material-properties#MaterialLayer
@@ -604,14 +593,6 @@
                rdfs:subClassOf [ rdf:type owl:Restriction ;
                                  owl:onProperty :hasMaterial ;
                                  owl:allValuesFrom :Material
-                               ] ,
-                               [ rdf:type owl:Restriction ;
-                                 owl:onProperty :hasMeasurement ;
-                                 owl:allValuesFrom <https://saref.etsi.org/core/Measurement>
-                               ] ,
-                               [ rdf:type owl:Restriction ;
-                                 owl:onProperty <https://saref.etsi.org/core/hasProperty> ;
-                                 owl:allValuesFrom <https://saref.etsi.org/core/Property>
                                ] ;
                rdfs:comment "A single and identifiable part of an element which is constructed of a number of layers (one or more)."@en ;
                rdfs:label "Material layer"@en ;
@@ -621,14 +602,6 @@
 ###  http://bimerr.iot.linkeddata.es/def/material-properties#MaterialLayerSet
 :MaterialLayerSet rdf:type owl:Class ;
                   rdfs:subClassOf [ rdf:type owl:Restriction ;
-                                    owl:onProperty :hasMeasurement ;
-                                    owl:allValuesFrom <https://saref.etsi.org/core/Measurement>
-                                  ] ,
-                                  [ rdf:type owl:Restriction ;
-                                    owl:onProperty <https://saref.etsi.org/core/hasProperty> ;
-                                    owl:allValuesFrom <https://saref.etsi.org/core/Property>
-                                  ] ,
-                                  [ rdf:type owl:Restriction ;
                                     owl:onProperty :hasMaterialLayer ;
                                     owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                                     owl:onClass :MaterialLayer
@@ -643,14 +616,6 @@
                  rdfs:subClassOf [ rdf:type owl:Restriction ;
                                    owl:onProperty :hasMaterial ;
                                    owl:allValuesFrom :Material
-                                 ] ,
-                                 [ rdf:type owl:Restriction ;
-                                   owl:onProperty :hasMeasurement ;
-                                   owl:allValuesFrom <https://saref.etsi.org/core/Measurement>
-                                 ] ,
-                                 [ rdf:type owl:Restriction ;
-                                   owl:onProperty <https://saref.etsi.org/core/hasProperty> ;
-                                   owl:allValuesFrom <https://saref.etsi.org/core/Property>
                                  ] ;
                  rdfs:comment "A single and identifiable cross section of an element which is constructed of a number of profiles (one or more)."@en ;
                  rdfs:label "Material profile"@en ;
@@ -660,14 +625,6 @@
 ###  http://bimerr.iot.linkeddata.es/def/material-properties#MaterialProfileSet
 :MaterialProfileSet rdf:type owl:Class ;
                     rdfs:subClassOf [ rdf:type owl:Restriction ;
-                                      owl:onProperty :hasMeasurement ;
-                                      owl:allValuesFrom <https://saref.etsi.org/core/Measurement>
-                                    ] ,
-                                    [ rdf:type owl:Restriction ;
-                                      owl:onProperty <https://saref.etsi.org/core/hasProperty> ;
-                                      owl:allValuesFrom <https://saref.etsi.org/core/Property>
-                                    ] ,
-                                    [ rdf:type owl:Restriction ;
                                       owl:onProperty :hasMaterialProfile ;
                                       owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                                       owl:onClass :MaterialProfile
@@ -677,308 +634,359 @@
                     rdfs:seeAlso "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcMaterialProfileSet"@en .
 
 
-###  http://bimerr.iot.linkeddata.es/def/material-properties#MaterialProperty
-:MaterialProperty rdf:type owl:Class ;
-                  rdfs:subClassOf <https://saref.etsi.org/core/Property> ,
-                                  [ rdf:type owl:Restriction ;
-                                    owl:onProperty :isPropertyFromDatabase ;
-                                    owl:allValuesFrom :MaterialDatabase
-                                  ] ,
-                                  [ rdf:type owl:Restriction ;
-                                    owl:onProperty <http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit> ;
-                                    owl:allValuesFrom <https://saref.etsi.org/core/UnitOfMeasure>
-                                  ] ;
-                  rdfs:comment "Properties that describe building materials."@en ;
-                  rdfs:label "Material property"@en .
+###  http://bimerr.iot.linkeddata.es/def/material-properties#MeansOfTransport
+:MeansOfTransport rdf:type owl:Class ;
+                  rdfs:subClassOf :Processes .
 
 
-###  http://bimerr.iot.linkeddata.es/def/material-properties#MaterialPropertyMeasurement
-:MaterialPropertyMeasurement rdf:type owl:Class ;
-                             rdfs:subClassOf <https://saref.etsi.org/core/Measurement> ,
-                                             [ rdf:type owl:Restriction ;
-                                               owl:onProperty :isPropertyValueFromDatabase ;
-                                               owl:allValuesFrom :MaterialDatabase
-                                             ] ;
-                             rdfs:comment "The measurement, value and unit of measure, related to properties of building materials."@en ;
-                             rdfs:label "Material property measurement"@en .
+###  http://bimerr.iot.linkeddata.es/def/material-properties#MineralFloorCoverings
+:MineralFloorCoverings rdf:type owl:Class ;
+                       rdfs:subClassOf :FloorCoveringAndSkirtingBoards .
 
 
-###  http://bimerr.iot.linkeddata.es/def/material-properties#MineralFloorCovering
-:MineralFloorCovering rdf:type owl:Class ;
-                      rdfs:subClassOf :FloorCovering ;
-                      rdfs:label "Mineral floor covering."@en .
+###  http://bimerr.iot.linkeddata.es/def/material-properties#MineralFoamInsulationBoards
+:MineralFoamInsulationBoards rdf:type owl:Class ;
+                             rdfs:subClassOf :MineralInsulationMaterials .
 
 
-###  http://bimerr.iot.linkeddata.es/def/material-properties#MineralFoamInsulationBoard
-:MineralFoamInsulationBoard rdf:type owl:Class ;
-                            rdfs:subClassOf :MineralInsulationMaterial ;
-                            rdfs:label "Mineral foam insulation board"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/material-properties#MineralInsulationMaterial
-:MineralInsulationMaterial rdf:type owl:Class ;
-                           rdfs:subClassOf :InsulationMaterial ;
-                           rdfs:label "Mineral insulation material"@en .
+###  http://bimerr.iot.linkeddata.es/def/material-properties#MineralInsulationMaterials
+:MineralInsulationMaterials rdf:type owl:Class ;
+                            rdfs:subClassOf :InsulatingMaterials .
 
 
 ###  http://bimerr.iot.linkeddata.es/def/material-properties#Mortar
 :Mortar rdf:type owl:Class ;
-        rdfs:subClassOf :MasonryAndPlasterMortar ;
-        rdfs:label "Mortar"@en .
+        rdfs:subClassOf :MasonryAndPlasterMortar .
 
 
-###  http://bimerr.iot.linkeddata.es/def/material-properties#NaturalStone
-:NaturalStone rdf:type owl:Class ;
-              rdfs:subClassOf :Material ;
-              rdfs:label "Natural stone"@en .
+###  http://bimerr.iot.linkeddata.es/def/material-properties#MountingAccesoriesIndividualBuildingMaterials
+:MountingAccesoriesIndividualBuildingMaterials rdf:type owl:Class ;
+                                               rdfs:subClassOf :Material .
+
+
+###  http://bimerr.iot.linkeddata.es/def/material-properties#MudBrickMasonryUnfired
+:MudBrickMasonryUnfired rdf:type owl:Class ;
+                        rdfs:subClassOf :Masonry .
 
 
 ###  http://bimerr.iot.linkeddata.es/def/material-properties#NaturalStoneMasonry
 :NaturalStoneMasonry rdf:type owl:Class ;
-                     rdfs:subClassOf :Masonry ;
-                     rdfs:label "Natural stone masonry"@en .
+                     rdfs:subClassOf :Masonry .
 
 
-###  http://bimerr.iot.linkeddata.es/def/material-properties#NormalConcrete
-:NormalConcrete rdf:type owl:Class ;
-                rdfs:subClassOf :Concrete ;
-                rdfs:label "Normal concrete"@en .
+###  http://bimerr.iot.linkeddata.es/def/material-properties#NaturalStones
+:NaturalStones rdf:type owl:Class ;
+               rdfs:subClassOf :Material .
 
 
-###  http://bimerr.iot.linkeddata.es/def/material-properties#PURPIRInsulationBoard
-:PURPIRInsulationBoard rdf:type owl:Class ;
-                       rdfs:subClassOf :SyntheticInsulatingMaterial ;
-                       rdfs:label "PUR/PIR insulation board"@en .
+###  http://bimerr.iot.linkeddata.es/def/material-properties#NormalConcretes
+:NormalConcretes rdf:type owl:Class ;
+                 rdfs:subClassOf :InSituConcretes .
 
 
-###  http://bimerr.iot.linkeddata.es/def/material-properties#PerliteInsulationBoard
-:PerliteInsulationBoard rdf:type owl:Class ;
-                        rdfs:subClassOf :MineralInsulationMaterial ;
-                        rdfs:label "Perlite insulation board"@en .
+###  http://bimerr.iot.linkeddata.es/def/material-properties#OIBCharecterizationFactors
+:OIBCharecterizationFactors rdf:type owl:Class ;
+                            rdfs:subClassOf :BuildingOperation .
 
 
-###  http://bimerr.iot.linkeddata.es/def/material-properties#PhenolicResinFoamBoard
-:PhenolicResinFoamBoard rdf:type owl:Class ;
-                        rdfs:subClassOf :SyntheticInsulatingMaterial ;
-                        rdfs:label "Phenolic resin foam board"@en .
+###  http://bimerr.iot.linkeddata.es/def/material-properties#OutdoorFacilities
+:OutdoorFacilities rdf:type owl:Class ;
+                   rdfs:subClassOf :Material .
+
+
+###  http://bimerr.iot.linkeddata.es/def/material-properties#PerliteInsulationBoards
+:PerliteInsulationBoards rdf:type owl:Class ;
+                         rdfs:subClassOf :MineralInsulationMaterials .
+
+
+###  http://bimerr.iot.linkeddata.es/def/material-properties#PhenolicResinFoamBoards
+:PhenolicResinFoamBoards rdf:type owl:Class ;
+                         rdfs:subClassOf :SyntheticInsulatingMaterials .
+
+
+###  http://bimerr.iot.linkeddata.es/def/material-properties#PhotovoltaicSystem
+:PhotovoltaicSystem rdf:type owl:Class ;
+                    rdfs:subClassOf :BuildingServices .
+
+
+###  http://bimerr.iot.linkeddata.es/def/material-properties#PipeMaterials
+:PipeMaterials rdf:type owl:Class ;
+               rdfs:subClassOf :BuildingServices .
 
 
 ###  http://bimerr.iot.linkeddata.es/def/material-properties#PlasterBase
 :PlasterBase rdf:type owl:Class ;
-             rdfs:subClassOf :MasonryAndPlasterMortar ;
-             rdfs:label "Plaster base"@en .
+             rdfs:subClassOf :MasonryAndPlasterMortar .
 
 
-###  http://bimerr.iot.linkeddata.es/def/material-properties#Platerboard
-:Platerboard rdf:type owl:Class ;
-             rdfs:subClassOf :BuildingBoard ;
-             rdfs:label "Plasterboard"@en .
+###  http://bimerr.iot.linkeddata.es/def/material-properties#Plasterboard
+:Plasterboard rdf:type owl:Class ;
+              rdfs:subClassOf :BuildingBoards .
 
 
-###  http://bimerr.iot.linkeddata.es/def/material-properties#PolyesterFibreInsulatingMaterial
-:PolyesterFibreInsulatingMaterial rdf:type owl:Class ;
-                                  rdfs:subClassOf :SyntheticInsulatingMaterial ;
-                                  rdfs:label "Polyester fibre insulating material"@en .
+###  http://bimerr.iot.linkeddata.es/def/material-properties#PolyesterFibreInsulatingMaterials
+:PolyesterFibreInsulatingMaterials rdf:type owl:Class ;
+                                   rdfs:subClassOf :SyntheticInsulatingMaterials .
 
 
-###  http://bimerr.iot.linkeddata.es/def/material-properties#PolyethyleneInsulatingMaterial
-:PolyethyleneInsulatingMaterial rdf:type owl:Class ;
-                                rdfs:subClassOf :SyntheticInsulatingMaterial ;
-                                rdfs:label "Polyethylene (PE) insulating material"@en .
+###  http://bimerr.iot.linkeddata.es/def/material-properties#PolyethyleneInsulatingMaterials
+:PolyethyleneInsulatingMaterials rdf:type owl:Class ;
+                                 rdfs:subClassOf :SyntheticInsulatingMaterials .
 
 
-###  http://bimerr.iot.linkeddata.es/def/material-properties#ReedInsulationPanel
-:ReedInsulationPanel rdf:type owl:Class ;
-                     rdfs:subClassOf :InsulatingMaterialsFromRenewableRawMaterial ;
-                     rdfs:label "Reed insulation panel"@en .
+###  http://bimerr.iot.linkeddata.es/def/material-properties#PolyisocyanurateAndPolyurethaneInsulatingBoards
+:PolyisocyanurateAndPolyurethaneInsulatingBoards rdf:type owl:Class ;
+                                                 rdfs:subClassOf :SyntheticInsulatingMaterials .
+
+
+###  http://bimerr.iot.linkeddata.es/def/material-properties#Processes
+:Processes rdf:type owl:Class ;
+           rdfs:subClassOf :Material .
+
+
+###  http://bimerr.iot.linkeddata.es/def/material-properties#RadiatorsHeaters
+:RadiatorsHeaters rdf:type owl:Class ;
+                  rdfs:subClassOf :HeatingSystems .
+
+
+###  http://bimerr.iot.linkeddata.es/def/material-properties#ReedInsulationBoards
+:ReedInsulationBoards rdf:type owl:Class ;
+                      rdfs:subClassOf :InsulatingMaterialsFromRenewableRawMaterials .
+
+
+###  http://bimerr.iot.linkeddata.es/def/material-properties#ReedInsulationMaterialsLoose
+:ReedInsulationMaterialsLoose rdf:type owl:Class ;
+                              rdfs:subClassOf :InsulatingMaterialsFromRenewableRawMaterials .
 
 
 ###  http://bimerr.iot.linkeddata.es/def/material-properties#ReinforcedConcreteNormalConcreteWithReinforcement
 :ReinforcedConcreteNormalConcreteWithReinforcement rdf:type owl:Class ;
-                                                   rdfs:subClassOf :Concrete ;
-                                                   rdfs:label "Reinforced concrete / normal concrete with reinforcement"@en .
+                                                   rdfs:subClassOf :InSituConcretes .
 
 
-###  http://bimerr.iot.linkeddata.es/def/material-properties#RockWoolInsulationMaterial
-:RockWoolInsulationMaterial rdf:type owl:Class ;
-                            rdfs:subClassOf :MineralInsulationMaterial ;
-                            rdfs:label "Rock wool insulation material"@en .
+###  http://bimerr.iot.linkeddata.es/def/material-properties#ResilientFloorCoverings
+:ResilientFloorCoverings rdf:type owl:Class ;
+                         rdfs:subClassOf :FloorCoveringAndSkirtingBoards .
 
 
-###  http://bimerr.iot.linkeddata.es/def/material-properties#RoofCovering
-:RoofCovering rdf:type owl:Class ;
-              rdfs:subClassOf :Material ;
-              rdfs:label "Roof covering"@en .
+###  http://bimerr.iot.linkeddata.es/def/material-properties#RockWoolInsulation
+:RockWoolInsulation rdf:type owl:Class ;
+                    rdfs:subClassOf :MineralInsulationMaterials .
+
+
+###  http://bimerr.iot.linkeddata.es/def/material-properties#RoofCoverings
+:RoofCoverings rdf:type owl:Class ;
+               rdfs:subClassOf :Material .
 
 
 ###  http://bimerr.iot.linkeddata.es/def/material-properties#SandLimeBrickwork
 :SandLimeBrickwork rdf:type owl:Class ;
-                   rdfs:subClassOf :Masonry ;
-                   rdfs:label "Sand-lime brickwork"@en .
+                   rdfs:subClassOf :Masonry .
 
 
-###  http://bimerr.iot.linkeddata.es/def/material-properties#Screed
-:Screed rdf:type owl:Class ;
-        rdfs:subClassOf :Material ;
-        rdfs:label "Screed"@en .
+###  http://bimerr.iot.linkeddata.es/def/material-properties#SanitaryFacilities
+:SanitaryFacilities rdf:type owl:Class ;
+                    rdfs:subClassOf :SanitaryIntallation .
 
 
-###  http://bimerr.iot.linkeddata.es/def/material-properties#SealantsAndAdhesive
-:SealantsAndAdhesive rdf:type owl:Class ;
-                     rdfs:subClassOf :Material ;
-                     rdfs:label "Sealant and adhesive"@en .
+###  http://bimerr.iot.linkeddata.es/def/material-properties#SanitaryIntallation
+:SanitaryIntallation rdf:type owl:Class ;
+                     rdfs:subClassOf :BuildingServices .
 
 
-###  http://bimerr.iot.linkeddata.es/def/material-properties#SealingSheet
-:SealingSheet rdf:type owl:Class ;
-              rdfs:subClassOf :SealingSheetVapourBarrierFoil ;
-              rdfs:label "Sealing sheet"@en .
+###  http://bimerr.iot.linkeddata.es/def/material-properties#Screeds
+:Screeds rdf:type owl:Class ;
+         rdfs:subClassOf :Material .
 
 
-###  http://bimerr.iot.linkeddata.es/def/material-properties#SealingSheetVapourBarrierFoil
-:SealingSheetVapourBarrierFoil rdf:type owl:Class ;
-                               rdfs:subClassOf :Material ;
-                               rdfs:label "Sealing sheet, vapour barrier, foil"@en .
+###  http://bimerr.iot.linkeddata.es/def/material-properties#Sealants
+:Sealants rdf:type owl:Class ;
+          rdfs:subClassOf :SealantsAndAdhesives .
 
 
-###  http://bimerr.iot.linkeddata.es/def/material-properties#SheepWoolInsulation
-:SheepWoolInsulation rdf:type owl:Class ;
-                     rdfs:subClassOf :InsulatingMaterialsFromRenewableRawMaterial ;
-                     rdfs:label "Sheep wool insulation"@en .
+###  http://bimerr.iot.linkeddata.es/def/material-properties#SealantsAndAdhesives
+:SealantsAndAdhesives rdf:type owl:Class ;
+                      rdfs:subClassOf :Material .
 
 
-###  http://bimerr.iot.linkeddata.es/def/material-properties#SheetsOfBondedLightweightAggregate
-:SheetsOfBondedLightweightAggregate rdf:type owl:Class ;
-                                    rdfs:subClassOf :BuildingBoard ;
-                                    rdfs:label "Sheets of bonded lightweight aggregate"@en .
+###  http://bimerr.iot.linkeddata.es/def/material-properties#SealingSheetVapourBarrierFoils
+:SealingSheetVapourBarrierFoils rdf:type owl:Class ;
+                                rdfs:subClassOf :Material .
+
+
+###  http://bimerr.iot.linkeddata.es/def/material-properties#SealingTapesAndThermalBridgeInterrupters
+:SealingTapesAndThermalBridgeInterrupters rdf:type owl:Class ;
+                                          rdfs:subClassOf :SealantsAndAdhesives .
+
+
+###  http://bimerr.iot.linkeddata.es/def/material-properties#SheepsWoolInsulationMaterials
+:SheepsWoolInsulationMaterials rdf:type owl:Class ;
+                               rdfs:subClassOf :InsulatingMaterialsFromRenewableRawMaterials .
+
+
+###  http://bimerr.iot.linkeddata.es/def/material-properties#SheetsOfBondedLightweightAggregates
+:SheetsOfBondedLightweightAggregates rdf:type owl:Class ;
+                                     rdfs:subClassOf :BuildingBoards .
 
 
 ###  http://bimerr.iot.linkeddata.es/def/material-properties#SlottedBrickMasonry
 :SlottedBrickMasonry rdf:type owl:Class ;
-                     rdfs:subClassOf :BrickMasonry ;
-                     rdfs:label "Slotted brick masonry"@en .
+                     rdfs:subClassOf :BrickMasonry .
 
 
-###  http://bimerr.iot.linkeddata.es/def/material-properties#SolidFloorCovering
-:SolidFloorCovering rdf:type owl:Class ;
-                    rdfs:subClassOf :FloorCovering ;
-                    rdfs:label "Solid floor covering."@en .
+###  http://bimerr.iot.linkeddata.es/def/material-properties#SolarSystem
+:SolarSystem rdf:type owl:Class ;
+             rdfs:subClassOf :BuildingServices .
 
 
-###  http://bimerr.iot.linkeddata.es/def/material-properties#StrawInsulationMaterial
-:StrawInsulationMaterial rdf:type owl:Class ;
-                         rdfs:subClassOf :InsulatingMaterialsFromRenewableRawMaterial ;
-                         rdfs:label "Straw insulation material"@en .
+###  http://bimerr.iot.linkeddata.es/def/material-properties#SolidFloorCoveringsOfWoodAndOtherNaturalRawMaterials
+:SolidFloorCoveringsOfWoodAndOtherNaturalRawMaterials rdf:type owl:Class ;
+                                                      rdfs:subClassOf :FloorCoveringAndSkirtingBoards .
 
 
-###  http://bimerr.iot.linkeddata.es/def/material-properties#StructuralSolidWood
-:StructuralSolidWood rdf:type owl:Class ;
-                     rdfs:subClassOf :Material ;
-                     rdfs:label "Structural (solid) wood"@en .
+###  http://bimerr.iot.linkeddata.es/def/material-properties#StrawInsulationMaterials
+:StrawInsulationMaterials rdf:type owl:Class ;
+                          rdfs:subClassOf :InsulatingMaterialsFromRenewableRawMaterials .
 
 
-###  http://bimerr.iot.linkeddata.es/def/material-properties#SyntheticInsulatingMaterial
-:SyntheticInsulatingMaterial rdf:type owl:Class ;
-                             rdfs:subClassOf :InsulationMaterial ;
-                             rdfs:label "Synthetic insulating material"@en .
+###  http://bimerr.iot.linkeddata.es/def/material-properties#SyntheticInsulatingMaterials
+:SyntheticInsulatingMaterials rdf:type owl:Class ;
+                              rdfs:subClassOf :InsulatingMaterials .
 
 
-###  http://bimerr.iot.linkeddata.es/def/material-properties#TextileFloorCovering
-:TextileFloorCovering rdf:type owl:Class ;
-                      rdfs:subClassOf :FloorCovering ;
-                      rdfs:label "Textile floor covering."@en .
+###  http://bimerr.iot.linkeddata.es/def/material-properties#TextileFloorCoverings
+:TextileFloorCoverings rdf:type owl:Class ;
+                       rdfs:subClassOf :FloorCoveringAndSkirtingBoards .
 
 
-###  http://bimerr.iot.linkeddata.es/def/material-properties#TippingAndAggregate
-:TippingAndAggregate rdf:type owl:Class ;
-                     rdfs:subClassOf :Material ;
-                     rdfs:label "Tipping and aggregate"@en .
+###  http://bimerr.iot.linkeddata.es/def/material-properties#TippingsAndAggregates
+:TippingsAndAggregates rdf:type owl:Class ;
+                       rdfs:subClassOf :Material .
 
 
-###  http://bimerr.iot.linkeddata.es/def/material-properties#UnderlaysAndBackCoatingsOfFloorCovering
-:UnderlaysAndBackCoatingsOfFloorCovering rdf:type owl:Class ;
-                                         rdfs:subClassOf :FloorCovering ;
-                                         rdfs:label "Underlays and back coatings of floor covering."@en .
+###  http://bimerr.iot.linkeddata.es/def/material-properties#UnderlaysAndBackCoatingsOfFloorCoverings
+:UnderlaysAndBackCoatingsOfFloorCoverings rdf:type owl:Class ;
+                                          rdfs:subClassOf :FloorCoveringAndSkirtingBoards .
 
 
-###  http://bimerr.iot.linkeddata.es/def/material-properties#VacuumInsulationPanel
-:VacuumInsulationPanel rdf:type owl:Class ;
-                       rdfs:subClassOf :MineralInsulationMaterial ;
-                       rdfs:label "Vacuum insulation panel"@en .
+###  http://bimerr.iot.linkeddata.es/def/material-properties#VacuumInsulationPanels
+:VacuumInsulationPanels rdf:type owl:Class ;
+                        rdfs:subClassOf :MineralInsulationMaterials .
 
 
-###  http://bimerr.iot.linkeddata.es/def/material-properties#VapourBarrierAndBrake
-:VapourBarrierAndBrake rdf:type owl:Class ;
-                       rdfs:subClassOf :SealingSheetVapourBarrierFoil ;
-                       rdfs:label "Vapour barrier and brake"@en .
+###  http://bimerr.iot.linkeddata.es/def/material-properties#VapourBarriersAndBrakes
+:VapourBarriersAndBrakes rdf:type owl:Class ;
+                         rdfs:subClassOf :SealingSheetVapourBarrierFoils .
 
 
-###  http://bimerr.iot.linkeddata.es/def/material-properties#WallPaintAndCovering
-:WallPaintAndCovering rdf:type owl:Class ;
-                      rdfs:subClassOf :Material ;
-                      rdfs:label "Wall paint and covering"@en .
+###  http://bimerr.iot.linkeddata.es/def/material-properties#VentilationPipes
+:VentilationPipes rdf:type owl:Class ;
+                  rdfs:subClassOf :VentillationSystem .
 
 
-###  http://bimerr.iot.linkeddata.es/def/material-properties#WoodAndWoodBasedPanel
-:WoodAndWoodBasedPanel rdf:type owl:Class ;
-                       rdfs:subClassOf :BuildingBoard ;
-                       rdfs:label "Wood and wood based panel"@en .
+###  http://bimerr.iot.linkeddata.es/def/material-properties#VentilationUnits
+:VentilationUnits rdf:type owl:Class ;
+                  rdfs:subClassOf :VentillationSystem .
 
 
-###  http://bimerr.iot.linkeddata.es/def/material-properties#WoodChipInsulationBoard
-:WoodChipInsulationBoard rdf:type owl:Class ;
-                         rdfs:subClassOf :MineralInsulationMaterial ;
-                         rdfs:label "Wood chip insulation board"@en .
+###  http://bimerr.iot.linkeddata.es/def/material-properties#VentillationSystem
+:VentillationSystem rdf:type owl:Class ;
+                    rdfs:subClassOf :BuildingServices .
 
 
-###  http://bimerr.iot.linkeddata.es/def/material-properties#WoodFibreInsulatingMaterial
-:WoodFibreInsulatingMaterial rdf:type owl:Class ;
-                             rdfs:subClassOf :InsulatingMaterialsFromRenewableRawMaterial ;
-                             rdfs:label "Wood fibre insulating material"@en .
+###  http://bimerr.iot.linkeddata.es/def/material-properties#WallElements
+:WallElements rdf:type owl:Class ;
+              rdfs:subClassOf :Material .
+
+
+###  http://bimerr.iot.linkeddata.es/def/material-properties#WallElementsMadeOfCellularConcrete
+:WallElementsMadeOfCellularConcrete rdf:type owl:Class ;
+                                    rdfs:subClassOf :WallElements .
+
+
+###  http://bimerr.iot.linkeddata.es/def/material-properties#WallElementsMadeOfLightweightConcrete
+:WallElementsMadeOfLightweightConcrete rdf:type owl:Class ;
+                                       rdfs:subClassOf :WallElements .
+
+
+###  http://bimerr.iot.linkeddata.es/def/material-properties#WallPaintsAndCoverings
+:WallPaintsAndCoverings rdf:type owl:Class ;
+                        rdfs:subClassOf :Material .
+
+
+###  http://bimerr.iot.linkeddata.es/def/material-properties#Water
+:Water rdf:type owl:Class ;
+       rdfs:subClassOf :Material .
+
+
+###  http://bimerr.iot.linkeddata.es/def/material-properties#WaterPipes
+:WaterPipes rdf:type owl:Class ;
+            rdfs:subClassOf :SanitaryIntallation .
+
+
+###  http://bimerr.iot.linkeddata.es/def/material-properties#WaterproofingMembranes
+:WaterproofingMembranes rdf:type owl:Class ;
+                        rdfs:subClassOf :SealingSheetVapourBarrierFoils .
+
+
+###  http://bimerr.iot.linkeddata.es/def/material-properties#WindowFrames
+:WindowFrames rdf:type owl:Class ;
+              rdfs:subClassOf :WindowsAndComponents .
+
+
+###  http://bimerr.iot.linkeddata.es/def/material-properties#WindowTotal
+:WindowTotal rdf:type owl:Class ;
+             rdfs:subClassOf :WindowsAndComponents .
+
+
+###  http://bimerr.iot.linkeddata.es/def/material-properties#WindowsAndComponents
+:WindowsAndComponents rdf:type owl:Class ;
+                      rdfs:subClassOf :Material .
+
+
+###  http://bimerr.iot.linkeddata.es/def/material-properties#WoodAndWoodBasedPanels
+:WoodAndWoodBasedPanels rdf:type owl:Class ;
+                        rdfs:subClassOf :BuildingBoards .
+
+
+###  http://bimerr.iot.linkeddata.es/def/material-properties#WoodChipInsulationBoards
+:WoodChipInsulationBoards rdf:type owl:Class ;
+                          rdfs:subClassOf :MineralInsulationMaterials .
+
+
+###  http://bimerr.iot.linkeddata.es/def/material-properties#WoodFibreInsulatingMaterials
+:WoodFibreInsulatingMaterials rdf:type owl:Class ;
+                              rdfs:subClassOf :InsulatingMaterialsFromRenewableRawMaterials .
 
 
 ###  http://bimerr.iot.linkeddata.es/def/material-properties#WoodShavingLooseSawdust
 :WoodShavingLooseSawdust rdf:type owl:Class ;
-                         rdfs:subClassOf :InsulatingMaterialsFromRenewableRawMaterial ;
-                         rdfs:label "Wood shaving (loose), sawdust"@en .
+                         rdfs:subClassOf :InsulatingMaterialsFromRenewableRawMaterials .
 
 
-###  http://bimerr.iot.linkeddata.es/def/material-properties#WoodWoolInsulationBoard
-:WoodWoolInsulationBoard rdf:type owl:Class ;
-                         rdfs:subClassOf :MineralInsulationMaterial ;
-                         rdfs:label "Wood wool insulation board"@en .
+###  http://bimerr.iot.linkeddata.es/def/material-properties#WoodWoolInsulationBoards
+:WoodWoolInsulationBoards rdf:type owl:Class ;
+                          rdfs:subClassOf :MineralInsulationMaterials .
 
 
-###  http://bimerr.iot.linkeddata.es/def/material-properties#WoodWoolMultiLayerInsulationBoard
-:WoodWoolMultiLayerInsulationBoard rdf:type owl:Class ;
-                                   rdfs:subClassOf :MineralInsulationMaterial ;
-                                   rdfs:label "Wood-wool multi-layer insulation board"@en .
+###  http://bimerr.iot.linkeddata.es/def/material-properties#WoodWoolMultiLayerInsulationBoards
+:WoodWoolMultiLayerInsulationBoards rdf:type owl:Class ;
+                                    rdfs:subClassOf :MineralInsulationMaterials .
 
 
-###  http://bimerr.iot.linkeddata.es/def/material-properties#XPSInsulationBoard
-:XPSInsulationBoard rdf:type owl:Class ;
-                    rdfs:subClassOf :SyntheticInsulatingMaterial ;
-                    rdfs:label "XPS insulation board"@en .
-
-
-###  https://saref.etsi.org/core/FeatureOfInterest
-<https://saref.etsi.org/core/FeatureOfInterest> rdf:type owl:Class ;
-                                                rdfs:subClassOf [ rdf:type owl:Restriction ;
-                                                                  owl:onProperty :hasMeasurement ;
-                                                                  owl:allValuesFrom <https://saref.etsi.org/core/Measurement>
-                                                                ] ,
-                                                                [ rdf:type owl:Restriction ;
-                                                                  owl:onProperty <https://saref.etsi.org/core/hasProperty> ;
-                                                                  owl:allValuesFrom <https://saref.etsi.org/core/Property>
-                                                                ] ;
-                                                rdfs:comment "A feature of interest represents any real world entity from which a property is measured. (Definition taken from SAREF)"@en ;
-                                                rdfs:label "Feature of interest"@en .
+###  http://bimerr.iot.linkeddata.es/def/material-properties#XPSInsulationBoards
+:XPSInsulationBoards rdf:type owl:Class ;
+                     rdfs:subClassOf :SyntheticInsulatingMaterials .
 
 
 ###  https://saref.etsi.org/core/Measurement
 <https://saref.etsi.org/core/Measurement> rdf:type owl:Class ;
                                           rdfs:subClassOf [ rdf:type owl:Restriction ;
-                                                            owl:onProperty :isMeasuredIn ;
+                                                            owl:onProperty :isPropertyValueFromDatabase ;
+                                                            owl:allValuesFrom :MaterialDatabase
+                                                          ] ,
+                                                          [ rdf:type owl:Restriction ;
+                                                            owl:onProperty <https://saref.etsi.org/core/isMeasuredIn> ;
                                                             owl:allValuesFrom <https://saref.etsi.org/core/UnitOfMeasure>
                                                           ] ,
                                                           [ rdf:type owl:Restriction ;
@@ -986,7 +994,7 @@
                                                             owl:allValuesFrom <https://saref.etsi.org/core/Property>
                                                           ] ,
                                                           [ rdf:type owl:Restriction ;
-                                                            owl:onProperty :isMeasuredIn ;
+                                                            owl:onProperty <https://saref.etsi.org/core/isMeasuredIn> ;
                                                             owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                                                             owl:onClass <https://saref.etsi.org/core/UnitOfMeasure>
                                                           ] ,
@@ -1001,8 +1009,8 @@
 ###  https://saref.etsi.org/core/Property
 <https://saref.etsi.org/core/Property> rdf:type owl:Class ;
                                        rdfs:subClassOf [ rdf:type owl:Restriction ;
-                                                         owl:onProperty <https://saref.etsi.org/core/relatesToMeasurement> ;
-                                                         owl:allValuesFrom <https://saref.etsi.org/core/Measurement>
+                                                         owl:onProperty :isPropertyFromDatabase ;
+                                                         owl:allValuesFrom :MaterialDatabase
                                                        ] ;
                                        rdfs:comment "A quality of a feature of interest that can be measured; an aspect of a feature of interest that is intrinsic to and cannot exist without the feature. (Definition taken from SAREF)"@en ;
                                        rdfs:label "Property"@en .
@@ -1010,729 +1018,8 @@
 
 ###  https://saref.etsi.org/core/UnitOfMeasure
 <https://saref.etsi.org/core/UnitOfMeasure> rdf:type owl:Class ;
-                                            rdfs:comment "The unit of measure is a standard for measurement of a quantity, such as a Property. For example, Power is a property and Watt is a unit of power that represents a definite predetermined power: when we say 10 Watt, we actually mean 10 times the definite predetermined power called \"watt\". Our definition is based on the definition of unit of measure in the Ontology of units of Measure (OM). We propose here a list of some units of measure that are relevant for the purpose of SAREF, but this list can be extended, also using some other ontologies rather than the Ontology of units of Measure (OM). (Definition taken from SAREF)"@en ;
-                                            rdfs:label "Unit of measure"@en .
-
-
-###  https://w3id.org/def/saref4bldg#Boiler
-<https://w3id.org/def/saref4bldg#Boiler> rdf:type owl:Class ;
-                                         rdfs:subClassOf <https://w3id.org/def/saref4bldg#EnergyConversionDevice> ;
-                                         rdfs:comment "A boiler is a closed, pressure-rated vessel in which water or other fluid is heated using an energy source such as natural gas, heating oil, or electricity. The fluid in the vessel is then circulated out of the boiler for use in various processes or heating applications."@en ;
-                                         rdfs:label "Boiler"@en ;
-                                         rdfs:seeAlso "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcBoiler" .
-
-
-###  https://w3id.org/def/saref4bldg#DistributionDevice
-<https://w3id.org/def/saref4bldg#DistributionDevice> rdf:type owl:Class ;
-                                                     rdfs:subClassOf <http://bimerr.iot.linkeddata.es/def/building#Element> ;
-                                                     rdfs:comment "A generalization of all elements that participate in a distribution system."@en ;
-                                                     rdfs:label "Distribution Device"@en ;
-                                                     rdfs:seeAlso "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcDistributionElement" .
-
-
-###  https://w3id.org/def/saref4bldg#DistributionFlowDevice
-<https://w3id.org/def/saref4bldg#DistributionFlowDevice> rdf:type owl:Class ;
-                                                         rdfs:subClassOf <https://w3id.org/def/saref4bldg#DistributionDevice> ;
-                                                         rdfs:comment "Defines occurrence elements of a distribution system that facilitate the distribution of energy or matter, such as air, water or power."@en ;
-                                                         rdfs:label "Distribution Flow Device"@en ;
-                                                         rdfs:seeAlso "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcDistributionFlowElement" .
-
-
-###  https://w3id.org/def/saref4bldg#EnergyConversionDevice
-<https://w3id.org/def/saref4bldg#EnergyConversionDevice> rdf:type owl:Class ;
-                                                         rdfs:subClassOf <https://w3id.org/def/saref4bldg#DistributionFlowDevice> ;
-                                                         rdfs:comment "Defines the occurrence of a device used to perform energy conversion or heat transfer and typically participates in a flow distribution system."@en ;
-                                                         rdfs:label "Energy Conversion Device"@en ;
-                                                         rdfs:seeAlso "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcEnergyConversionDevice" .
-
-
-###  https://w3id.org/def/saref4bldg#Fan
-<https://w3id.org/def/saref4bldg#Fan> rdf:type owl:Class ;
-                                      rdfs:subClassOf <https://w3id.org/def/saref4bldg#FlowMovingDevice> ;
-                                      rdfs:comment "A fan is a device which imparts mechanical work on a gas. A typical usage of a fan is to induce airflow in a building services air distribution system."@en ;
-                                      rdfs:label "Fan"@en ;
-                                      rdfs:seeAlso "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcFan" .
-
-
-###  https://w3id.org/def/saref4bldg#FlowController
-<https://w3id.org/def/saref4bldg#FlowController> rdf:type owl:Class ;
-                                                 rdfs:subClassOf <https://w3id.org/def/saref4bldg#DistributionFlowDevice> ;
-                                                 rdfs:comment "Defines the occurrence of elements of a distribution system that are used to regulate flow through a distribution system. Examples include dampers, valves, switches, and relays."@en ;
-                                                 rdfs:label "Flow Controller"@en ;
-                                                 rdfs:seeAlso "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcFlowController" .
-
-
-###  https://w3id.org/def/saref4bldg#FlowMovingDevice
-<https://w3id.org/def/saref4bldg#FlowMovingDevice> rdf:type owl:Class ;
-                                                   rdfs:subClassOf <https://w3id.org/def/saref4bldg#DistributionFlowDevice> ;
-                                                   rdfs:comment "Defines the occurrence of an apparatus used to distribute, circulate or perform conveyance of fluids, including liquids and gases (such as a pump or fan), and typically participates in a flow distribution system."@en ;
-                                                   rdfs:label "Flow Moving Device"@en ;
-                                                   rdfs:seeAlso "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcFlowMovingDevice" .
-
-
-###  https://w3id.org/def/saref4bldg#FlowStorageDevice
-<https://w3id.org/def/saref4bldg#FlowStorageDevice> rdf:type owl:Class ;
-                                                    rdfs:subClassOf <https://w3id.org/def/saref4bldg#DistributionFlowDevice> ;
-                                                    rdfs:comment "Defines the occurrence of a device that participates in a distribution system and is used for temporary storage (such as a tank)."@en ;
-                                                    rdfs:label "Flow Storage Device"@en ;
-                                                    rdfs:seeAlso "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcFlowStorageDevice" .
-
-
-###  https://w3id.org/def/saref4bldg#FlowTerminal
-<https://w3id.org/def/saref4bldg#FlowTerminal> rdf:type owl:Class ;
-                                               rdfs:subClassOf <https://w3id.org/def/saref4bldg#DistributionFlowDevice> ;
-                                               rdfs:comment "Defines the occurrence of a permanently attached element that acts as a terminus or beginning of a distribution system (such as an air outlet, drain, water closet, or sink). A terminal is typically a point at which a system interfaces with an external environment."@en ;
-                                               rdfs:label "Flow Terminal"@en ;
-                                               rdfs:seeAlso "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcFlowTerminal" .
-
-
-###  https://w3id.org/def/saref4bldg#HeatExchanger
-<https://w3id.org/def/saref4bldg#HeatExchanger> rdf:type owl:Class ;
-                                                rdfs:subClassOf <https://w3id.org/def/saref4bldg#EnergyConversionDevice> ;
-                                                rdfs:comment "A heat exchanger is a device used to provide heat transfer between non-mixing media such as plate and shell and tube heat exchangers."@en ;
-                                                rdfs:label "Heat Exchanger"@en ;
-                                                rdfs:seeAlso "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcHeatExchanger" .
-
-
-###  https://w3id.org/def/saref4bldg#Outlet
-<https://w3id.org/def/saref4bldg#Outlet> rdf:type owl:Class ;
-                                         rdfs:subClassOf <https://w3id.org/def/saref4bldg#FlowTerminal> ;
-                                         rdfs:comment "An outlet is a device installed at a point to receive one or more inserted plugs for electrical power or communications."@en ;
-                                         rdfs:label "Outlet"@en ;
-                                         rdfs:seeAlso "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcOutlet" .
-
-
-###  https://w3id.org/def/saref4bldg#Pump
-<https://w3id.org/def/saref4bldg#Pump> rdf:type owl:Class ;
-                                       rdfs:subClassOf <https://w3id.org/def/saref4bldg#FlowMovingDevice> ;
-                                       rdfs:comment "A pump is a device which imparts mechanical work on fluids or slurries to move them through a channel or pipeline. A typical use of a pump is to circulate chilled water or heating hot water in a building services distribution system."@en ;
-                                       rdfs:label "Pump"@en ;
-                                       rdfs:seeAlso "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcPump" .
-
-
-###  https://w3id.org/def/saref4bldg#SolarDevice
-<https://w3id.org/def/saref4bldg#SolarDevice> rdf:type owl:Class ;
-                                              rdfs:subClassOf <https://w3id.org/def/saref4bldg#EnergyConversionDevice> ;
-                                              rdfs:comment "A solar device converts solar radiation into other energy such as electric current or thermal energy."@en ;
-                                              rdfs:label "Solar Device"@en ;
-                                              rdfs:seeAlso "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcSolarDevice" .
-
-
-###  https://w3id.org/def/saref4bldg#SpaceHeater
-<https://w3id.org/def/saref4bldg#SpaceHeater> rdf:type owl:Class ;
-                                              rdfs:subClassOf <https://w3id.org/def/saref4bldg#FlowTerminal> ;
-                                              rdfs:comment "Space heaters utilize a combination of radiation and/or natural convection using a heating source such as electricity, steam or hot water to heat a limited space or area. Examples of space heaters include radiators, convectors, baseboard and finned-tube heaters."@en ;
-                                              rdfs:label "Space Heater"@en ;
-                                              rdfs:seeAlso "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcSpaceHeater" .
-
-
-###  https://w3id.org/def/saref4bldg#SwitchingDevice
-<https://w3id.org/def/saref4bldg#SwitchingDevice> rdf:type owl:Class ;
-                                                  rdfs:subClassOf <https://w3id.org/def/saref4bldg#FlowController> ;
-                                                  rdfs:comment "A switch is used in a cable distribution system (electrical circuit) to control or modulate the flow of electricity."@en ;
-                                                  rdfs:label "Switching Device"@en ;
-                                                  rdfs:seeAlso "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcSwitchingDevice" .
-
-
-###  https://w3id.org/def/saref4bldg#Tank
-<https://w3id.org/def/saref4bldg#Tank> rdf:type owl:Class ;
-                                       rdfs:subClassOf <https://w3id.org/def/saref4bldg#FlowStorageDevice> ;
-                                       rdfs:comment "A tank is a vessel or container in which a fluid or gas is stored for later use."@en ;
-                                       rdfs:label "Tank"@en ;
-                                       rdfs:seeAlso "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcTank" .
-
-
-###  https://w3id.org/def/saref4bldg#TubeBundle
-<https://w3id.org/def/saref4bldg#TubeBundle> rdf:type owl:Class ;
-                                             rdfs:subClassOf <https://w3id.org/def/saref4bldg#EnergyConversionDevice> ;
-                                             rdfs:comment "A tube bundle is a device consisting of tubes and bundles of tubes used for heat transfer and contained typically within other energy conversion devices, such as a chiller or coil."@en ;
-                                             rdfs:label "Tube Bundle"@en ;
-                                             rdfs:seeAlso "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcTubeBundle" .
-
-
-#################################################################
-#    Individuals
-#################################################################
-
-###  http://bimerr.iot.linkeddata.es/def/material-properties#ASHRAE
-:ASHRAE rdf:type owl:NamedIndividual ,
-                 :MaterialDatabase ;
-        rdfs:comment "The ASHRAE 2005 Handbook of Fundamentals, Chapter 25 contains thermal property data (e.g., conductivity, density, specific heat) of selected building materials. The data is provided for reference materials and not concrete building products. The materials dataset is also provided as part of the EnergyPlus software."@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/material-properties#AbioticDepletionPotentialForFossilResources
-:AbioticDepletionPotentialForFossilResources rdf:type owl:NamedIndividual ,
-                                                      :MaterialProperty ;
-                                             <http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit> :MJ ;
-                                             rdfs:label "Abiotic depletion potential for fossil resources (ADPF)"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/material-properties#AbioticDepletionPotentialForNonFossilResources
-:AbioticDepletionPotentialForNonFossilResources rdf:type owl:NamedIndividual ,
-                                                         :MaterialProperty ;
-                                                <http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit> :KG-SB-EQ ;
-                                                rdfs:label "Abiotic depletion potential for non fossil resources (ADPE)"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/material-properties#AcidificationPotentialOfSoilAndWater
-:AcidificationPotentialOfSoilAndWater rdf:type owl:NamedIndividual ,
-                                               :MaterialProperty ;
-                                      <http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit> :KG-SO2-EQ ;
-                                      rdfs:label "Acidification potential of soil and water (AP)"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/material-properties#BAUBOOK
-:BAUBOOK rdf:type owl:NamedIndividual ,
-                  :MaterialDatabase ;
-         rdfs:comment "A database of building material and their ecological and structural-physical aspects. Currently 3616 building products from 359 vendors are described in the database. The baubook platform also contains a catalog with around 400 reference values which includes different ecological and structural-physical indicators. These values deliver the primary indicators and orientation values for energy and eco certificates.  They are especially helpful for calculating energy certificates in early planning phase where the concrete products are not decided yet."@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/material-properties#BacksideInfraredHemisphericalEmissivity
-:BacksideInfraredHemisphericalEmissivity rdf:type owl:NamedIndividual ,
-                                                  :MaterialProperty ;
-                                         rdfs:label "Backside infrared hemispherical emissivity (BSIHE)"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/material-properties#BacksideSolarReflectanceAtNormalIncidence
-:BacksideSolarReflectanceAtNormalIncidence rdf:type owl:NamedIndividual ,
-                                                    :MaterialProperty ;
-                                           rdfs:label "Backside solar reflectance at normal incidence (BSSRNI)"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/material-properties#BacksideVisibleReflectanceAtNormalIncidence
-:BacksideVisibleReflectanceAtNormalIncidence rdf:type owl:NamedIndividual ,
-                                                      :MaterialProperty ;
-                                             rdfs:label "Backside visible reflectance at normal incidence (BSVRNI)"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/material-properties#ComponentsForReuse
-:ComponentsForReuse rdf:type owl:NamedIndividual ,
-                             :MaterialProperty ;
-                    <http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit> :KG ;
-                    rdfs:label "Components for re-use (CRU)"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/material-properties#Conductivity
-:Conductivity rdf:type owl:NamedIndividual ,
-                       :MaterialProperty ;
-              <http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit> :W-PER-M-K ;
-              rdfs:label "Conductivity"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/material-properties#ConversionFactorTo1Kg
-:ConversionFactorTo1Kg rdf:type owl:NamedIndividual ,
-                                :MaterialProperty ;
-                       rdfs:label "Conversion factor to 1 Kg"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/material-properties#Density
-:Density rdf:type owl:NamedIndividual ,
-                  :MaterialProperty ;
-         <http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit> :KG-PER-M3 ;
-         rdfs:label "Density"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/material-properties#DepletionPotentialOfTheStratosphericLayer
-:DepletionPotentialOfTheStratosphericLayer rdf:type owl:NamedIndividual ,
-                                                    :MaterialProperty ;
-                                           <http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit> :KG-CFC-11 ;
-                                           rdfs:label "Depletion potential of the stratospheric layer (ODP)"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/material-properties#DoorHeatTransmissionCoefficient
-:DoorHeatTransmissionCoefficient rdf:type owl:NamedIndividual ,
-                                          :MaterialProperty ;
-                                 <http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit> :W-PER-M2-K ;
-                                 rdfs:label "Door heat transmission coefficient"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/material-properties#EutrophicationPotential
-:EutrophicationPotential rdf:type owl:NamedIndividual ,
-                                  :MaterialProperty ;
-                         <http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit> :KG-PO34 ;
-                         rdfs:label "Eutrophication Potential (EP)"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/material-properties#ExportedElectricalEnergy
-:ExportedElectricalEnergy rdf:type owl:NamedIndividual ,
-                                   :MaterialProperty ;
-                          <http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit> :MJ ;
-                          rdfs:label "Exported electrical energy (EEE)"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/material-properties#ExportedThermalEnergy
-:ExportedThermalEnergy rdf:type owl:NamedIndividual ,
-                                :MaterialProperty ;
-                       <http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit> :MJ ;
-                       rdfs:label "Exported thermal energy (EET)"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/material-properties#FormationPotentialToTroposphericOzone
-:FormationPotentialToTroposphericOzone rdf:type owl:NamedIndividual ,
-                                                :MaterialProperty ;
-                                       <http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit> :KG-C2H4 ;
-                                       rdfs:label "Formation potential to tropospheric ozone (POCP)"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/material-properties#FrontTransmittanceAtNormalIncidence
-:FrontTransmittanceAtNormalIncidence rdf:type owl:NamedIndividual ,
-                                              :MaterialProperty ;
-                                     rdfs:label "Front transmittance at normal incidence (FSSRNI)"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/material-properties#FrontsideInfraredHemisphericalEmissivity
-:FrontsideInfraredHemisphericalEmissivity rdf:type owl:NamedIndividual ,
-                                                   :MaterialProperty ;
-                                          rdfs:label "Frontside infrared hemispherical emissivity (FSIHE)"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/material-properties#FrontsideVisibleReflectanceAtNormalIncidence
-:FrontsideVisibleReflectanceAtNormalIncidence rdf:type owl:NamedIndividual ,
-                                                       :MaterialProperty ;
-                                              rdfs:label "Frontside visible reflectance at normal incidence (FSVRNI)"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/material-properties#GlassEnergyTransmissionFactor
-:GlassEnergyTransmissionFactor rdf:type owl:NamedIndividual ,
-                                        :MaterialProperty ;
-                               <http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit> :PERCENT ;
-                               rdfs:label "Glass energy tranmission factor"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/material-properties#GlassHeatTransmissionCoefficient
-:GlassHeatTransmissionCoefficient rdf:type owl:NamedIndividual ,
-                                           :MaterialProperty ;
-                                  <http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit> :W-PER-M2-K ;
-                                  rdfs:label "Glass heat transmission coefficient"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/material-properties#GlobalWarmingPotential
-:GlobalWarmingPotential rdf:type owl:NamedIndividual ,
-                                 :MaterialProperty ;
-                        <http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit> :KG-CO2-EQ ;
-                        rdfs:label "Global warming potential (GWP)"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/material-properties#HazardousWasteDisposed
-:HazardousWasteDisposed rdf:type owl:NamedIndividual ,
-                                 :MaterialProperty ;
-                        <http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit> :KG ;
-                        rdfs:label "Hazardous waste disposed (HWD)"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/material-properties#J-PER-KG-K
-:J-PER-KG-K rdf:type owl:NamedIndividual ,
-                     <https://saref.etsi.org/core/UnitOfMeasure> ;
-            rdfs:label "Joule per Kilogram Kelvin"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/material-properties#KG
-:KG rdf:type owl:NamedIndividual ,
-             <https://saref.etsi.org/core/UnitOfMeasure> ;
-    rdfs:label "Kilogram"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/material-properties#KG-C2H4
-:KG-C2H4 rdf:type owl:NamedIndividual ,
-                  <https://saref.etsi.org/core/UnitOfMeasure> ;
-         rdfs:label "Kilograms of Ethylene"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/material-properties#KG-CFC-11
-:KG-CFC-11 rdf:type owl:NamedIndividual ,
-                    <https://saref.etsi.org/core/UnitOfMeasure> ;
-           rdfs:label "Kilograms of Chlorofluorocarbon 11"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/material-properties#KG-CO2-EQ
-:KG-CO2-EQ rdf:type owl:NamedIndividual ,
-                    <https://saref.etsi.org/core/UnitOfMeasure> ;
-           rdfs:label "Kilograms of equivalent Dioxide Carbon"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/material-properties#KG-PER-M
-:KG-PER-M rdf:type owl:NamedIndividual ,
-                   <https://saref.etsi.org/core/UnitOfMeasure> ;
-          rdfs:label "Kilograms per Meter"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/material-properties#KG-PER-M2
-:KG-PER-M2 rdf:type owl:NamedIndividual ,
-                    <https://saref.etsi.org/core/UnitOfMeasure> ;
-           rdfs:label "Kilograms per Square Meter"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/material-properties#KG-PER-M3
-:KG-PER-M3 rdf:type owl:NamedIndividual ,
-                    <https://saref.etsi.org/core/UnitOfMeasure> ;
-           rdfs:label "Kilograms per Cubic Meter"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/material-properties#KG-PO34
-:KG-PO34 rdf:type owl:NamedIndividual ,
-                  <https://saref.etsi.org/core/UnitOfMeasure> ;
-         rdfs:label "Kilograms of Phosphate"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/material-properties#KG-SB-EQ
-:KG-SB-EQ rdf:type owl:NamedIndividual ,
-                   <https://saref.etsi.org/core/UnitOfMeasure> ;
-          rdfs:label "kilograms of Antimony"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/material-properties#KG-SO2-EQ
-:KG-SO2-EQ rdf:type owl:NamedIndividual ,
-                    <https://saref.etsi.org/core/UnitOfMeasure> ;
-           rdfs:label "Kilograms of Sulfur dioxide"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/material-properties#LayerPosition
-:LayerPosition rdf:type owl:NamedIndividual ,
-                        :MaterialProperty ;
-               rdfs:label "Layer position"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/material-properties#LengthWeight
-:LengthWeight rdf:type owl:NamedIndividual ,
-                       :MaterialProperty ;
-              <http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit> :KG-PER-M ;
-              rdfs:label "Length weight"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/material-properties#Lifetime
-:Lifetime rdf:type owl:NamedIndividual ,
-                   :MaterialProperty ;
-          <http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit> :YEARS ;
-          rdfs:label "Lifetime"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/material-properties#LinearThermalBridgeCoefficient
-:LinearThermalBridgeCoefficient rdf:type owl:NamedIndividual ,
-                                         :MaterialProperty ;
-                                <http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit> :W-PER-M-K ;
-                                rdfs:label "Linear thermal bridge coefficient"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/material-properties#M
-:M rdf:type owl:NamedIndividual ,
-            <https://saref.etsi.org/core/UnitOfMeasure> ;
-   rdfs:label "Meter"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/material-properties#M2
-:M2 rdf:type owl:NamedIndividual ,
-             <https://saref.etsi.org/core/UnitOfMeasure> ;
-    rdfs:label "Square meter"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/material-properties#M2-K-PER-W
-:M2-K-PER-W rdf:type owl:NamedIndividual ,
-                     <https://saref.etsi.org/core/UnitOfMeasure> ;
-            rdfs:label "Square Meter Kelvin per Watt"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/material-properties#M3
-:M3 rdf:type owl:NamedIndividual ,
-             <https://saref.etsi.org/core/UnitOfMeasure> ;
-    rdfs:label "Cubic meter"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/material-properties#MJ
-:MJ rdf:type owl:NamedIndividual ,
-             <https://saref.etsi.org/core/UnitOfMeasure> ;
-    rdfs:label "Mega Joule"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/material-properties#MaterialsForEnergyRecovery
-:MaterialsForEnergyRecovery rdf:type owl:NamedIndividual ,
-                                     :MaterialProperty ;
-                            <http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit> :KG ;
-                            rdfs:label "Materials for energy recovery (MER)"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/material-properties#MaterialsForRecycling
-:MaterialsForRecycling rdf:type owl:NamedIndividual ,
-                                :MaterialProperty ;
-                       <http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit> :KG ;
-                       rdfs:label "Materials for recycling (MFR)"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/material-properties#NonHazardousWasteDisposed
-:NonHazardousWasteDisposed rdf:type owl:NamedIndividual ,
-                                    :MaterialProperty ;
-                           <http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit> :KG ;
-                           rdfs:label "Non hazardous waste disposed (NHWD)"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/material-properties#OKOBAUDAT
-:OKOBAUDAT rdf:type owl:NamedIndividual ,
-                    :MaterialDatabase ;
-           rdfs:comment "A database that provides around 1200 life cycle assessment datasets regarding building materials, construction, transport, energy and disposal processes. The database can be used to reconstruct the entire building life cycle and is maintained by the German Ministry of Interior, Building and Community. The used data format is based on the ILCD data format, compliant to EN 15804 and provided as CSV files."@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/material-properties#OpticalDataType
-:OpticalDataType rdf:type owl:NamedIndividual ,
-                          :MaterialProperty ;
-                 rdfs:label "Optical data type (ODT)"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/material-properties#PERCENT
-:PERCENT rdf:type owl:NamedIndividual ,
-                  <https://saref.etsi.org/core/UnitOfMeasure> .
-
-
-###  http://bimerr.iot.linkeddata.es/def/material-properties#Percentage
-:Percentage rdf:type owl:NamedIndividual ,
-                     :MaterialProperty ;
-            rdfs:label "Percentage"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/material-properties#RadioactiveWasteDisposed
-:RadioactiveWasteDisposed rdf:type owl:NamedIndividual ,
-                                   :MaterialProperty ;
-                          <http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit> :KG ;
-                          rdfs:label "Radioactive waste disposed (RWD)"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/material-properties#ReferenceSize
-:ReferenceSize rdf:type owl:NamedIndividual ,
-                        :MaterialProperty ;
-               rdfs:label "Reference size"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/material-properties#Roughness
-:Roughness rdf:type owl:NamedIndividual ,
-                    :MaterialProperty ;
-           rdfs:label "Roughness"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/material-properties#SolarAbsorptance
-:SolarAbsorptance rdf:type owl:NamedIndividual ,
-                           :MaterialProperty ;
-                  rdfs:label "Solar absorptance"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/material-properties#SolarTransmittanceAtNormalIncidence
-:SolarTransmittanceAtNormalIncidence rdf:type owl:NamedIndividual ,
-                                              :MaterialProperty ;
-                                     rdfs:label "Solar transmittance at normal incidence (STNI)"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/material-properties#SpecificHeat
-:SpecificHeat rdf:type owl:NamedIndividual ,
-                       :MaterialProperty ;
-              <http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit> :J-PER-KG-K ;
-              rdfs:label "Specific heat"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/material-properties#SurfaceWeight
-:SurfaceWeight rdf:type owl:NamedIndividual ,
-                        :MaterialProperty ;
-               <http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit> :KG-PER-M2 ;
-               rdfs:label "Surface weight"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/material-properties#ThermalAbsorptance
-:ThermalAbsorptance rdf:type owl:NamedIndividual ,
-                             :MaterialProperty ;
-                    rdfs:label "Thermal absorptance"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/material-properties#ThermalResistance
-:ThermalResistance rdf:type owl:NamedIndividual ,
-                            :MaterialProperty ;
-                   <http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit> :M2-K-PER-W ;
-                   rdfs:label "Thermal resistance"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/material-properties#Thickness
-:Thickness rdf:type owl:NamedIndividual ,
-                    :MaterialProperty ;
-           <http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit> :M ;
-           rdfs:label "Thickness"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/material-properties#TotalUseOfNonRenewablePrimaryEnergyResource
-:TotalUseOfNonRenewablePrimaryEnergyResource rdf:type owl:NamedIndividual ,
-                                                      :MaterialProperty ;
-                                             <http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit> :MJ ;
-                                             rdfs:label "Total use of non renewable primary energy resource (PENRT)"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/material-properties#TotalUseOfRenewablePrimaryEnergy
-:TotalUseOfRenewablePrimaryEnergy rdf:type owl:NamedIndividual ,
-                                           :MaterialProperty ;
-                                  <http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit> :MJ ;
-                                  rdfs:label "Total use of renewable primary energy (PERT)"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/material-properties#UnitOfReference
-:UnitOfReference rdf:type owl:NamedIndividual ,
-                          :MaterialProperty ;
-                 rdfs:label "Unit of reference"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/material-properties#UseOfNetFreshWater
-:UseOfNetFreshWater rdf:type owl:NamedIndividual ,
-                             :MaterialProperty ;
-                    <http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit> :M3 ;
-                    rdfs:label "Use of net fresh water (FW)"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/material-properties#UseOfNonRenewablePrimaryEnergy
-:UseOfNonRenewablePrimaryEnergy rdf:type owl:NamedIndividual ,
-                                         :MaterialProperty ;
-                                <http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit> :MJ ;
-                                rdfs:label "Use of non renewable primary energy (PENRE)"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/material-properties#UseOfNonRenewablePrimaryEnergyResourcesUsedAsRawMaterials
-:UseOfNonRenewablePrimaryEnergyResourcesUsedAsRawMaterials rdf:type owl:NamedIndividual ,
-                                                                    :MaterialProperty ;
-                                                           <http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit> :MJ ;
-                                                           rdfs:label "Use of non renewable primary energy resources used as raw materials (PENRM)"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/material-properties#UseOfNonRenewableSecondaryFuels
-:UseOfNonRenewableSecondaryFuels rdf:type owl:NamedIndividual ,
-                                          :MaterialProperty ;
-                                 <http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit> :MJ ;
-                                 rdfs:label "Use of non renewable secondary fuels (NRSF)"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/material-properties#UseOfRenewablePrimaryEnergy
-:UseOfRenewablePrimaryEnergy rdf:type owl:NamedIndividual ,
-                                      :MaterialProperty ;
-                             <http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit> :MJ ;
-                             rdfs:label "Use of renewable primary energy (PERE)"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/material-properties#UseOfRenewablePrimaryEnergyResourcesUsedAsRawMaterials
-:UseOfRenewablePrimaryEnergyResourcesUsedAsRawMaterials rdf:type owl:NamedIndividual ,
-                                                                 :MaterialProperty ;
-                                                        <http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit> :MJ ;
-                                                        rdfs:label "Use of renewable primary energy resources used as raw materials (PERM)"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/material-properties#UseOfRenewableSecondaryFuels
-:UseOfRenewableSecondaryFuels rdf:type owl:NamedIndividual ,
-                                       :MaterialProperty ;
-                              <http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit> :MJ ;
-                              rdfs:label "Use of renewable secondary fuels (RSF)"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/material-properties#UseOfSecondaryMaterial
-:UseOfSecondaryMaterial rdf:type owl:NamedIndividual ,
-                                 :MaterialProperty ;
-                        <http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit> :KG ;
-                        rdfs:label "Use of secondary material (SM)"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/material-properties#UsedFromYear
-:UsedFromYear rdf:type owl:NamedIndividual ,
-                       :MaterialProperty ;
-              rdfs:label "Used from year"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/material-properties#UsedToYear
-:UsedToYear rdf:type owl:NamedIndividual ,
-                     :MaterialProperty ;
-            rdfs:label "Used to year"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/material-properties#VapourDiffusionResistance
-:VapourDiffusionResistance rdf:type owl:NamedIndividual ,
-                                    :MaterialProperty ;
-                           rdfs:label "Vapour diffusion resistance"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/material-properties#VapourDiffusionResistanceDry
-:VapourDiffusionResistanceDry rdf:type owl:NamedIndividual ,
-                                       :MaterialProperty ;
-                              rdfs:label "Vapour diffusion resistance dry"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/material-properties#VapourDiffusionResistanceWet
-:VapourDiffusionResistanceWet rdf:type owl:NamedIndividual ,
-                                       :MaterialProperty ;
-                              rdfs:label "Vapour diffusion resistance wet"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/material-properties#VisibleAbsorptance
-:VisibleAbsorptance rdf:type owl:NamedIndividual ,
-                             :MaterialProperty ;
-                    rdfs:label "Visible absorptance"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/material-properties#VisibleTransmittanceAtNormalIncidence
-:VisibleTransmittanceAtNormalIncidence rdf:type owl:NamedIndividual ,
-                                                :MaterialProperty ;
-                                       rdfs:label "Visible transmittance at normal incidence (VTNI)"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/material-properties#W-PER-M-K
-:W-PER-M-K rdf:type owl:NamedIndividual ,
-                    <https://saref.etsi.org/core/UnitOfMeasure> ;
-           rdfs:label "Watt per Meter Kelvin"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/material-properties#W-PER-M2-K
-:W-PER-M2-K rdf:type owl:NamedIndividual ,
-                     <https://saref.etsi.org/core/UnitOfMeasure> ;
-            rdfs:label "Watt per Square Meter Kelvin"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/material-properties#WindowFrameHeatTransmissionCoefficient
-:WindowFrameHeatTransmissionCoefficient rdf:type owl:NamedIndividual ,
-                                                 :MaterialProperty ;
-                                        <http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit> :W-PER-M2-K ;
-                                        rdfs:label "Window frame heat transmission coefficient"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/material-properties#WindowFrameRungWidth
-:WindowFrameRungWidth rdf:type owl:NamedIndividual ,
-                               :MaterialProperty ;
-                      <http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit> :M ;
-                      rdfs:label "Window frame rung width"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/material-properties#WindowFrameWidth
-:WindowFrameWidth rdf:type owl:NamedIndividual ,
-                           :MaterialProperty ;
-                  <http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit> :M ;
-                  rdfs:label "Window frame width"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/material-properties#WindowGlassSpectralDataSetName
-:WindowGlassSpectralDataSetName rdf:type owl:NamedIndividual ,
-                                         :MaterialProperty ;
-                                rdfs:label "Window glass spectral data set name (WGSDSN)"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/material-properties#WindowThickness
-:WindowThickness rdf:type owl:NamedIndividual ,
-                          :MaterialProperty ;
-                 <http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit> :M ;
-                 rdfs:label "Window thickness"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/material-properties#YEARS
-:YEARS rdf:type owl:NamedIndividual ,
-                <https://saref.etsi.org/core/UnitOfMeasure> ;
-       rdfs:label "Years"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/material-properties#Yield
-:Yield rdf:type owl:NamedIndividual ,
-                :MaterialProperty ;
-       <http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit> :M2 ;
-       rdfs:label "Yield"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/material-properties#InfraredTransmittanceAtNormalIncidence_(ITNI)
-<http://bimerr.iot.linkeddata.es/def/material-properties#InfraredTransmittanceAtNormalIncidence_(ITNI)> rdf:type owl:NamedIndividual ,
-                                                                                                                 :MaterialProperty ;
-                                                                                                        rdfs:label "Infrared transmittance at normal incidence (ITNI)"@en .
+                                            rdfs:comment "The unit of measure is a standard for measurement of a quantity, such as a Property. For example, Power is a property and Watt is a unit of power that represents a definite predetermined power: when we say 10 Watt, we actually mean 10 times the definite predetermined power called watt. Our definition is based on the definition of unit of measure in the Ontology of units of Measure (OM). We propose here a list of some units of measure that are relevant for the purpose of SAREF, but this list can be extended, also using some other ontologies rather than the Ontology of units of Measure (OM)."@en ;
+                                            rdfs:label "Unit of Measure"@en .
 
 
 ###  Generated by the OWL API (version 5.1.11) https://github.com/owlcs/owlapi/

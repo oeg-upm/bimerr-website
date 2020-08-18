@@ -9,28 +9,19 @@
     of an element having a material layer set constitution is a wall, which is conformed by a set of layers. These construction types can be further decomposed into
     <code>props:MaterialLayer</code>, <code>props:MaterialProfile</code>, and <code>props:MaterialConstituent</code> respectively, where each of this entities 
     have a set of materials related.
-</p>The classes mentioned before have properties and measurements related to them. For this purpose we reutilize the artifacts provided by the SAREF ontology. 
-As we can see on Figure 1, a <code>saref:FeatureOfInterest</code> is related to the concepts <code>saref:Property</code> and <code>saref:Measurement</code>, by 
-means of the relations <code>saref:hasProperty</code> and <code>saref:hasMeasurement</code>. Instead of making the classes of our ontology directly 
-subclasses of the concept <code>saref:FeatureOfInterest</code>, we create restrictions between our classes with the saref properties. This decision 
-gives more flexibility to the model at the model of representing data. For instance, an individual ofthe class <code>props:Material</code> may not have 
-properties associated, so it is not an instance of the concept <code>saref:FeatureOfInterest</code>.</p>
+</p>
+
+<p>The materials have properties and measurements related to them. For this purpose we reutilize the artifacts provided by the SAREF ontology. 
+    As we can see on Figure 1, a <code>saref:FeatureOfInterest</code> is related to the concepts <code>saref:Property</code> and <code>saref:Measurement</code>, by 
+    means of the relations <code>saref:hasProperty</code> and <code>saref:hasMeasurement</code>.
+</p>
 
 <p>In order to provide provenance information regarding where the material property definitions, and the specific values come from, we added
     the object properties <code>props:isPropertyFromDatabase</code> and <code>props:isPropertyValueDatabase</code>. These relations point to the source 
-    databases used to extract that information. Finally, even though the model allow the user to indicate the unit of measure for each measurement, 
-    the databases include default units of measure for the properties. This fact is represented by the reused object property <code>om-2:commonlyHasUnit</code>.
-
+    databases used to extract that information. Finally, even though the model allow the user to indicate the unit of measure for each measurement.
 </p>
 
-<center><img src="resources/images/diagram.svg" alt="General overview of the Material Properties ontology." width="95%">   <figcaption><b>Figure 1.</b> - General overview of the Material Properties ontology main classes and properties.</figcaption></center>
+<center><img src="resources/images/diagram.svg" alt="General overview of the Material Properties ontology." width="95%"></center>
 <br>
-
-<h3 id="example" class="list">Instantiation of the Model<span class="backlink"> back to <a href="#toc">ToC</a></span></h3>
-
-<p>Figure 2 presents an example of how to use the ontology. A brick
-identified as <code>data:BrickMasonry_01</code> has a density of 1922.0 Kg/m3. The density property is defined in
-the databases BAUBOOK, ASHRAE and OKOBAUDAT, and the specific value of 1922 Kg/m3 is taken from the latter.
-
-<center><img src="resources/images/example.svg" alt="General overview of the Material Properties ontology.">   <figcaption><b>Figure 2.</b> - Example of the Material Properties Ontology.</figcaption></center>
+<center><figcaption><b>Figure 1.</b> - General overview of the Material Properties ontology main classes and properties.</figcaption></center>
 <br>
