@@ -1,1148 +1,3930 @@
 {
-  "Apartment": {
-    "children": {
-      "hasSpace": {
-        "date_added": "20/05/220",
-        "date_deprecated": null,
-        "definition": "Relation to spaces contained in a zone.",
-        "facet": {
-          "cardinalityMax": null,
-          "codeList": null,
-          "codeType": null,
-          "measurementType": null,
-          "measurementUnit": null,
-          "ordered": null,
-          "sensitive": null,
-          "timeZone": null,
-          "transformation": null
-        },
+    "Space": {
+        "definition": "A space represents an area or volume bounded actually or theoretically. Spaces are areas or volumes that provide for certain functions within a building.",
         "related_terms": [
-          [
-            "has space"
-          ]
+            "IfcSpace"
         ],
         "standards": [
-          null
+            "IFC 4.1"
         ],
-        "type": {
-          "$ref": "#/Space"
-        },
-        "version": 1
-      },
-      "ifcIdentifier": {
-        "date_added": null,
+        "date_added": "29/06/2020",
         "date_deprecated": null,
-        "definition": "Identifier used in the IFC model (Global Unique ID).",
-        "facet": {
-          "cardinalityMax": null,
-          "codeList": null,
-          "codeType": null,
-          "measurementType": null,
-          "measurementUnit": null,
-          "ordered": null,
-          "sensitive": null,
-          "timeZone": null,
-          "transformation": null
-        },
-        "related_terms": [
-          [
-            "ifc identifier"
-          ]
-        ],
-        "standards": [
-          null
-        ],
-        "type": "string",
-        "version": "20/05/220"
-      }
-    },
-    "date_added": "20/05/220",
-    "date_deprecated": null,
-    "definition": "An apartment is a group of spaces, partial spaces or other zones.",
-    "related_terms": [
-      [
-        "Apartment",
-        "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcZone"
-      ]
-    ],
-    "standards": [
-      null
-    ],
-    "version": 1
-  },
-  "BiomassBoiler": {
-    "children": {},
-    "date_added": "20/05/220",
-    "date_deprecated": null,
-    "definition": null,
-    "related_terms": [
-      [
-        "Biomass Boiler"
-      ]
-    ],
-    "standards": [
-      null
-    ],
-    "version": 1
-  },
-  "Boiler": {
-    "children": {
-      "hasSubClass": {
-        "type": {
-          "$ref": [
-            "#/FossilBoiler",
-            "#/BiomassBoiler"
-          ]
+        "version": "0.0.4",
+        "children": {
+            "ObXMLFile": {
+                "definition": "Relationship to indicate the path of the obXML file for an specific space.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": "08/07/2020",
+                "date_deprecated": null,
+                "version": "0.0.5",
+                "facet": {
+                    "cardinalityMax": null,
+                    "ordered": false,
+                    "sensitive": false,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": "string"
+            },
+            "maxOccupants": {
+                "definition": "Maximum number of occupants inside a building.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": "29/06/2020",
+                "date_deprecated": null,
+                "version": "0.0.4",
+                "facet": {
+                    "cardinalityMax": "1",
+                    "ordered": false,
+                    "sensitive": false,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": "integer"
+            },
+            "Simple3DModel": {
+                "definition": "Location (path) of the 3D model file.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": "29/06/2020",
+                "date_deprecated": null,
+                "version": "0.0.4",
+                "facet": {
+                    "cardinalityMax": null,
+                    "ordered": false,
+                    "sensitive": false,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": "string"
+            },
+            "Element": {
+                "definition": "Links a Zone to an Element that is contained in, or adjacent to, the Zone.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": "29/06/2020",
+                "date_deprecated": null,
+                "version": "0.0.4",
+                "facet": {
+                    "cardinalityMax": null,
+                    "ordered": false,
+                    "sensitive": false,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": {
+                    "$ref": "#/Element"
+                }
+            },
+            "ifcIdentifier": {
+                "definition": "Identifier used in the IFC model (Global Unique ID).",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": "29/06/2020",
+                "date_deprecated": null,
+                "version": "0.0.4",
+                "facet": {
+                    "cardinalityMax": null,
+                    "ordered": false,
+                    "sensitive": false,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": "string"
+            },
+            "minOccupants": {
+                "definition": "Minimum number of occupants inside a building.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": "29/06/2020",
+                "date_deprecated": null,
+                "version": "0.0.4",
+                "facet": {
+                    "cardinalityMax": "1",
+                    "ordered": false,
+                    "sensitive": false,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": "integer"
+            }
         }
-      }
     },
-    "date_added": null,
-    "date_deprecated": null,
-    "definition": "A boiler is a closed, pressure-rated vessel in which water or other fluid is heated using an energy source such as natural gas, heating oil, or electricity. The fluid in the vessel is then circulated out of the boiler for use in various processes or heating applications.",
-    "related_terms": [
-      [
-        "Boiler",
-        "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcBoiler"
-      ]
-    ],
-    "standards": [
-      null
-    ],
-    "version": null
-  },
-  "Building": {
-    "children": {
-      "buildingAddress": {
-        "date_added": null,
-        "date_deprecated": null,
-        "definition": "The postal address of the building",
+    "Roof": {
+        "definition": "A roof is the covering of the top part of a building, it protects the building against the effects of wheather.",
         "related_terms": [
-          [
-            "building address"
-          ]
+            "IfcRoof"
         ],
         "standards": [
-          null
+            "IFC 4.1"
         ],
-        "type": {
-          "$ref": "#/string"
-        },
-        "version": 1
-      },
-      "hasStorey": {
-        "date_added": "20/05/220",
+        "date_added": "29/06/2020",
         "date_deprecated": null,
-        "definition": "Relation to storeys contained in a zone.",
-        "facet": {
-          "cardinalityMax": null,
-          "codeList": null,
-          "codeType": null,
-          "measurementType": null,
-          "measurementUnit": null,
-          "ordered": null,
-          "sensitive": null,
-          "timeZone": null,
-          "transformation": null
-        },
+        "version": "0.0.4",
+        "children": {
+            "SubElement": {
+                "definition": "Relationship to indicate the subcomponents of elements",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": "29/06/2020",
+                "date_deprecated": null,
+                "version": "0.0.4",
+                "facet": {
+                    "cardinalityMax": null,
+                    "ordered": false,
+                    "sensitive": false,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": {
+                    "$ref": "#/Element"
+                }
+            },
+            "Simple3DModel": {
+                "definition": "Location (path) of the 3D model file.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": "29/06/2020",
+                "date_deprecated": null,
+                "version": "0.0.4",
+                "facet": {
+                    "cardinalityMax": null,
+                    "ordered": false,
+                    "sensitive": false,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": "string"
+            },
+            "ifcIdentifier": {
+                "definition": "Identifier used in the IFC model (Global Unique ID).",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": "29/06/2020",
+                "date_deprecated": null,
+                "version": "0.0.4",
+                "facet": {
+                    "cardinalityMax": null,
+                    "ordered": false,
+                    "sensitive": false,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": "string"
+            },
+            "identifierInDatabase": {
+                "definition": "Indicates the ID of the building element in the BIMERR materials and component database.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": "08/07/2020",
+                "date_deprecated": null,
+                "version": "0.0.5",
+                "facet": {
+                    "cardinalityMax": "1",
+                    "ordered": false,
+                    "sensitive": false,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": "string"
+            }
+        }
+    },
+    "HeatExchanger": {
+        "definition": "A heat exchanger is a device used to provide heat transfer between non-mixing media such as plate and shell and tube heat exchangers.",
         "related_terms": [
-          [
-            "has storey"
-          ]
+            "IfcHeatExchanger"
         ],
         "standards": [
-          null
+            "IFC 4.1"
         ],
-        "type": {
-          "$ref": "#/Storey"
-        },
-        "version": 1
-      },
-      "ifcIdentifier": {
-        "date_added": null,
+        "date_added": "29/06/2020",
         "date_deprecated": null,
-        "definition": "Identifier used in the IFC model (Global Unique ID).",
-        "facet": {
-          "cardinalityMax": null,
-          "codeList": null,
-          "codeType": null,
-          "measurementType": null,
-          "measurementUnit": null,
-          "ordered": null,
-          "sensitive": null,
-          "timeZone": null,
-          "transformation": null
-        },
+        "version": "0.0.4",
+        "children": {
+            "SubElement": {
+                "definition": "Relationship to indicate the subcomponents of elements",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": "29/06/2020",
+                "date_deprecated": null,
+                "version": "0.0.4",
+                "facet": {
+                    "cardinalityMax": null,
+                    "ordered": false,
+                    "sensitive": false,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": {
+                    "$ref": "#/Element"
+                }
+            },
+            "Simple3DModel": {
+                "definition": "Location (path) of the 3D model file.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": "29/06/2020",
+                "date_deprecated": null,
+                "version": "0.0.4",
+                "facet": {
+                    "cardinalityMax": null,
+                    "ordered": false,
+                    "sensitive": false,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": "string"
+            },
+            "ifcIdentifier": {
+                "definition": "Identifier used in the IFC model (Global Unique ID).",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": "29/06/2020",
+                "date_deprecated": null,
+                "version": "0.0.4",
+                "facet": {
+                    "cardinalityMax": null,
+                    "ordered": false,
+                    "sensitive": false,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": "string"
+            },
+            "identifierInDatabase": {
+                "definition": "Indicates the ID of the building element in the BIMERR materials and component database.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": "08/07/2020",
+                "date_deprecated": null,
+                "version": "0.0.5",
+                "facet": {
+                    "cardinalityMax": "1",
+                    "ordered": false,
+                    "sensitive": false,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": "string"
+            }
+        }
+    },
+    "Tank": {
+        "definition": "A tank is a vessel or container in which a fluid or gas is stored for later use.",
         "related_terms": [
-          [
-            "ifc identifier"
-          ]
+            "IfcTank"
         ],
         "standards": [
-          null
+            "IFC 4.1"
         ],
-        "type": "string",
-        "version": "20/05/220"
-      }
-    },
-    "date_added": "20/05/220",
-    "date_deprecated": null,
-    "definition": "A building represents a structure that provides shelter for its occupants or contents and stands in one place. The building is also used to provide a basic element within the spatial structure hierarchy for the components of a building project (together with site, storey, and space).",
-    "related_terms": [
-      [
-        "Building",
-        "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcBuilding"
-      ]
-    ],
-    "standards": [
-      null
-    ],
-    "version": 1
-  },
-  "BuildingElement": {
-    "children": {
-      "hasSubClass": {
-        "type": {
-          "$ref": [
-            "#/Door",
-            "#/Wall",
-            "#/Window",
-            "#/Roof",
-            "#/Slab"
-          ]
-        }
-      }
-    },
-    "date_added": null,
-    "date_deprecated": null,
-    "definition": "The building element comprises all elements that are primarily part of the construction of a building, i.e., its structural and space separating system. Building elements are all physically existent and tangible things.",
-    "related_terms": [
-      [
-        "Building Element",
-        "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcBuildingElement"
-      ]
-    ],
-    "standards": [
-      null
-    ],
-    "version": null
-  },
-  "CoolingSystem": {
-    "children": {},
-    "date_added": null,
-    "date_deprecated": null,
-    "definition": "System that aggregates cooling devices.",
-    "related_terms": [
-      [
-        "Cooling System"
-      ]
-    ],
-    "standards": [
-      null
-    ],
-    "version": null
-  },
-  "DistributionDevice": {
-    "children": {
-      "hasSubClass": {
-        "type": {
-          "$ref": [
-            "#/DistributionFlowDevice"
-          ]
-        }
-      }
-    },
-    "date_added": null,
-    "date_deprecated": null,
-    "definition": "A generalization of all elements that participate in a distribution system.",
-    "related_terms": [
-      [
-        "Distribution Device",
-        "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcDistributionElement"
-      ]
-    ],
-    "standards": [
-      null
-    ],
-    "version": null
-  },
-  "DistributionFlowDevice": {
-    "children": {
-      "hasSubClass": {
-        "type": {
-          "$ref": [
-            "#/FlowMovingDevice",
-            "#/EnergyConversionDevice",
-            "#/FlowStorageDevice",
-            "#/FlowSegment",
-            "#/FlowTerminal",
-            "#/FlowController"
-          ]
-        }
-      }
-    },
-    "date_added": null,
-    "date_deprecated": null,
-    "definition": "Defines occurrence elements of a distribution system that facilitate the distribution of energy or matter, such as air, water or power.",
-    "related_terms": [
-      [
-        "Distribution Flow Device",
-        "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcDistributionFlowElement"
-      ]
-    ],
-    "standards": [
-      null
-    ],
-    "version": null
-  },
-  "Door": {
-    "children": {},
-    "date_added": "20/05/220",
-    "date_deprecated": null,
-    "definition": "The door is a building element that is predominately used to provide controlled access for people and goods. It includes constructions with hinged, pivoted, sliding, and additionally revolving and folding operations. A door consists of a lining and one or several panels.",
-    "related_terms": [
-      [
-        "Door",
-        "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcDoor"
-      ]
-    ],
-    "standards": [
-      null
-    ],
-    "version": 1
-  },
-  "DuctSegment": {
-    "children": {},
-    "date_added": null,
-    "date_deprecated": null,
-    "definition": "A duct segment is used to typically join two sections of duct network.",
-    "related_terms": [
-      [
-        "Duct Segment",
-        "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcDuctSegment"
-      ]
-    ],
-    "standards": [
-      null
-    ],
-    "version": null
-  },
-  "Element": {
-    "children": {
-      "hasSubClass": {
-        "type": {
-          "$ref": [
-            "#/DistributionDevice",
-            "#/BuildingElement"
-          ]
-        }
-      },
-      "hasSubElement": {
-        "date_added": "20/05/220",
+        "date_added": "29/06/2020",
         "date_deprecated": null,
-        "definition": "Relationship to indicate the subcomponents of elements",
-        "facet": {
-          "cardinalityMax": null,
-          "codeList": null,
-          "codeType": null,
-          "measurementType": null,
-          "measurementUnit": null,
-          "ordered": null,
-          "sensitive": null,
-          "timeZone": null,
-          "transformation": null
-        },
+        "version": "0.0.4",
+        "children": {
+            "SubElement": {
+                "definition": "Relationship to indicate the subcomponents of elements",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": "29/06/2020",
+                "date_deprecated": null,
+                "version": "0.0.4",
+                "facet": {
+                    "cardinalityMax": null,
+                    "ordered": false,
+                    "sensitive": false,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": {
+                    "$ref": "#/Element"
+                }
+            },
+            "Simple3DModel": {
+                "definition": "Location (path) of the 3D model file.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": "29/06/2020",
+                "date_deprecated": null,
+                "version": "0.0.4",
+                "facet": {
+                    "cardinalityMax": null,
+                    "ordered": false,
+                    "sensitive": false,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": "string"
+            },
+            "ifcIdentifier": {
+                "definition": "Identifier used in the IFC model (Global Unique ID).",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": "29/06/2020",
+                "date_deprecated": null,
+                "version": "0.0.4",
+                "facet": {
+                    "cardinalityMax": null,
+                    "ordered": false,
+                    "sensitive": false,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": "string"
+            },
+            "identifierInDatabase": {
+                "definition": "Indicates the ID of the building element in the BIMERR materials and component database.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": "08/07/2020",
+                "date_deprecated": null,
+                "version": "0.0.5",
+                "facet": {
+                    "cardinalityMax": "1",
+                    "ordered": false,
+                    "sensitive": false,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": "string"
+            }
+        }
+    },
+    "Apartment": {
+        "definition": "An apartment is a group of spaces, partial spaces or other zones.",
         "related_terms": [
-          [
-            "has sub element"
-          ]
+            "IfcZone"
         ],
         "standards": [
-          null
+            "IFC 4.1"
         ],
-        "type": {
-          "$ref": "#/Element"
-        },
-        "version": 1
-      },
-      "ifcIdentifier": {
-        "date_added": null,
+        "date_added": "29/06/2020",
         "date_deprecated": null,
-        "definition": "Identifier used in the IFC model (Global Unique ID).",
-        "facet": {
-          "cardinalityMax": null,
-          "codeList": null,
-          "codeType": null,
-          "measurementType": null,
-          "measurementUnit": null,
-          "ordered": null,
-          "sensitive": null,
-          "timeZone": null,
-          "transformation": null
-        },
+        "version": "0.0.4",
+        "children": {
+            "ifcIdentifier": {
+                "definition": "Identifier used in the IFC model (Global Unique ID).",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": "29/06/2020",
+                "date_deprecated": null,
+                "version": "0.0.4",
+                "facet": {
+                    "cardinalityMax": null,
+                    "ordered": false,
+                    "sensitive": false,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": "string"
+            },
+            "Simple3DModel": {
+                "definition": "Location (path) of the 3D model file.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": "29/06/2020",
+                "date_deprecated": null,
+                "version": "0.0.4",
+                "facet": {
+                    "cardinalityMax": null,
+                    "ordered": false,
+                    "sensitive": false,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": "string"
+            },
+            "Space": {
+                "definition": "Relation to spaces contained in a zone.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": "29/06/2020",
+                "date_deprecated": null,
+                "version": "0.0.4",
+                "facet": {
+                    "cardinalityMax": null,
+                    "ordered": false,
+                    "sensitive": false,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": {
+                    "$ref": "#/Space"
+                }
+            },
+            "Element": {
+                "definition": "Links a Zone to an Element that is contained in, or adjacent to, the Zone.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": "29/06/2020",
+                "date_deprecated": null,
+                "version": "0.0.4",
+                "facet": {
+                    "cardinalityMax": null,
+                    "ordered": false,
+                    "sensitive": false,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": {
+                    "$ref": "#/Element"
+                }
+            }
+        }
+    },
+    "FlowMovingDevice": {
+        "definition": "Defines the occurrence of an apparatus used to distribute, circulate or perform conveyance of fluids, including liquids and gases (such as a pump or fan), and typically participates in a flow distribution system.",
         "related_terms": [
-          [
-            "ifc identifier"
-          ]
+            "IfcFlowMovingDevice"
         ],
         "standards": [
-          null
+            "IFC 4.1"
         ],
-        "type": "string",
-        "version": "20/05/220"
-      },
-      "isPartOfSystem": {
-        "date_added": null,
+        "date_added": "29/06/2020",
         "date_deprecated": null,
-        "definition": "Relationship that indicates that an element or device is part of a system.",
-        "facet": {
-          "cardinalityMax": "1",
-          "codeList": null,
-          "codeType": null,
-          "measurementType": null,
-          "measurementUnit": null,
-          "ordered": null,
-          "sensitive": null,
-          "timeZone": null,
-          "transformation": null
-        },
+        "version": "0.0.4",
+        "children": {
+            "SubElement": {
+                "definition": "Relationship to indicate the subcomponents of elements",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": "29/06/2020",
+                "date_deprecated": null,
+                "version": "0.0.4",
+                "facet": {
+                    "cardinalityMax": null,
+                    "ordered": false,
+                    "sensitive": false,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": {
+                    "$ref": "#/Element"
+                }
+            },
+            "Simple3DModel": {
+                "definition": "Location (path) of the 3D model file.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": "29/06/2020",
+                "date_deprecated": null,
+                "version": "0.0.4",
+                "facet": {
+                    "cardinalityMax": null,
+                    "ordered": false,
+                    "sensitive": false,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": "string"
+            },
+            "ifcIdentifier": {
+                "definition": "Identifier used in the IFC model (Global Unique ID).",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": "29/06/2020",
+                "date_deprecated": null,
+                "version": "0.0.4",
+                "facet": {
+                    "cardinalityMax": null,
+                    "ordered": false,
+                    "sensitive": false,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": "string"
+            },
+            "identifierInDatabase": {
+                "definition": "Indicates the ID of the building element in the BIMERR materials and component database.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": "08/07/2020",
+                "date_deprecated": null,
+                "version": "0.0.5",
+                "facet": {
+                    "cardinalityMax": "1",
+                    "ordered": false,
+                    "sensitive": false,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": "string"
+            }
+        }
+    },
+    "FlowController": {
+        "definition": "Defines the occurrence of elements of a distribution system that are used to regulate flow through a distribution system. Examples include dampers, valves, switches, and relays.",
         "related_terms": [
-          [
-            "is part of system"
-          ]
+            "IfcFlowController"
         ],
         "standards": [
-          null
+            "IFC 4.1"
         ],
-        "type": {
-          "$ref": "#/System"
-        },
-        "version": null
-      }
-    },
-    "date_added": "20/05/220",
-    "date_deprecated": null,
-    "definition": null,
-    "related_terms": [
-      [
-        "Element"
-      ]
-    ],
-    "standards": [
-      null
-    ],
-    "version": 1
-  },
-  "EnergyConversionDevice": {
-    "children": {
-      "hasSubClass": {
-        "type": {
-          "$ref": [
-            "#/SolarDevice",
-            "#/HeatExchanger",
-            "#/Boiler",
-            "#/TubeBundle"
-          ]
-        }
-      }
-    },
-    "date_added": null,
-    "date_deprecated": null,
-    "definition": "Defines the occurrence of a device used to perform energy conversion or heat transfer and typically participates in a flow distribution system.",
-    "related_terms": [
-      [
-        "Energy Conversion Device",
-        "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcEnergyConversionDevice"
-      ]
-    ],
-    "standards": [
-      null
-    ],
-    "version": null
-  },
-  "Fan": {
-    "children": {},
-    "date_added": null,
-    "date_deprecated": null,
-    "definition": "A fan is a device which imparts mechanical work on a gas. A typical usage of a fan is to induce airflow in a building services air distribution system.",
-    "related_terms": [
-      [
-        "Fan",
-        "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcFan"
-      ]
-    ],
-    "standards": [
-      null
-    ],
-    "version": null
-  },
-  "FenestrationSystem": {
-    "children": {},
-    "date_added": null,
-    "date_deprecated": null,
-    "definition": "System that aggregates fenestration elements.",
-    "related_terms": [
-      [
-        "Fenestration System"
-      ]
-    ],
-    "standards": [
-      null
-    ],
-    "version": null
-  },
-  "FlowController": {
-    "children": {
-      "hasSubClass": {
-        "type": {
-          "$ref": [
-            "#/SwitchingDevice"
-          ]
-        }
-      }
-    },
-    "date_added": null,
-    "date_deprecated": null,
-    "definition": "Defines the occurrence of elements of a distribution system that are used to regulate flow through a distribution system. Examples include dampers, valves, switches, and relays.",
-    "related_terms": [
-      [
-        "Flow Controller",
-        "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcFlowController"
-      ]
-    ],
-    "standards": [
-      null
-    ],
-    "version": null
-  },
-  "FlowMovingDevice": {
-    "children": {
-      "hasSubClass": {
-        "type": {
-          "$ref": [
-            "#/Fan",
-            "#/Pump"
-          ]
-        }
-      }
-    },
-    "date_added": null,
-    "date_deprecated": null,
-    "definition": "Defines the occurrence of an apparatus used to distribute, circulate or perform conveyance of fluids, including liquids and gases (such as a pump or fan), and typically participates in a flow distribution system.",
-    "related_terms": [
-      [
-        "Flow Moving Device",
-        "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcFlowMovingDevice"
-      ]
-    ],
-    "standards": [
-      null
-    ],
-    "version": null
-  },
-  "FlowSegment": {
-    "children": {
-      "hasSubClass": {
-        "type": {
-          "$ref": [
-            "#/DuctSegment",
-            "#/PipeSegment"
-          ]
-        }
-      }
-    },
-    "date_added": null,
-    "date_deprecated": null,
-    "definition": "Defines the occurrence of a segment of a flow distribution system.",
-    "related_terms": [
-      [
-        "Flow Segment",
-        "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcFlowSegment"
-      ]
-    ],
-    "standards": [
-      null
-    ],
-    "version": null
-  },
-  "FlowStorageDevice": {
-    "children": {
-      "hasSubClass": {
-        "type": {
-          "$ref": [
-            "#/Tank"
-          ]
-        }
-      }
-    },
-    "date_added": null,
-    "date_deprecated": null,
-    "definition": "Defines the occurrence of a device that participates in a distribution system and is used for temporary storage (such as a tank).",
-    "related_terms": [
-      [
-        "Flow Storage Device",
-        "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcFlowStorageDevice"
-      ]
-    ],
-    "standards": [
-      null
-    ],
-    "version": null
-  },
-  "FlowTerminal": {
-    "children": {
-      "hasSubClass": {
-        "type": {
-          "$ref": [
-            "#/SpaceHeater",
-            "#/Outlet"
-          ]
-        }
-      }
-    },
-    "date_added": null,
-    "date_deprecated": null,
-    "definition": "Defines the occurrence of a permanently attached element that acts as a terminus or beginning of a distribution system (such as an air outlet, drain, water closet, or sink). A terminal is typically a point at which a system interfaces with an external environment.",
-    "related_terms": [
-      [
-        "Flow Terminal",
-        "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcFlowTerminal"
-      ]
-    ],
-    "standards": [
-      null
-    ],
-    "version": null
-  },
-  "FossilBoiler": {
-    "children": {},
-    "date_added": "20/05/220",
-    "date_deprecated": null,
-    "definition": null,
-    "related_terms": [
-      [
-        "Fossil Boiler"
-      ]
-    ],
-    "standards": [
-      null
-    ],
-    "version": 1
-  },
-  "HeatExchanger": {
-    "children": {},
-    "date_added": null,
-    "date_deprecated": null,
-    "definition": "A heat exchanger is a device used to provide heat transfer between non-mixing media such as plate and shell and tube heat exchangers.",
-    "related_terms": [
-      [
-        "Heat Exchanger",
-        "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcHeatExchanger"
-      ]
-    ],
-    "standards": [
-      null
-    ],
-    "version": null
-  },
-  "HeatingSystem": {
-    "children": {},
-    "date_added": "20/05/220",
-    "date_deprecated": null,
-    "definition": "System that aggregates heating devices.",
-    "related_terms": [
-      [
-        "Heating System"
-      ]
-    ],
-    "standards": [
-      null
-    ],
-    "version": 1
-  },
-  "Outlet": {
-    "children": {},
-    "date_added": null,
-    "date_deprecated": null,
-    "definition": "An outlet is a device installed at a point to receive one or more inserted plugs for electrical power or communications.",
-    "related_terms": [
-      [
-        "Outlet",
-        "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcOutlet"
-      ]
-    ],
-    "standards": [
-      null
-    ],
-    "version": null
-  },
-  "PhotovoltaicSystem": {
-    "children": {},
-    "date_added": "20/05/220",
-    "date_deprecated": null,
-    "definition": "System that aggregates photovoltaic devices.",
-    "related_terms": [
-      [
-        "Photovoltaic System"
-      ]
-    ],
-    "standards": [
-      null
-    ],
-    "version": 1
-  },
-  "PipeSegment": {
-    "children": {},
-    "date_added": null,
-    "date_deprecated": null,
-    "definition": "A pipe segment is used to typically join two sections of a piping network.",
-    "related_terms": [
-      [
-        "Pipe Segment",
-        "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcPipeSegment"
-      ]
-    ],
-    "standards": [
-      null
-    ],
-    "version": null
-  },
-  "Pump": {
-    "children": {},
-    "date_added": null,
-    "date_deprecated": null,
-    "definition": "A pump is a device which imparts mechanical work on fluids or slurries to move them through a channel or pipeline. A typical use of a pump is to circulate chilled water or heating hot water in a building services distribution system.",
-    "related_terms": [
-      [
-        "Pump",
-        "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcPump"
-      ]
-    ],
-    "standards": [
-      null
-    ],
-    "version": null
-  },
-  "Roof": {
-    "children": {},
-    "date_added": "20/05/220",
-    "date_deprecated": null,
-    "definition": "A roof is the covering of the top part of a building, it protects the building against the effects of wheather.",
-    "related_terms": [
-      [
-        "Roof",
-        "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcRoof"
-      ]
-    ],
-    "standards": [
-      null
-    ],
-    "version": 1
-  },
-  "Slab": {
-    "children": {},
-    "date_added": null,
-    "date_deprecated": null,
-    "definition": "A slab is a component of the construction that normally encloses a space vertically. The slab may provide the lower support (floor) or upper construction (roof slab) in any space in a building.",
-    "related_terms": [
-      [
-        "Slab",
-        "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcSlab"
-      ]
-    ],
-    "standards": [
-      null
-    ],
-    "version": null
-  },
-  "SolarDevice": {
-    "children": {},
-    "date_added": null,
-    "date_deprecated": null,
-    "definition": "A solar device converts solar radiation into other energy such as electric current or thermal energy.",
-    "related_terms": [
-      [
-        "Solar Device",
-        "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcSolarDevice"
-      ]
-    ],
-    "standards": [
-      null
-    ],
-    "version": null
-  },
-  "SolarSystem": {
-    "children": {},
-    "date_added": "20/05/220",
-    "date_deprecated": null,
-    "definition": "System that aggregates solar devices.",
-    "related_terms": [
-      [
-        "Solar System"
-      ]
-    ],
-    "standards": [
-      null
-    ],
-    "version": 1
-  },
-  "Space": {
-    "children": {
-      "hasElement": {
-        "date_added": "20/05/220",
+        "date_added": "29/06/2020",
         "date_deprecated": null,
-        "definition": "Links a Zone to an Element that is contained in, or adjacent to, the Zone.",
-        "facet": {
-          "cardinalityMax": null,
-          "codeList": null,
-          "codeType": null,
-          "measurementType": null,
-          "measurementUnit": null,
-          "ordered": null,
-          "sensitive": null,
-          "timeZone": null,
-          "transformation": null
-        },
+        "version": "0.0.4",
+        "children": {
+            "SubElement": {
+                "definition": "Relationship to indicate the subcomponents of elements",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": "29/06/2020",
+                "date_deprecated": null,
+                "version": "0.0.4",
+                "facet": {
+                    "cardinalityMax": null,
+                    "ordered": false,
+                    "sensitive": false,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": {
+                    "$ref": "#/Element"
+                }
+            },
+            "Simple3DModel": {
+                "definition": "Location (path) of the 3D model file.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": "29/06/2020",
+                "date_deprecated": null,
+                "version": "0.0.4",
+                "facet": {
+                    "cardinalityMax": null,
+                    "ordered": false,
+                    "sensitive": false,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": "string"
+            },
+            "ifcIdentifier": {
+                "definition": "Identifier used in the IFC model (Global Unique ID).",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": "29/06/2020",
+                "date_deprecated": null,
+                "version": "0.0.4",
+                "facet": {
+                    "cardinalityMax": null,
+                    "ordered": false,
+                    "sensitive": false,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": "string"
+            },
+            "identifierInDatabase": {
+                "definition": "Indicates the ID of the building element in the BIMERR materials and component database.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": "08/07/2020",
+                "date_deprecated": null,
+                "version": "0.0.5",
+                "facet": {
+                    "cardinalityMax": "1",
+                    "ordered": false,
+                    "sensitive": false,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": "string"
+            }
+        }
+    },
+    "Pump": {
+        "definition": "A pump is a device which imparts mechanical work on fluids or slurries to move them through a channel or pipeline. A typical use of a pump is to circulate chilled water or heating hot water in a building services distribution system.",
         "related_terms": [
-          [
-            "has element"
-          ]
+            "IfcPump"
         ],
         "standards": [
-          null
+            "IFC 4.1"
         ],
-        "type": {
-          "$ref": "#/Element"
-        },
-        "version": 1
-      },
-      "ifcIdentifier": {
-        "date_added": null,
+        "date_added": "29/06/2020",
         "date_deprecated": null,
-        "definition": "Identifier used in the IFC model (Global Unique ID).",
-        "facet": {
-          "cardinalityMax": null,
-          "codeList": null,
-          "codeType": null,
-          "measurementType": null,
-          "measurementUnit": null,
-          "ordered": null,
-          "sensitive": null,
-          "timeZone": null,
-          "transformation": null
-        },
-        "related_terms": [
-          [
-            "ifc identifier"
-          ]
-        ],
-        "standards": [
-          null
-        ],
-        "type": "string",
-        "version": "20/05/220"
-      }
-    },
-    "date_added": "20/05/220",
-    "date_deprecated": null,
-    "definition": "A space represents an area or volume bounded actually or theoretically. Spaces are areas or volumes that provide for certain functions within a building.",
-    "related_terms": [
-      [
-        "Space",
-        "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcSpace"
-      ]
-    ],
-    "standards": [
-      null
-    ],
-    "version": 1
-  },
-  "SpaceHeater": {
-    "children": {},
-    "date_added": null,
-    "date_deprecated": null,
-    "definition": "Space heaters utilize a combination of radiation and/or natural convection using a heating source such as electricity, steam or hot water to heat a limited space or area. Examples of space heaters include radiators, convectors, baseboard and finned-tube heaters.",
-    "related_terms": [
-      [
-        "Space Heater",
-        "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcSpaceHeater"
-      ]
-    ],
-    "standards": [
-      null
-    ],
-    "version": null
-  },
-  "Storey": {
-    "children": {
-      "containsZone": {
-        "date_added": "20/05/220",
-        "date_deprecated": null,
-        "definition": "Relationship to the subzones of a major zone. A space zone could for instance be contained in a storey zone which is further contained in a building zone.",
-        "facet": {
-          "cardinalityMax": null,
-          "codeList": null,
-          "codeType": null,
-          "measurementType": null,
-          "measurementUnit": null,
-          "ordered": null,
-          "sensitive": null,
-          "timeZone": null,
-          "transformation": null
-        },
-        "related_terms": [
-          [
-            "contains zone"
-          ]
-        ],
-        "standards": [
-          null
-        ],
-        "type": {
-          "$ref": "#/Apartment"
-        },
-        "version": 1
-      },
-      "hasApartment": {
-        "date_added": "20/05/220",
-        "date_deprecated": null,
-        "definition": "Relation between a storey and the apartments it is composed of.",
-        "facet": {
-          "cardinalityMax": null,
-          "codeList": null,
-          "codeType": null,
-          "measurementType": null,
-          "measurementUnit": null,
-          "ordered": null,
-          "sensitive": null,
-          "timeZone": null,
-          "transformation": null
-        },
-        "related_terms": [
-          [
-            "has apartment"
-          ]
-        ],
-        "standards": [
-          null
-        ],
-        "type": {
-          "$ref": "#/Apartment"
-        },
-        "version": 1
-      },
-      "ifcIdentifier": {
-        "date_added": null,
-        "date_deprecated": null,
-        "definition": "Identifier used in the IFC model (Global Unique ID).",
-        "facet": {
-          "cardinalityMax": null,
-          "codeList": null,
-          "codeType": null,
-          "measurementType": null,
-          "measurementUnit": null,
-          "ordered": null,
-          "sensitive": null,
-          "timeZone": null,
-          "transformation": null
-        },
-        "related_terms": [
-          [
-            "ifc identifier"
-          ]
-        ],
-        "standards": [
-          null
-        ],
-        "type": "string",
-        "version": "20/05/220"
-      }
-    },
-    "date_added": "20/05/220",
-    "date_deprecated": null,
-    "definition": "The building storey has an elevation and typically represents a (nearly) horizontal aggregation of spaces that are vertically bound.",
-    "related_terms": [
-      [
-        "Storey",
-        "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcBuildingStorey"
-      ]
-    ],
-    "standards": [
-      null
-    ],
-    "version": 1
-  },
-  "SwitchingDevice": {
-    "children": {},
-    "date_added": null,
-    "date_deprecated": null,
-    "definition": "A switch is used in a cable distribution system (electrical circuit) to control or modulate the flow of electricity.",
-    "related_terms": [
-      [
-        "Switching Device",
-        "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcSwitchingDevice"
-      ]
-    ],
-    "standards": [
-      null
-    ],
-    "version": null
-  },
-  "System": {
-    "children": {
-      "hasSubClass": {
-        "type": {
-          "$ref": [
-            "#/PhotovoltaicSystem",
-            "#/VentilationSystem",
-            "#/HeatingSystem",
-            "#/SolarSystem",
-            "#/CoolingSystem",
-            "#/FenestrationSystem"
-          ]
+        "version": "0.0.4",
+        "children": {
+            "SubElement": {
+                "definition": "Relationship to indicate the subcomponents of elements",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": "29/06/2020",
+                "date_deprecated": null,
+                "version": "0.0.4",
+                "facet": {
+                    "cardinalityMax": null,
+                    "ordered": false,
+                    "sensitive": false,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": {
+                    "$ref": "#/Element"
+                }
+            },
+            "Simple3DModel": {
+                "definition": "Location (path) of the 3D model file.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": "29/06/2020",
+                "date_deprecated": null,
+                "version": "0.0.4",
+                "facet": {
+                    "cardinalityMax": null,
+                    "ordered": false,
+                    "sensitive": false,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": "string"
+            },
+            "ifcIdentifier": {
+                "definition": "Identifier used in the IFC model (Global Unique ID).",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": "29/06/2020",
+                "date_deprecated": null,
+                "version": "0.0.4",
+                "facet": {
+                    "cardinalityMax": null,
+                    "ordered": false,
+                    "sensitive": false,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": "string"
+            },
+            "identifierInDatabase": {
+                "definition": "Indicates the ID of the building element in the BIMERR materials and component database.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": "08/07/2020",
+                "date_deprecated": null,
+                "version": "0.0.5",
+                "facet": {
+                    "cardinalityMax": "1",
+                    "ordered": false,
+                    "sensitive": false,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": "string"
+            }
         }
-      },
-      "includesElement": {
-        "date_added": null,
-        "date_deprecated": null,
-        "definition": "Relationship that connects a system with an element or device.",
-        "facet": {
-          "cardinalityMax": null,
-          "codeList": null,
-          "codeType": null,
-          "measurementType": null,
-          "measurementUnit": null,
-          "ordered": null,
-          "sensitive": null,
-          "timeZone": null,
-          "transformation": null
-        },
+    },
+    "FlowStorageDevice": {
+        "definition": "Defines the occurrence of a device that participates in a distribution system and is used for temporary storage (such as a tank).",
         "related_terms": [
-          [
-            "includes element"
-          ]
+            "IfcFlowStorageDevice"
         ],
         "standards": [
-          null
+            "IFC 4.1"
         ],
-        "type": {
-          "$ref": "#/Element"
-        },
-        "version": null
-      }
-    },
-    "date_added": null,
-    "date_deprecated": null,
-    "definition": null,
-    "related_terms": [
-      [
-        "System"
-      ]
-    ],
-    "standards": [
-      null
-    ],
-    "version": null
-  },
-  "Tank": {
-    "children": {},
-    "date_added": null,
-    "date_deprecated": null,
-    "definition": "A tank is a vessel or container in which a fluid or gas is stored for later use.",
-    "related_terms": [
-      [
-        "Tank",
-        "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcTank"
-      ]
-    ],
-    "standards": [
-      null
-    ],
-    "version": null
-  },
-  "TubeBundle": {
-    "children": {},
-    "date_added": null,
-    "date_deprecated": null,
-    "definition": "A tube bundle is a device consisting of tubes and bundles of tubes used for heat transfer and contained typically within other energy conversion devices, such as a chiller or coil.",
-    "related_terms": [
-      [
-        "Tube Bundle",
-        "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcTubeBundle"
-      ]
-    ],
-    "standards": [
-      null
-    ],
-    "version": null
-  },
-  "VentilationSystem": {
-    "children": {},
-    "date_added": "20/05/220",
-    "date_deprecated": null,
-    "definition": "System that aggregates ventilation devices.",
-    "related_terms": [
-      [
-        "Ventilation System"
-      ]
-    ],
-    "standards": [
-      null
-    ],
-    "version": 1
-  },
-  "Wall": {
-    "children": {},
-    "date_added": null,
-    "date_deprecated": null,
-    "definition": "The wall represents a vertical construction that bounds or subdivides spaces. Wall are usually vertical, or nearly vertical, planar elements, often designed to bear structural loads. A wall is however not required to be load bearing.",
-    "related_terms": [
-      [
-        "Wall",
-        "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcWall"
-      ]
-    ],
-    "standards": [
-      null
-    ],
-    "version": null
-  },
-  "Window": {
-    "children": {},
-    "date_added": null,
-    "date_deprecated": null,
-    "definition": "The window is a building element that is predominately used to provide natural light and fresh air. It includes vertical opening but also horizontal opening such as skylights or light domes. It includes constructions with swinging, pivoting, sliding, or revolving panels and fixed panels. A window consists of a lining and one or several panels.",
-    "related_terms": [
-      [
-        "Window",
-        "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcWindow"
-      ]
-    ],
-    "standards": [
-      null
-    ],
-    "version": null
-  },
-  "Zone": {
-    "children": {
-      "hasSubClass": {
-        "type": {
-          "$ref": [
-            "#/Apartment"
-          ]
+        "date_added": "29/06/2020",
+        "date_deprecated": null,
+        "version": "0.0.4",
+        "children": {
+            "SubElement": {
+                "definition": "Relationship to indicate the subcomponents of elements",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": "29/06/2020",
+                "date_deprecated": null,
+                "version": "0.0.4",
+                "facet": {
+                    "cardinalityMax": null,
+                    "ordered": false,
+                    "sensitive": false,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": {
+                    "$ref": "#/Element"
+                }
+            },
+            "Simple3DModel": {
+                "definition": "Location (path) of the 3D model file.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": "29/06/2020",
+                "date_deprecated": null,
+                "version": "0.0.4",
+                "facet": {
+                    "cardinalityMax": null,
+                    "ordered": false,
+                    "sensitive": false,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": "string"
+            },
+            "ifcIdentifier": {
+                "definition": "Identifier used in the IFC model (Global Unique ID).",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": "29/06/2020",
+                "date_deprecated": null,
+                "version": "0.0.4",
+                "facet": {
+                    "cardinalityMax": null,
+                    "ordered": false,
+                    "sensitive": false,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": "string"
+            },
+            "identifierInDatabase": {
+                "definition": "Indicates the ID of the building element in the BIMERR materials and component database.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": "08/07/2020",
+                "date_deprecated": null,
+                "version": "0.0.5",
+                "facet": {
+                    "cardinalityMax": "1",
+                    "ordered": false,
+                    "sensitive": false,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": "string"
+            }
         }
-      }
     },
-    "date_added": "20/05/220",
-    "date_deprecated": null,
-    "definition": null,
-    "related_terms": [
-      [
-        "Zone"
-      ]
-    ],
-    "standards": [
-      null
-    ],
-    "version": 1
-  }
+    "SolarDevice": {
+        "definition": "A solar device converts solar radiation into other energy such as electric current or thermal energy.",
+        "related_terms": [
+            "IfcSolarDevice"
+        ],
+        "standards": [
+            "IFC 4.1"
+        ],
+        "date_added": "29/06/2020",
+        "date_deprecated": null,
+        "version": "0.0.4",
+        "children": {
+            "SubElement": {
+                "definition": "Relationship to indicate the subcomponents of elements",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": "29/06/2020",
+                "date_deprecated": null,
+                "version": "0.0.4",
+                "facet": {
+                    "cardinalityMax": null,
+                    "ordered": false,
+                    "sensitive": false,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": {
+                    "$ref": "#/Element"
+                }
+            },
+            "Simple3DModel": {
+                "definition": "Location (path) of the 3D model file.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": "29/06/2020",
+                "date_deprecated": null,
+                "version": "0.0.4",
+                "facet": {
+                    "cardinalityMax": null,
+                    "ordered": false,
+                    "sensitive": false,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": "string"
+            },
+            "ifcIdentifier": {
+                "definition": "Identifier used in the IFC model (Global Unique ID).",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": "29/06/2020",
+                "date_deprecated": null,
+                "version": "0.0.4",
+                "facet": {
+                    "cardinalityMax": null,
+                    "ordered": false,
+                    "sensitive": false,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": "string"
+            },
+            "identifierInDatabase": {
+                "definition": "Indicates the ID of the building element in the BIMERR materials and component database.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": "08/07/2020",
+                "date_deprecated": null,
+                "version": "0.0.5",
+                "facet": {
+                    "cardinalityMax": "1",
+                    "ordered": false,
+                    "sensitive": false,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": "string"
+            }
+        }
+    },
+    "DistributionDevice": {
+        "definition": "A generalization of all elements that participate in a distribution system.",
+        "related_terms": [
+            "IfcDistributionElement"
+        ],
+        "standards": [
+            "IFC 4.1"
+        ],
+        "date_added": "29/06/2020",
+        "date_deprecated": null,
+        "version": "0.0.4",
+        "children": {
+            "SubElement": {
+                "definition": "Relationship to indicate the subcomponents of elements",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": "29/06/2020",
+                "date_deprecated": null,
+                "version": "0.0.4",
+                "facet": {
+                    "cardinalityMax": null,
+                    "ordered": false,
+                    "sensitive": false,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": {
+                    "$ref": "#/Element"
+                }
+            },
+            "Simple3DModel": {
+                "definition": "Location (path) of the 3D model file.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": "29/06/2020",
+                "date_deprecated": null,
+                "version": "0.0.4",
+                "facet": {
+                    "cardinalityMax": null,
+                    "ordered": false,
+                    "sensitive": false,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": "string"
+            },
+            "ifcIdentifier": {
+                "definition": "Identifier used in the IFC model (Global Unique ID).",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": "29/06/2020",
+                "date_deprecated": null,
+                "version": "0.0.4",
+                "facet": {
+                    "cardinalityMax": null,
+                    "ordered": false,
+                    "sensitive": false,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": "string"
+            },
+            "identifierInDatabase": {
+                "definition": "Indicates the ID of the building element in the BIMERR materials and component database.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": "08/07/2020",
+                "date_deprecated": null,
+                "version": "0.0.5",
+                "facet": {
+                    "cardinalityMax": "1",
+                    "ordered": false,
+                    "sensitive": false,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": "string"
+            }
+        }
+    },
+    "Zone": {
+        "definition": null,
+        "related_terms": [
+            null
+        ],
+        "standards": [
+            null
+        ],
+        "date_added": "29/06/2020",
+        "date_deprecated": null,
+        "version": "0.0.4",
+        "children": {}
+    },
+    "Boiler": {
+        "definition": "A boiler is a closed, pressure-rated vessel in which water or other fluid is heated using an energy source such as natural gas, heating oil, or electricity. The fluid in the vessel is then circulated out of the boiler for use in various processes or heating applications.",
+        "related_terms": [
+            "IfcBoiler"
+        ],
+        "standards": [
+            "IFC 4.1"
+        ],
+        "date_added": "29/06/2020",
+        "date_deprecated": null,
+        "version": "0.0.4",
+        "children": {
+            "SubElement": {
+                "definition": "Relationship to indicate the subcomponents of elements",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": "29/06/2020",
+                "date_deprecated": null,
+                "version": "0.0.4",
+                "facet": {
+                    "cardinalityMax": null,
+                    "ordered": false,
+                    "sensitive": false,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": {
+                    "$ref": "#/Element"
+                }
+            },
+            "Simple3DModel": {
+                "definition": "Location (path) of the 3D model file.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": "29/06/2020",
+                "date_deprecated": null,
+                "version": "0.0.4",
+                "facet": {
+                    "cardinalityMax": null,
+                    "ordered": false,
+                    "sensitive": false,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": "string"
+            },
+            "ifcIdentifier": {
+                "definition": "Identifier used in the IFC model (Global Unique ID).",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": "29/06/2020",
+                "date_deprecated": null,
+                "version": "0.0.4",
+                "facet": {
+                    "cardinalityMax": null,
+                    "ordered": false,
+                    "sensitive": false,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": "string"
+            },
+            "identifierInDatabase": {
+                "definition": "Indicates the ID of the building element in the BIMERR materials and component database.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": "08/07/2020",
+                "date_deprecated": null,
+                "version": "0.0.5",
+                "facet": {
+                    "cardinalityMax": "1",
+                    "ordered": false,
+                    "sensitive": false,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": "string"
+            }
+        }
+    },
+    "PipeSegment": {
+        "definition": "A pipe segment is used to typically join two sections of a piping network.",
+        "related_terms": [
+            "IfcPipeSegment"
+        ],
+        "standards": [
+            "IFC 4.1"
+        ],
+        "date_added": "29/06/2020",
+        "date_deprecated": null,
+        "version": "0.0.4",
+        "children": {
+            "SubElement": {
+                "definition": "Relationship to indicate the subcomponents of elements",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": "29/06/2020",
+                "date_deprecated": null,
+                "version": "0.0.4",
+                "facet": {
+                    "cardinalityMax": null,
+                    "ordered": false,
+                    "sensitive": false,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": {
+                    "$ref": "#/Element"
+                }
+            },
+            "Simple3DModel": {
+                "definition": "Location (path) of the 3D model file.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": "29/06/2020",
+                "date_deprecated": null,
+                "version": "0.0.4",
+                "facet": {
+                    "cardinalityMax": null,
+                    "ordered": false,
+                    "sensitive": false,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": "string"
+            },
+            "ifcIdentifier": {
+                "definition": "Identifier used in the IFC model (Global Unique ID).",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": "29/06/2020",
+                "date_deprecated": null,
+                "version": "0.0.4",
+                "facet": {
+                    "cardinalityMax": null,
+                    "ordered": false,
+                    "sensitive": false,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": "string"
+            },
+            "identifierInDatabase": {
+                "definition": "Indicates the ID of the building element in the BIMERR materials and component database.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": "08/07/2020",
+                "date_deprecated": null,
+                "version": "0.0.5",
+                "facet": {
+                    "cardinalityMax": "1",
+                    "ordered": false,
+                    "sensitive": false,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": "string"
+            }
+        }
+    },
+    "DuctSegment": {
+        "definition": "A duct segment is used to typically join two sections of duct network.",
+        "related_terms": [
+            "IfcDuctSegment"
+        ],
+        "standards": [
+            "IFC 4.1"
+        ],
+        "date_added": "29/06/2020",
+        "date_deprecated": null,
+        "version": "0.0.4",
+        "children": {
+            "SubElement": {
+                "definition": "Relationship to indicate the subcomponents of elements",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": "29/06/2020",
+                "date_deprecated": null,
+                "version": "0.0.4",
+                "facet": {
+                    "cardinalityMax": null,
+                    "ordered": false,
+                    "sensitive": false,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": {
+                    "$ref": "#/Element"
+                }
+            },
+            "Simple3DModel": {
+                "definition": "Location (path) of the 3D model file.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": "29/06/2020",
+                "date_deprecated": null,
+                "version": "0.0.4",
+                "facet": {
+                    "cardinalityMax": null,
+                    "ordered": false,
+                    "sensitive": false,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": "string"
+            },
+            "ifcIdentifier": {
+                "definition": "Identifier used in the IFC model (Global Unique ID).",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": "29/06/2020",
+                "date_deprecated": null,
+                "version": "0.0.4",
+                "facet": {
+                    "cardinalityMax": null,
+                    "ordered": false,
+                    "sensitive": false,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": "string"
+            },
+            "identifierInDatabase": {
+                "definition": "Indicates the ID of the building element in the BIMERR materials and component database.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": "08/07/2020",
+                "date_deprecated": null,
+                "version": "0.0.5",
+                "facet": {
+                    "cardinalityMax": "1",
+                    "ordered": false,
+                    "sensitive": false,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": "string"
+            }
+        }
+    },
+    "Element": {
+        "definition": "An element is a generalization of all components that make up an AEC product.",
+        "related_terms": [
+            "IfcElement"
+        ],
+        "standards": [
+            "IFC 4.1"
+        ],
+        "date_added": "29/06/2020",
+        "date_deprecated": null,
+        "version": "0.0.4",
+        "children": {
+            "SubElement": {
+                "definition": "Relationship to indicate the subcomponents of elements",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": "29/06/2020",
+                "date_deprecated": null,
+                "version": "0.0.4",
+                "facet": {
+                    "cardinalityMax": null,
+                    "ordered": false,
+                    "sensitive": false,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": {
+                    "$ref": "#/Element"
+                }
+            },
+            "Simple3DModel": {
+                "definition": "Location (path) of the 3D model file.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": "29/06/2020",
+                "date_deprecated": null,
+                "version": "0.0.4",
+                "facet": {
+                    "cardinalityMax": null,
+                    "ordered": false,
+                    "sensitive": false,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": "string"
+            },
+            "ifcIdentifier": {
+                "definition": "Identifier used in the IFC model (Global Unique ID).",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": "29/06/2020",
+                "date_deprecated": null,
+                "version": "0.0.4",
+                "facet": {
+                    "cardinalityMax": null,
+                    "ordered": false,
+                    "sensitive": false,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": "string"
+            },
+            "identifierInDatabase": {
+                "definition": "Indicates the ID of the building element in the BIMERR materials and component database.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": "08/07/2020",
+                "date_deprecated": null,
+                "version": "0.0.5",
+                "facet": {
+                    "cardinalityMax": "1",
+                    "ordered": false,
+                    "sensitive": false,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": "string"
+            }
+        }
+    },
+    "FlowSegment": {
+        "definition": "Defines the occurrence of a segment of a flow distribution system.",
+        "related_terms": [
+            "IfcFlowSegment"
+        ],
+        "standards": [
+            "IFC 4.1"
+        ],
+        "date_added": "29/06/2020",
+        "date_deprecated": null,
+        "version": "0.0.4",
+        "children": {
+            "SubElement": {
+                "definition": "Relationship to indicate the subcomponents of elements",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": "29/06/2020",
+                "date_deprecated": null,
+                "version": "0.0.4",
+                "facet": {
+                    "cardinalityMax": null,
+                    "ordered": false,
+                    "sensitive": false,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": {
+                    "$ref": "#/Element"
+                }
+            },
+            "Simple3DModel": {
+                "definition": "Location (path) of the 3D model file.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": "29/06/2020",
+                "date_deprecated": null,
+                "version": "0.0.4",
+                "facet": {
+                    "cardinalityMax": null,
+                    "ordered": false,
+                    "sensitive": false,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": "string"
+            },
+            "ifcIdentifier": {
+                "definition": "Identifier used in the IFC model (Global Unique ID).",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": "29/06/2020",
+                "date_deprecated": null,
+                "version": "0.0.4",
+                "facet": {
+                    "cardinalityMax": null,
+                    "ordered": false,
+                    "sensitive": false,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": "string"
+            },
+            "identifierInDatabase": {
+                "definition": "Indicates the ID of the building element in the BIMERR materials and component database.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": "08/07/2020",
+                "date_deprecated": null,
+                "version": "0.0.5",
+                "facet": {
+                    "cardinalityMax": "1",
+                    "ordered": false,
+                    "sensitive": false,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": "string"
+            }
+        }
+    },
+    "Wall": {
+        "definition": "The wall represents a vertical construction that bounds or subdivides spaces. Wall are usually vertical, or nearly vertical, planar elements, often designed to bear structural loads. A wall is however not required to be load bearing.",
+        "related_terms": [
+            "IfcWall"
+        ],
+        "standards": [
+            "IFC 4.1"
+        ],
+        "date_added": "29/06/2020",
+        "date_deprecated": null,
+        "version": "0.0.4",
+        "children": {
+            "SubElement": {
+                "definition": "Relationship to indicate the subcomponents of elements",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": "29/06/2020",
+                "date_deprecated": null,
+                "version": "0.0.4",
+                "facet": {
+                    "cardinalityMax": null,
+                    "ordered": false,
+                    "sensitive": false,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": {
+                    "$ref": "#/Element"
+                }
+            },
+            "Simple3DModel": {
+                "definition": "Location (path) of the 3D model file.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": "29/06/2020",
+                "date_deprecated": null,
+                "version": "0.0.4",
+                "facet": {
+                    "cardinalityMax": null,
+                    "ordered": false,
+                    "sensitive": false,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": "string"
+            },
+            "ifcIdentifier": {
+                "definition": "Identifier used in the IFC model (Global Unique ID).",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": "29/06/2020",
+                "date_deprecated": null,
+                "version": "0.0.4",
+                "facet": {
+                    "cardinalityMax": null,
+                    "ordered": false,
+                    "sensitive": false,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": "string"
+            },
+            "identifierInDatabase": {
+                "definition": "Indicates the ID of the building element in the BIMERR materials and component database.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": "08/07/2020",
+                "date_deprecated": null,
+                "version": "0.0.5",
+                "facet": {
+                    "cardinalityMax": "1",
+                    "ordered": false,
+                    "sensitive": false,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": "string"
+            }
+        }
+    },
+    "Storey": {
+        "definition": null,
+        "related_terms": [
+            null
+        ],
+        "standards": [
+            null
+        ],
+        "date_added": "29/06/2020",
+        "date_deprecated": null,
+        "version": "0.0.4",
+        "children": {
+            "Apartment": {
+                "definition": "Relation between a storey and the apartments it is composed of.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": "29/06/2020",
+                "date_deprecated": null,
+                "version": "0.0.4",
+                "facet": {
+                    "cardinalityMax": null,
+                    "ordered": false,
+                    "sensitive": false,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": {
+                    "$ref": "#/Apartment"
+                }
+            },
+            "Space": {
+                "definition": "Relation to spaces contained in a zone.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": "29/06/2020",
+                "date_deprecated": null,
+                "version": "0.0.4",
+                "facet": {
+                    "cardinalityMax": null,
+                    "ordered": false,
+                    "sensitive": false,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": {
+                    "$ref": "#/Space"
+                }
+            },
+            "containsZone": {
+                "definition": "Relationship to the subzones of a major zone. A space zone could for instance be contained in a storey zone which is further contained in a building zone.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": "29/06/2020",
+                "date_deprecated": null,
+                "version": "0.0.4",
+                "facet": {
+                    "cardinalityMax": null,
+                    "ordered": false,
+                    "sensitive": false,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": {
+                    "$ref": "#/Apartment"
+                }
+            },
+            "ifcIdentifier": {
+                "definition": "Identifier used in the IFC model (Global Unique ID).",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": "29/06/2020",
+                "date_deprecated": null,
+                "version": "0.0.4",
+                "facet": {
+                    "cardinalityMax": null,
+                    "ordered": false,
+                    "sensitive": false,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": "string"
+            },
+            "Simple3DModel": {
+                "definition": "Location (path) of the 3D model file.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": "29/06/2020",
+                "date_deprecated": null,
+                "version": "0.0.4",
+                "facet": {
+                    "cardinalityMax": null,
+                    "ordered": false,
+                    "sensitive": false,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": "string"
+            },
+            "Element": {
+                "definition": "Links a Zone to an Element that is contained in, or adjacent to, the Zone.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": "29/06/2020",
+                "date_deprecated": null,
+                "version": "0.0.4",
+                "facet": {
+                    "cardinalityMax": null,
+                    "ordered": false,
+                    "sensitive": false,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": {
+                    "$ref": "#/Element"
+                }
+            }
+        }
+    },
+    "Window": {
+        "definition": "The window is a building element that is predominately used to provide natural light and fresh air. It includes vertical opening but also horizontal opening such as skylights or light domes. It includes constructions with swinging, pivoting, sliding, or revolving panels and fixed panels. A window consists of a lining and one or several panels.",
+        "related_terms": [
+            "IfcWindow"
+        ],
+        "standards": [
+            "IFC 4.1"
+        ],
+        "date_added": "29/06/2020",
+        "date_deprecated": null,
+        "version": "0.0.4",
+        "children": {
+            "SubElement": {
+                "definition": "Relationship to indicate the subcomponents of elements",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": "29/06/2020",
+                "date_deprecated": null,
+                "version": "0.0.4",
+                "facet": {
+                    "cardinalityMax": null,
+                    "ordered": false,
+                    "sensitive": false,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": {
+                    "$ref": "#/Element"
+                }
+            },
+            "Simple3DModel": {
+                "definition": "Location (path) of the 3D model file.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": "29/06/2020",
+                "date_deprecated": null,
+                "version": "0.0.4",
+                "facet": {
+                    "cardinalityMax": null,
+                    "ordered": false,
+                    "sensitive": false,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": "string"
+            },
+            "ifcIdentifier": {
+                "definition": "Identifier used in the IFC model (Global Unique ID).",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": "29/06/2020",
+                "date_deprecated": null,
+                "version": "0.0.4",
+                "facet": {
+                    "cardinalityMax": null,
+                    "ordered": false,
+                    "sensitive": false,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": "string"
+            },
+            "identifierInDatabase": {
+                "definition": "Indicates the ID of the building element in the BIMERR materials and component database.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": "08/07/2020",
+                "date_deprecated": null,
+                "version": "0.0.5",
+                "facet": {
+                    "cardinalityMax": "1",
+                    "ordered": false,
+                    "sensitive": false,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": "string"
+            }
+        }
+    },
+    "Building": {
+        "definition": null,
+        "related_terms": [
+            null
+        ],
+        "standards": [
+            null
+        ],
+        "date_added": "29/06/2020",
+        "date_deprecated": null,
+        "version": "0.0.4",
+        "children": {
+            "Simple3DModel": {
+                "definition": "Location (path) of the 3D model file.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": "29/06/2020",
+                "date_deprecated": null,
+                "version": "0.0.4",
+                "facet": {
+                    "cardinalityMax": null,
+                    "ordered": false,
+                    "sensitive": false,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": "string"
+            },
+            "ifcIdentifier": {
+                "definition": "Identifier used in the IFC model (Global Unique ID).",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": "29/06/2020",
+                "date_deprecated": null,
+                "version": "0.0.4",
+                "facet": {
+                    "cardinalityMax": null,
+                    "ordered": false,
+                    "sensitive": false,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": "string"
+            },
+            "Space": {
+                "definition": "Relation to spaces contained in a zone.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": "29/06/2020",
+                "date_deprecated": null,
+                "version": "0.0.4",
+                "facet": {
+                    "cardinalityMax": null,
+                    "ordered": false,
+                    "sensitive": false,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": {
+                    "$ref": "#/Space"
+                }
+            },
+            "long": {
+                "definition": "Longitude geo location coordinate.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": "29/06/2020",
+                "date_deprecated": null,
+                "version": "0.0.4",
+                "facet": {
+                    "cardinalityMax": "1",
+                    "ordered": false,
+                    "sensitive": false,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": null
+            },
+            "alt": {
+                "definition": "Altitude geo location coordinate.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": "29/06/2020",
+                "date_deprecated": null,
+                "version": "0.0.4",
+                "facet": {
+                    "cardinalityMax": "1",
+                    "ordered": false,
+                    "sensitive": false,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": null
+            },
+            "Element": {
+                "definition": "Links a Zone to an Element that is contained in, or adjacent to, the Zone.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": "29/06/2020",
+                "date_deprecated": null,
+                "version": "0.0.4",
+                "facet": {
+                    "cardinalityMax": null,
+                    "ordered": false,
+                    "sensitive": false,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": {
+                    "$ref": "#/Element"
+                }
+            },
+            "lat": {
+                "definition": "Latitude geo location coordinate.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": "29/06/2020",
+                "date_deprecated": null,
+                "version": "0.0.4",
+                "facet": {
+                    "cardinalityMax": "1",
+                    "ordered": false,
+                    "sensitive": false,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": null
+            },
+            "Storey": {
+                "definition": "Relation to storeys contained in a zone.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": "29/06/2020",
+                "date_deprecated": null,
+                "version": "0.0.4",
+                "facet": {
+                    "cardinalityMax": null,
+                    "ordered": false,
+                    "sensitive": false,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": {
+                    "$ref": "#/Storey"
+                }
+            },
+            "buildingAddress": {
+                "definition": "The postal address of the building",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": "29/06/2020",
+                "date_deprecated": null,
+                "version": "0.0.4",
+                "type": {
+                    "$ref": "#/string"
+                }
+            }
+        }
+    },
+    "FlowTerminal": {
+        "definition": "Defines the occurrence of a permanently attached element that acts as a terminus or beginning of a distribution system (such as an air outlet, drain, water closet, or sink). A terminal is typically a point at which a system interfaces with an external environment.",
+        "related_terms": [
+            "IfcFlowTerminal"
+        ],
+        "standards": [
+            "IFC 4.1"
+        ],
+        "date_added": "29/06/2020",
+        "date_deprecated": null,
+        "version": "0.0.4",
+        "children": {
+            "SubElement": {
+                "definition": "Relationship to indicate the subcomponents of elements",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": "29/06/2020",
+                "date_deprecated": null,
+                "version": "0.0.4",
+                "facet": {
+                    "cardinalityMax": null,
+                    "ordered": false,
+                    "sensitive": false,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": {
+                    "$ref": "#/Element"
+                }
+            },
+            "Simple3DModel": {
+                "definition": "Location (path) of the 3D model file.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": "29/06/2020",
+                "date_deprecated": null,
+                "version": "0.0.4",
+                "facet": {
+                    "cardinalityMax": null,
+                    "ordered": false,
+                    "sensitive": false,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": "string"
+            },
+            "ifcIdentifier": {
+                "definition": "Identifier used in the IFC model (Global Unique ID).",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": "29/06/2020",
+                "date_deprecated": null,
+                "version": "0.0.4",
+                "facet": {
+                    "cardinalityMax": null,
+                    "ordered": false,
+                    "sensitive": false,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": "string"
+            },
+            "identifierInDatabase": {
+                "definition": "Indicates the ID of the building element in the BIMERR materials and component database.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": "08/07/2020",
+                "date_deprecated": null,
+                "version": "0.0.5",
+                "facet": {
+                    "cardinalityMax": "1",
+                    "ordered": false,
+                    "sensitive": false,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": "string"
+            }
+        }
+    },
+    "DistributionFlowDevice": {
+        "definition": "Defines occurrence elements of a distribution system that facilitate the distribution of energy or matter, such as air, water or power.",
+        "related_terms": [
+            "IfcDistributionFlowDevice"
+        ],
+        "standards": [
+            "IFC 4.1"
+        ],
+        "date_added": "29/06/2020",
+        "date_deprecated": null,
+        "version": "0.0.4",
+        "children": {
+            "SubElement": {
+                "definition": "Relationship to indicate the subcomponents of elements",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": "29/06/2020",
+                "date_deprecated": null,
+                "version": "0.0.4",
+                "facet": {
+                    "cardinalityMax": null,
+                    "ordered": false,
+                    "sensitive": false,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": {
+                    "$ref": "#/Element"
+                }
+            },
+            "Simple3DModel": {
+                "definition": "Location (path) of the 3D model file.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": "29/06/2020",
+                "date_deprecated": null,
+                "version": "0.0.4",
+                "facet": {
+                    "cardinalityMax": null,
+                    "ordered": false,
+                    "sensitive": false,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": "string"
+            },
+            "ifcIdentifier": {
+                "definition": "Identifier used in the IFC model (Global Unique ID).",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": "29/06/2020",
+                "date_deprecated": null,
+                "version": "0.0.4",
+                "facet": {
+                    "cardinalityMax": null,
+                    "ordered": false,
+                    "sensitive": false,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": "string"
+            },
+            "identifierInDatabase": {
+                "definition": "Indicates the ID of the building element in the BIMERR materials and component database.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": "08/07/2020",
+                "date_deprecated": null,
+                "version": "0.0.5",
+                "facet": {
+                    "cardinalityMax": "1",
+                    "ordered": false,
+                    "sensitive": false,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": "string"
+            }
+        }
+    },
+    "SpaceHeater": {
+        "definition": "Space heaters utilize a combination of radiation and/or natural convection using a heating source such as electricity, steam or hot water to heat a limited space or area. Examples of space heaters include radiators, convectors, baseboard and finned-tube heaters.",
+        "related_terms": [
+            "IfcSpaceHeater"
+        ],
+        "standards": [
+            "IFC 4.1"
+        ],
+        "date_added": "29/06/2020",
+        "date_deprecated": null,
+        "version": "0.0.4",
+        "children": {
+            "SubElement": {
+                "definition": "Relationship to indicate the subcomponents of elements",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": "29/06/2020",
+                "date_deprecated": null,
+                "version": "0.0.4",
+                "facet": {
+                    "cardinalityMax": null,
+                    "ordered": false,
+                    "sensitive": false,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": {
+                    "$ref": "#/Element"
+                }
+            },
+            "Simple3DModel": {
+                "definition": "Location (path) of the 3D model file.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": "29/06/2020",
+                "date_deprecated": null,
+                "version": "0.0.4",
+                "facet": {
+                    "cardinalityMax": null,
+                    "ordered": false,
+                    "sensitive": false,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": "string"
+            },
+            "ifcIdentifier": {
+                "definition": "Identifier used in the IFC model (Global Unique ID).",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": "29/06/2020",
+                "date_deprecated": null,
+                "version": "0.0.4",
+                "facet": {
+                    "cardinalityMax": null,
+                    "ordered": false,
+                    "sensitive": false,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": "string"
+            },
+            "identifierInDatabase": {
+                "definition": "Indicates the ID of the building element in the BIMERR materials and component database.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": "08/07/2020",
+                "date_deprecated": null,
+                "version": "0.0.5",
+                "facet": {
+                    "cardinalityMax": "1",
+                    "ordered": false,
+                    "sensitive": false,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": "string"
+            }
+        }
+    },
+    "Fan": {
+        "definition": "A fan is a device which imparts mechanical work on a gas. A typical usage of a fan is to induce airflow in a building services air distribution system.",
+        "related_terms": [
+            "IfcFan"
+        ],
+        "standards": [
+            "IFC 4.1"
+        ],
+        "date_added": "29/06/2020",
+        "date_deprecated": null,
+        "version": "0.0.4",
+        "children": {
+            "SubElement": {
+                "definition": "Relationship to indicate the subcomponents of elements",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": "29/06/2020",
+                "date_deprecated": null,
+                "version": "0.0.4",
+                "facet": {
+                    "cardinalityMax": null,
+                    "ordered": false,
+                    "sensitive": false,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": {
+                    "$ref": "#/Element"
+                }
+            },
+            "Simple3DModel": {
+                "definition": "Location (path) of the 3D model file.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": "29/06/2020",
+                "date_deprecated": null,
+                "version": "0.0.4",
+                "facet": {
+                    "cardinalityMax": null,
+                    "ordered": false,
+                    "sensitive": false,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": "string"
+            },
+            "ifcIdentifier": {
+                "definition": "Identifier used in the IFC model (Global Unique ID).",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": "29/06/2020",
+                "date_deprecated": null,
+                "version": "0.0.4",
+                "facet": {
+                    "cardinalityMax": null,
+                    "ordered": false,
+                    "sensitive": false,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": "string"
+            },
+            "identifierInDatabase": {
+                "definition": "Indicates the ID of the building element in the BIMERR materials and component database.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": "08/07/2020",
+                "date_deprecated": null,
+                "version": "0.0.5",
+                "facet": {
+                    "cardinalityMax": "1",
+                    "ordered": false,
+                    "sensitive": false,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": "string"
+            }
+        }
+    },
+    "SwitchingDevice": {
+        "definition": "A switch is used in a cable distribution system (electrical circuit) to control or modulate the flow of electricity.",
+        "related_terms": [
+            "IfcSwitchingDevice"
+        ],
+        "standards": [
+            "IFC 4.1"
+        ],
+        "date_added": "29/06/2020",
+        "date_deprecated": null,
+        "version": "0.0.4",
+        "children": {
+            "SubElement": {
+                "definition": "Relationship to indicate the subcomponents of elements",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": "29/06/2020",
+                "date_deprecated": null,
+                "version": "0.0.4",
+                "facet": {
+                    "cardinalityMax": null,
+                    "ordered": false,
+                    "sensitive": false,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": {
+                    "$ref": "#/Element"
+                }
+            },
+            "Simple3DModel": {
+                "definition": "Location (path) of the 3D model file.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": "29/06/2020",
+                "date_deprecated": null,
+                "version": "0.0.4",
+                "facet": {
+                    "cardinalityMax": null,
+                    "ordered": false,
+                    "sensitive": false,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": "string"
+            },
+            "ifcIdentifier": {
+                "definition": "Identifier used in the IFC model (Global Unique ID).",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": "29/06/2020",
+                "date_deprecated": null,
+                "version": "0.0.4",
+                "facet": {
+                    "cardinalityMax": null,
+                    "ordered": false,
+                    "sensitive": false,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": "string"
+            },
+            "identifierInDatabase": {
+                "definition": "Indicates the ID of the building element in the BIMERR materials and component database.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": "08/07/2020",
+                "date_deprecated": null,
+                "version": "0.0.5",
+                "facet": {
+                    "cardinalityMax": "1",
+                    "ordered": false,
+                    "sensitive": false,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": "string"
+            }
+        }
+    },
+    "Outlet": {
+        "definition": "An outlet is a device installed at a point to receive one or more inserted plugs for electrical power or communications.",
+        "related_terms": [
+            "IfcOutlet"
+        ],
+        "standards": [
+            "IFC 4.1"
+        ],
+        "date_added": "29/06/2020",
+        "date_deprecated": null,
+        "version": "0.0.4",
+        "children": {
+            "SubElement": {
+                "definition": "Relationship to indicate the subcomponents of elements",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": "29/06/2020",
+                "date_deprecated": null,
+                "version": "0.0.4",
+                "facet": {
+                    "cardinalityMax": null,
+                    "ordered": false,
+                    "sensitive": false,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": {
+                    "$ref": "#/Element"
+                }
+            },
+            "Simple3DModel": {
+                "definition": "Location (path) of the 3D model file.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": "29/06/2020",
+                "date_deprecated": null,
+                "version": "0.0.4",
+                "facet": {
+                    "cardinalityMax": null,
+                    "ordered": false,
+                    "sensitive": false,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": "string"
+            },
+            "ifcIdentifier": {
+                "definition": "Identifier used in the IFC model (Global Unique ID).",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": "29/06/2020",
+                "date_deprecated": null,
+                "version": "0.0.4",
+                "facet": {
+                    "cardinalityMax": null,
+                    "ordered": false,
+                    "sensitive": false,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": "string"
+            },
+            "identifierInDatabase": {
+                "definition": "Indicates the ID of the building element in the BIMERR materials and component database.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": "08/07/2020",
+                "date_deprecated": null,
+                "version": "0.0.5",
+                "facet": {
+                    "cardinalityMax": "1",
+                    "ordered": false,
+                    "sensitive": false,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": "string"
+            }
+        }
+    },
+    "Door": {
+        "definition": "The door is a building element that is predominately used to provide controlled access for people and goods. It includes constructions with hinged, pivoted, sliding, and additionally revolving and folding operations. A door consists of a lining and one or several panels.",
+        "related_terms": [
+            "IfcDoor"
+        ],
+        "standards": [
+            "IFC 4.1"
+        ],
+        "date_added": "29/06/2020",
+        "date_deprecated": null,
+        "version": "0.0.4",
+        "children": {
+            "SubElement": {
+                "definition": "Relationship to indicate the subcomponents of elements",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": "29/06/2020",
+                "date_deprecated": null,
+                "version": "0.0.4",
+                "facet": {
+                    "cardinalityMax": null,
+                    "ordered": false,
+                    "sensitive": false,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": {
+                    "$ref": "#/Element"
+                }
+            },
+            "Simple3DModel": {
+                "definition": "Location (path) of the 3D model file.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": "29/06/2020",
+                "date_deprecated": null,
+                "version": "0.0.4",
+                "facet": {
+                    "cardinalityMax": null,
+                    "ordered": false,
+                    "sensitive": false,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": "string"
+            },
+            "ifcIdentifier": {
+                "definition": "Identifier used in the IFC model (Global Unique ID).",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": "29/06/2020",
+                "date_deprecated": null,
+                "version": "0.0.4",
+                "facet": {
+                    "cardinalityMax": null,
+                    "ordered": false,
+                    "sensitive": false,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": "string"
+            },
+            "identifierInDatabase": {
+                "definition": "Indicates the ID of the building element in the BIMERR materials and component database.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": "08/07/2020",
+                "date_deprecated": null,
+                "version": "0.0.5",
+                "facet": {
+                    "cardinalityMax": "1",
+                    "ordered": false,
+                    "sensitive": false,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": "string"
+            }
+        }
+    },
+    "Slab": {
+        "definition": "A slab is a component of the construction that normally encloses a space vertically. The slab may provide the lower support (floor) or upper construction (roof slab) in any space in a building.",
+        "related_terms": [
+            "IfcSlab"
+        ],
+        "standards": [
+            "IFC 4.1"
+        ],
+        "date_added": "29/06/2020",
+        "date_deprecated": null,
+        "version": "0.0.4",
+        "children": {
+            "SubElement": {
+                "definition": "Relationship to indicate the subcomponents of elements",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": "29/06/2020",
+                "date_deprecated": null,
+                "version": "0.0.4",
+                "facet": {
+                    "cardinalityMax": null,
+                    "ordered": false,
+                    "sensitive": false,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": {
+                    "$ref": "#/Element"
+                }
+            },
+            "Simple3DModel": {
+                "definition": "Location (path) of the 3D model file.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": "29/06/2020",
+                "date_deprecated": null,
+                "version": "0.0.4",
+                "facet": {
+                    "cardinalityMax": null,
+                    "ordered": false,
+                    "sensitive": false,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": "string"
+            },
+            "ifcIdentifier": {
+                "definition": "Identifier used in the IFC model (Global Unique ID).",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": "29/06/2020",
+                "date_deprecated": null,
+                "version": "0.0.4",
+                "facet": {
+                    "cardinalityMax": null,
+                    "ordered": false,
+                    "sensitive": false,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": "string"
+            },
+            "identifierInDatabase": {
+                "definition": "Indicates the ID of the building element in the BIMERR materials and component database.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": "08/07/2020",
+                "date_deprecated": null,
+                "version": "0.0.5",
+                "facet": {
+                    "cardinalityMax": "1",
+                    "ordered": false,
+                    "sensitive": false,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": "string"
+            }
+        }
+    },
+    "BiomassBoiler": {
+        "definition": null,
+        "related_terms": [
+            null
+        ],
+        "standards": [
+            null
+        ],
+        "date_added": "29/06/2020",
+        "date_deprecated": null,
+        "version": "0.0.4",
+        "children": {
+            "SubElement": {
+                "definition": "Relationship to indicate the subcomponents of elements",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": "29/06/2020",
+                "date_deprecated": null,
+                "version": "0.0.4",
+                "facet": {
+                    "cardinalityMax": null,
+                    "ordered": false,
+                    "sensitive": false,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": {
+                    "$ref": "#/Element"
+                }
+            },
+            "Simple3DModel": {
+                "definition": "Location (path) of the 3D model file.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": "29/06/2020",
+                "date_deprecated": null,
+                "version": "0.0.4",
+                "facet": {
+                    "cardinalityMax": null,
+                    "ordered": false,
+                    "sensitive": false,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": "string"
+            },
+            "ifcIdentifier": {
+                "definition": "Identifier used in the IFC model (Global Unique ID).",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": "29/06/2020",
+                "date_deprecated": null,
+                "version": "0.0.4",
+                "facet": {
+                    "cardinalityMax": null,
+                    "ordered": false,
+                    "sensitive": false,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": "string"
+            },
+            "identifierInDatabase": {
+                "definition": "Indicates the ID of the building element in the BIMERR materials and component database.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": "08/07/2020",
+                "date_deprecated": null,
+                "version": "0.0.5",
+                "facet": {
+                    "cardinalityMax": "1",
+                    "ordered": false,
+                    "sensitive": false,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": "string"
+            }
+        }
+    },
+    "EnergyConversionDevice": {
+        "definition": "Defines the occurrence of a device used to perform energy conversion or heat transfer and typically participates in a flow distribution system.",
+        "related_terms": [
+            "IfcEnergyConversionDevice"
+        ],
+        "standards": [
+            "IFC 4.1"
+        ],
+        "date_added": "29/06/2020",
+        "date_deprecated": null,
+        "version": "0.0.4",
+        "children": {
+            "SubElement": {
+                "definition": "Relationship to indicate the subcomponents of elements",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": "29/06/2020",
+                "date_deprecated": null,
+                "version": "0.0.4",
+                "facet": {
+                    "cardinalityMax": null,
+                    "ordered": false,
+                    "sensitive": false,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": {
+                    "$ref": "#/Element"
+                }
+            },
+            "Simple3DModel": {
+                "definition": "Location (path) of the 3D model file.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": "29/06/2020",
+                "date_deprecated": null,
+                "version": "0.0.4",
+                "facet": {
+                    "cardinalityMax": null,
+                    "ordered": false,
+                    "sensitive": false,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": "string"
+            },
+            "ifcIdentifier": {
+                "definition": "Identifier used in the IFC model (Global Unique ID).",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": "29/06/2020",
+                "date_deprecated": null,
+                "version": "0.0.4",
+                "facet": {
+                    "cardinalityMax": null,
+                    "ordered": false,
+                    "sensitive": false,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": "string"
+            },
+            "identifierInDatabase": {
+                "definition": "Indicates the ID of the building element in the BIMERR materials and component database.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": "08/07/2020",
+                "date_deprecated": null,
+                "version": "0.0.5",
+                "facet": {
+                    "cardinalityMax": "1",
+                    "ordered": false,
+                    "sensitive": false,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": "string"
+            }
+        }
+    },
+    "TubeBundle": {
+        "definition": "A tube bundle is a device consisting of tubes and bundles of tubes used for heat transfer and contained typically within other energy conversion devices, such as a chiller or coil.",
+        "related_terms": [
+            "IfcTubeBundle"
+        ],
+        "standards": [
+            "IFC 4.1"
+        ],
+        "date_added": "29/06/2020",
+        "date_deprecated": null,
+        "version": "0.0.4",
+        "children": {
+            "SubElement": {
+                "definition": "Relationship to indicate the subcomponents of elements",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": "29/06/2020",
+                "date_deprecated": null,
+                "version": "0.0.4",
+                "facet": {
+                    "cardinalityMax": null,
+                    "ordered": false,
+                    "sensitive": false,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": {
+                    "$ref": "#/Element"
+                }
+            },
+            "Simple3DModel": {
+                "definition": "Location (path) of the 3D model file.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": "29/06/2020",
+                "date_deprecated": null,
+                "version": "0.0.4",
+                "facet": {
+                    "cardinalityMax": null,
+                    "ordered": false,
+                    "sensitive": false,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": "string"
+            },
+            "ifcIdentifier": {
+                "definition": "Identifier used in the IFC model (Global Unique ID).",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": "29/06/2020",
+                "date_deprecated": null,
+                "version": "0.0.4",
+                "facet": {
+                    "cardinalityMax": null,
+                    "ordered": false,
+                    "sensitive": false,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": "string"
+            },
+            "identifierInDatabase": {
+                "definition": "Indicates the ID of the building element in the BIMERR materials and component database.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": "08/07/2020",
+                "date_deprecated": null,
+                "version": "0.0.5",
+                "facet": {
+                    "cardinalityMax": "1",
+                    "ordered": false,
+                    "sensitive": false,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": "string"
+            }
+        }
+    },
+    "BuildingElement": {
+        "definition": "The building element comprises all elements that are primarily part of the construction of a building, i.e., its structural and space separating system. Building elements are all physically existent and tangible things.",
+        "related_terms": [
+            "IfcBuildingElement"
+        ],
+        "standards": [
+            "IFC 4.1"
+        ],
+        "date_added": "29/06/2020",
+        "date_deprecated": null,
+        "version": "0.0.4",
+        "children": {
+            "SubElement": {
+                "definition": "Relationship to indicate the subcomponents of elements",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": "29/06/2020",
+                "date_deprecated": null,
+                "version": "0.0.4",
+                "facet": {
+                    "cardinalityMax": null,
+                    "ordered": false,
+                    "sensitive": false,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": {
+                    "$ref": "#/Element"
+                }
+            },
+            "Simple3DModel": {
+                "definition": "Location (path) of the 3D model file.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": "29/06/2020",
+                "date_deprecated": null,
+                "version": "0.0.4",
+                "facet": {
+                    "cardinalityMax": null,
+                    "ordered": false,
+                    "sensitive": false,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": "string"
+            },
+            "ifcIdentifier": {
+                "definition": "Identifier used in the IFC model (Global Unique ID).",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": "29/06/2020",
+                "date_deprecated": null,
+                "version": "0.0.4",
+                "facet": {
+                    "cardinalityMax": null,
+                    "ordered": false,
+                    "sensitive": false,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": "string"
+            },
+            "identifierInDatabase": {
+                "definition": "Indicates the ID of the building element in the BIMERR materials and component database.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": "08/07/2020",
+                "date_deprecated": null,
+                "version": "0.0.5",
+                "facet": {
+                    "cardinalityMax": "1",
+                    "ordered": false,
+                    "sensitive": false,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": "string"
+            }
+        }
+    },
+    "FossilBoiler": {
+        "definition": null,
+        "related_terms": [
+            null
+        ],
+        "standards": [
+            null
+        ],
+        "date_added": "29/06/2020",
+        "date_deprecated": null,
+        "version": "0.0.4",
+        "children": {
+            "SubElement": {
+                "definition": "Relationship to indicate the subcomponents of elements",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": "29/06/2020",
+                "date_deprecated": null,
+                "version": "0.0.4",
+                "facet": {
+                    "cardinalityMax": null,
+                    "ordered": false,
+                    "sensitive": false,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": {
+                    "$ref": "#/Element"
+                }
+            },
+            "Simple3DModel": {
+                "definition": "Location (path) of the 3D model file.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": "29/06/2020",
+                "date_deprecated": null,
+                "version": "0.0.4",
+                "facet": {
+                    "cardinalityMax": null,
+                    "ordered": false,
+                    "sensitive": false,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": "string"
+            },
+            "ifcIdentifier": {
+                "definition": "Identifier used in the IFC model (Global Unique ID).",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": "29/06/2020",
+                "date_deprecated": null,
+                "version": "0.0.4",
+                "facet": {
+                    "cardinalityMax": null,
+                    "ordered": false,
+                    "sensitive": false,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": "string"
+            },
+            "identifierInDatabase": {
+                "definition": "Indicates the ID of the building element in the BIMERR materials and component database.",
+                "related_terms": [
+                    null
+                ],
+                "standards": [
+                    null
+                ],
+                "date_added": "08/07/2020",
+                "date_deprecated": null,
+                "version": "0.0.5",
+                "facet": {
+                    "cardinalityMax": "1",
+                    "ordered": false,
+                    "sensitive": false,
+                    "transformation": null,
+                    "measurementType": null,
+                    "measurementUnit": null,
+                    "timeZone": null,
+                    "codeList": null,
+                    "codeType": null
+                },
+                "type": "string"
+            }
+        }
+    }
 }
