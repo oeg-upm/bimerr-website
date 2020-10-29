@@ -14,7 +14,7 @@
                                                  <http://purl.org/dc/elements/1.1/publisher> "http://purl.org/NET/rdflicense/cc-by4.0" ,
                                                                                              "http://www.oeg-upm.net/" ;
                                                  <http://purl.org/dc/elements/1.1/title> "Building Ontology" ;
-                                                 owl:versionInfo "0.0.5" .
+                                                 owl:versionInfo "0.1.0" .
 
 #################################################################
 #    Annotation properties
@@ -151,7 +151,7 @@
 ###  https://w3id.org/bot#hasSimple3DModel
 <https://w3id.org/bot#hasSimple3DModel> rdf:type owl:DatatypeProperty ;
                                         rdfs:range xsd:string ;
-                                        rdfs:comment "Links any Zone or Element to a 3D Model encoded as a literal."@en ;
+                                        rdfs:comment "Location (path) of the 3D model file."@en ;
                                         rdfs:label "has simple 3d model" .
 
 
@@ -169,6 +169,10 @@
                            [ rdf:type owl:Restriction ;
                              owl:onProperty <https://w3id.org/bot#hasSpace> ;
                              owl:allValuesFrom :Space
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty <https://w3id.org/bot#hasSimple3DModel> ;
+                             owl:allValuesFrom xsd:string
                            ] ,
                            [ rdf:type owl:Restriction ;
                              owl:onProperty :ifcIdentifier ;
@@ -194,13 +198,33 @@
                             owl:allValuesFrom <https://w3id.org/bot#Element>
                           ] ,
                           [ rdf:type owl:Restriction ;
+                            owl:onProperty <https://w3id.org/bot#hasSpace> ;
+                            owl:allValuesFrom <https://w3id.org/bot#Space>
+                          ] ,
+                          [ rdf:type owl:Restriction ;
                             owl:onProperty <https://w3id.org/bot#hasStorey> ;
                             owl:allValuesFrom :Storey
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty <https://w3id.org/bot#hasSimple3DModel> ;
+                            owl:allValuesFrom xsd:string
                           ] ,
                           [ rdf:type owl:Restriction ;
                             owl:onProperty :ifcIdentifier ;
                             owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                             owl:onDataRange xsd:string
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty <http://www.w3.org/2003/01/geo/wgs84_pos#alt> ;
+                            owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty <http://www.w3.org/2003/01/geo/wgs84_pos#lat> ;
+                            owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty <http://www.w3.org/2003/01/geo/wgs84_pos#long> ;
+                            owl:maxCardinality "1"^^xsd:nonNegativeInteger
                           ] ;
           rdfs:comment "A building represents a structure that provides shelter for its occupants or contents and stands in one place. The building is also used to provide a basic element within the spatial structure hierarchy for the components of a building project (together with site, storey, and space)."@en ;
           rdfs:label "Building" ;
@@ -237,6 +261,10 @@
                          [ rdf:type owl:Restriction ;
                            owl:onProperty <https://w3id.org/bot#hasSubElement> ;
                            owl:allValuesFrom :Element
+                         ] ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty <https://w3id.org/bot#hasSimple3DModel> ;
+                           owl:allValuesFrom xsd:string
                          ] ,
                          [ rdf:type owl:Restriction ;
                            owl:onProperty :ifcIdentifier ;
@@ -300,13 +328,26 @@
                        ] ,
                        [ rdf:type owl:Restriction ;
                          owl:onProperty :hasObXMLFile ;
-                         owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                         owl:onDataRange xsd:string
+                         owl:allValuesFrom xsd:string
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty <https://w3id.org/bot#hasSimple3DModel> ;
+                         owl:allValuesFrom xsd:string
                        ] ,
                        [ rdf:type owl:Restriction ;
                          owl:onProperty :ifcIdentifier ;
                          owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                          owl:onDataRange xsd:string
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :maxOccupants ;
+                         owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                         owl:onDataRange xsd:integer
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :minOccupants ;
+                         owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                         owl:onDataRange xsd:integer
                        ] ;
        rdfs:comment "A space represents an area or volume bounded actually or theoretically. Spaces are areas or volumes that provide for certain functions within a building."@en ;
        rdfs:label "Space" ;
@@ -327,6 +368,14 @@
                         [ rdf:type owl:Restriction ;
                           owl:onProperty <https://w3id.org/bot#hasElement> ;
                           owl:allValuesFrom <https://w3id.org/bot#Element>
+                        ] ,
+                        [ rdf:type owl:Restriction ;
+                          owl:onProperty <https://w3id.org/bot#hasSpace> ;
+                          owl:allValuesFrom <https://w3id.org/bot#Space>
+                        ] ,
+                        [ rdf:type owl:Restriction ;
+                          owl:onProperty <https://w3id.org/bot#hasSimple3DModel> ;
+                          owl:allValuesFrom xsd:string
                         ] ,
                         [ rdf:type owl:Restriction ;
                           owl:onProperty :ifcIdentifier ;

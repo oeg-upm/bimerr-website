@@ -166,6 +166,26 @@
     
 
 
+    <!-- http://bimerr.iot.linkeddata.es/def/material-properties#hasProperty -->
+
+
+    <owl:ObjectProperty rdf:about="http://bimerr.iot.linkeddata.es/def/material-properties#hasProperty">
+        <rdfs:comment xml:lang="en">A relationship between a feature of interest and a property of that feature.</rdfs:comment>
+        <rdfs:label xml:lang="en">has property</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://bimerr.iot.linkeddata.es/def/material-properties#hasPropertySet -->
+
+
+    <owl:ObjectProperty rdf:about="http://bimerr.iot.linkeddata.es/def/material-properties#hasPropertySet">
+        <rdfs:comment xml:lang="en">Relationship to connect a material or building element to an specific set of properties.</rdfs:comment>
+        <rdfs:label xml:lang="en">has property set</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://bimerr.iot.linkeddata.es/def/material-properties#isPropertyFromDatabase -->
 
 
@@ -186,32 +206,22 @@
     
 
 
-    <!-- https://saref.etsi.org/core/hasMeasurement -->
-
-
-    <owl:ObjectProperty rdf:about="https://saref.etsi.org/core/hasMeasurement">
-        <rdfs:comment xml:lang="en">A relationship between a feature of interest and a measurement about it.</rdfs:comment>
-        <rdfs:label xml:lang="en">has measurement</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://saref.etsi.org/core/hasProperty -->
-
-
-    <owl:ObjectProperty rdf:about="https://saref.etsi.org/core/hasProperty">
-        <rdfs:comment xml:lang="en">A relationship between a feature of interest and a property of that feature.</rdfs:comment>
-        <rdfs:label xml:lang="en">has property</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
     <!-- https://saref.etsi.org/core/isMeasuredIn -->
 
 
     <owl:ObjectProperty rdf:about="https://saref.etsi.org/core/isMeasuredIn">
         <rdfs:comment xml:lang="en">A relationship identifying the unit of measure used for a certain entity.</rdfs:comment>
         <rdfs:label xml:lang="en">is measured in</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://saref.etsi.org/core/relatesToMeasurement -->
+
+
+    <owl:ObjectProperty rdf:about="https://saref.etsi.org/core/relatesToMeasurement">
+        <rdfs:comment xml:lang="en">A relationship between a property and the measurements it relates to.</rdfs:comment>
+        <rdfs:label xml:lang="en">relates to measurement</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -238,6 +248,16 @@
     
 
 
+    <!-- http://bimerr.iot.linkeddata.es/def/material-properties#description -->
+
+
+    <owl:DatatypeProperty rdf:about="http://bimerr.iot.linkeddata.es/def/material-properties#description">
+        <rdfs:comment xml:lang="en">A description of the entity.</rdfs:comment>
+        <rdfs:label xml:lang="en">description</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://bimerr.iot.linkeddata.es/def/material-properties#identifierInDatabase -->
 
 
@@ -248,12 +268,22 @@
     
 
 
-    <!-- http://www.w3.org/2004/02/skos/core#prefLabel -->
+    <!-- http://bimerr.iot.linkeddata.es/def/material-properties#ifcIdentifier -->
 
 
-    <owl:DatatypeProperty rdf:about="http://www.w3.org/2004/02/skos/core#prefLabel">
-        <rdfs:comment xml:lang="en">relationship between a concept and its preferred label</rdfs:comment>
-        <rdfs:label xml:lang="en">pref label</rdfs:label>
+    <owl:DatatypeProperty rdf:about="http://bimerr.iot.linkeddata.es/def/material-properties#ifcIdentifier">
+        <rdfs:comment xml:lang="en">Ifc identifier of the element in an IFC file.</rdfs:comment>
+        <rdfs:label xml:lang="en">ifc identifier</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://bimerr.iot.linkeddata.es/def/material-properties#name -->
+
+
+    <owl:DatatypeProperty rdf:about="http://bimerr.iot.linkeddata.es/def/material-properties#name">
+        <rdfs:comment xml:lang="en">Name of the entity.</rdfs:comment>
+        <rdfs:label xml:lang="en">name</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -308,6 +338,12 @@
                 <owl:allValuesFrom rdf:resource="http://bimerr.iot.linkeddata.es/def/material-properties#MaterialProfileSet"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://bimerr.iot.linkeddata.es/def/material-properties#hasPropertySet"/>
+                <owl:allValuesFrom rdf:resource="http://bimerr.iot.linkeddata.es/def/material-properties#PropertySet"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">An element is a generalization of all components that make up an AEC product.</rdfs:comment>
         <rdfs:label xml:lang="en">Element</rdfs:label>
         <rdfs:seeAlso xml:lang="en">http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcElement</rdfs:seeAlso>
@@ -320,6 +356,7 @@
 
     <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/material-properties#Accesories">
         <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/material-properties#VentillationSystem"/>
+        <rdfs:label xml:lang="en">Accesories</rdfs:label>
     </owl:Class>
     
 
@@ -329,6 +366,7 @@
 
     <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/material-properties#AdhesiveBridgesAndPreSpray">
         <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/material-properties#MasonryAndPlasterMortar"/>
+        <rdfs:label xml:lang="en">Adhesive Bridges And Pre Spray</rdfs:label>
     </owl:Class>
     
 
@@ -338,6 +376,7 @@
 
     <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/material-properties#AdhesivesAndFillers">
         <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/material-properties#Material"/>
+        <rdfs:label xml:lang="en">Adhesives And Fillers</rdfs:label>
     </owl:Class>
     
 
@@ -347,6 +386,7 @@
 
     <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/material-properties#AeratedConcreteMasonry">
         <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/material-properties#Masonry"/>
+        <rdfs:label xml:lang="en">Aerated Concrete Masonry</rdfs:label>
     </owl:Class>
     
 
@@ -356,6 +396,7 @@
 
     <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/material-properties#Air">
         <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/material-properties#Material"/>
+        <rdfs:label xml:lang="en">Air</rdfs:label>
     </owl:Class>
     
 
@@ -365,6 +406,7 @@
 
     <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/material-properties#AsphaltPavements">
         <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/material-properties#OutdoorFacilities"/>
+        <rdfs:label xml:lang="en">Asphalt Pavements</rdfs:label>
     </owl:Class>
     
 
@@ -374,6 +416,7 @@
 
     <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/material-properties#BiomassBoiler">
         <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/material-properties#HeatingSystems"/>
+        <rdfs:label xml:lang="en">Biomass Boiler</rdfs:label>
     </owl:Class>
     
 
@@ -383,6 +426,7 @@
 
     <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/material-properties#BitumenAdhesivesSealantsAndFillers">
         <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/material-properties#SealantsAndAdhesives"/>
+        <rdfs:label xml:lang="en">Bitumen Adhesives Sealants And Fillers</rdfs:label>
     </owl:Class>
     
 
@@ -392,6 +436,7 @@
 
     <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/material-properties#BitumenCoatings">
         <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/material-properties#SealantsAndAdhesives"/>
+        <rdfs:label xml:lang="en">Bitumen Coatings</rdfs:label>
     </owl:Class>
     
 
@@ -401,6 +446,7 @@
 
     <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/material-properties#BitumenGroutingCompounds">
         <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/material-properties#SealantsAndAdhesives"/>
+        <rdfs:label xml:lang="en">Bitumen Grouting Compounds</rdfs:label>
     </owl:Class>
     
 
@@ -410,6 +456,7 @@
 
     <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/material-properties#BrickMasonry">
         <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/material-properties#Masonry"/>
+        <rdfs:label xml:lang="en">Brick Masonry</rdfs:label>
     </owl:Class>
     
 
@@ -419,6 +466,7 @@
 
     <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/material-properties#BuildingBoards">
         <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/material-properties#Material"/>
+        <rdfs:label xml:lang="en">Building Boards</rdfs:label>
     </owl:Class>
     
 
@@ -428,6 +476,7 @@
 
     <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/material-properties#BuildingOperation">
         <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/material-properties#Processes"/>
+        <rdfs:label xml:lang="en">Building Operation</rdfs:label>
     </owl:Class>
     
 
@@ -437,6 +486,7 @@
 
     <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/material-properties#BuildingServices">
         <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/material-properties#Material"/>
+        <rdfs:label xml:lang="en">Building Services</rdfs:label>
     </owl:Class>
     
 
@@ -446,6 +496,7 @@
 
     <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/material-properties#CalciumSilicateInsulationBoard">
         <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/material-properties#MineralInsulationMaterials"/>
+        <rdfs:label xml:lang="en">Calcium Silicate Insulation Board</rdfs:label>
     </owl:Class>
     
 
@@ -455,6 +506,7 @@
 
     <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/material-properties#CeilingAndRoofElements">
         <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/material-properties#Material"/>
+        <rdfs:label xml:lang="en">Ceiling And Roof Elements</rdfs:label>
     </owl:Class>
     
 
@@ -464,6 +516,7 @@
 
     <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/material-properties#CelluloseFibreInsulatingMaterials">
         <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/material-properties#InsulatingMaterialsFromRenewableRawMaterials"/>
+        <rdfs:label xml:lang="en">Cellulose Fibre Insulating Materials</rdfs:label>
     </owl:Class>
     
 
@@ -473,6 +526,7 @@
 
     <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/material-properties#CementBoundEPSBoards">
         <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/material-properties#SyntheticInsulatingMaterials"/>
+        <rdfs:label xml:lang="en">Cement Bound EPS Boards</rdfs:label>
     </owl:Class>
     
 
@@ -482,6 +536,7 @@
 
     <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/material-properties#CementBoundLightweightConcreteSlab">
         <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/material-properties#BuildingBoards"/>
+        <rdfs:label xml:lang="en">Cement Bound Lightweight Concrete Slab</rdfs:label>
     </owl:Class>
     
 
@@ -491,6 +546,7 @@
 
     <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/material-properties#ChipboardConcreteWallElements">
         <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/material-properties#WallElements"/>
+        <rdfs:label xml:lang="en">Chipboard Concrete Wall Elements</rdfs:label>
     </owl:Class>
     
 
@@ -500,6 +556,7 @@
 
     <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/material-properties#ClayBuildingBoards">
         <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/material-properties#BuildingBoards"/>
+        <rdfs:label xml:lang="en">Clay Building Boards</rdfs:label>
     </owl:Class>
     
 
@@ -509,15 +566,17 @@
 
     <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/material-properties#CoatingsAndImpregnations">
         <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/material-properties#Material"/>
+        <rdfs:label xml:lang="en">Coatings And Impregnations</rdfs:label>
     </owl:Class>
     
 
 
-    <!-- http://bimerr.iot.linkeddata.es/def/material-properties#CoconutFobreInsulatingMaterials -->
+    <!-- http://bimerr.iot.linkeddata.es/def/material-properties#CoconutFibreInsulatingMaterials -->
 
 
-    <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/material-properties#CoconutFobreInsulatingMaterials">
+    <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/material-properties#CoconutFibreInsulatingMaterials">
         <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/material-properties#InsulatingMaterialsFromRenewableRawMaterials"/>
+        <rdfs:label xml:lang="en">Coconut Fibre Insulating Materials</rdfs:label>
     </owl:Class>
     
 
@@ -527,6 +586,7 @@
 
     <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/material-properties#ConcreteMasonry">
         <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/material-properties#Masonry"/>
+        <rdfs:label xml:lang="en">Concrete Masonry</rdfs:label>
     </owl:Class>
     
 
@@ -536,6 +596,7 @@
 
     <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/material-properties#ConcretesInWUQuality">
         <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/material-properties#InSituConcretes"/>
+        <rdfs:label xml:lang="en">Concretes In WU Quality</rdfs:label>
     </owl:Class>
     
 
@@ -545,6 +606,7 @@
 
     <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/material-properties#ConcretesWithEPSAggregate">
         <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/material-properties#InSituConcretes"/>
+        <rdfs:label xml:lang="en">Concretes With EPS Aggregate</rdfs:label>
     </owl:Class>
     
 
@@ -554,6 +616,7 @@
 
     <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/material-properties#ConcretesWithExpandedClayOrBrickChippingsAggregate">
         <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/material-properties#InSituConcretes"/>
+        <rdfs:label xml:lang="en">Concretes With Expanded Clay Or Brick Chippings Aggregate</rdfs:label>
     </owl:Class>
     
 
@@ -563,6 +626,7 @@
 
     <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/material-properties#ConcretesWithExpandedShaleAggregate">
         <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/material-properties#InSituConcretes"/>
+        <rdfs:label xml:lang="en">Concretes With Expanded Shale Aggregate</rdfs:label>
     </owl:Class>
     
 
@@ -572,6 +636,7 @@
 
     <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/material-properties#ConcretesWithPumiceAggregate">
         <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/material-properties#InSituConcretes"/>
+        <rdfs:label xml:lang="en">Concretes With Pumice Aggregate</rdfs:label>
     </owl:Class>
     
 
@@ -581,6 +646,7 @@
 
     <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/material-properties#ConcretesWithSlagPumiceAggregate">
         <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/material-properties#InSituConcretes"/>
+        <rdfs:label xml:lang="en">Concretes With Slag Pumice Aggregate</rdfs:label>
     </owl:Class>
     
 
@@ -590,6 +656,7 @@
 
     <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/material-properties#ConcretesWithSulphateSlagCement">
         <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/material-properties#InSituConcretes"/>
+        <rdfs:label xml:lang="en">Concretes With Sulphate Slag Cement</rdfs:label>
     </owl:Class>
     
 
@@ -599,6 +666,7 @@
 
     <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/material-properties#ConstructiveSolidWood">
         <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/material-properties#Material"/>
+        <rdfs:label xml:lang="en">Constructive Solid Wood</rdfs:label>
     </owl:Class>
     
 
@@ -608,6 +676,7 @@
 
     <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/material-properties#CorkInsulatingMaterials">
         <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/material-properties#InsulatingMaterialsFromRenewableRawMaterials"/>
+        <rdfs:label xml:lang="en">Coconut Fibre Insulating Materials</rdfs:label>
     </owl:Class>
     
 
@@ -617,6 +686,7 @@
 
     <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/material-properties#CottonInsulationMaterials">
         <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/material-properties#InsulatingMaterialsFromRenewableRawMaterials"/>
+        <rdfs:label xml:lang="en">Cotton Insulation Materials</rdfs:label>
     </owl:Class>
     
 
@@ -626,6 +696,7 @@
 
     <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/material-properties#Disposal">
         <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/material-properties#Processes"/>
+        <rdfs:label xml:lang="en">Disposal</rdfs:label>
     </owl:Class>
     
 
@@ -635,6 +706,7 @@
 
     <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/material-properties#Doors">
         <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/material-properties#Material"/>
+        <rdfs:label xml:lang="en">Doors</rdfs:label>
     </owl:Class>
     
 
@@ -644,6 +716,7 @@
 
     <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/material-properties#EPSInsulation">
         <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/material-properties#SyntheticInsulatingMaterials"/>
+        <rdfs:label xml:lang="en">EPS Insulation</rdfs:label>
     </owl:Class>
     
 
@@ -653,6 +726,7 @@
 
     <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/material-properties#ElectricalCables">
         <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/material-properties#ElectricalInstallation"/>
+        <rdfs:label xml:lang="en">Electrical Cables</rdfs:label>
     </owl:Class>
     
 
@@ -662,6 +736,7 @@
 
     <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/material-properties#ElectricalInstallation">
         <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/material-properties#BuildingServices"/>
+        <rdfs:label xml:lang="en">Electrical Installation</rdfs:label>
     </owl:Class>
     
 
@@ -671,6 +746,7 @@
 
     <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/material-properties#ExternalPlaster">
         <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/material-properties#MasonryAndPlasterMortar"/>
+        <rdfs:label xml:lang="en">External Plaster</rdfs:label>
     </owl:Class>
     
 
@@ -680,6 +756,7 @@
 
     <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/material-properties#FacadeCladdings">
         <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/material-properties#Material"/>
+        <rdfs:label xml:lang="en">Facade Claddings</rdfs:label>
     </owl:Class>
     
 
@@ -689,6 +766,7 @@
 
     <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/material-properties#FibreCementBoardsInterior">
         <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/material-properties#BuildingBoards"/>
+        <rdfs:label xml:lang="en">Fibre Cement Boards Interior</rdfs:label>
     </owl:Class>
     
 
@@ -698,6 +776,7 @@
 
     <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/material-properties#FillingBricks">
         <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/material-properties#BrickMasonry"/>
+        <rdfs:label xml:lang="en">Filling Bricks</rdfs:label>
     </owl:Class>
     
 
@@ -707,6 +786,7 @@
 
     <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/material-properties#FilmProtectionMaterials">
         <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/material-properties#SealingSheetVapourBarrierFoils"/>
+        <rdfs:label xml:lang="en">Film Protection Materials</rdfs:label>
     </owl:Class>
     
 
@@ -716,6 +796,7 @@
 
     <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/material-properties#FlaxInsulatingMaterials">
         <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/material-properties#InsulatingMaterialsFromRenewableRawMaterials"/>
+        <rdfs:label xml:lang="en">Flax Insulating Materials</rdfs:label>
     </owl:Class>
     
 
@@ -725,6 +806,7 @@
 
     <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/material-properties#FloorCoveringAndSkirtingBoards">
         <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/material-properties#Material"/>
+        <rdfs:label xml:lang="en">Floor Covering And Skirting Boards</rdfs:label>
     </owl:Class>
     
 
@@ -734,6 +816,7 @@
 
     <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/material-properties#FloorCoveringCapableOfInfiltration">
         <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/material-properties#OutdoorFacilities"/>
+        <rdfs:label xml:lang="en">Floor Covering Capable Of Infiltration</rdfs:label>
     </owl:Class>
     
 
@@ -743,6 +826,7 @@
 
     <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/material-properties#FoamGlassInsulationBoards">
         <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/material-properties#MineralInsulationMaterials"/>
+        <rdfs:label xml:lang="en">Foam Glass Insulation Boards</rdfs:label>
     </owl:Class>
     
 
@@ -752,6 +836,7 @@
 
     <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/material-properties#FossilHeatingBoilers">
         <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/material-properties#HeatingSystems"/>
+        <rdfs:label xml:lang="en">Fossil Heating Boilers</rdfs:label>
     </owl:Class>
     
 
@@ -761,6 +846,7 @@
 
     <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/material-properties#Gases">
         <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/material-properties#Material"/>
+        <rdfs:label xml:lang="en">Gases</rdfs:label>
     </owl:Class>
     
 
@@ -770,6 +856,7 @@
 
     <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/material-properties#GlassWoolInsulatingMaterials">
         <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/material-properties#MineralInsulationMaterials"/>
+        <rdfs:label xml:lang="en">Glass Wool Insulating Materials</rdfs:label>
     </owl:Class>
     
 
@@ -779,6 +866,7 @@
 
     <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/material-properties#Glazings">
         <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/material-properties#WindowsAndComponents"/>
+        <rdfs:label xml:lang="en">Glazings</rdfs:label>
     </owl:Class>
     
 
@@ -788,6 +876,7 @@
 
     <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/material-properties#GrassFibreInsulationBoards">
         <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/material-properties#InsulatingMaterialsFromRenewableRawMaterials"/>
+        <rdfs:label xml:lang="en">Grass Fibre Insulation Boards</rdfs:label>
     </owl:Class>
     
 
@@ -797,6 +886,7 @@
 
     <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/material-properties#HeatFlowDownwards">
         <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/material-properties#Air"/>
+        <rdfs:label xml:lang="en">Heat Flow Downwards</rdfs:label>
     </owl:Class>
     
 
@@ -806,6 +896,7 @@
 
     <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/material-properties#HeatFlowHorizontal">
         <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/material-properties#Air"/>
+        <rdfs:label xml:lang="en">Heat Flow Horizontal</rdfs:label>
     </owl:Class>
     
 
@@ -815,6 +906,7 @@
 
     <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/material-properties#HeatFlowUpwards">
         <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/material-properties#Air"/>
+        <rdfs:label xml:lang="en">Heat Flow Upwards</rdfs:label>
     </owl:Class>
     
 
@@ -824,6 +916,7 @@
 
     <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/material-properties#HeatPumps">
         <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/material-properties#HeatingSystems"/>
+        <rdfs:label xml:lang="en">Heat Pumps</rdfs:label>
     </owl:Class>
     
 
@@ -833,6 +926,7 @@
 
     <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/material-properties#HeatingPipe">
         <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/material-properties#HeatingSystems"/>
+        <rdfs:label xml:lang="en">Heating Pipe</rdfs:label>
     </owl:Class>
     
 
@@ -842,6 +936,7 @@
 
     <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/material-properties#HeatingSystems">
         <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/material-properties#BuildingServices"/>
+        <rdfs:label xml:lang="en">Heating Systems</rdfs:label>
     </owl:Class>
     
 
@@ -851,6 +946,7 @@
 
     <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/material-properties#HempInsulatingMaterials">
         <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/material-properties#InsulatingMaterialsFromRenewableRawMaterials"/>
+        <rdfs:label xml:lang="en">Hemp Insulating Materials</rdfs:label>
     </owl:Class>
     
 
@@ -860,6 +956,7 @@
 
     <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/material-properties#HighPerforatedBrickMasonry">
         <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/material-properties#BrickMasonry"/>
+        <rdfs:label xml:lang="en">High Perforated Brick Masonry</rdfs:label>
     </owl:Class>
     
 
@@ -869,6 +966,7 @@
 
     <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/material-properties#HotWaterTank">
         <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/material-properties#BuildingServices"/>
+        <rdfs:label xml:lang="en">Hot Water Tank</rdfs:label>
     </owl:Class>
     
 
@@ -878,6 +976,7 @@
 
     <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/material-properties#IBOCharecterizationFactors">
         <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/material-properties#BuildingOperation"/>
+        <rdfs:label xml:lang="en">IBO Charecterization Factors</rdfs:label>
     </owl:Class>
     
 
@@ -887,6 +986,7 @@
 
     <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/material-properties#InSituConcretes">
         <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/material-properties#Material"/>
+        <rdfs:label xml:lang="en">In Situ Concretes</rdfs:label>
     </owl:Class>
     
 
@@ -896,6 +996,7 @@
 
     <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/material-properties#InsulatingMaterials">
         <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/material-properties#Material"/>
+        <rdfs:label xml:lang="en">Insulating Materials</rdfs:label>
     </owl:Class>
     
 
@@ -905,6 +1006,7 @@
 
     <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/material-properties#InsulatingMaterialsFromRenewableRawMaterials">
         <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/material-properties#InsulatingMaterials"/>
+        <rdfs:label xml:lang="en">Insulating Materials From Renewable Raw Materials</rdfs:label>
     </owl:Class>
     
 
@@ -914,6 +1016,7 @@
 
     <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/material-properties#InteriorPlaster">
         <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/material-properties#MasonryAndPlasterMortar"/>
+        <rdfs:label xml:lang="en">Interior Plaster</rdfs:label>
     </owl:Class>
     
 
@@ -923,6 +1026,7 @@
 
     <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/material-properties#LinearThermalBridgeCoefficientPSIValue">
         <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/material-properties#WindowsAndComponents"/>
+        <rdfs:label xml:lang="en">Linear Thermal Bridge Coefficient PSI Value</rdfs:label>
     </owl:Class>
     
 
@@ -932,6 +1036,7 @@
 
     <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/material-properties#LiquidFoils">
         <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/material-properties#SealantsAndAdhesives"/>
+        <rdfs:label xml:lang="en">Liquid Foils</rdfs:label>
     </owl:Class>
     
 
@@ -941,6 +1046,7 @@
 
     <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/material-properties#MachiningProcesses">
         <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/material-properties#Processes"/>
+        <rdfs:label xml:lang="en">Machining Processes</rdfs:label>
     </owl:Class>
     
 
@@ -950,6 +1056,7 @@
 
     <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/material-properties#Masonry">
         <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/material-properties#Material"/>
+        <rdfs:label xml:lang="en">Masonry</rdfs:label>
     </owl:Class>
     
 
@@ -959,6 +1066,7 @@
 
     <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/material-properties#MasonryAndPlasterMortar">
         <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/material-properties#Material"/>
+        <rdfs:label xml:lang="en">Masonry And Plaster Mortar</rdfs:label>
     </owl:Class>
     
 
@@ -969,20 +1077,27 @@
     <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/material-properties#Material">
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://saref.etsi.org/core/hasMeasurement"/>
-                <owl:allValuesFrom rdf:resource="https://saref.etsi.org/core/Measurement"/>
+                <owl:onProperty rdf:resource="http://bimerr.iot.linkeddata.es/def/material-properties#hasPropertySet"/>
+                <owl:allValuesFrom rdf:resource="http://bimerr.iot.linkeddata.es/def/material-properties#PropertySet"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://saref.etsi.org/core/hasProperty"/>
-                <owl:allValuesFrom rdf:resource="https://saref.etsi.org/core/Property"/>
+                <owl:onProperty rdf:resource="http://bimerr.iot.linkeddata.es/def/material-properties#description"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://bimerr.iot.linkeddata.es/def/material-properties#name"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://bimerr.iot.linkeddata.es/def/material-properties#identifierInDatabase"/>
-                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">A homogeneous or inhomogeneous substance that can be used to form elements (physical products or their components). (Definition taken from IFC)</rdfs:comment>
@@ -1002,6 +1117,18 @@
                 <owl:allValuesFrom rdf:resource="http://bimerr.iot.linkeddata.es/def/material-properties#Material"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://bimerr.iot.linkeddata.es/def/material-properties#description"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://bimerr.iot.linkeddata.es/def/material-properties#name"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">A single and identifiable part of an element which is constructed of a number of part (one or more) each having an individual material.</rdfs:comment>
         <rdfs:label xml:lang="en">Material constituent</rdfs:label>
         <rdfs:seeAlso xml:lang="en">http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcMaterialConstituent</rdfs:seeAlso>
@@ -1018,6 +1145,18 @@
                 <owl:onProperty rdf:resource="http://bimerr.iot.linkeddata.es/def/material-properties#hasMaterialConstituent"/>
                 <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
                 <owl:onClass rdf:resource="http://bimerr.iot.linkeddata.es/def/material-properties#MaterialConstituent"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://bimerr.iot.linkeddata.es/def/material-properties#description"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://bimerr.iot.linkeddata.es/def/material-properties#name"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">A collection of individual material constituents, each assigning a material to a part of an element.</rdfs:comment>
@@ -1047,6 +1186,18 @@
                 <owl:allValuesFrom rdf:resource="http://bimerr.iot.linkeddata.es/def/material-properties#Material"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://bimerr.iot.linkeddata.es/def/material-properties#description"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://bimerr.iot.linkeddata.es/def/material-properties#name"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">A single and identifiable part of an element which is constructed of a number of layers (one or more).</rdfs:comment>
         <rdfs:label xml:lang="en">Material layer</rdfs:label>
         <rdfs:seeAlso xml:lang="en">http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcMaterialLayer</rdfs:seeAlso>
@@ -1065,9 +1216,70 @@
                 <owl:onClass rdf:resource="http://bimerr.iot.linkeddata.es/def/material-properties#MaterialLayer"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://bimerr.iot.linkeddata.es/def/material-properties#description"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://bimerr.iot.linkeddata.es/def/material-properties#name"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">A designation by which materials of an element constructed of a number of material layers is known and through which the relative positioning of individual layers can be expressed.</rdfs:comment>
         <rdfs:label xml:lang="en">Material layer set</rdfs:label>
         <rdfs:seeAlso xml:lang="en">http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcMaterialLayerSet</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://bimerr.iot.linkeddata.es/def/material-properties#MaterialMeasurement -->
+
+
+    <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/material-properties#MaterialMeasurement">
+        <rdfs:subClassOf rdf:resource="https://saref.etsi.org/core/Measurement"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://bimerr.iot.linkeddata.es/def/material-properties#isPropertyValueFromDatabase"/>
+                <owl:allValuesFrom rdf:resource="http://bimerr.iot.linkeddata.es/def/material-properties#MaterialDatabase"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://saref.etsi.org/core/isMeasuredIn"/>
+                <owl:allValuesFrom rdf:resource="https://saref.etsi.org/core/UnitOfMeasure"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://saref.etsi.org/core/relatesToProperty"/>
+                <owl:allValuesFrom rdf:resource="http://bimerr.iot.linkeddata.es/def/material-properties#MaterialProperty"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://saref.etsi.org/core/isMeasuredIn"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://saref.etsi.org/core/UnitOfMeasure"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://saref.etsi.org/core/relatesToProperty"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://bimerr.iot.linkeddata.es/def/material-properties#MaterialProperty"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://saref.etsi.org/core/hasValue"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Measurements related to materials.</rdfs:comment>
+        <rdfs:label xml:lang="en">Material measurement</rdfs:label>
     </owl:Class>
     
 
@@ -1080,6 +1292,18 @@
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://bimerr.iot.linkeddata.es/def/material-properties#hasMaterial"/>
                 <owl:allValuesFrom rdf:resource="http://bimerr.iot.linkeddata.es/def/material-properties#Material"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://bimerr.iot.linkeddata.es/def/material-properties#description"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://bimerr.iot.linkeddata.es/def/material-properties#name"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">A single and identifiable cross section of an element which is constructed of a number of profiles (one or more).</rdfs:comment>
@@ -1100,9 +1324,44 @@
                 <owl:onClass rdf:resource="http://bimerr.iot.linkeddata.es/def/material-properties#MaterialProfile"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://bimerr.iot.linkeddata.es/def/material-properties#description"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://bimerr.iot.linkeddata.es/def/material-properties#name"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">A designation by which individual material(s) of a prismatic element (for example, beam or column) constructed of a single or multiple material profiles is known.</rdfs:comment>
         <rdfs:label xml:lang="en">Material profile set</rdfs:label>
         <rdfs:seeAlso xml:lang="en">http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcMaterialProfileSet</rdfs:seeAlso>
+    </owl:Class>
+    
+
+
+    <!-- http://bimerr.iot.linkeddata.es/def/material-properties#MaterialProperty -->
+
+
+    <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/material-properties#MaterialProperty">
+        <rdfs:subClassOf rdf:resource="https://saref.etsi.org/core/Property"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://bimerr.iot.linkeddata.es/def/material-properties#isPropertyFromDatabase"/>
+                <owl:allValuesFrom rdf:resource="http://bimerr.iot.linkeddata.es/def/material-properties#MaterialDatabase"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://saref.etsi.org/core/relatesToMeasurement"/>
+                <owl:allValuesFrom rdf:resource="http://bimerr.iot.linkeddata.es/def/material-properties#MaterialMeasurement"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Properties of materials.</rdfs:comment>
+        <rdfs:label xml:lang="en">Material property</rdfs:label>
     </owl:Class>
     
 
@@ -1112,6 +1371,7 @@
 
     <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/material-properties#MeansOfTransport">
         <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/material-properties#Processes"/>
+        <rdfs:label xml:lang="en">Means Of Transport</rdfs:label>
     </owl:Class>
     
 
@@ -1121,6 +1381,7 @@
 
     <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/material-properties#MineralFloorCoverings">
         <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/material-properties#FloorCoveringAndSkirtingBoards"/>
+        <rdfs:label xml:lang="en">Mineral Floor Coverings</rdfs:label>
     </owl:Class>
     
 
@@ -1130,6 +1391,7 @@
 
     <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/material-properties#MineralFoamInsulationBoards">
         <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/material-properties#MineralInsulationMaterials"/>
+        <rdfs:label xml:lang="en">Mineral Foam Insulation Boards</rdfs:label>
     </owl:Class>
     
 
@@ -1139,6 +1401,7 @@
 
     <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/material-properties#MineralInsulationMaterials">
         <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/material-properties#InsulatingMaterials"/>
+        <rdfs:label xml:lang="en">Mineral Insulation Materials</rdfs:label>
     </owl:Class>
     
 
@@ -1148,6 +1411,7 @@
 
     <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/material-properties#Mortar">
         <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/material-properties#MasonryAndPlasterMortar"/>
+        <rdfs:label xml:lang="en">Mortar</rdfs:label>
     </owl:Class>
     
 
@@ -1157,6 +1421,7 @@
 
     <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/material-properties#MountingAccesoriesIndividualBuildingMaterials">
         <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/material-properties#Material"/>
+        <rdfs:label xml:lang="en">Mounting Accesories Individual Building Materials</rdfs:label>
     </owl:Class>
     
 
@@ -1166,6 +1431,7 @@
 
     <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/material-properties#MudBrickMasonryUnfired">
         <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/material-properties#Masonry"/>
+        <rdfs:label xml:lang="en">Mud Brick Masonry Unfired</rdfs:label>
     </owl:Class>
     
 
@@ -1175,6 +1441,7 @@
 
     <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/material-properties#NaturalStoneMasonry">
         <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/material-properties#Masonry"/>
+        <rdfs:label xml:lang="en">Natural Stone Masonry</rdfs:label>
     </owl:Class>
     
 
@@ -1184,6 +1451,7 @@
 
     <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/material-properties#NaturalStones">
         <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/material-properties#Material"/>
+        <rdfs:label xml:lang="en">Natural Stones</rdfs:label>
     </owl:Class>
     
 
@@ -1193,6 +1461,7 @@
 
     <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/material-properties#NormalConcretes">
         <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/material-properties#InSituConcretes"/>
+        <rdfs:label xml:lang="en">Normal Concretes</rdfs:label>
     </owl:Class>
     
 
@@ -1202,6 +1471,7 @@
 
     <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/material-properties#OIBCharecterizationFactors">
         <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/material-properties#BuildingOperation"/>
+        <rdfs:label xml:lang="en">OIB Charecterization Factors</rdfs:label>
     </owl:Class>
     
 
@@ -1211,6 +1481,7 @@
 
     <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/material-properties#OutdoorFacilities">
         <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/material-properties#Material"/>
+        <rdfs:label xml:lang="en">Outdoor Facilities</rdfs:label>
     </owl:Class>
     
 
@@ -1220,6 +1491,7 @@
 
     <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/material-properties#PerliteInsulationBoards">
         <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/material-properties#MineralInsulationMaterials"/>
+        <rdfs:label xml:lang="en">Perlite Insulation Boards</rdfs:label>
     </owl:Class>
     
 
@@ -1229,6 +1501,7 @@
 
     <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/material-properties#PhenolicResinFoamBoards">
         <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/material-properties#SyntheticInsulatingMaterials"/>
+        <rdfs:label xml:lang="en">Phenolic Resin Foam Boards</rdfs:label>
     </owl:Class>
     
 
@@ -1238,6 +1511,7 @@
 
     <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/material-properties#PhotovoltaicSystem">
         <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/material-properties#BuildingServices"/>
+        <rdfs:label xml:lang="en">Photovoltaic System</rdfs:label>
     </owl:Class>
     
 
@@ -1247,6 +1521,7 @@
 
     <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/material-properties#PipeMaterials">
         <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/material-properties#BuildingServices"/>
+        <rdfs:label xml:lang="en">Pipe Materials</rdfs:label>
     </owl:Class>
     
 
@@ -1256,6 +1531,7 @@
 
     <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/material-properties#PlasterBase">
         <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/material-properties#MasonryAndPlasterMortar"/>
+        <rdfs:label xml:lang="en">Plaster Base</rdfs:label>
     </owl:Class>
     
 
@@ -1265,6 +1541,7 @@
 
     <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/material-properties#Plasterboard">
         <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/material-properties#BuildingBoards"/>
+        <rdfs:label xml:lang="en">Plasterboard</rdfs:label>
     </owl:Class>
     
 
@@ -1274,6 +1551,7 @@
 
     <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/material-properties#PolyesterFibreInsulatingMaterials">
         <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/material-properties#SyntheticInsulatingMaterials"/>
+        <rdfs:label xml:lang="en">Polyester Fibre Insulating Materials</rdfs:label>
     </owl:Class>
     
 
@@ -1283,6 +1561,7 @@
 
     <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/material-properties#PolyethyleneInsulatingMaterials">
         <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/material-properties#SyntheticInsulatingMaterials"/>
+        <rdfs:label xml:lang="en">Polyethylene Insulating Materials</rdfs:label>
     </owl:Class>
     
 
@@ -1292,6 +1571,7 @@
 
     <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/material-properties#PolyisocyanurateAndPolyurethaneInsulatingBoards">
         <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/material-properties#SyntheticInsulatingMaterials"/>
+        <rdfs:label xml:lang="en">Polyisocyanurate And Polyurethane Insulating Boards</rdfs:label>
     </owl:Class>
     
 
@@ -1301,6 +1581,41 @@
 
     <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/material-properties#Processes">
         <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/material-properties#Material"/>
+        <rdfs:label xml:lang="en">Processes</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bimerr.iot.linkeddata.es/def/material-properties#PropertySet -->
+
+
+    <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/material-properties#PropertySet">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://bimerr.iot.linkeddata.es/def/material-properties#hasProperty"/>
+                <owl:allValuesFrom rdf:resource="https://saref.etsi.org/core/Property"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://bimerr.iot.linkeddata.es/def/material-properties#description"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://bimerr.iot.linkeddata.es/def/material-properties#ifcIdentifier"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://bimerr.iot.linkeddata.es/def/material-properties#name"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">N-ary class to unite specific properties related to building elements or materials.</rdfs:comment>
+        <rdfs:label xml:lang="en">Property set</rdfs:label>
     </owl:Class>
     
 
@@ -1310,6 +1625,7 @@
 
     <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/material-properties#RadiatorsHeaters">
         <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/material-properties#HeatingSystems"/>
+        <rdfs:label xml:lang="en">Radiators Heaters</rdfs:label>
     </owl:Class>
     
 
@@ -1319,6 +1635,7 @@
 
     <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/material-properties#ReedInsulationBoards">
         <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/material-properties#InsulatingMaterialsFromRenewableRawMaterials"/>
+        <rdfs:label xml:lang="en">Reed Insulation Boards</rdfs:label>
     </owl:Class>
     
 
@@ -1328,6 +1645,7 @@
 
     <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/material-properties#ReedInsulationMaterialsLoose">
         <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/material-properties#InsulatingMaterialsFromRenewableRawMaterials"/>
+        <rdfs:label xml:lang="en">Reed Insulation Materials Loose</rdfs:label>
     </owl:Class>
     
 
@@ -1337,6 +1655,7 @@
 
     <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/material-properties#ReinforcedConcreteNormalConcreteWithReinforcement">
         <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/material-properties#InSituConcretes"/>
+        <rdfs:label xml:lang="en">Reinforced Concrete Normal Concrete With Reinforcement</rdfs:label>
     </owl:Class>
     
 
@@ -1346,6 +1665,7 @@
 
     <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/material-properties#ResilientFloorCoverings">
         <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/material-properties#FloorCoveringAndSkirtingBoards"/>
+        <rdfs:label xml:lang="en">Resilient Floor Coverings</rdfs:label>
     </owl:Class>
     
 
@@ -1355,6 +1675,7 @@
 
     <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/material-properties#RockWoolInsulation">
         <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/material-properties#MineralInsulationMaterials"/>
+        <rdfs:label xml:lang="en">Rock Wool Insulation</rdfs:label>
     </owl:Class>
     
 
@@ -1364,6 +1685,7 @@
 
     <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/material-properties#RoofCoverings">
         <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/material-properties#Material"/>
+        <rdfs:label xml:lang="en">Roof Coverings</rdfs:label>
     </owl:Class>
     
 
@@ -1373,6 +1695,7 @@
 
     <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/material-properties#SandLimeBrickwork">
         <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/material-properties#Masonry"/>
+        <rdfs:label xml:lang="en">Sand Lime Brickwork</rdfs:label>
     </owl:Class>
     
 
@@ -1382,6 +1705,7 @@
 
     <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/material-properties#SanitaryFacilities">
         <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/material-properties#SanitaryIntallation"/>
+        <rdfs:label xml:lang="en">Sanitary Facilities</rdfs:label>
     </owl:Class>
     
 
@@ -1391,6 +1715,7 @@
 
     <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/material-properties#SanitaryIntallation">
         <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/material-properties#BuildingServices"/>
+        <rdfs:label xml:lang="en">Sanitary Intallation</rdfs:label>
     </owl:Class>
     
 
@@ -1400,6 +1725,7 @@
 
     <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/material-properties#Screeds">
         <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/material-properties#Material"/>
+        <rdfs:label xml:lang="en">Screeds</rdfs:label>
     </owl:Class>
     
 
@@ -1409,6 +1735,7 @@
 
     <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/material-properties#Sealants">
         <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/material-properties#SealantsAndAdhesives"/>
+        <rdfs:label xml:lang="en">Sealants</rdfs:label>
     </owl:Class>
     
 
@@ -1418,6 +1745,7 @@
 
     <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/material-properties#SealantsAndAdhesives">
         <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/material-properties#Material"/>
+        <rdfs:label xml:lang="en">Sealants AndAdhesives</rdfs:label>
     </owl:Class>
     
 
@@ -1427,6 +1755,7 @@
 
     <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/material-properties#SealingSheetVapourBarrierFoils">
         <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/material-properties#Material"/>
+        <rdfs:label xml:lang="en">Sealing Sheet Vapour Barrier Foils</rdfs:label>
     </owl:Class>
     
 
@@ -1436,6 +1765,7 @@
 
     <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/material-properties#SealingTapesAndThermalBridgeInterrupters">
         <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/material-properties#SealantsAndAdhesives"/>
+        <rdfs:label xml:lang="en">Sealing Tapes And Thermal Bridge Interrupters</rdfs:label>
     </owl:Class>
     
 
@@ -1445,6 +1775,7 @@
 
     <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/material-properties#SheepsWoolInsulationMaterials">
         <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/material-properties#InsulatingMaterialsFromRenewableRawMaterials"/>
+        <rdfs:label xml:lang="en">Sheeps Wool Insulation Materials</rdfs:label>
     </owl:Class>
     
 
@@ -1454,6 +1785,7 @@
 
     <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/material-properties#SheetsOfBondedLightweightAggregates">
         <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/material-properties#BuildingBoards"/>
+        <rdfs:label xml:lang="en">Sheets Of Bonded Lightweight Aggregates</rdfs:label>
     </owl:Class>
     
 
@@ -1463,6 +1795,7 @@
 
     <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/material-properties#SlottedBrickMasonry">
         <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/material-properties#BrickMasonry"/>
+        <rdfs:label xml:lang="en">Slotted Brick Masonry</rdfs:label>
     </owl:Class>
     
 
@@ -1472,6 +1805,7 @@
 
     <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/material-properties#SolarSystem">
         <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/material-properties#BuildingServices"/>
+        <rdfs:label xml:lang="en">Solar System</rdfs:label>
     </owl:Class>
     
 
@@ -1481,6 +1815,7 @@
 
     <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/material-properties#SolidFloorCoveringsOfWoodAndOtherNaturalRawMaterials">
         <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/material-properties#FloorCoveringAndSkirtingBoards"/>
+        <rdfs:label xml:lang="en">Solid Floor Coverings Of Wood And Other Natural Raw Materials</rdfs:label>
     </owl:Class>
     
 
@@ -1490,6 +1825,7 @@
 
     <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/material-properties#StrawInsulationMaterials">
         <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/material-properties#InsulatingMaterialsFromRenewableRawMaterials"/>
+        <rdfs:label xml:lang="en">Straw Insulation Materials</rdfs:label>
     </owl:Class>
     
 
@@ -1499,6 +1835,7 @@
 
     <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/material-properties#SyntheticInsulatingMaterials">
         <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/material-properties#InsulatingMaterials"/>
+        <rdfs:label xml:lang="en">Synthetic Insulating Materials</rdfs:label>
     </owl:Class>
     
 
@@ -1508,6 +1845,7 @@
 
     <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/material-properties#TextileFloorCoverings">
         <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/material-properties#FloorCoveringAndSkirtingBoards"/>
+        <rdfs:label xml:lang="en">Textile Floor Coverings</rdfs:label>
     </owl:Class>
     
 
@@ -1517,6 +1855,7 @@
 
     <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/material-properties#TippingsAndAggregates">
         <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/material-properties#Material"/>
+        <rdfs:label xml:lang="en">Tippings And Aggregates</rdfs:label>
     </owl:Class>
     
 
@@ -1526,6 +1865,7 @@
 
     <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/material-properties#UnderlaysAndBackCoatingsOfFloorCoverings">
         <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/material-properties#FloorCoveringAndSkirtingBoards"/>
+        <rdfs:label xml:lang="en">Underlays And Back Coatings Of Floor Coverings</rdfs:label>
     </owl:Class>
     
 
@@ -1535,6 +1875,7 @@
 
     <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/material-properties#VacuumInsulationPanels">
         <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/material-properties#MineralInsulationMaterials"/>
+        <rdfs:label xml:lang="en">Vacuum Insulation Panels</rdfs:label>
     </owl:Class>
     
 
@@ -1544,6 +1885,7 @@
 
     <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/material-properties#VapourBarriersAndBrakes">
         <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/material-properties#SealingSheetVapourBarrierFoils"/>
+        <rdfs:label xml:lang="en">Vapour Barriers And Brakes</rdfs:label>
     </owl:Class>
     
 
@@ -1553,6 +1895,7 @@
 
     <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/material-properties#VentilationPipes">
         <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/material-properties#VentillationSystem"/>
+        <rdfs:label xml:lang="en">Ventilation Pipes</rdfs:label>
     </owl:Class>
     
 
@@ -1562,6 +1905,7 @@
 
     <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/material-properties#VentilationUnits">
         <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/material-properties#VentillationSystem"/>
+        <rdfs:label xml:lang="en">Ventilation Units</rdfs:label>
     </owl:Class>
     
 
@@ -1571,6 +1915,7 @@
 
     <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/material-properties#VentillationSystem">
         <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/material-properties#BuildingServices"/>
+        <rdfs:label xml:lang="en">Ventillation System</rdfs:label>
     </owl:Class>
     
 
@@ -1580,6 +1925,7 @@
 
     <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/material-properties#WallElements">
         <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/material-properties#Material"/>
+        <rdfs:label xml:lang="en">Wall Elements</rdfs:label>
     </owl:Class>
     
 
@@ -1589,6 +1935,7 @@
 
     <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/material-properties#WallElementsMadeOfCellularConcrete">
         <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/material-properties#WallElements"/>
+        <rdfs:label xml:lang="en">Wall Elements Made Of Cellular Concrete</rdfs:label>
     </owl:Class>
     
 
@@ -1598,6 +1945,7 @@
 
     <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/material-properties#WallElementsMadeOfLightweightConcrete">
         <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/material-properties#WallElements"/>
+        <rdfs:label xml:lang="en">Wall Elements Made Of Lightweight Concrete</rdfs:label>
     </owl:Class>
     
 
@@ -1607,6 +1955,7 @@
 
     <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/material-properties#WallPaintsAndCoverings">
         <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/material-properties#Material"/>
+        <rdfs:label xml:lang="en">Wall Paints And Coverings</rdfs:label>
     </owl:Class>
     
 
@@ -1616,6 +1965,7 @@
 
     <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/material-properties#Water">
         <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/material-properties#Material"/>
+        <rdfs:label xml:lang="en">Water</rdfs:label>
     </owl:Class>
     
 
@@ -1625,6 +1975,7 @@
 
     <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/material-properties#WaterPipes">
         <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/material-properties#SanitaryIntallation"/>
+        <rdfs:label xml:lang="en">Water Pipes</rdfs:label>
     </owl:Class>
     
 
@@ -1634,6 +1985,7 @@
 
     <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/material-properties#WaterproofingMembranes">
         <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/material-properties#SealingSheetVapourBarrierFoils"/>
+        <rdfs:label xml:lang="en">Waterproofing Membranes</rdfs:label>
     </owl:Class>
     
 
@@ -1643,6 +1995,7 @@
 
     <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/material-properties#WindowFrames">
         <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/material-properties#WindowsAndComponents"/>
+        <rdfs:label xml:lang="en">Window Frames</rdfs:label>
     </owl:Class>
     
 
@@ -1652,6 +2005,7 @@
 
     <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/material-properties#WindowTotal">
         <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/material-properties#WindowsAndComponents"/>
+        <rdfs:label xml:lang="en">Window Total</rdfs:label>
     </owl:Class>
     
 
@@ -1661,6 +2015,7 @@
 
     <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/material-properties#WindowsAndComponents">
         <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/material-properties#Material"/>
+        <rdfs:label xml:lang="en">Windows And Components</rdfs:label>
     </owl:Class>
     
 
@@ -1670,6 +2025,7 @@
 
     <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/material-properties#WoodAndWoodBasedPanels">
         <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/material-properties#BuildingBoards"/>
+        <rdfs:label xml:lang="en">Wood And Wood Based Panels</rdfs:label>
     </owl:Class>
     
 
@@ -1679,6 +2035,7 @@
 
     <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/material-properties#WoodChipInsulationBoards">
         <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/material-properties#MineralInsulationMaterials"/>
+        <rdfs:label xml:lang="en">Wood Chip Insulation Boards</rdfs:label>
     </owl:Class>
     
 
@@ -1688,6 +2045,7 @@
 
     <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/material-properties#WoodFibreInsulatingMaterials">
         <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/material-properties#InsulatingMaterialsFromRenewableRawMaterials"/>
+        <rdfs:label xml:lang="en">Wood Fibre Insulating Materials</rdfs:label>
     </owl:Class>
     
 
@@ -1697,6 +2055,7 @@
 
     <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/material-properties#WoodShavingLooseSawdust">
         <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/material-properties#InsulatingMaterialsFromRenewableRawMaterials"/>
+        <rdfs:label xml:lang="en">Wood Shaving Loose Sawdust</rdfs:label>
     </owl:Class>
     
 
@@ -1706,6 +2065,7 @@
 
     <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/material-properties#WoodWoolInsulationBoards">
         <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/material-properties#MineralInsulationMaterials"/>
+        <rdfs:label xml:lang="en">Wood Wool Insulation Boards</rdfs:label>
     </owl:Class>
     
 
@@ -1715,6 +2075,7 @@
 
     <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/material-properties#WoodWoolMultiLayerInsulationBoards">
         <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/material-properties#MineralInsulationMaterials"/>
+        <rdfs:label xml:lang="en">Wood Wool MultiLayer Insulation Boards</rdfs:label>
     </owl:Class>
     
 
@@ -1724,6 +2085,7 @@
 
     <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/material-properties#XPSInsulationBoards">
         <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/material-properties#SyntheticInsulatingMaterials"/>
+        <rdfs:label xml:lang="en">XPS Insulation Boards</rdfs:label>
     </owl:Class>
     
 
@@ -1732,37 +2094,6 @@
 
 
     <owl:Class rdf:about="https://saref.etsi.org/core/Measurement">
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://bimerr.iot.linkeddata.es/def/material-properties#isPropertyValueFromDatabase"/>
-                <owl:allValuesFrom rdf:resource="http://bimerr.iot.linkeddata.es/def/material-properties#MaterialDatabase"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://saref.etsi.org/core/isMeasuredIn"/>
-                <owl:allValuesFrom rdf:resource="https://saref.etsi.org/core/UnitOfMeasure"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://saref.etsi.org/core/relatesToProperty"/>
-                <owl:allValuesFrom rdf:resource="https://saref.etsi.org/core/Property"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://saref.etsi.org/core/isMeasuredIn"/>
-                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onClass rdf:resource="https://saref.etsi.org/core/UnitOfMeasure"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://saref.etsi.org/core/hasValue"/>
-                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">Represents the measured value made over a property. It is also linked to the unit of measure in which the value is expressed and the timestamp of the measurement. (Definition taken from SAREF)</rdfs:comment>
         <rdfs:label xml:lang="en">Measurement</rdfs:label>
     </owl:Class>
@@ -1773,12 +2104,6 @@
 
 
     <owl:Class rdf:about="https://saref.etsi.org/core/Property">
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://bimerr.iot.linkeddata.es/def/material-properties#isPropertyFromDatabase"/>
-                <owl:allValuesFrom rdf:resource="http://bimerr.iot.linkeddata.es/def/material-properties#MaterialDatabase"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">A quality of a feature of interest that can be measured; an aspect of a feature of interest that is intrinsic to and cannot exist without the feature. (Definition taken from SAREF)</rdfs:comment>
         <rdfs:label xml:lang="en">Property</rdfs:label>
     </owl:Class>

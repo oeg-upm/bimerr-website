@@ -4,6 +4,10 @@ This section provides details for each class and property defined by Key Perform
    <h3 id="classes-headline" class="list">Classes</h3>
    <ul class="hlist">
       <li>
+         <a href="#http://bimerr.iot.linkeddata.es/def/building#Building"
+            title="http://bimerr.iot.linkeddata.es/def/building#Building">Building</a>
+      </li>
+      <li>
          <a href="#CalculationParameter"
             title="http://bimerr.iot.linkeddata.es/def/key-performance-indicator#CalculationParameter">Calculation parameter</a>
       </li>
@@ -71,6 +75,14 @@ This section provides details for each class and property defined by Key Perform
          <a href="#https://w3id.org/saref#UnitOfMeasure" title="https://w3id.org/saref#UnitOfMeasure">Unit of measure</a>
       </li>
    </ul>
+   <div class="entity" id="http://bimerr.iot.linkeddata.es/def/building#Building">
+      <h3>Building<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://bimerr.iot.linkeddata.es/def/building#Building</p>
+   </div>
    <div class="entity" id="CalculationParameter">
       <h3>Calculation parameter<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
@@ -498,6 +510,10 @@ This section provides details for each class and property defined by Key Perform
          <a href="#https://w3id.org/def/saref4city#refersToTime" title="https://w3id.org/def/saref4city#refersToTime">refers to time</a>
       </li>
       <li>
+         <a href="#relatedToBuilding"
+            title="http://bimerr.iot.linkeddata.es/def/key-performance-indicator#relatedToBuilding">related to building</a>
+      </li>
+      <li>
          <a href="#relatedToProject"
             title="http://bimerr.iot.linkeddata.es/def/key-performance-indicator#relatedToProject">related to project</a>
       </li>
@@ -551,6 +567,9 @@ This section provides details for each class and property defined by Key Perform
       </h3>
       <p>
          <strong>IRI:</strong> http://bimerr.iot.linkeddata.es/def/key-performance-indicator#basedOnParameter</p>
+      <div class="comment">
+         <span class="markdown">Links to the parameter used to compute a KPI value.</span>
+      </div>
    </div>
    <div class="entity" id="https://w3id.org/def/saref4city#hasCalculationPeriod">
       <h3>has calculation period<sup class="type-op" title="object property">op</sup>
@@ -588,6 +607,9 @@ This section provides details for each class and property defined by Key Perform
       </h3>
       <p>
          <strong>IRI:</strong> http://bimerr.iot.linkeddata.es/def/key-performance-indicator#hasSubGoal</p>
+      <div class="comment">
+         <span class="markdown">Relationship used to decompose a project goal into more specific sub-goals.</span>
+      </div>
    </div>
    <div class="entity" id="https://w3id.org/saref#isMeasuredIn">
       <h3>is measured in<sup class="type-op" title="object property">op</sup>
@@ -633,6 +655,17 @@ This section provides details for each class and property defined by Key Perform
          <span class="markdown">Property to add a time stamp to a KPI value.</span>
       </div>
    </div>
+   <div class="entity" id="relatedToBuilding">
+      <h3>related to building<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://bimerr.iot.linkeddata.es/def/key-performance-indicator#relatedToBuilding</p>
+      <div class="comment">
+         <span class="markdown">Links to the building the project is about.</span>
+      </div>
+   </div>
    <div class="entity" id="relatedToProject">
       <h3>related to project<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
@@ -660,11 +693,17 @@ This section provides details for each class and property defined by Key Perform
             title="http://bimerr.iot.linkeddata.es/def/key-performance-indicator#coordinates">coordinates</a>
       </li>
       <li>
+         <a href="#http://purl.org/dc/terms/created" title="http://purl.org/dc/terms/created">creation date</a>
+      </li>
+      <li>
          <a href="#https://w3id.org/saref#hasValue" title="https://w3id.org/saref#hasValue">has value</a>
       </li>
       <li>
          <a href="#identifier"
             title="http://bimerr.iot.linkeddata.es/def/key-performance-indicator#identifier">identifier</a>
+      </li>
+      <li>
+         <a href="#http://purl.org/dc/terms/ISO3166" title="http://purl.org/dc/terms/ISO3166">ISO country code</a>
       </li>
       <li>
          <a href="#maxValue"
@@ -698,7 +737,7 @@ This section provides details for each class and property defined by Key Perform
       <p>
          <strong>IRI:</strong> http://bimerr.iot.linkeddata.es/def/key-performance-indicator#changeDate</p>
       <div class="comment">
-         <span class="markdown">The most recent editing date of a project .</span>
+         <span class="markdown">The most recent editing date of a project.</span>
       </div>
    </div>
    <div class="entity" id="coordinates">
@@ -708,6 +747,17 @@ This section provides details for each class and property defined by Key Perform
       </h3>
       <p>
          <strong>IRI:</strong> http://bimerr.iot.linkeddata.es/def/key-performance-indicator#coordinates</p>
+   </div>
+   <div class="entity" id="http://purl.org/dc/terms/created">
+      <h3>creation date<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/dc/terms/created</p>
+      <div class="comment">
+         <span class="markdown">The date when the project was created.</span>
+      </div>
    </div>
    <div class="entity" id="https://w3id.org/saref#hasValue">
       <h3>has value<sup class="type-dp" title="data property">dp</sup>
@@ -734,6 +784,17 @@ This section provides details for each class and property defined by Key Perform
                <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
             </dd>
          </dl>
+      </div>
+   </div>
+   <div class="entity" id="http://purl.org/dc/terms/ISO3166">
+      <h3>ISO country code<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://purl.org/dc/terms/ISO3166</p>
+      <div class="comment">
+         <span class="markdown">The ISO country code where the project is being developed.</span>
       </div>
    </div>
    <div class="entity" id="maxValue">

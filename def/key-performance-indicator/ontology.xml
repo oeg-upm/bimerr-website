@@ -137,6 +137,7 @@
 
 
     <owl:ObjectProperty rdf:about="http://bimerr.iot.linkeddata.es/def/key-performance-indicator#basedOnParameter">
+        <rdfs:comment xml:lang="en">Links to the parameter used to compute a KPI value.</rdfs:comment>
         <rdfs:label xml:lang="en">based on parameter</rdfs:label>
     </owl:ObjectProperty>
     
@@ -157,6 +158,7 @@
 
 
     <owl:ObjectProperty rdf:about="http://bimerr.iot.linkeddata.es/def/key-performance-indicator#hasSubGoal">
+        <rdfs:comment xml:lang="en">Relationship used to decompose a project goal into more specific sub-goals.</rdfs:comment>
         <rdfs:label xml:lang="en">has sub-goal</rdfs:label>
     </owl:ObjectProperty>
     
@@ -168,6 +170,16 @@
     <owl:ObjectProperty rdf:about="http://bimerr.iot.linkeddata.es/def/key-performance-indicator#monitorIndicator">
         <rdfs:comment xml:lang="en">A goal need to monitor a set of KPI values, to verify its accomplishment.</rdfs:comment>
         <rdfs:label xml:lang="en">monitor indicator</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://bimerr.iot.linkeddata.es/def/key-performance-indicator#relatedToBuilding -->
+
+
+    <owl:ObjectProperty rdf:about="http://bimerr.iot.linkeddata.es/def/key-performance-indicator#relatedToBuilding">
+        <rdfs:comment xml:lang="en">Links to the building the project is about.</rdfs:comment>
+        <rdfs:label xml:lang="en">related to building</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -247,7 +259,7 @@
 
 
     <owl:DatatypeProperty rdf:about="http://bimerr.iot.linkeddata.es/def/key-performance-indicator#changeDate">
-        <rdfs:comment xml:lang="en">The most recent editing date of a project .</rdfs:comment>
+        <rdfs:comment xml:lang="en">The most recent editing date of a project.</rdfs:comment>
         <rdfs:label xml:lang="en">change date</rdfs:label>
     </owl:DatatypeProperty>
     
@@ -303,6 +315,26 @@
     
 
 
+    <!-- http://purl.org/dc/terms/ISO3166 -->
+
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/dc/terms/ISO3166">
+        <rdfs:comment xml:lang="en">The ISO country code where the project is being developed.</rdfs:comment>
+        <rdfs:label xml:lang="en">ISO country code</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.org/dc/terms/created -->
+
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/dc/terms/created">
+        <rdfs:comment xml:lang="en">The date when the project was created.</rdfs:comment>
+        <rdfs:label xml:lang="en">creation date</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- https://w3id.org/saref#hasValue -->
 
 
@@ -322,6 +354,15 @@
      -->
 
 
+    
+
+
+    <!-- http://bimerr.iot.linkeddata.es/def/building#Building -->
+
+
+    <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/building#Building">
+        <rdfs:label xml:lang="en">Building</rdfs:label>
+    </owl:Class>
     
 
 
@@ -447,6 +488,12 @@
     <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/key-performance-indicator#Project">
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="http://bimerr.iot.linkeddata.es/def/key-performance-indicator#relatedToBuilding"/>
+                <owl:allValuesFrom rdf:resource="http://bimerr.iot.linkeddata.es/def/building#Building"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="http://bimerr.iot.linkeddata.es/def/key-performance-indicator#hasGoal"/>
                 <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
                 <owl:onClass rdf:resource="http://bimerr.iot.linkeddata.es/def/key-performance-indicator#Goal"/>
@@ -497,6 +544,18 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://bimerr.iot.linkeddata.es/def/key-performance-indicator#coordinates"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/dc/terms/ISO3166"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/dc/terms/created"/>
                 <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>

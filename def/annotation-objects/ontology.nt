@@ -1,0 +1,895 @@
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#> <http://purl.org/dc/elements/1.1/creator> "María Poveda-Villalón" .
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#> <http://purl.org/dc/elements/1.1/creator> "Serge Chávez-Feria" .
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#> <http://purl.org/dc/elements/1.1/title> "Annotations Ontology" .
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#> <http://www.w3.org/2002/07/owl#versionInfo> "0.0.2" .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/dc/elements/1.1/creator
+<http://purl.org/dc/elements/1.1/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/elements/1.1/title
+<http://purl.org/dc/elements/1.1/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# http://bimerr.iot.linkeddata.es/def/annotation-objects#cameraDirection
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#cameraDirection> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#cameraDirection> <http://www.w3.org/2000/01/rdf-schema#label> "camera direction" .
+# 
+# http://bimerr.iot.linkeddata.es/def/annotation-objects#cameraUpVector
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#cameraUpVector> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#cameraUpVector> <http://www.w3.org/2000/01/rdf-schema#label> "camera up vector" .
+# 
+# http://bimerr.iot.linkeddata.es/def/annotation-objects#cameraViewPoint
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#cameraViewPoint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#cameraViewPoint> <http://www.w3.org/2000/01/rdf-schema#label> "camera view point" .
+# 
+# http://bimerr.iot.linkeddata.es/def/annotation-objects#hasBimSnippet
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#hasBimSnippet> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#hasBimSnippet> <http://www.w3.org/2000/01/rdf-schema#label> "has bim snippet" .
+# 
+# http://bimerr.iot.linkeddata.es/def/annotation-objects#hasBitmap
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#hasBitmap> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#hasBitmap> <http://www.w3.org/2000/01/rdf-schema#label> "has bitmap" .
+# 
+# http://bimerr.iot.linkeddata.es/def/annotation-objects#hasCamera
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#hasCamera> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#hasCamera> <http://www.w3.org/2000/01/rdf-schema#label> "has camera" .
+# 
+# http://bimerr.iot.linkeddata.es/def/annotation-objects#hasClippingPlane
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#hasClippingPlane> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#hasClippingPlane> <http://www.w3.org/2000/01/rdf-schema#label> "has clipping plane" .
+# 
+# http://bimerr.iot.linkeddata.es/def/annotation-objects#hasComment
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#hasComment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#hasComment> <http://www.w3.org/2000/01/rdf-schema#label> "has comment" .
+# 
+# http://bimerr.iot.linkeddata.es/def/annotation-objects#hasComponent
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#hasComponent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#hasComponent> <http://www.w3.org/2000/01/rdf-schema#label> "has component" .
+# 
+# http://bimerr.iot.linkeddata.es/def/annotation-objects#hasDirection
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#hasDirection> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#hasDirection> <http://www.w3.org/2000/01/rdf-schema#label> "has direction" .
+# 
+# http://bimerr.iot.linkeddata.es/def/annotation-objects#hasDocumentReference
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#hasDocumentReference> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#hasDocumentReference> <http://www.w3.org/2000/01/rdf-schema#label> "has document reference" .
+# 
+# http://bimerr.iot.linkeddata.es/def/annotation-objects#hasFile
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#hasFile> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#hasFile> <http://www.w3.org/2000/01/rdf-schema#label> "has file" .
+# 
+# http://bimerr.iot.linkeddata.es/def/annotation-objects#hasFormat
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#hasFormat> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#hasFormat> <http://www.w3.org/2000/01/rdf-schema#label> "has format" .
+# 
+# http://bimerr.iot.linkeddata.es/def/annotation-objects#hasLine
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#hasLine> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#hasLine> <http://www.w3.org/2000/01/rdf-schema#label> "has line" .
+# 
+# http://bimerr.iot.linkeddata.es/def/annotation-objects#hasLocation
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#hasLocation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#hasLocation> <http://www.w3.org/2000/01/rdf-schema#label> "has location" .
+# 
+# http://bimerr.iot.linkeddata.es/def/annotation-objects#hasPoint
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#hasPoint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#hasPoint> <http://www.w3.org/2000/01/rdf-schema#label> "has point" .
+# 
+# http://bimerr.iot.linkeddata.es/def/annotation-objects#hasReferenceLink
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#hasReferenceLink> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#hasReferenceLink> <http://www.w3.org/2000/01/rdf-schema#label> "has reference link" .
+# 
+# http://bimerr.iot.linkeddata.es/def/annotation-objects#hasStage
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#hasStage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#hasStage> <http://www.w3.org/2000/01/rdf-schema#label> "has stage" .
+# 
+# http://bimerr.iot.linkeddata.es/def/annotation-objects#hasTopicLabel
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#hasTopicLabel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#hasTopicLabel> <http://www.w3.org/2000/01/rdf-schema#label> "has topic label" .
+# 
+# http://bimerr.iot.linkeddata.es/def/annotation-objects#hasTopicStatus
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#hasTopicStatus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#hasTopicStatus> <http://www.w3.org/2000/01/rdf-schema#label> "has topic status" .
+# 
+# http://bimerr.iot.linkeddata.es/def/annotation-objects#hasTopicType
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#hasTopicType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#hasTopicType> <http://www.w3.org/2000/01/rdf-schema#label> "has topic type" .
+# 
+# http://bimerr.iot.linkeddata.es/def/annotation-objects#hasViewpoint
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#hasViewpoint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#hasViewpoint> <http://www.w3.org/2000/01/rdf-schema#label> "has viewpoint" .
+# 
+# http://bimerr.iot.linkeddata.es/def/annotation-objects#normalVector
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#normalVector> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#normalVector> <http://www.w3.org/2000/01/rdf-schema#label> "normal vector" .
+# 
+# http://bimerr.iot.linkeddata.es/def/annotation-objects#relatedToComment
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#relatedToComment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#relatedToComment> <http://www.w3.org/2000/01/rdf-schema#label> "related to comment" .
+# 
+# http://bimerr.iot.linkeddata.es/def/annotation-objects#relatedToProject
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#relatedToProject> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#relatedToProject> <http://www.w3.org/2000/01/rdf-schema#label> "related to project" .
+# 
+# http://bimerr.iot.linkeddata.es/def/annotation-objects#relatedToTopic
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#relatedToTopic> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#relatedToTopic> <http://www.w3.org/2000/01/rdf-schema#label> "related to topic" .
+# 
+# http://bimerr.iot.linkeddata.es/def/annotation-objects#upVector
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#upVector> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#upVector> <http://www.w3.org/2000/01/rdf-schema#label> "up vector" .
+# 
+# http://bimerr.iot.linkeddata.es/def/information-objects#hasExtension
+<http://bimerr.iot.linkeddata.es/def/information-objects#hasExtension> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://bimerr.iot.linkeddata.es/def/information-objects#hasExtension> <http://www.w3.org/2000/01/rdf-schema#label> "has extension" .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# http://bimerr.iot.linkeddata.es/def/annotation-objects#assignedTo
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#assignedTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#assignedTo> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#assignedTo> <http://www.w3.org/2000/01/rdf-schema#label> "assigned to" .
+# 
+# http://bimerr.iot.linkeddata.es/def/annotation-objects#comment
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#comment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#comment> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#comment> <http://www.w3.org/2000/01/rdf-schema#label> "comment" .
+# 
+# http://bimerr.iot.linkeddata.es/def/annotation-objects#creationAuthor
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#creationAuthor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#creationAuthor> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#creationAuthor> <http://www.w3.org/2000/01/rdf-schema#label> "creation author" .
+# 
+# http://bimerr.iot.linkeddata.es/def/annotation-objects#creationDate
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#creationDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#creationDate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#creationDate> <http://www.w3.org/2000/01/rdf-schema#label> "creation date" .
+# 
+# http://bimerr.iot.linkeddata.es/def/annotation-objects#description
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#description> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#description> <http://www.w3.org/2000/01/rdf-schema#label> "description" .
+# 
+# http://bimerr.iot.linkeddata.es/def/annotation-objects#dueDate
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#dueDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#dueDate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#dueDate> <http://www.w3.org/2000/01/rdf-schema#label> "due date" .
+# 
+# http://bimerr.iot.linkeddata.es/def/annotation-objects#fieldOfView
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#fieldOfView> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#fieldOfView> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#float> .
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#fieldOfView> <http://www.w3.org/2000/01/rdf-schema#label> "field of view" .
+# 
+# http://bimerr.iot.linkeddata.es/def/annotation-objects#identifier
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#identifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#identifier> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#identifier> <http://www.w3.org/2000/01/rdf-schema#label> "identifier" .
+# 
+# http://bimerr.iot.linkeddata.es/def/annotation-objects#index
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#index> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#index> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#index> <http://www.w3.org/2000/01/rdf-schema#label> "index" .
+# 
+# http://bimerr.iot.linkeddata.es/def/annotation-objects#modifiedAuthor
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#modifiedAuthor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#modifiedAuthor> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#modifiedAuthor> <http://www.w3.org/2000/01/rdf-schema#label> "modified author" .
+# 
+# http://bimerr.iot.linkeddata.es/def/annotation-objects#modifiedDate
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#modifiedDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#modifiedDate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#modifiedDate> <http://www.w3.org/2000/01/rdf-schema#label> "modified date" .
+# 
+# http://bimerr.iot.linkeddata.es/def/annotation-objects#priority
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#priority> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#priority> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#priority> <http://www.w3.org/2000/01/rdf-schema#label> "priority" .
+# 
+# http://bimerr.iot.linkeddata.es/def/annotation-objects#reference
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#reference> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#reference> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#reference> <http://www.w3.org/2000/01/rdf-schema#label> "reference" .
+# 
+# http://bimerr.iot.linkeddata.es/def/annotation-objects#snapshotName
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#snapshotName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#snapshotName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#snapshotName> <http://www.w3.org/2000/01/rdf-schema#label> "snapshot name" .
+# 
+# http://bimerr.iot.linkeddata.es/def/annotation-objects#title
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#title> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#title> <http://www.w3.org/2000/01/rdf-schema#label> "title" .
+# 
+# http://bimerr.iot.linkeddata.es/def/annotation-objects#viewToWorldScale
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#viewToWorldScale> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#viewToWorldScale> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#float> .
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#viewToWorldScale> <http://www.w3.org/2000/01/rdf-schema#label> "view to world scale" .
+# 
+# http://bimerr.iot.linkeddata.es/def/annotation-objects#viewpointName
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#viewpointName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#viewpointName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#viewpointName> <http://www.w3.org/2000/01/rdf-schema#label> "viewpoint name" .
+# 
+# http://bimerr.iot.linkeddata.es/def/annotation-objects#xCoordinate
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#xCoordinate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#xCoordinate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#float> .
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#xCoordinate> <http://www.w3.org/2000/01/rdf-schema#label> "x coordinate" .
+# 
+# http://bimerr.iot.linkeddata.es/def/annotation-objects#yCoordinate
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#yCoordinate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#yCoordinate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#float> .
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#yCoordinate> <http://www.w3.org/2000/01/rdf-schema#label> "y coordinate" .
+# 
+# http://bimerr.iot.linkeddata.es/def/annotation-objects#zCoordinate
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#zCoordinate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#zCoordinate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#float> .
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#zCoordinate> <http://www.w3.org/2000/01/rdf-schema#label> "z coordinate" .
+# 
+# http://bimerr.iot.linkeddata.es/def/building#autoringToolId
+<http://bimerr.iot.linkeddata.es/def/building#autoringToolId> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://bimerr.iot.linkeddata.es/def/building#autoringToolId> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://bimerr.iot.linkeddata.es/def/building#autoringToolId> <http://www.w3.org/2000/01/rdf-schema#label> "autoring tool id" .
+# 
+# http://bimerr.iot.linkeddata.es/def/building#colorDisplay
+<http://bimerr.iot.linkeddata.es/def/building#colorDisplay> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://bimerr.iot.linkeddata.es/def/building#colorDisplay> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://bimerr.iot.linkeddata.es/def/building#colorDisplay> <http://www.w3.org/2000/01/rdf-schema#label> "color display" .
+# 
+# http://bimerr.iot.linkeddata.es/def/building#ifcIdentifier
+<http://bimerr.iot.linkeddata.es/def/building#ifcIdentifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://bimerr.iot.linkeddata.es/def/building#ifcIdentifier> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://bimerr.iot.linkeddata.es/def/building#ifcIdentifier> <http://www.w3.org/2000/01/rdf-schema#label> "ifc identifier" .
+# 
+# http://bimerr.iot.linkeddata.es/def/building#originatingSystem
+<http://bimerr.iot.linkeddata.es/def/building#originatingSystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://bimerr.iot.linkeddata.es/def/building#originatingSystem> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://bimerr.iot.linkeddata.es/def/building#originatingSystem> <http://www.w3.org/2000/01/rdf-schema#label> "originating system" .
+# 
+# http://bimerr.iot.linkeddata.es/def/key-performance-indicator#identifier
+<http://bimerr.iot.linkeddata.es/def/key-performance-indicator#identifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://bimerr.iot.linkeddata.es/def/key-performance-indicator#identifier> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://bimerr.iot.linkeddata.es/def/key-performance-indicator#identifier> <http://www.w3.org/2000/01/rdf-schema#label> "identifier" .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://bimerr.iot.linkeddata.es/def/annotation-objects#Bitmap
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#Bitmap> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#Bitmap> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid1 .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid1 <http://www.w3.org/2002/07/owl#onProperty> <http://bimerr.iot.linkeddata.es/def/annotation-objects#hasFormat> .
+_:genid1 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid1 <http://www.w3.org/2002/07/owl#onClass> <http://bimerr.iot.linkeddata.es/def/information-objects#Format> .
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#Bitmap> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid2 .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid2 <http://www.w3.org/2002/07/owl#onProperty> <http://bimerr.iot.linkeddata.es/def/annotation-objects#hasLocation> .
+_:genid2 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid2 <http://www.w3.org/2002/07/owl#onClass> <http://bimerr.iot.linkeddata.es/def/annotation-objects#Coordinate3D> .
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#Bitmap> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid3 .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid3 <http://www.w3.org/2002/07/owl#onProperty> <http://bimerr.iot.linkeddata.es/def/annotation-objects#normalVector> .
+_:genid3 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid3 <http://www.w3.org/2002/07/owl#onClass> <http://bimerr.iot.linkeddata.es/def/annotation-objects#Coordinate3D> .
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#Bitmap> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid4 .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid4 <http://www.w3.org/2002/07/owl#onProperty> <http://bimerr.iot.linkeddata.es/def/annotation-objects#upVector> .
+_:genid4 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid4 <http://www.w3.org/2002/07/owl#onClass> <http://bimerr.iot.linkeddata.es/def/annotation-objects#Coordinate3D> .
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#Bitmap> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid5 .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid5 <http://www.w3.org/2002/07/owl#onProperty> <http://bimerr.iot.linkeddata.es/def/annotation-objects#hasFormat> .
+_:genid5 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid5 <http://www.w3.org/2002/07/owl#onClass> <http://bimerr.iot.linkeddata.es/def/information-objects#Format> .
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#Bitmap> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid6 .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid6 <http://www.w3.org/2002/07/owl#onProperty> <http://bimerr.iot.linkeddata.es/def/annotation-objects#hasLocation> .
+_:genid6 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid6 <http://www.w3.org/2002/07/owl#onClass> <http://bimerr.iot.linkeddata.es/def/annotation-objects#Coordinate3D> .
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#Bitmap> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid7 .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid7 <http://www.w3.org/2002/07/owl#onProperty> <http://bimerr.iot.linkeddata.es/def/annotation-objects#normalVector> .
+_:genid7 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid7 <http://www.w3.org/2002/07/owl#onClass> <http://bimerr.iot.linkeddata.es/def/annotation-objects#Coordinate3D> .
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#Bitmap> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid8 .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid8 <http://www.w3.org/2002/07/owl#onProperty> <http://bimerr.iot.linkeddata.es/def/annotation-objects#upVector> .
+_:genid8 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid8 <http://www.w3.org/2002/07/owl#onClass> <http://bimerr.iot.linkeddata.es/def/annotation-objects#Coordinate3D> .
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#Bitmap> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid9 .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid9 <http://www.w3.org/2002/07/owl#onProperty> <http://bimerr.iot.linkeddata.es/def/annotation-objects#reference> .
+_:genid9 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid9 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#string> .
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#Bitmap> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid10 .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid10 <http://www.w3.org/2002/07/owl#onProperty> <http://bimerr.iot.linkeddata.es/def/annotation-objects#reference> .
+_:genid10 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid10 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#string> .
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#Bitmap> <http://www.w3.org/2000/01/rdf-schema#label> "Bitmap" .
+# 
+# http://bimerr.iot.linkeddata.es/def/annotation-objects#Camera
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#Camera> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#Camera> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid11 .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid11 <http://www.w3.org/2002/07/owl#onProperty> <http://bimerr.iot.linkeddata.es/def/annotation-objects#cameraDirection> .
+_:genid11 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid11 <http://www.w3.org/2002/07/owl#onClass> <http://bimerr.iot.linkeddata.es/def/annotation-objects#Coordinate3D> .
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#Camera> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid12 .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid12 <http://www.w3.org/2002/07/owl#onProperty> <http://bimerr.iot.linkeddata.es/def/annotation-objects#cameraUpVector> .
+_:genid12 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid12 <http://www.w3.org/2002/07/owl#onClass> <http://bimerr.iot.linkeddata.es/def/annotation-objects#Coordinate3D> .
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#Camera> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid13 .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid13 <http://www.w3.org/2002/07/owl#onProperty> <http://bimerr.iot.linkeddata.es/def/annotation-objects#cameraViewPoint> .
+_:genid13 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid13 <http://www.w3.org/2002/07/owl#onClass> <http://bimerr.iot.linkeddata.es/def/annotation-objects#Coordinate3D> .
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#Camera> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid14 .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid14 <http://www.w3.org/2002/07/owl#onProperty> <http://bimerr.iot.linkeddata.es/def/annotation-objects#cameraDirection> .
+_:genid14 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid14 <http://www.w3.org/2002/07/owl#onClass> <http://bimerr.iot.linkeddata.es/def/annotation-objects#Coordinate3D> .
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#Camera> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid15 .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid15 <http://www.w3.org/2002/07/owl#onProperty> <http://bimerr.iot.linkeddata.es/def/annotation-objects#cameraUpVector> .
+_:genid15 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid15 <http://www.w3.org/2002/07/owl#onClass> <http://bimerr.iot.linkeddata.es/def/annotation-objects#Coordinate3D> .
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#Camera> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid16 .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid16 <http://www.w3.org/2002/07/owl#onProperty> <http://bimerr.iot.linkeddata.es/def/annotation-objects#cameraViewPoint> .
+_:genid16 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid16 <http://www.w3.org/2002/07/owl#onClass> <http://bimerr.iot.linkeddata.es/def/annotation-objects#Coordinate3D> .
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#Camera> <http://www.w3.org/2000/01/rdf-schema#label> "Camera" .
+# 
+# http://bimerr.iot.linkeddata.es/def/annotation-objects#ClippingPlane
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#ClippingPlane> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#ClippingPlane> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid17 .
+_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid17 <http://www.w3.org/2002/07/owl#onProperty> <http://bimerr.iot.linkeddata.es/def/annotation-objects#hasDirection> .
+_:genid17 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid17 <http://www.w3.org/2002/07/owl#onClass> <http://bimerr.iot.linkeddata.es/def/annotation-objects#Coordinate3D> .
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#ClippingPlane> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid18 .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid18 <http://www.w3.org/2002/07/owl#onProperty> <http://bimerr.iot.linkeddata.es/def/annotation-objects#hasLocation> .
+_:genid18 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid18 <http://www.w3.org/2002/07/owl#onClass> <http://bimerr.iot.linkeddata.es/def/annotation-objects#Coordinate3D> .
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#ClippingPlane> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid19 .
+_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid19 <http://www.w3.org/2002/07/owl#onProperty> <http://bimerr.iot.linkeddata.es/def/annotation-objects#hasDirection> .
+_:genid19 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid19 <http://www.w3.org/2002/07/owl#onClass> <http://bimerr.iot.linkeddata.es/def/annotation-objects#Coordinate3D> .
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#ClippingPlane> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid20 .
+_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid20 <http://www.w3.org/2002/07/owl#onProperty> <http://bimerr.iot.linkeddata.es/def/annotation-objects#hasLocation> .
+_:genid20 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid20 <http://www.w3.org/2002/07/owl#onClass> <http://bimerr.iot.linkeddata.es/def/annotation-objects#Coordinate3D> .
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#ClippingPlane> <http://www.w3.org/2000/01/rdf-schema#label> "Clipping Plane" .
+# 
+# http://bimerr.iot.linkeddata.es/def/annotation-objects#Comment
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#Comment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#Comment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid21 .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid21 <http://www.w3.org/2002/07/owl#onProperty> <http://bimerr.iot.linkeddata.es/def/annotation-objects#hasViewpoint> .
+_:genid21 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://bimerr.iot.linkeddata.es/def/annotation-objects#Viewpoint> .
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#Comment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid22 .
+_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid22 <http://www.w3.org/2002/07/owl#onProperty> <http://bimerr.iot.linkeddata.es/def/annotation-objects#hasViewpoint> .
+_:genid22 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid22 <http://www.w3.org/2002/07/owl#onClass> <http://bimerr.iot.linkeddata.es/def/annotation-objects#Viewpoint> .
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#Comment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid23 .
+_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid23 <http://www.w3.org/2002/07/owl#onProperty> <http://bimerr.iot.linkeddata.es/def/annotation-objects#comment> .
+_:genid23 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid23 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#string> .
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#Comment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid24 .
+_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid24 <http://www.w3.org/2002/07/owl#onProperty> <http://bimerr.iot.linkeddata.es/def/annotation-objects#creationAuthor> .
+_:genid24 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid24 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#string> .
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#Comment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid25 .
+_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid25 <http://www.w3.org/2002/07/owl#onProperty> <http://bimerr.iot.linkeddata.es/def/annotation-objects#creationDate> .
+_:genid25 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid25 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#Comment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid26 .
+_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid26 <http://www.w3.org/2002/07/owl#onProperty> <http://bimerr.iot.linkeddata.es/def/annotation-objects#identifier> .
+_:genid26 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid26 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#string> .
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#Comment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid27 .
+_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid27 <http://www.w3.org/2002/07/owl#onProperty> <http://bimerr.iot.linkeddata.es/def/annotation-objects#comment> .
+_:genid27 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid27 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#string> .
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#Comment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid28 .
+_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid28 <http://www.w3.org/2002/07/owl#onProperty> <http://bimerr.iot.linkeddata.es/def/annotation-objects#creationAuthor> .
+_:genid28 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid28 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#string> .
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#Comment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid29 .
+_:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid29 <http://www.w3.org/2002/07/owl#onProperty> <http://bimerr.iot.linkeddata.es/def/annotation-objects#creationDate> .
+_:genid29 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid29 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#Comment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid30 .
+_:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid30 <http://www.w3.org/2002/07/owl#onProperty> <http://bimerr.iot.linkeddata.es/def/annotation-objects#identifier> .
+_:genid30 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid30 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#string> .
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#Comment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid31 .
+_:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid31 <http://www.w3.org/2002/07/owl#onProperty> <http://bimerr.iot.linkeddata.es/def/annotation-objects#modifiedAuthor> .
+_:genid31 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid31 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#string> .
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#Comment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid32 .
+_:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid32 <http://www.w3.org/2002/07/owl#onProperty> <http://bimerr.iot.linkeddata.es/def/annotation-objects#modifiedDate> .
+_:genid32 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid32 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#Comment> <http://www.w3.org/2000/01/rdf-schema#label> "Comment" .
+# 
+# http://bimerr.iot.linkeddata.es/def/annotation-objects#Coordinate3D
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#Coordinate3D> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#Coordinate3D> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid33 .
+_:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid33 <http://www.w3.org/2002/07/owl#onProperty> <http://bimerr.iot.linkeddata.es/def/annotation-objects#xCoordinate> .
+_:genid33 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid33 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#float> .
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#Coordinate3D> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid34 .
+_:genid34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid34 <http://www.w3.org/2002/07/owl#onProperty> <http://bimerr.iot.linkeddata.es/def/annotation-objects#yCoordinate> .
+_:genid34 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid34 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#float> .
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#Coordinate3D> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid35 .
+_:genid35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid35 <http://www.w3.org/2002/07/owl#onProperty> <http://bimerr.iot.linkeddata.es/def/annotation-objects#zCoordinate> .
+_:genid35 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid35 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#float> .
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#Coordinate3D> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid36 .
+_:genid36 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid36 <http://www.w3.org/2002/07/owl#onProperty> <http://bimerr.iot.linkeddata.es/def/annotation-objects#xCoordinate> .
+_:genid36 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid36 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#float> .
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#Coordinate3D> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid37 .
+_:genid37 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid37 <http://www.w3.org/2002/07/owl#onProperty> <http://bimerr.iot.linkeddata.es/def/annotation-objects#yCoordinate> .
+_:genid37 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid37 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#float> .
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#Coordinate3D> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid38 .
+_:genid38 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid38 <http://www.w3.org/2002/07/owl#onProperty> <http://bimerr.iot.linkeddata.es/def/annotation-objects#zCoordinate> .
+_:genid38 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid38 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#float> .
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#Coordinate3D> <http://www.w3.org/2000/01/rdf-schema#label> "Coordinate3 D" .
+# 
+# http://bimerr.iot.linkeddata.es/def/annotation-objects#Line
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#Line> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#Line> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid39 .
+_:genid39 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid39 <http://www.w3.org/2002/07/owl#onProperty> <http://bimerr.iot.linkeddata.es/def/annotation-objects#hasPoint> .
+_:genid39 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "2"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid39 <http://www.w3.org/2002/07/owl#onClass> <http://bimerr.iot.linkeddata.es/def/annotation-objects#Coordinate3D> .
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#Line> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid40 .
+_:genid40 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid40 <http://www.w3.org/2002/07/owl#onProperty> <http://bimerr.iot.linkeddata.es/def/annotation-objects#hasPoint> .
+_:genid40 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "2"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid40 <http://www.w3.org/2002/07/owl#onClass> <http://bimerr.iot.linkeddata.es/def/annotation-objects#Coordinate3D> .
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#Line> <http://www.w3.org/2000/01/rdf-schema#label> "Line" .
+# 
+# http://bimerr.iot.linkeddata.es/def/annotation-objects#OrthogonalCamera
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#OrthogonalCamera> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#OrthogonalCamera> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://bimerr.iot.linkeddata.es/def/annotation-objects#Camera> .
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#OrthogonalCamera> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid41 .
+_:genid41 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid41 <http://www.w3.org/2002/07/owl#onProperty> <http://bimerr.iot.linkeddata.es/def/annotation-objects#viewToWorldScale> .
+_:genid41 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid41 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#float> .
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#OrthogonalCamera> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid42 .
+_:genid42 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid42 <http://www.w3.org/2002/07/owl#onProperty> <http://bimerr.iot.linkeddata.es/def/annotation-objects#viewToWorldScale> .
+_:genid42 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid42 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#float> .
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#OrthogonalCamera> <http://www.w3.org/2000/01/rdf-schema#label> "Orthogonal Camera" .
+# 
+# http://bimerr.iot.linkeddata.es/def/annotation-objects#PerspectiveCamera
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#PerspectiveCamera> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#PerspectiveCamera> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://bimerr.iot.linkeddata.es/def/annotation-objects#Camera> .
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#PerspectiveCamera> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid43 .
+_:genid43 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid43 <http://www.w3.org/2002/07/owl#onProperty> <http://bimerr.iot.linkeddata.es/def/annotation-objects#fieldOfView> .
+_:genid43 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid43 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#float> .
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#PerspectiveCamera> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid44 .
+_:genid44 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid44 <http://www.w3.org/2002/07/owl#onProperty> <http://bimerr.iot.linkeddata.es/def/annotation-objects#fieldOfView> .
+_:genid44 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid44 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#float> .
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#PerspectiveCamera> <http://www.w3.org/2000/01/rdf-schema#label> "Perspective Camera" .
+# 
+# http://bimerr.iot.linkeddata.es/def/annotation-objects#Stage
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#Stage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#Stage> <http://www.w3.org/2000/01/rdf-schema#label> "Stage" .
+# 
+# http://bimerr.iot.linkeddata.es/def/annotation-objects#Topic
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#Topic> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#Topic> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid45 .
+_:genid45 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid45 <http://www.w3.org/2002/07/owl#onProperty> <http://bimerr.iot.linkeddata.es/def/annotation-objects#hasBimSnippet> .
+_:genid45 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://bimerr.iot.linkeddata.es/def/information-objects#InformationObject> .
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#Topic> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid46 .
+_:genid46 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid46 <http://www.w3.org/2002/07/owl#onProperty> <http://bimerr.iot.linkeddata.es/def/annotation-objects#hasComment> .
+_:genid46 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://bimerr.iot.linkeddata.es/def/annotation-objects#Comment> .
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#Topic> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid47 .
+_:genid47 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid47 <http://www.w3.org/2002/07/owl#onProperty> <http://bimerr.iot.linkeddata.es/def/annotation-objects#hasDocumentReference> .
+_:genid47 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://bimerr.iot.linkeddata.es/def/information-objects#InformationObject> .
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#Topic> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid48 .
+_:genid48 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid48 <http://www.w3.org/2002/07/owl#onProperty> <http://bimerr.iot.linkeddata.es/def/annotation-objects#hasFile> .
+_:genid48 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://bimerr.iot.linkeddata.es/def/information-objects#InformationObject> .
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#Topic> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid49 .
+_:genid49 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid49 <http://www.w3.org/2002/07/owl#onProperty> <http://bimerr.iot.linkeddata.es/def/annotation-objects#hasReferenceLink> .
+_:genid49 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://bimerr.iot.linkeddata.es/def/information-objects#InformationObject> .
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#Topic> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid50 .
+_:genid50 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid50 <http://www.w3.org/2002/07/owl#onProperty> <http://bimerr.iot.linkeddata.es/def/annotation-objects#hasDocumentReference> .
+_:genid50 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid50 <http://www.w3.org/2002/07/owl#onClass> <http://bimerr.iot.linkeddata.es/def/information-objects#InformationObject> .
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#Topic> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid51 .
+_:genid51 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid51 <http://www.w3.org/2002/07/owl#onProperty> <http://bimerr.iot.linkeddata.es/def/annotation-objects#hasFile> .
+_:genid51 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid51 <http://www.w3.org/2002/07/owl#onClass> <http://bimerr.iot.linkeddata.es/def/information-objects#InformationObject> .
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#Topic> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid52 .
+_:genid52 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid52 <http://www.w3.org/2002/07/owl#onProperty> <http://bimerr.iot.linkeddata.es/def/annotation-objects#hasReferenceLink> .
+_:genid52 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid52 <http://www.w3.org/2002/07/owl#onClass> <http://bimerr.iot.linkeddata.es/def/information-objects#InformationObject> .
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#Topic> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid53 .
+_:genid53 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid53 <http://www.w3.org/2002/07/owl#onProperty> <http://bimerr.iot.linkeddata.es/def/annotation-objects#relatedToProject> .
+_:genid53 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid53 <http://www.w3.org/2002/07/owl#onClass> <http://bimerr.iot.linkeddata.es/def/key-performance-indicator#Project> .
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#Topic> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid54 .
+_:genid54 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid54 <http://www.w3.org/2002/07/owl#onProperty> <http://bimerr.iot.linkeddata.es/def/annotation-objects#hasStage> .
+_:genid54 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid54 <http://www.w3.org/2002/07/owl#onClass> <http://bimerr.iot.linkeddata.es/def/annotation-objects#Stage> .
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#Topic> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid55 .
+_:genid55 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid55 <http://www.w3.org/2002/07/owl#onProperty> <http://bimerr.iot.linkeddata.es/def/annotation-objects#hasTopicStatus> .
+_:genid55 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid55 <http://www.w3.org/2002/07/owl#onClass> <http://bimerr.iot.linkeddata.es/def/annotation-objects#TopicStatus> .
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#Topic> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid56 .
+_:genid56 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid56 <http://www.w3.org/2002/07/owl#onProperty> <http://bimerr.iot.linkeddata.es/def/annotation-objects#hasTopicType> .
+_:genid56 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid56 <http://www.w3.org/2002/07/owl#onClass> <http://bimerr.iot.linkeddata.es/def/annotation-objects#TopicType> .
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#Topic> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid57 .
+_:genid57 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid57 <http://www.w3.org/2002/07/owl#onProperty> <http://bimerr.iot.linkeddata.es/def/annotation-objects#relatedToProject> .
+_:genid57 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid57 <http://www.w3.org/2002/07/owl#onClass> <http://bimerr.iot.linkeddata.es/def/key-performance-indicator#Project> .
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#Topic> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid58 .
+_:genid58 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid58 <http://www.w3.org/2002/07/owl#onProperty> <http://bimerr.iot.linkeddata.es/def/annotation-objects#creationAuthor> .
+_:genid58 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid58 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#string> .
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#Topic> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid59 .
+_:genid59 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid59 <http://www.w3.org/2002/07/owl#onProperty> <http://bimerr.iot.linkeddata.es/def/annotation-objects#creationDate> .
+_:genid59 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid59 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#Topic> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid60 .
+_:genid60 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid60 <http://www.w3.org/2002/07/owl#onProperty> <http://bimerr.iot.linkeddata.es/def/annotation-objects#identifier> .
+_:genid60 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid60 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#string> .
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#Topic> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid61 .
+_:genid61 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid61 <http://www.w3.org/2002/07/owl#onProperty> <http://bimerr.iot.linkeddata.es/def/annotation-objects#title> .
+_:genid61 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid61 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#string> .
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#Topic> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid62 .
+_:genid62 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid62 <http://www.w3.org/2002/07/owl#onProperty> <http://bimerr.iot.linkeddata.es/def/annotation-objects#assignedTo> .
+_:genid62 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid62 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#string> .
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#Topic> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid63 .
+_:genid63 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid63 <http://www.w3.org/2002/07/owl#onProperty> <http://bimerr.iot.linkeddata.es/def/annotation-objects#creationAuthor> .
+_:genid63 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid63 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#string> .
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#Topic> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid64 .
+_:genid64 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid64 <http://www.w3.org/2002/07/owl#onProperty> <http://bimerr.iot.linkeddata.es/def/annotation-objects#creationDate> .
+_:genid64 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid64 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#Topic> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid65 .
+_:genid65 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid65 <http://www.w3.org/2002/07/owl#onProperty> <http://bimerr.iot.linkeddata.es/def/annotation-objects#description> .
+_:genid65 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid65 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#string> .
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#Topic> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid66 .
+_:genid66 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid66 <http://www.w3.org/2002/07/owl#onProperty> <http://bimerr.iot.linkeddata.es/def/annotation-objects#dueDate> .
+_:genid66 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid66 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#Topic> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid67 .
+_:genid67 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid67 <http://www.w3.org/2002/07/owl#onProperty> <http://bimerr.iot.linkeddata.es/def/annotation-objects#identifier> .
+_:genid67 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid67 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#string> .
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#Topic> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid68 .
+_:genid68 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid68 <http://www.w3.org/2002/07/owl#onProperty> <http://bimerr.iot.linkeddata.es/def/annotation-objects#index> .
+_:genid68 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid68 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#integer> .
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#Topic> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid69 .
+_:genid69 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid69 <http://www.w3.org/2002/07/owl#onProperty> <http://bimerr.iot.linkeddata.es/def/annotation-objects#modifiedAuthor> .
+_:genid69 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid69 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#string> .
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#Topic> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid70 .
+_:genid70 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid70 <http://www.w3.org/2002/07/owl#onProperty> <http://bimerr.iot.linkeddata.es/def/annotation-objects#modifiedDate> .
+_:genid70 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid70 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#Topic> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid71 .
+_:genid71 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid71 <http://www.w3.org/2002/07/owl#onProperty> <http://bimerr.iot.linkeddata.es/def/annotation-objects#priority> .
+_:genid71 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid71 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#integer> .
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#Topic> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid72 .
+_:genid72 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid72 <http://www.w3.org/2002/07/owl#onProperty> <http://bimerr.iot.linkeddata.es/def/annotation-objects#title> .
+_:genid72 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid72 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#string> .
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#Topic> <http://www.w3.org/2000/01/rdf-schema#label> "Topic" .
+# 
+# http://bimerr.iot.linkeddata.es/def/annotation-objects#TopicLabel
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#TopicLabel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#TopicLabel> <http://www.w3.org/2000/01/rdf-schema#label> "Topic Label" .
+# 
+# http://bimerr.iot.linkeddata.es/def/annotation-objects#TopicStatus
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#TopicStatus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#TopicStatus> <http://www.w3.org/2000/01/rdf-schema#label> "Topic Status" .
+# 
+# http://bimerr.iot.linkeddata.es/def/annotation-objects#TopicType
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#TopicType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#TopicType> <http://www.w3.org/2000/01/rdf-schema#label> "Topic Type" .
+# 
+# http://bimerr.iot.linkeddata.es/def/annotation-objects#Viewpoint
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#Viewpoint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#Viewpoint> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid73 .
+_:genid73 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid73 <http://www.w3.org/2002/07/owl#onProperty> <http://bimerr.iot.linkeddata.es/def/annotation-objects#hasBitmap> .
+_:genid73 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://bimerr.iot.linkeddata.es/def/annotation-objects#Bitmap> .
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#Viewpoint> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid74 .
+_:genid74 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid74 <http://www.w3.org/2002/07/owl#onProperty> <http://bimerr.iot.linkeddata.es/def/annotation-objects#hasCamera> .
+_:genid74 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://bimerr.iot.linkeddata.es/def/annotation-objects#Camera> .
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#Viewpoint> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid75 .
+_:genid75 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid75 <http://www.w3.org/2002/07/owl#onProperty> <http://bimerr.iot.linkeddata.es/def/annotation-objects#hasClippingPlane> .
+_:genid75 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://bimerr.iot.linkeddata.es/def/annotation-objects#ClippingPlane> .
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#Viewpoint> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid76 .
+_:genid76 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid76 <http://www.w3.org/2002/07/owl#onProperty> <http://bimerr.iot.linkeddata.es/def/annotation-objects#hasLine> .
+_:genid76 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://bimerr.iot.linkeddata.es/def/annotation-objects#Line> .
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#Viewpoint> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid77 .
+_:genid77 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid77 <http://www.w3.org/2002/07/owl#onProperty> <http://bimerr.iot.linkeddata.es/def/annotation-objects#relatedToComment> .
+_:genid77 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://bimerr.iot.linkeddata.es/def/annotation-objects#Comment> .
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#Viewpoint> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid78 .
+_:genid78 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid78 <http://www.w3.org/2002/07/owl#onProperty> <http://bimerr.iot.linkeddata.es/def/annotation-objects#hasComponent> .
+_:genid78 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid78 <http://www.w3.org/2002/07/owl#onClass> <http://bimerr.iot.linkeddata.es/def/building#Element> .
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#Viewpoint> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid79 .
+_:genid79 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid79 <http://www.w3.org/2002/07/owl#onProperty> <http://bimerr.iot.linkeddata.es/def/annotation-objects#relatedToComment> .
+_:genid79 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid79 <http://www.w3.org/2002/07/owl#onClass> <http://bimerr.iot.linkeddata.es/def/annotation-objects#Comment> .
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#Viewpoint> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid80 .
+_:genid80 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid80 <http://www.w3.org/2002/07/owl#onProperty> <http://bimerr.iot.linkeddata.es/def/annotation-objects#hasCamera> .
+_:genid80 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid80 <http://www.w3.org/2002/07/owl#onClass> <http://bimerr.iot.linkeddata.es/def/annotation-objects#Camera> .
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#Viewpoint> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid81 .
+_:genid81 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid81 <http://www.w3.org/2002/07/owl#onProperty> <http://bimerr.iot.linkeddata.es/def/annotation-objects#identifier> .
+_:genid81 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid81 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#string> .
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#Viewpoint> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid82 .
+_:genid82 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid82 <http://www.w3.org/2002/07/owl#onProperty> <http://bimerr.iot.linkeddata.es/def/annotation-objects#identifier> .
+_:genid82 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid82 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#string> .
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#Viewpoint> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid83 .
+_:genid83 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid83 <http://www.w3.org/2002/07/owl#onProperty> <http://bimerr.iot.linkeddata.es/def/annotation-objects#index> .
+_:genid83 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid83 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#integer> .
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#Viewpoint> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid84 .
+_:genid84 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid84 <http://www.w3.org/2002/07/owl#onProperty> <http://bimerr.iot.linkeddata.es/def/annotation-objects#snapshotName> .
+_:genid84 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid84 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#string> .
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#Viewpoint> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid85 .
+_:genid85 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid85 <http://www.w3.org/2002/07/owl#onProperty> <http://bimerr.iot.linkeddata.es/def/annotation-objects#viewpointName> .
+_:genid85 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid85 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#string> .
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#Viewpoint> <http://www.w3.org/2000/01/rdf-schema#label> "Viewpoint" .
+# 
+# http://bimerr.iot.linkeddata.es/def/building#Element
+<http://bimerr.iot.linkeddata.es/def/building#Element> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://bimerr.iot.linkeddata.es/def/building#Element> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid86 .
+_:genid86 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid86 <http://www.w3.org/2002/07/owl#onProperty> <http://bimerr.iot.linkeddata.es/def/building#ifcIdentifier> .
+_:genid86 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid86 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#string> .
+<http://bimerr.iot.linkeddata.es/def/building#Element> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid87 .
+_:genid87 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid87 <http://www.w3.org/2002/07/owl#onProperty> <http://bimerr.iot.linkeddata.es/def/building#autoringToolId> .
+_:genid87 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid87 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#string> .
+<http://bimerr.iot.linkeddata.es/def/building#Element> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid88 .
+_:genid88 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid88 <http://www.w3.org/2002/07/owl#onProperty> <http://bimerr.iot.linkeddata.es/def/building#colorDisplay> .
+_:genid88 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid88 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#string> .
+<http://bimerr.iot.linkeddata.es/def/building#Element> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid89 .
+_:genid89 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid89 <http://www.w3.org/2002/07/owl#onProperty> <http://bimerr.iot.linkeddata.es/def/building#ifcIdentifier> .
+_:genid89 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid89 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#string> .
+<http://bimerr.iot.linkeddata.es/def/building#Element> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid90 .
+_:genid90 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid90 <http://www.w3.org/2002/07/owl#onProperty> <http://bimerr.iot.linkeddata.es/def/building#originatingSystem> .
+_:genid90 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid90 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#string> .
+<http://bimerr.iot.linkeddata.es/def/building#Element> <http://www.w3.org/2000/01/rdf-schema#label> "Element" .
+# 
+# http://bimerr.iot.linkeddata.es/def/information-objects#Format
+<http://bimerr.iot.linkeddata.es/def/information-objects#Format> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://bimerr.iot.linkeddata.es/def/information-objects#Format> <http://www.w3.org/2000/01/rdf-schema#label> "Format" .
+# 
+# http://bimerr.iot.linkeddata.es/def/information-objects#InformationObject
+<http://bimerr.iot.linkeddata.es/def/information-objects#InformationObject> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://bimerr.iot.linkeddata.es/def/information-objects#InformationObject> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid91 .
+_:genid91 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid91 <http://www.w3.org/2002/07/owl#onProperty> <http://bimerr.iot.linkeddata.es/def/information-objects#hasExtension> .
+_:genid91 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid91 <http://www.w3.org/2002/07/owl#onClass> <http://bimerr.iot.linkeddata.es/def/information-objects#Format> .
+<http://bimerr.iot.linkeddata.es/def/information-objects#InformationObject> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid92 .
+_:genid92 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid92 <http://www.w3.org/2002/07/owl#onProperty> <http://bimerr.iot.linkeddata.es/def/information-objects#hasExtension> .
+_:genid92 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid92 <http://www.w3.org/2002/07/owl#onClass> <http://bimerr.iot.linkeddata.es/def/information-objects#Format> .
+<http://bimerr.iot.linkeddata.es/def/information-objects#InformationObject> <http://www.w3.org/2000/01/rdf-schema#label> "Information Object" .
+# 
+# http://bimerr.iot.linkeddata.es/def/key-performance-indicator#Project
+<http://bimerr.iot.linkeddata.es/def/key-performance-indicator#Project> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://bimerr.iot.linkeddata.es/def/key-performance-indicator#Project> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid93 .
+_:genid93 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid93 <http://www.w3.org/2002/07/owl#onProperty> <http://bimerr.iot.linkeddata.es/def/key-performance-indicator#identifier> .
+_:genid93 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid93 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#string> .
+<http://bimerr.iot.linkeddata.es/def/key-performance-indicator#Project> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid94 .
+_:genid94 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid94 <http://www.w3.org/2002/07/owl#onProperty> <http://bimerr.iot.linkeddata.es/def/key-performance-indicator#identifier> .
+_:genid94 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid94 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#string> .
+<http://bimerr.iot.linkeddata.es/def/key-performance-indicator#Project> <http://www.w3.org/2000/01/rdf-schema#label> "Project" .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Individuals
+# #
+# #################################################################
+# 
+# 
+# http://bimerr.iot.linkeddata.es/def/annotation-objects#ArchitectureTopicLabel
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#ArchitectureTopicLabel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#ArchitectureTopicLabel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://bimerr.iot.linkeddata.es/def/annotation-objects#TopicLabel> .
+# 
+# http://bimerr.iot.linkeddata.es/def/annotation-objects#ClosedTopicStatus
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#ClosedTopicStatus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#ClosedTopicStatus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://bimerr.iot.linkeddata.es/def/annotation-objects#TopicStatus> .
+# 
+# http://bimerr.iot.linkeddata.es/def/annotation-objects#CommentTopicType
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#CommentTopicType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#CommentTopicType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://bimerr.iot.linkeddata.es/def/annotation-objects#TopicType> .
+# 
+# http://bimerr.iot.linkeddata.es/def/annotation-objects#ConstructionEnd
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#ConstructionEnd> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#ConstructionEnd> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://bimerr.iot.linkeddata.es/def/annotation-objects#Stage> .
+# 
+# http://bimerr.iot.linkeddata.es/def/annotation-objects#ConstructionStart
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#ConstructionStart> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#ConstructionStart> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://bimerr.iot.linkeddata.es/def/annotation-objects#Stage> .
+# 
+# http://bimerr.iot.linkeddata.es/def/annotation-objects#ElectricalTopicLabel
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#ElectricalTopicLabel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#ElectricalTopicLabel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://bimerr.iot.linkeddata.es/def/annotation-objects#TopicLabel> .
+# 
+# http://bimerr.iot.linkeddata.es/def/annotation-objects#InProgressTopicStatus
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#InProgressTopicStatus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#InProgressTopicStatus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://bimerr.iot.linkeddata.es/def/annotation-objects#TopicStatus> .
+# 
+# http://bimerr.iot.linkeddata.es/def/annotation-objects#IssueTopicType
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#IssueTopicType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#IssueTopicType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://bimerr.iot.linkeddata.es/def/annotation-objects#TopicType> .
+# 
+# http://bimerr.iot.linkeddata.es/def/annotation-objects#MechanicalTopicLabel
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#MechanicalTopicLabel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#MechanicalTopicLabel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://bimerr.iot.linkeddata.es/def/annotation-objects#TopicLabel> .
+# 
+# http://bimerr.iot.linkeddata.es/def/annotation-objects#OpenTopicStatus
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#OpenTopicStatus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#OpenTopicStatus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://bimerr.iot.linkeddata.es/def/annotation-objects#TopicStatus> .
+# 
+# http://bimerr.iot.linkeddata.es/def/annotation-objects#PreliminaryPlanningEnd
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#PreliminaryPlanningEnd> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#PreliminaryPlanningEnd> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://bimerr.iot.linkeddata.es/def/annotation-objects#Stage> .
+# 
+# http://bimerr.iot.linkeddata.es/def/annotation-objects#ReOpenedTopicStatus
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#ReOpenedTopicStatus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#ReOpenedTopicStatus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://bimerr.iot.linkeddata.es/def/annotation-objects#TopicStatus> .
+# 
+# http://bimerr.iot.linkeddata.es/def/annotation-objects#RequestTopicType
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#RequestTopicType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#RequestTopicType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://bimerr.iot.linkeddata.es/def/annotation-objects#TopicType> .
+# 
+# http://bimerr.iot.linkeddata.es/def/annotation-objects#SolutionTopicType
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#SolutionTopicType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#SolutionTopicType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://bimerr.iot.linkeddata.es/def/annotation-objects#TopicType> .
+# 
+# http://bimerr.iot.linkeddata.es/def/annotation-objects#SpecificationsTopicLabel
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#SpecificationsTopicLabel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#SpecificationsTopicLabel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://bimerr.iot.linkeddata.es/def/annotation-objects#TopicLabel> .
+# 
+# http://bimerr.iot.linkeddata.es/def/annotation-objects#StructureTopicLabel
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#StructureTopicLabel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#StructureTopicLabel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://bimerr.iot.linkeddata.es/def/annotation-objects#TopicLabel> .
+# 
+# http://bimerr.iot.linkeddata.es/def/annotation-objects#TechnologyTopicLabel
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#TechnologyTopicLabel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://bimerr.iot.linkeddata.es/def/annotation-objects#TechnologyTopicLabel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://bimerr.iot.linkeddata.es/def/annotation-objects#TopicLabel> .
+# 
+# Generated by the OWL API (version 5.1.11) https://github.com/owlcs/owlapi/
