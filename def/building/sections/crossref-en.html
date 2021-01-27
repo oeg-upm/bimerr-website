@@ -59,7 +59,8 @@ This section provides details for each class and property defined by Building On
          <a href="#https://w3id.org/def/saref4bldg#FlowController" title="https://w3id.org/def/saref4bldg#FlowController">Flow Controller</a>
       </li>
       <li>
-         <a href="#https://w3id.org/def/saref4bldg#FlowMovingDevice" title="https://w3id.org/def/saref4bldg#FlowMovingDevice">Flow Moving Device</a>
+         <a href="#https://w3id.org/def/saref4bldg#FlowMovingDevice"
+            title="https://w3id.org/def/saref4bldg#FlowMovingDevice">Flow Moving Device</a>
       </li>
       <li>
          <a href="#FlowSegment"
@@ -154,6 +155,12 @@ This section provides details for each class and property defined by Building On
             <a href="#https://w3id.org/bot#Zone" title="https://w3id.org/bot#Zone">Zone</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#hasApartment"
+               title="http://bimerr.iot.linkeddata.es/def/building#hasApartment">has apartment</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
       </dl>
    </div>
    <div class="entity" id="BiomassBoiler">
@@ -163,6 +170,9 @@ This section provides details for each class and property defined by Building On
       </h3>
       <p>
          <strong>IRI:</strong> http://bimerr.iot.linkeddata.es/def/building#BiomassBoiler</p>
+      <div class="comment">
+         <span class="markdown">Boiler for the combustion of biomass fuels.</span>
+      </div>
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
@@ -229,6 +239,9 @@ This section provides details for each class and property defined by Building On
       </h3>
       <p>
          <strong>IRI:</strong> https://w3id.org/bot#Building</p>
+      <div class="comment">
+         <span class="markdown">An independent unit of the built environment with a characteristic spatial structure. Concept from the BOT ontology.</span>
+      </div>
       <dl class="description">
          <dt>has sub-classes</dt>
          <dd>
@@ -318,7 +331,8 @@ This section provides details for each class and property defined by Building On
             <a href="#https://w3id.org/def/saref4bldg#EnergyConversionDevice"
                title="https://w3id.org/def/saref4bldg#EnergyConversionDevice">Energy Conversion Device</a>
             <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/def/saref4bldg#FlowController" title="https://w3id.org/def/saref4bldg#FlowController">Flow Controller</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/def/saref4bldg#FlowMovingDevice" title="https://w3id.org/def/saref4bldg#FlowMovingDevice">Flow Moving Device</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/def/saref4bldg#FlowMovingDevice"
+               title="https://w3id.org/def/saref4bldg#FlowMovingDevice">Flow Moving Device</a>
             <sup class="type-c" title="class">c</sup>, <a href="#FlowSegment"
                title="http://bimerr.iot.linkeddata.es/def/building#FlowSegment">Flow Segment</a>
             <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/def/saref4bldg#FlowStorageDevice"
@@ -399,12 +413,26 @@ This section provides details for each class and property defined by Building On
       </h3>
       <p>
          <strong>IRI:</strong> https://w3id.org/bot#Element</p>
+      <div class="comment">
+         <span class="markdown">Constituent of a construction entity with a characteristic technical function, form or position. Concept from the BOT ontology.</span>
+      </div>
       <dl class="description">
          <dt>has sub-classes</dt>
          <dd>
             <a href="#Element"
                title="http://bimerr.iot.linkeddata.es/def/building#Element">Element</a>
             <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#https://w3id.org/bot#hasSubElement" title="https://w3id.org/bot#hasSubElement">has sub element</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#https://w3id.org/bot#hasElement" title="https://w3id.org/bot#hasElement">has element</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/bot#hasSubElement" title="https://w3id.org/bot#hasSubElement">has sub element</a>
+            <sup class="type-op" title="object property">op</sup>
          </dd>
       </dl>
    </div>
@@ -448,7 +476,8 @@ This section provides details for each class and property defined by Building On
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
-            <a href="#https://w3id.org/def/saref4bldg#FlowMovingDevice" title="https://w3id.org/def/saref4bldg#FlowMovingDevice">Flow Moving Device</a>
+            <a href="#https://w3id.org/def/saref4bldg#FlowMovingDevice"
+               title="https://w3id.org/def/saref4bldg#FlowMovingDevice">Flow Moving Device</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -585,6 +614,9 @@ This section provides details for each class and property defined by Building On
       </h3>
       <p>
          <strong>IRI:</strong> http://bimerr.iot.linkeddata.es/def/building#FossilBoiler</p>
+      <div class="comment">
+         <span class="markdown">Boiler for the combustion of fossil fuels.</span>
+      </div>
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
@@ -662,7 +694,8 @@ This section provides details for each class and property defined by Building On
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
-            <a href="#https://w3id.org/def/saref4bldg#FlowMovingDevice" title="https://w3id.org/def/saref4bldg#FlowMovingDevice">Flow Moving Device</a>
+            <a href="#https://w3id.org/def/saref4bldg#FlowMovingDevice"
+               title="https://w3id.org/def/saref4bldg#FlowMovingDevice">Flow Moving Device</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -755,12 +788,20 @@ This section provides details for each class and property defined by Building On
       </h3>
       <p>
          <strong>IRI:</strong> https://w3id.org/bot#Space</p>
+      <div class="comment">
+         <span class="markdown">A limited three-dimensional extent defined physically or notionally. Concept from the BOT ontology.</span>
+      </div>
       <dl class="description">
          <dt>has sub-classes</dt>
          <dd>
             <a href="#Space"
                title="http://bimerr.iot.linkeddata.es/def/building#Space">Space</a>
             <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#https://w3id.org/bot#hasSpace" title="https://w3id.org/bot#hasSpace">has space</a>
+            <sup class="type-op" title="object property">op</sup>
          </dd>
       </dl>
    </div>
@@ -798,6 +839,12 @@ This section provides details for each class and property defined by Building On
             <a href="#https://w3id.org/bot#Storey" title="https://w3id.org/bot#Storey">Storey</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#hasApartment"
+               title="http://bimerr.iot.linkeddata.es/def/building#hasApartment">has apartment</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
       </dl>
    </div>
    <div class="entity" id="https://w3id.org/bot#Storey">
@@ -807,12 +854,20 @@ This section provides details for each class and property defined by Building On
       </h3>
       <p>
          <strong>IRI:</strong> https://w3id.org/bot#Storey</p>
+      <div class="comment">
+         <span class="markdown">A level part of a building. Concept from the BOT ontology.</span>
+      </div>
       <dl class="description">
          <dt>has sub-classes</dt>
          <dd>
             <a href="#Storey"
                title="http://bimerr.iot.linkeddata.es/def/building#Storey">Storey</a>
             <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#https://w3id.org/bot#hasStorey" title="https://w3id.org/bot#hasStorey">has storey</a>
+            <sup class="type-op" title="object property">op</sup>
          </dd>
       </dl>
    </div>
@@ -917,12 +972,28 @@ This section provides details for each class and property defined by Building On
       </h3>
       <p>
          <strong>IRI:</strong> https://w3id.org/bot#Zone</p>
+      <div class="comment">
+         <span class="markdown">A part of the physical world or a virtual world that is inherently both located in this world and having a 3D spatial extent. Concept from the BOT ontology.</span>
+      </div>
       <dl class="description">
          <dt>has sub-classes</dt>
          <dd>
             <a href="#Apartment"
                title="http://bimerr.iot.linkeddata.es/def/building#Apartment">Apartment</a>
             <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#https://w3id.org/bot#containsZone" title="https://w3id.org/bot#containsZone">contains zone</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/bot#hasElement" title="https://w3id.org/bot#hasElement">has element</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/bot#hasSpace" title="https://w3id.org/bot#hasSpace">has space</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#https://w3id.org/bot#hasStorey" title="https://w3id.org/bot#hasStorey">has storey</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#https://w3id.org/bot#containsZone" title="https://w3id.org/bot#containsZone">contains zone</a>
+            <sup class="type-op" title="object property">op</sup>
          </dd>
       </dl>
    </div>
@@ -959,6 +1030,20 @@ This section provides details for each class and property defined by Building On
       <div class="comment">
          <span class="markdown">Relationship to the subzones of a major zone. A space zone could for instance be contained in a storey zone which is further contained in a building zone.</span>
       </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#https://w3id.org/bot#Zone" title="https://w3id.org/bot#Zone">Zone</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#https://w3id.org/bot#Zone" title="https://w3id.org/bot#Zone">Zone</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
    </div>
    <div class="entity" id="hasApartment">
       <h3>has apartment<sup class="type-op" title="object property">op</sup>
@@ -969,6 +1054,22 @@ This section provides details for each class and property defined by Building On
          <strong>IRI:</strong> http://bimerr.iot.linkeddata.es/def/building#hasApartment</p>
       <div class="comment">
          <span class="markdown">Relation between a storey and the apartments it is composed of.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Storey"
+                  title="http://bimerr.iot.linkeddata.es/def/building#Storey">Storey</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Apartment"
+                  title="http://bimerr.iot.linkeddata.es/def/building#Apartment">Apartment</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
       </div>
    </div>
    <div class="entity" id="https://w3id.org/bot#hasElement">
@@ -981,6 +1082,20 @@ This section provides details for each class and property defined by Building On
       <div class="comment">
          <span class="markdown">Links a Zone to an Element that is contained in, or adjacent to, the Zone.</span>
       </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#https://w3id.org/bot#Zone" title="https://w3id.org/bot#Zone">Zone</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#https://w3id.org/bot#Element" title="https://w3id.org/bot#Element">Element</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
    </div>
    <div class="entity" id="https://w3id.org/bot#hasSpace">
       <h3>has space<sup class="type-op" title="object property">op</sup>
@@ -991,6 +1106,20 @@ This section provides details for each class and property defined by Building On
          <strong>IRI:</strong> https://w3id.org/bot#hasSpace</p>
       <div class="comment">
          <span class="markdown">Relation to spaces contained in a zone.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#https://w3id.org/bot#Zone" title="https://w3id.org/bot#Zone">Zone</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#https://w3id.org/bot#Space" title="https://w3id.org/bot#Space">Space</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
       </div>
    </div>
    <div class="entity" id="https://w3id.org/bot#hasStorey">
@@ -1003,6 +1132,20 @@ This section provides details for each class and property defined by Building On
       <div class="comment">
          <span class="markdown">Relation to storeys contained in a zone.</span>
       </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#https://w3id.org/bot#Zone" title="https://w3id.org/bot#Zone">Zone</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#https://w3id.org/bot#Storey" title="https://w3id.org/bot#Storey">Storey</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
    </div>
    <div class="entity" id="https://w3id.org/bot#hasSubElement">
       <h3>has sub element<sup class="type-op" title="object property">op</sup>
@@ -1013,6 +1156,20 @@ This section provides details for each class and property defined by Building On
          <strong>IRI:</strong> https://w3id.org/bot#hasSubElement</p>
       <div class="comment">
          <span class="markdown">Relationship to indicate the subcomponents of elements</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#https://w3id.org/bot#Element" title="https://w3id.org/bot#Element">Element</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#https://w3id.org/bot#Element" title="https://w3id.org/bot#Element">Element</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
       </div>
    </div>
 </div><div id="dataproperties">
@@ -1109,6 +1266,10 @@ This section provides details for each class and property defined by Building On
                   title="http://bimerr.iot.linkeddata.es/def/building#Space">Space</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            </dd>
          </dl>
       </div>
    </div>
@@ -1140,6 +1301,14 @@ This section provides details for each class and property defined by Building On
          <strong>IRI:</strong> http://bimerr.iot.linkeddata.es/def/building#identifierInDatabase</p>
       <div class="comment">
          <span class="markdown">Indicates the ID of the building element in the BIMERR materials and component database.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            </dd>
+         </dl>
       </div>
    </div>
    <div class="entity" id="ifcIdentifier">

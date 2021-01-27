@@ -1,0 +1,253 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://bimerr.iot.linkeddata.es/def/information-objects#"
+     xml:base="http://bimerr.iot.linkeddata.es/def/information-objects"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:terms="http://purl.org/dc/terms/">
+    <owl:Ontology rdf:about="http://bimerr.iot.linkeddata.es/def/information-objects#">
+        <terms:creator xml:lang="en">Serge Chávez-Feria</terms:creator>
+        <terms:creator>María Poveda-Villalón</terms:creator>
+        <terms:license>http://purl.org/NET/rdflicense/cc-by4.0</terms:license>
+        <terms:publisher>http://www.oeg-upm.net/</terms:publisher>
+        <terms:title>Information Objects Ontology</terms:title>
+        <owl:versionInfo>0.0.1</owl:versionInfo>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://purl.org/dc/terms/creator -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/license -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/publisher -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/publisher"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/title -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/title"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://bimerr.iot.linkeddata.es/def/information-objects#hasDocumentation -->
+
+
+    <owl:ObjectProperty rdf:about="http://bimerr.iot.linkeddata.es/def/information-objects#hasDocumentation">
+        <rdfs:comment xml:lang="en">Relates an entity (Building, Project, Space, etc) with an information object (file) describing an aspect of that entity.</rdfs:comment>
+        <rdfs:label xml:lang="en">has documentation</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://bimerr.iot.linkeddata.es/def/information-objects#hasGeometryFile -->
+
+
+    <owl:ObjectProperty rdf:about="http://bimerr.iot.linkeddata.es/def/information-objects#hasGeometryFile">
+        <rdfs:subPropertyOf rdf:resource="http://bimerr.iot.linkeddata.es/def/information-objects#hasDocumentation"/>
+        <rdfs:comment xml:lang="en">Relates the representation of a building topological element with a file describing its geometric information.</rdfs:comment>
+        <rdfs:label xml:lang="en">has geometry file</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://bimerr.iot.linkeddata.es/def/information-objects#hasObxmlFile -->
+
+
+    <owl:ObjectProperty rdf:about="http://bimerr.iot.linkeddata.es/def/information-objects#hasObxmlFile">
+        <rdfs:subPropertyOf rdf:resource="http://bimerr.iot.linkeddata.es/def/information-objects#hasDocumentation"/>
+        <rdfs:comment xml:lang="en">Relates Space entities with obXML files.</rdfs:comment>
+        <rdfs:label xml:lang="en">has obxml file</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://bimerr.iot.linkeddata.es/def/information-objects#hasWorkflowPlan -->
+
+
+    <owl:ObjectProperty rdf:about="http://bimerr.iot.linkeddata.es/def/information-objects#hasWorkflowPlan">
+        <rdfs:subPropertyOf rdf:resource="http://bimerr.iot.linkeddata.es/def/information-objects#hasDocumentation"/>
+        <rdfs:comment xml:lang="en">Relates a Project entity with a workflow plan file.</rdfs:comment>
+        <rdfs:label xml:lang="en">has workflow plan</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://bimerr.iot.linkeddata.es/def/information-objects#isRelatedToFile -->
+
+
+    <owl:ObjectProperty rdf:about="http://bimerr.iot.linkeddata.es/def/information-objects#isRelatedToFile">
+        <rdfs:comment xml:lang="en">Indicated a relationship between files.</rdfs:comment>
+        <rdfs:label xml:lang="en">is related to file</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://bimerr.iot.linkeddata.es/def/information-objects#created -->
+
+
+    <owl:DatatypeProperty rdf:about="http://bimerr.iot.linkeddata.es/def/information-objects#created">
+        <rdfs:comment xml:lang="en">Date when the document has been created.</rdfs:comment>
+        <rdfs:label xml:lang="en">created</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://bimerr.iot.linkeddata.es/def/information-objects#creator -->
+
+
+    <owl:DatatypeProperty rdf:about="http://bimerr.iot.linkeddata.es/def/information-objects#creator">
+        <rdfs:comment xml:lang="en">Creator of the file.</rdfs:comment>
+        <rdfs:label xml:lang="en">creator</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://bimerr.iot.linkeddata.es/def/information-objects#description -->
+
+
+    <owl:DatatypeProperty rdf:about="http://bimerr.iot.linkeddata.es/def/information-objects#description">
+        <rdfs:comment xml:lang="en">A short description of the content of the file.</rdfs:comment>
+        <rdfs:label xml:lang="en">description</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://bimerr.iot.linkeddata.es/def/information-objects#filename -->
+
+
+    <owl:DatatypeProperty rdf:about="http://bimerr.iot.linkeddata.es/def/information-objects#filename">
+        <rdfs:comment xml:lang="en">Filename or path to the location of the file.</rdfs:comment>
+        <rdfs:label xml:lang="en">filename</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://bimerr.iot.linkeddata.es/def/information-objects#format -->
+
+
+    <owl:DatatypeProperty rdf:about="http://bimerr.iot.linkeddata.es/def/information-objects#format">
+        <rdfs:comment xml:lang="en">Format or extension of the file.</rdfs:comment>
+        <rdfs:label xml:lang="en">format</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://bimerr.iot.linkeddata.es/def/information-objects#identifier -->
+
+
+    <owl:DatatypeProperty rdf:about="http://bimerr.iot.linkeddata.es/def/information-objects#identifier">
+        <rdfs:comment xml:lang="en">Identifier of the file.</rdfs:comment>
+        <rdfs:label xml:lang="en">identifier</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://bimerr.iot.linkeddata.es/def/information-objects#lastModificationAuthor -->
+
+
+    <owl:DatatypeProperty rdf:about="http://bimerr.iot.linkeddata.es/def/information-objects#lastModificationAuthor">
+        <rdfs:comment xml:lang="en">The user who last modified the file.</rdfs:comment>
+        <rdfs:label xml:lang="en">las modification author</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://bimerr.iot.linkeddata.es/def/information-objects#modified -->
+
+
+    <owl:DatatypeProperty rdf:about="http://bimerr.iot.linkeddata.es/def/information-objects#modified">
+        <rdfs:comment xml:lang="en">Date when the file was last modified.</rdfs:comment>
+        <rdfs:label xml:lang="en">modified</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://bimerr.iot.linkeddata.es/def/information-objects#version -->
+
+
+    <owl:DatatypeProperty rdf:about="http://bimerr.iot.linkeddata.es/def/information-objects#version">
+        <rdfs:comment xml:lang="en">Version of the file.</rdfs:comment>
+        <rdfs:label xml:lang="en">version</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://bimerr.iot.linkeddata.es/def/information-objects#InformationObject -->
+
+
+    <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/information-objects#InformationObject">
+        <rdfs:comment xml:lang="en">Class that represents any type of file.</rdfs:comment>
+        <rdfs:label xml:lang="en">Information object</rdfs:label>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.1.11) https://github.com/owlcs/owlapi/ -->
+
+

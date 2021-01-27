@@ -1,0 +1,292 @@
+<h2 id="crossreference" class="list">Cross reference for Information Objects Ontology classes, properties and dataproperties <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+This section provides details for each class and property defined by Information Objects Ontology.
+<div id="classes">
+   <h3 id="classes-headline" class="list">Classes</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#InformationObject"
+            title="http://bimerr.iot.linkeddata.es/def/information-objects#InformationObject">Information object</a>
+      </li>
+   </ul>
+   <div class="entity" id="InformationObject">
+      <h3>Information object<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://bimerr.iot.linkeddata.es/def/information-objects#InformationObject</p>
+      <div class="comment">
+         <span class="markdown">Class that represents any type of file.</span>
+      </div>
+   </div>
+</div><div id="objectproperties">
+   <h3 id="properties" class="list">Object Properties</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#hasDocumentation"
+            title="http://bimerr.iot.linkeddata.es/def/information-objects#hasDocumentation">has documentation</a>
+      </li>
+      <li>
+         <a href="#hasGeometryFile"
+            title="http://bimerr.iot.linkeddata.es/def/information-objects#hasGeometryFile">has geometry file</a>
+      </li>
+      <li>
+         <a href="#hasObxmlFile"
+            title="http://bimerr.iot.linkeddata.es/def/information-objects#hasObxmlFile">has obxml file</a>
+      </li>
+      <li>
+         <a href="#hasWorkflowPlan"
+            title="http://bimerr.iot.linkeddata.es/def/information-objects#hasWorkflowPlan">has workflow plan</a>
+      </li>
+      <li>
+         <a href="#isRelatedToFile"
+            title="http://bimerr.iot.linkeddata.es/def/information-objects#isRelatedToFile">is related to file</a>
+      </li>
+   </ul>
+   <div class="entity" id="hasDocumentation">
+      <h3>has documentation<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://bimerr.iot.linkeddata.es/def/information-objects#hasDocumentation</p>
+      <div class="comment">
+         <span class="markdown">Relates an entity (Building, Project, Space, etc) with an information object (file) describing an aspect of that entity.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has sub-properties</dt>
+            <dd>
+               <a href="#hasGeometryFile"
+                  title="http://bimerr.iot.linkeddata.es/def/information-objects#hasGeometryFile">has geometry file</a>
+               <sup class="type-op" title="object property">op</sup>, <a href="#hasObxmlFile"
+                  title="http://bimerr.iot.linkeddata.es/def/information-objects#hasObxmlFile">has obxml file</a>
+               <sup class="type-op" title="object property">op</sup>, <a href="#hasWorkflowPlan"
+                  title="http://bimerr.iot.linkeddata.es/def/information-objects#hasWorkflowPlan">has workflow plan</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasGeometryFile">
+      <h3>has geometry file<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://bimerr.iot.linkeddata.es/def/information-objects#hasGeometryFile</p>
+      <div class="comment">
+         <span class="markdown">Relates the representation of a building topological element with a file describing its geometric information.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="#hasDocumentation"
+                  title="http://bimerr.iot.linkeddata.es/def/information-objects#hasDocumentation">has documentation</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasObxmlFile">
+      <h3>has obxml file<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://bimerr.iot.linkeddata.es/def/information-objects#hasObxmlFile</p>
+      <div class="comment">
+         <span class="markdown">Relates Space entities with obXML files.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="#hasDocumentation"
+                  title="http://bimerr.iot.linkeddata.es/def/information-objects#hasDocumentation">has documentation</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasWorkflowPlan">
+      <h3>has workflow plan<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://bimerr.iot.linkeddata.es/def/information-objects#hasWorkflowPlan</p>
+      <div class="comment">
+         <span class="markdown">Relates a Project entity with a workflow plan file.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="#hasDocumentation"
+                  title="http://bimerr.iot.linkeddata.es/def/information-objects#hasDocumentation">has documentation</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="isRelatedToFile">
+      <h3>is related to file<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://bimerr.iot.linkeddata.es/def/information-objects#isRelatedToFile</p>
+      <div class="comment">
+         <span class="markdown">Indicated a relationship between files.</span>
+      </div>
+   </div>
+</div><div id="dataproperties">
+   <h3 id="dataproperties-headline" class="list">Data Properties</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#created"
+            title="http://bimerr.iot.linkeddata.es/def/information-objects#created">created</a>
+      </li>
+      <li>
+         <a href="#creator"
+            title="http://bimerr.iot.linkeddata.es/def/information-objects#creator">creator</a>
+      </li>
+      <li>
+         <a href="#description"
+            title="http://bimerr.iot.linkeddata.es/def/information-objects#description">description</a>
+      </li>
+      <li>
+         <a href="#filename"
+            title="http://bimerr.iot.linkeddata.es/def/information-objects#filename">filename</a>
+      </li>
+      <li>
+         <a href="#format"
+            title="http://bimerr.iot.linkeddata.es/def/information-objects#format">format</a>
+      </li>
+      <li>
+         <a href="#identifier"
+            title="http://bimerr.iot.linkeddata.es/def/information-objects#identifier">identifier</a>
+      </li>
+      <li>
+         <a href="#lastModificationAuthor"
+            title="http://bimerr.iot.linkeddata.es/def/information-objects#lastModificationAuthor">las modification author</a>
+      </li>
+      <li>
+         <a href="#modified"
+            title="http://bimerr.iot.linkeddata.es/def/information-objects#modified">modified</a>
+      </li>
+      <li>
+         <a href="#version"
+            title="http://bimerr.iot.linkeddata.es/def/information-objects#version">version</a>
+      </li>
+   </ul>
+   <div class="entity" id="created">
+      <h3>created<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://bimerr.iot.linkeddata.es/def/information-objects#created</p>
+      <div class="comment">
+         <span class="markdown">Date when the document has been created.</span>
+      </div>
+   </div>
+   <div class="entity" id="creator">
+      <h3>creator<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://bimerr.iot.linkeddata.es/def/information-objects#creator</p>
+      <div class="comment">
+         <span class="markdown">Creator of the file.</span>
+      </div>
+   </div>
+   <div class="entity" id="description">
+      <h3>description<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://bimerr.iot.linkeddata.es/def/information-objects#description</p>
+      <div class="comment">
+         <span class="markdown">A short description of the content of the file.</span>
+      </div>
+   </div>
+   <div class="entity" id="filename">
+      <h3>filename<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://bimerr.iot.linkeddata.es/def/information-objects#filename</p>
+      <div class="comment">
+         <span class="markdown">Filename or path to the location of the file.</span>
+      </div>
+   </div>
+   <div class="entity" id="format">
+      <h3>format<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://bimerr.iot.linkeddata.es/def/information-objects#format</p>
+      <div class="comment">
+         <span class="markdown">Format or extension of the file.</span>
+      </div>
+   </div>
+   <div class="entity" id="identifier">
+      <h3>identifier<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://bimerr.iot.linkeddata.es/def/information-objects#identifier</p>
+      <div class="comment">
+         <span class="markdown">Identifier of the file.</span>
+      </div>
+   </div>
+   <div class="entity" id="lastModificationAuthor">
+      <h3>las modification author<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://bimerr.iot.linkeddata.es/def/information-objects#lastModificationAuthor</p>
+      <div class="comment">
+         <span class="markdown">The user who last modified the file.</span>
+      </div>
+   </div>
+   <div class="entity" id="modified">
+      <h3>modified<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://bimerr.iot.linkeddata.es/def/information-objects#modified</p>
+      <div class="comment">
+         <span class="markdown">Date when the file was last modified.</span>
+      </div>
+   </div>
+   <div class="entity" id="version">
+      <h3>version<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://bimerr.iot.linkeddata.es/def/information-objects#version</p>
+      <div class="comment">
+         <span class="markdown">Version of the file.</span>
+      </div>
+   </div>
+</div><div id="legend">
+<h2>Legend <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<div   class="entity">
+<sup class="type-c" title="Classes">c</sup>: Classes <br/>
+<sup class="type-op" title="Object Properties">op</sup>: Object Properties <br/>
+<sup class="type-dp" title="Data Properties">dp</sup>: Data Properties <br/>
+<sup class="type-ni" title="Named Individuals">ni</sup>: Named Individuals
+</div>
+</div>

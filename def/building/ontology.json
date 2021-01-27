@@ -299,16 +299,17 @@
   }, {
     "@value" : "Serge Chávez-Feria"
   } ],
-  "http://purl.org/dc/elements/1.1/publisher" : [ {
+  "http://purl.org/dc/elements/1.1/license" : [ {
     "@value" : "http://purl.org/NET/rdflicense/cc-by4.0"
-  }, {
+  } ],
+  "http://purl.org/dc/elements/1.1/publisher" : [ {
     "@value" : "http://www.oeg-upm.net/"
   } ],
   "http://purl.org/dc/elements/1.1/title" : [ {
     "@value" : "Building Ontology"
   } ],
   "http://www.w3.org/2002/07/owl#versionInfo" : [ {
-    "@value" : "0.1.0"
+    "@value" : "0.1.1"
   } ]
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/building#Apartment",
@@ -337,6 +338,10 @@
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/building#BiomassBoiler",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Boiler for the combustion of biomass fuels."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Biomass Boiler"
   } ],
@@ -466,6 +471,10 @@
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/building#FossilBoiler",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Boiler for the combustion of fossil fuels."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Fossil Boiler"
   } ],
@@ -631,8 +640,14 @@
     "@language" : "en",
     "@value" : "Relation between a storey and the apartments it is composed of."
   } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/building#Storey"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "has apartment"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/building#Apartment"
   } ]
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/building#hasObXMLFile",
@@ -647,6 +662,9 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "has obXML file"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/building#identifierInDatabase",
@@ -658,6 +676,9 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "identifier in database"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/building#ifcIdentifier",
@@ -752,30 +773,50 @@
 }, {
   "@id" : "https://w3id.org/bot#Building",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "An independent unit of the built environment with a characteristic spatial structure. Concept from the BOT ontology."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Building"
   } ]
 }, {
   "@id" : "https://w3id.org/bot#Element",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Constituent of a construction entity with a characteristic technical function, form or position. Concept from the BOT ontology."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Element"
   } ]
 }, {
   "@id" : "https://w3id.org/bot#Space",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A limited three-dimensional extent defined physically or notionally. Concept from the BOT ontology."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Space"
   } ]
 }, {
   "@id" : "https://w3id.org/bot#Storey",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A level part of a building. Concept from the BOT ontology."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Storey"
   } ]
 }, {
   "@id" : "https://w3id.org/bot#Zone",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A part of the physical world or a virtual world that is inherently both located in this world and having a 3D spatial extent. Concept from the BOT ontology."
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Zone"
   } ]
@@ -786,8 +827,14 @@
     "@language" : "en",
     "@value" : "Relationship to the subzones of a major zone. A space zone could for instance be contained in a storey zone which is further contained in a building zone."
   } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/bot#Zone"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "contains zone"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/bot#Zone"
   } ]
 }, {
   "@id" : "https://w3id.org/bot#hasElement",
@@ -796,8 +843,14 @@
     "@language" : "en",
     "@value" : "Links a Zone to an Element that is contained in, or adjacent to, the Zone."
   } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/bot#Zone"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "has element"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/bot#Element"
   } ]
 }, {
   "@id" : "https://w3id.org/bot#hasSimple3DModel",
@@ -819,8 +872,14 @@
     "@language" : "en",
     "@value" : "Relation to spaces contained in a zone."
   } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/bot#Zone"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "has space"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/bot#Space"
   } ]
 }, {
   "@id" : "https://w3id.org/bot#hasStorey",
@@ -829,8 +888,14 @@
     "@language" : "en",
     "@value" : "Relation to storeys contained in a zone."
   } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/bot#Zone"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "has storey"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/bot#Storey"
   } ]
 }, {
   "@id" : "https://w3id.org/bot#hasSubElement",
@@ -839,8 +904,14 @@
     "@language" : "en",
     "@value" : "Relationship to indicate the subcomponents of elements"
   } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/bot#Element"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "has sub element"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/bot#Element"
   } ]
 }, {
   "@id" : "https://w3id.org/def/saref4bldg#Boiler",

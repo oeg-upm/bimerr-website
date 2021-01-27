@@ -1,0 +1,134 @@
+<http://bimerr.iot.linkeddata.es/def/information-objects#> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://bimerr.iot.linkeddata.es/def/information-objects#> <http://purl.org/dc/terms/creator> "Serge Chávez-Feria"@en .
+<http://bimerr.iot.linkeddata.es/def/information-objects#> <http://purl.org/dc/terms/creator> "María Poveda-Villalón" .
+<http://bimerr.iot.linkeddata.es/def/information-objects#> <http://purl.org/dc/terms/license> "http://purl.org/NET/rdflicense/cc-by4.0" .
+<http://bimerr.iot.linkeddata.es/def/information-objects#> <http://purl.org/dc/terms/publisher> "http://www.oeg-upm.net/" .
+<http://bimerr.iot.linkeddata.es/def/information-objects#> <http://purl.org/dc/terms/title> "Information Objects Ontology" .
+<http://bimerr.iot.linkeddata.es/def/information-objects#> <http://www.w3.org/2002/07/owl#versionInfo> "0.0.1" .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/dc/terms/creator
+<http://purl.org/dc/terms/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/license
+<http://purl.org/dc/terms/license> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/publisher
+<http://purl.org/dc/terms/publisher> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/title
+<http://purl.org/dc/terms/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# http://bimerr.iot.linkeddata.es/def/information-objects#hasDocumentation
+<http://bimerr.iot.linkeddata.es/def/information-objects#hasDocumentation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://bimerr.iot.linkeddata.es/def/information-objects#hasDocumentation> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates an entity (Building, Project, Space, etc) with an information object (file) describing an aspect of that entity."@en .
+<http://bimerr.iot.linkeddata.es/def/information-objects#hasDocumentation> <http://www.w3.org/2000/01/rdf-schema#label> "has documentation"@en .
+# 
+# http://bimerr.iot.linkeddata.es/def/information-objects#hasGeometryFile
+<http://bimerr.iot.linkeddata.es/def/information-objects#hasGeometryFile> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://bimerr.iot.linkeddata.es/def/information-objects#hasGeometryFile> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://bimerr.iot.linkeddata.es/def/information-objects#hasDocumentation> .
+<http://bimerr.iot.linkeddata.es/def/information-objects#hasGeometryFile> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates the representation of a building topological element with a file describing its geometric information."@en .
+<http://bimerr.iot.linkeddata.es/def/information-objects#hasGeometryFile> <http://www.w3.org/2000/01/rdf-schema#label> "has geometry file"@en .
+# 
+# http://bimerr.iot.linkeddata.es/def/information-objects#hasObxmlFile
+<http://bimerr.iot.linkeddata.es/def/information-objects#hasObxmlFile> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://bimerr.iot.linkeddata.es/def/information-objects#hasObxmlFile> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://bimerr.iot.linkeddata.es/def/information-objects#hasDocumentation> .
+<http://bimerr.iot.linkeddata.es/def/information-objects#hasObxmlFile> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates Space entities with obXML files."@en .
+<http://bimerr.iot.linkeddata.es/def/information-objects#hasObxmlFile> <http://www.w3.org/2000/01/rdf-schema#label> "has obxml file"@en .
+# 
+# http://bimerr.iot.linkeddata.es/def/information-objects#hasWorkflowPlan
+<http://bimerr.iot.linkeddata.es/def/information-objects#hasWorkflowPlan> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://bimerr.iot.linkeddata.es/def/information-objects#hasWorkflowPlan> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://bimerr.iot.linkeddata.es/def/information-objects#hasDocumentation> .
+<http://bimerr.iot.linkeddata.es/def/information-objects#hasWorkflowPlan> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates a Project entity with a workflow plan file."@en .
+<http://bimerr.iot.linkeddata.es/def/information-objects#hasWorkflowPlan> <http://www.w3.org/2000/01/rdf-schema#label> "has workflow plan"@en .
+# 
+# http://bimerr.iot.linkeddata.es/def/information-objects#isRelatedToFile
+<http://bimerr.iot.linkeddata.es/def/information-objects#isRelatedToFile> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://bimerr.iot.linkeddata.es/def/information-objects#isRelatedToFile> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicated a relationship between files."@en .
+<http://bimerr.iot.linkeddata.es/def/information-objects#isRelatedToFile> <http://www.w3.org/2000/01/rdf-schema#label> "is related to file"@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# http://bimerr.iot.linkeddata.es/def/information-objects#created
+<http://bimerr.iot.linkeddata.es/def/information-objects#created> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://bimerr.iot.linkeddata.es/def/information-objects#created> <http://www.w3.org/2000/01/rdf-schema#comment> "Date when the document has been created."@en .
+<http://bimerr.iot.linkeddata.es/def/information-objects#created> <http://www.w3.org/2000/01/rdf-schema#label> "created"@en .
+# 
+# http://bimerr.iot.linkeddata.es/def/information-objects#creator
+<http://bimerr.iot.linkeddata.es/def/information-objects#creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://bimerr.iot.linkeddata.es/def/information-objects#creator> <http://www.w3.org/2000/01/rdf-schema#comment> "Creator of the file."@en .
+<http://bimerr.iot.linkeddata.es/def/information-objects#creator> <http://www.w3.org/2000/01/rdf-schema#label> "creator"@en .
+# 
+# http://bimerr.iot.linkeddata.es/def/information-objects#description
+<http://bimerr.iot.linkeddata.es/def/information-objects#description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://bimerr.iot.linkeddata.es/def/information-objects#description> <http://www.w3.org/2000/01/rdf-schema#comment> "A short description of the content of the file."@en .
+<http://bimerr.iot.linkeddata.es/def/information-objects#description> <http://www.w3.org/2000/01/rdf-schema#label> "description"@en .
+# 
+# http://bimerr.iot.linkeddata.es/def/information-objects#filename
+<http://bimerr.iot.linkeddata.es/def/information-objects#filename> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://bimerr.iot.linkeddata.es/def/information-objects#filename> <http://www.w3.org/2000/01/rdf-schema#comment> "Filename or path to the location of the file."@en .
+<http://bimerr.iot.linkeddata.es/def/information-objects#filename> <http://www.w3.org/2000/01/rdf-schema#label> "filename"@en .
+# 
+# http://bimerr.iot.linkeddata.es/def/information-objects#format
+<http://bimerr.iot.linkeddata.es/def/information-objects#format> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://bimerr.iot.linkeddata.es/def/information-objects#format> <http://www.w3.org/2000/01/rdf-schema#comment> "Format or extension of the file."@en .
+<http://bimerr.iot.linkeddata.es/def/information-objects#format> <http://www.w3.org/2000/01/rdf-schema#label> "format"@en .
+# 
+# http://bimerr.iot.linkeddata.es/def/information-objects#identifier
+<http://bimerr.iot.linkeddata.es/def/information-objects#identifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://bimerr.iot.linkeddata.es/def/information-objects#identifier> <http://www.w3.org/2000/01/rdf-schema#comment> "Identifier of the file."@en .
+<http://bimerr.iot.linkeddata.es/def/information-objects#identifier> <http://www.w3.org/2000/01/rdf-schema#label> "identifier"@en .
+# 
+# http://bimerr.iot.linkeddata.es/def/information-objects#lastModificationAuthor
+<http://bimerr.iot.linkeddata.es/def/information-objects#lastModificationAuthor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://bimerr.iot.linkeddata.es/def/information-objects#lastModificationAuthor> <http://www.w3.org/2000/01/rdf-schema#comment> "The user who last modified the file."@en .
+<http://bimerr.iot.linkeddata.es/def/information-objects#lastModificationAuthor> <http://www.w3.org/2000/01/rdf-schema#label> "las modification author"@en .
+# 
+# http://bimerr.iot.linkeddata.es/def/information-objects#modified
+<http://bimerr.iot.linkeddata.es/def/information-objects#modified> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://bimerr.iot.linkeddata.es/def/information-objects#modified> <http://www.w3.org/2000/01/rdf-schema#comment> "Date when the file was last modified."@en .
+<http://bimerr.iot.linkeddata.es/def/information-objects#modified> <http://www.w3.org/2000/01/rdf-schema#label> "modified"@en .
+# 
+# http://bimerr.iot.linkeddata.es/def/information-objects#version
+<http://bimerr.iot.linkeddata.es/def/information-objects#version> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://bimerr.iot.linkeddata.es/def/information-objects#version> <http://www.w3.org/2000/01/rdf-schema#comment> "Version of the file."@en .
+<http://bimerr.iot.linkeddata.es/def/information-objects#version> <http://www.w3.org/2000/01/rdf-schema#label> "version"@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://bimerr.iot.linkeddata.es/def/information-objects#InformationObject
+<http://bimerr.iot.linkeddata.es/def/information-objects#InformationObject> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://bimerr.iot.linkeddata.es/def/information-objects#InformationObject> <http://www.w3.org/2000/01/rdf-schema#comment> "Class that represents any type of file."@en .
+<http://bimerr.iot.linkeddata.es/def/information-objects#InformationObject> <http://www.w3.org/2000/01/rdf-schema#label> "Information object"@en .
+# 
+# Generated by the OWL API (version 5.1.11) https://github.com/owlcs/owlapi/

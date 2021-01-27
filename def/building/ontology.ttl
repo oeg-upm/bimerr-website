@@ -11,10 +11,10 @@
                                                  <http://purl.org/dc/elements/1.1/creator> "The Building ontology has been developed to perform as the core module of the BIMERR project, containing information related to buidling topology, components, materials, and geometry. The geometry information is managed as information objects whitout entering in the details of the BIM model."@en ,
                                                                                            "María Poveda-Villalón" ,
                                                                                            "Serge Chávez-Feria" ;
-                                                 <http://purl.org/dc/elements/1.1/publisher> "http://purl.org/NET/rdflicense/cc-by4.0" ,
-                                                                                             "http://www.oeg-upm.net/" ;
+                                                 <http://purl.org/dc/elements/1.1/license> "http://purl.org/NET/rdflicense/cc-by4.0" ;
+                                                 <http://purl.org/dc/elements/1.1/publisher> "http://www.oeg-upm.net/" ;
                                                  <http://purl.org/dc/elements/1.1/title> "Building Ontology" ;
-                                                 owl:versionInfo "0.1.0" .
+                                                 owl:versionInfo "0.1.1" .
 
 #################################################################
 #    Annotation properties
@@ -50,36 +50,48 @@
 
 ###  http://bimerr.iot.linkeddata.es/def/building#hasApartment
 :hasApartment rdf:type owl:ObjectProperty ;
+              rdfs:domain :Storey ;
+              rdfs:range :Apartment ;
               rdfs:comment "Relation between a storey and the apartments it is composed of."@en ;
               rdfs:label "has apartment" .
 
 
 ###  https://w3id.org/bot#containsZone
 <https://w3id.org/bot#containsZone> rdf:type owl:ObjectProperty ;
+                                    rdfs:domain <https://w3id.org/bot#Zone> ;
+                                    rdfs:range <https://w3id.org/bot#Zone> ;
                                     rdfs:comment "Relationship to the subzones of a major zone. A space zone could for instance be contained in a storey zone which is further contained in a building zone."@en ;
                                     rdfs:label "contains zone" .
 
 
 ###  https://w3id.org/bot#hasElement
 <https://w3id.org/bot#hasElement> rdf:type owl:ObjectProperty ;
+                                  rdfs:domain <https://w3id.org/bot#Zone> ;
+                                  rdfs:range <https://w3id.org/bot#Element> ;
                                   rdfs:comment "Links a Zone to an Element that is contained in, or adjacent to, the Zone."@en ;
                                   rdfs:label "has element" .
 
 
 ###  https://w3id.org/bot#hasSpace
 <https://w3id.org/bot#hasSpace> rdf:type owl:ObjectProperty ;
+                                rdfs:domain <https://w3id.org/bot#Zone> ;
+                                rdfs:range <https://w3id.org/bot#Space> ;
                                 rdfs:comment "Relation to spaces contained in a zone."@en ;
                                 rdfs:label "has space" .
 
 
 ###  https://w3id.org/bot#hasStorey
 <https://w3id.org/bot#hasStorey> rdf:type owl:ObjectProperty ;
+                                 rdfs:domain <https://w3id.org/bot#Zone> ;
+                                 rdfs:range <https://w3id.org/bot#Storey> ;
                                  rdfs:comment "Relation to storeys contained in a zone."@en ;
                                  rdfs:label "has storey" .
 
 
 ###  https://w3id.org/bot#hasSubElement
 <https://w3id.org/bot#hasSubElement> rdf:type owl:ObjectProperty ;
+                                     rdfs:domain <https://w3id.org/bot#Element> ;
+                                     rdfs:range <https://w3id.org/bot#Element> ;
                                      rdfs:comment "Relationship to indicate the subcomponents of elements"@en ;
                                      rdfs:label "has sub element" .
 
@@ -99,12 +111,14 @@
 ###  http://bimerr.iot.linkeddata.es/def/building#hasObXMLFile
 :hasObXMLFile rdf:type owl:DatatypeProperty ;
               rdfs:domain :Space ;
+              rdfs:range xsd:string ;
               rdfs:comment "Relationship to indicate the path of the obXML file for an specific space."@en ;
               rdfs:label "has obXML file"@en .
 
 
 ###  http://bimerr.iot.linkeddata.es/def/building#identifierInDatabase
 :identifierInDatabase rdf:type owl:DatatypeProperty ;
+                      rdfs:range xsd:string ;
                       rdfs:comment "Indicates the ID of the building element in the BIMERR materials and component database."@en ;
                       rdfs:label "identifier in database"@en .
 
@@ -187,6 +201,7 @@
 ###  http://bimerr.iot.linkeddata.es/def/building#BiomassBoiler
 :BiomassBoiler rdf:type owl:Class ;
                rdfs:subClassOf <https://w3id.org/def/saref4bldg#Boiler> ;
+               rdfs:comment "Boiler for the combustion of biomass fuels."@en ;
                rdfs:label "Biomass Boiler" .
 
 
@@ -292,6 +307,7 @@
 ###  http://bimerr.iot.linkeddata.es/def/building#FossilBoiler
 :FossilBoiler rdf:type owl:Class ;
               rdfs:subClassOf <https://w3id.org/def/saref4bldg#Boiler> ;
+              rdfs:comment "Boiler for the combustion of fossil fuels."@en ;
               rdfs:label "Fossil Boiler" .
 
 
@@ -405,26 +421,31 @@
 
 ###  https://w3id.org/bot#Building
 <https://w3id.org/bot#Building> rdf:type owl:Class ;
+                                rdfs:comment "An independent unit of the built environment with a characteristic spatial structure. Concept from the BOT ontology."@en ;
                                 rdfs:label "Building" .
 
 
 ###  https://w3id.org/bot#Element
 <https://w3id.org/bot#Element> rdf:type owl:Class ;
+                               rdfs:comment "Constituent of a construction entity with a characteristic technical function, form or position. Concept from the BOT ontology."@en ;
                                rdfs:label "Element" .
 
 
 ###  https://w3id.org/bot#Space
 <https://w3id.org/bot#Space> rdf:type owl:Class ;
+                             rdfs:comment "A limited three-dimensional extent defined physically or notionally. Concept from the BOT ontology."@en ;
                              rdfs:label "Space" .
 
 
 ###  https://w3id.org/bot#Storey
 <https://w3id.org/bot#Storey> rdf:type owl:Class ;
+                              rdfs:comment "A level part of a building. Concept from the BOT ontology."@en ;
                               rdfs:label "Storey" .
 
 
 ###  https://w3id.org/bot#Zone
 <https://w3id.org/bot#Zone> rdf:type owl:Class ;
+                            rdfs:comment "A part of the physical world or a virtual world that is inherently both located in this world and having a 3D spatial extent. Concept from the BOT ontology."@en ;
                             rdfs:label "Zone" .
 
 

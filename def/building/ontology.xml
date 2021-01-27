@@ -13,10 +13,10 @@
         <dc:creator xml:lang="en">The Building ontology has been developed to perform as the core module of the BIMERR project, containing information related to buidling topology, components, materials, and geometry. The geometry information is managed as information objects whitout entering in the details of the BIM model.</dc:creator>
         <dc:creator>María Poveda-Villalón</dc:creator>
         <dc:creator>Serge Chávez-Feria</dc:creator>
-        <dc:publisher>http://purl.org/NET/rdflicense/cc-by4.0</dc:publisher>
+        <dc:license>http://purl.org/NET/rdflicense/cc-by4.0</dc:license>
         <dc:publisher>http://www.oeg-upm.net/</dc:publisher>
         <dc:title>Building Ontology</dc:title>
-        <owl:versionInfo>0.1.0</owl:versionInfo>
+        <owl:versionInfo>0.1.1</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -91,6 +91,8 @@
 
 
     <owl:ObjectProperty rdf:about="http://bimerr.iot.linkeddata.es/def/building#hasApartment">
+        <rdfs:domain rdf:resource="http://bimerr.iot.linkeddata.es/def/building#Storey"/>
+        <rdfs:range rdf:resource="http://bimerr.iot.linkeddata.es/def/building#Apartment"/>
         <rdfs:comment xml:lang="en">Relation between a storey and the apartments it is composed of.</rdfs:comment>
         <rdfs:label>has apartment</rdfs:label>
     </owl:ObjectProperty>
@@ -101,6 +103,8 @@
 
 
     <owl:ObjectProperty rdf:about="https://w3id.org/bot#containsZone">
+        <rdfs:domain rdf:resource="https://w3id.org/bot#Zone"/>
+        <rdfs:range rdf:resource="https://w3id.org/bot#Zone"/>
         <rdfs:comment xml:lang="en">Relationship to the subzones of a major zone. A space zone could for instance be contained in a storey zone which is further contained in a building zone.</rdfs:comment>
         <rdfs:label>contains zone</rdfs:label>
     </owl:ObjectProperty>
@@ -111,6 +115,8 @@
 
 
     <owl:ObjectProperty rdf:about="https://w3id.org/bot#hasElement">
+        <rdfs:domain rdf:resource="https://w3id.org/bot#Zone"/>
+        <rdfs:range rdf:resource="https://w3id.org/bot#Element"/>
         <rdfs:comment xml:lang="en">Links a Zone to an Element that is contained in, or adjacent to, the Zone.</rdfs:comment>
         <rdfs:label>has element</rdfs:label>
     </owl:ObjectProperty>
@@ -121,6 +127,8 @@
 
 
     <owl:ObjectProperty rdf:about="https://w3id.org/bot#hasSpace">
+        <rdfs:domain rdf:resource="https://w3id.org/bot#Zone"/>
+        <rdfs:range rdf:resource="https://w3id.org/bot#Space"/>
         <rdfs:comment xml:lang="en">Relation to spaces contained in a zone.</rdfs:comment>
         <rdfs:label>has space</rdfs:label>
     </owl:ObjectProperty>
@@ -131,6 +139,8 @@
 
 
     <owl:ObjectProperty rdf:about="https://w3id.org/bot#hasStorey">
+        <rdfs:domain rdf:resource="https://w3id.org/bot#Zone"/>
+        <rdfs:range rdf:resource="https://w3id.org/bot#Storey"/>
         <rdfs:comment xml:lang="en">Relation to storeys contained in a zone.</rdfs:comment>
         <rdfs:label>has storey</rdfs:label>
     </owl:ObjectProperty>
@@ -141,6 +151,8 @@
 
 
     <owl:ObjectProperty rdf:about="https://w3id.org/bot#hasSubElement">
+        <rdfs:domain rdf:resource="https://w3id.org/bot#Element"/>
+        <rdfs:range rdf:resource="https://w3id.org/bot#Element"/>
         <rdfs:comment xml:lang="en">Relationship to indicate the subcomponents of elements</rdfs:comment>
         <rdfs:label>has sub element</rdfs:label>
     </owl:ObjectProperty>
@@ -176,6 +188,7 @@
 
     <owl:DatatypeProperty rdf:about="http://bimerr.iot.linkeddata.es/def/building#hasObXMLFile">
         <rdfs:domain rdf:resource="http://bimerr.iot.linkeddata.es/def/building#Space"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment xml:lang="en">Relationship to indicate the path of the obXML file for an specific space.</rdfs:comment>
         <rdfs:label xml:lang="en">has obXML file</rdfs:label>
     </owl:DatatypeProperty>
@@ -186,6 +199,7 @@
 
 
     <owl:DatatypeProperty rdf:about="http://bimerr.iot.linkeddata.es/def/building#identifierInDatabase">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment xml:lang="en">Indicates the ID of the building element in the BIMERR materials and component database.</rdfs:comment>
         <rdfs:label xml:lang="en">identifier in database</rdfs:label>
     </owl:DatatypeProperty>
@@ -320,6 +334,7 @@
 
     <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/building#BiomassBoiler">
         <rdfs:subClassOf rdf:resource="https://w3id.org/def/saref4bldg#Boiler"/>
+        <rdfs:comment xml:lang="en">Boiler for the combustion of biomass fuels.</rdfs:comment>
         <rdfs:label>Biomass Boiler</rdfs:label>
     </owl:Class>
     
@@ -477,6 +492,7 @@
 
     <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/building#FossilBoiler">
         <rdfs:subClassOf rdf:resource="https://w3id.org/def/saref4bldg#Boiler"/>
+        <rdfs:comment xml:lang="en">Boiler for the combustion of fossil fuels.</rdfs:comment>
         <rdfs:label>Fossil Boiler</rdfs:label>
     </owl:Class>
     
@@ -646,6 +662,7 @@
 
 
     <owl:Class rdf:about="https://w3id.org/bot#Building">
+        <rdfs:comment xml:lang="en">An independent unit of the built environment with a characteristic spatial structure. Concept from the BOT ontology.</rdfs:comment>
         <rdfs:label>Building</rdfs:label>
     </owl:Class>
     
@@ -655,6 +672,7 @@
 
 
     <owl:Class rdf:about="https://w3id.org/bot#Element">
+        <rdfs:comment xml:lang="en">Constituent of a construction entity with a characteristic technical function, form or position. Concept from the BOT ontology.</rdfs:comment>
         <rdfs:label>Element</rdfs:label>
     </owl:Class>
     
@@ -664,6 +682,7 @@
 
 
     <owl:Class rdf:about="https://w3id.org/bot#Space">
+        <rdfs:comment xml:lang="en">A limited three-dimensional extent defined physically or notionally. Concept from the BOT ontology.</rdfs:comment>
         <rdfs:label>Space</rdfs:label>
     </owl:Class>
     
@@ -673,6 +692,7 @@
 
 
     <owl:Class rdf:about="https://w3id.org/bot#Storey">
+        <rdfs:comment xml:lang="en">A level part of a building. Concept from the BOT ontology.</rdfs:comment>
         <rdfs:label>Storey</rdfs:label>
     </owl:Class>
     
@@ -682,6 +702,7 @@
 
 
     <owl:Class rdf:about="https://w3id.org/bot#Zone">
+        <rdfs:comment xml:lang="en">A part of the physical world or a virtual world that is inherently both located in this world and having a 3D spatial extent. Concept from the BOT ontology.</rdfs:comment>
         <rdfs:label>Zone</rdfs:label>
     </owl:Class>
     

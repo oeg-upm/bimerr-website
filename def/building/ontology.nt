@@ -3,10 +3,10 @@
 <http://bimerr.iot.linkeddata.es/def/building#> <http://purl.org/dc/elements/1.1/creator> "The Building ontology has been developed to perform as the core module of the BIMERR project, containing information related to buidling topology, components, materials, and geometry. The geometry information is managed as information objects whitout entering in the details of the BIM model."@en .
 <http://bimerr.iot.linkeddata.es/def/building#> <http://purl.org/dc/elements/1.1/creator> "María Poveda-Villalón" .
 <http://bimerr.iot.linkeddata.es/def/building#> <http://purl.org/dc/elements/1.1/creator> "Serge Chávez-Feria" .
-<http://bimerr.iot.linkeddata.es/def/building#> <http://purl.org/dc/elements/1.1/publisher> "http://purl.org/NET/rdflicense/cc-by4.0" .
+<http://bimerr.iot.linkeddata.es/def/building#> <http://purl.org/dc/elements/1.1/license> "http://purl.org/NET/rdflicense/cc-by4.0" .
 <http://bimerr.iot.linkeddata.es/def/building#> <http://purl.org/dc/elements/1.1/publisher> "http://www.oeg-upm.net/" .
 <http://bimerr.iot.linkeddata.es/def/building#> <http://purl.org/dc/elements/1.1/title> "Building Ontology" .
-<http://bimerr.iot.linkeddata.es/def/building#> <http://www.w3.org/2002/07/owl#versionInfo> "0.1.0" .
+<http://bimerr.iot.linkeddata.es/def/building#> <http://www.w3.org/2002/07/owl#versionInfo> "0.1.1" .
 # 
 # 
 # #################################################################
@@ -45,31 +45,43 @@
 # 
 # http://bimerr.iot.linkeddata.es/def/building#hasApartment
 <http://bimerr.iot.linkeddata.es/def/building#hasApartment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://bimerr.iot.linkeddata.es/def/building#hasApartment> <http://www.w3.org/2000/01/rdf-schema#domain> <http://bimerr.iot.linkeddata.es/def/building#Storey> .
+<http://bimerr.iot.linkeddata.es/def/building#hasApartment> <http://www.w3.org/2000/01/rdf-schema#range> <http://bimerr.iot.linkeddata.es/def/building#Apartment> .
 <http://bimerr.iot.linkeddata.es/def/building#hasApartment> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation between a storey and the apartments it is composed of."@en .
 <http://bimerr.iot.linkeddata.es/def/building#hasApartment> <http://www.w3.org/2000/01/rdf-schema#label> "has apartment" .
 # 
 # https://w3id.org/bot#containsZone
 <https://w3id.org/bot#containsZone> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/bot#containsZone> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/bot#Zone> .
+<https://w3id.org/bot#containsZone> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/bot#Zone> .
 <https://w3id.org/bot#containsZone> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship to the subzones of a major zone. A space zone could for instance be contained in a storey zone which is further contained in a building zone."@en .
 <https://w3id.org/bot#containsZone> <http://www.w3.org/2000/01/rdf-schema#label> "contains zone" .
 # 
 # https://w3id.org/bot#hasElement
 <https://w3id.org/bot#hasElement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/bot#hasElement> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/bot#Zone> .
+<https://w3id.org/bot#hasElement> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/bot#Element> .
 <https://w3id.org/bot#hasElement> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a Zone to an Element that is contained in, or adjacent to, the Zone."@en .
 <https://w3id.org/bot#hasElement> <http://www.w3.org/2000/01/rdf-schema#label> "has element" .
 # 
 # https://w3id.org/bot#hasSpace
 <https://w3id.org/bot#hasSpace> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/bot#hasSpace> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/bot#Zone> .
+<https://w3id.org/bot#hasSpace> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/bot#Space> .
 <https://w3id.org/bot#hasSpace> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation to spaces contained in a zone."@en .
 <https://w3id.org/bot#hasSpace> <http://www.w3.org/2000/01/rdf-schema#label> "has space" .
 # 
 # https://w3id.org/bot#hasStorey
 <https://w3id.org/bot#hasStorey> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/bot#hasStorey> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/bot#Zone> .
+<https://w3id.org/bot#hasStorey> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/bot#Storey> .
 <https://w3id.org/bot#hasStorey> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation to storeys contained in a zone."@en .
 <https://w3id.org/bot#hasStorey> <http://www.w3.org/2000/01/rdf-schema#label> "has storey" .
 # 
 # https://w3id.org/bot#hasSubElement
 <https://w3id.org/bot#hasSubElement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/bot#hasSubElement> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/bot#Element> .
+<https://w3id.org/bot#hasSubElement> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/bot#Element> .
 <https://w3id.org/bot#hasSubElement> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship to indicate the subcomponents of elements"@en .
 <https://w3id.org/bot#hasSubElement> <http://www.w3.org/2000/01/rdf-schema#label> "has sub element" .
 # 
@@ -92,11 +104,13 @@
 # http://bimerr.iot.linkeddata.es/def/building#hasObXMLFile
 <http://bimerr.iot.linkeddata.es/def/building#hasObXMLFile> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <http://bimerr.iot.linkeddata.es/def/building#hasObXMLFile> <http://www.w3.org/2000/01/rdf-schema#domain> <http://bimerr.iot.linkeddata.es/def/building#Space> .
+<http://bimerr.iot.linkeddata.es/def/building#hasObXMLFile> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
 <http://bimerr.iot.linkeddata.es/def/building#hasObXMLFile> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship to indicate the path of the obXML file for an specific space."@en .
 <http://bimerr.iot.linkeddata.es/def/building#hasObXMLFile> <http://www.w3.org/2000/01/rdf-schema#label> "has obXML file"@en .
 # 
 # http://bimerr.iot.linkeddata.es/def/building#identifierInDatabase
 <http://bimerr.iot.linkeddata.es/def/building#identifierInDatabase> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://bimerr.iot.linkeddata.es/def/building#identifierInDatabase> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
 <http://bimerr.iot.linkeddata.es/def/building#identifierInDatabase> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates the ID of the building element in the BIMERR materials and component database."@en .
 <http://bimerr.iot.linkeddata.es/def/building#identifierInDatabase> <http://www.w3.org/2000/01/rdf-schema#label> "identifier in database"@en .
 # 
@@ -175,6 +189,7 @@ _:genid4 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XML
 # http://bimerr.iot.linkeddata.es/def/building#BiomassBoiler
 <http://bimerr.iot.linkeddata.es/def/building#BiomassBoiler> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://bimerr.iot.linkeddata.es/def/building#BiomassBoiler> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/def/saref4bldg#Boiler> .
+<http://bimerr.iot.linkeddata.es/def/building#BiomassBoiler> <http://www.w3.org/2000/01/rdf-schema#comment> "Boiler for the combustion of biomass fuels."@en .
 <http://bimerr.iot.linkeddata.es/def/building#BiomassBoiler> <http://www.w3.org/2000/01/rdf-schema#label> "Biomass Boiler" .
 # 
 # http://bimerr.iot.linkeddata.es/def/building#Building
@@ -273,6 +288,7 @@ _:genid16 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XM
 # http://bimerr.iot.linkeddata.es/def/building#FossilBoiler
 <http://bimerr.iot.linkeddata.es/def/building#FossilBoiler> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://bimerr.iot.linkeddata.es/def/building#FossilBoiler> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/def/saref4bldg#Boiler> .
+<http://bimerr.iot.linkeddata.es/def/building#FossilBoiler> <http://www.w3.org/2000/01/rdf-schema#comment> "Boiler for the combustion of fossil fuels."@en .
 <http://bimerr.iot.linkeddata.es/def/building#FossilBoiler> <http://www.w3.org/2000/01/rdf-schema#label> "Fossil Boiler" .
 # 
 # http://bimerr.iot.linkeddata.es/def/building#PipeSegment
@@ -378,22 +394,27 @@ _:genid28 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XM
 # 
 # https://w3id.org/bot#Building
 <https://w3id.org/bot#Building> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/bot#Building> <http://www.w3.org/2000/01/rdf-schema#comment> "An independent unit of the built environment with a characteristic spatial structure. Concept from the BOT ontology."@en .
 <https://w3id.org/bot#Building> <http://www.w3.org/2000/01/rdf-schema#label> "Building" .
 # 
 # https://w3id.org/bot#Element
 <https://w3id.org/bot#Element> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/bot#Element> <http://www.w3.org/2000/01/rdf-schema#comment> "Constituent of a construction entity with a characteristic technical function, form or position. Concept from the BOT ontology."@en .
 <https://w3id.org/bot#Element> <http://www.w3.org/2000/01/rdf-schema#label> "Element" .
 # 
 # https://w3id.org/bot#Space
 <https://w3id.org/bot#Space> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/bot#Space> <http://www.w3.org/2000/01/rdf-schema#comment> "A limited three-dimensional extent defined physically or notionally. Concept from the BOT ontology."@en .
 <https://w3id.org/bot#Space> <http://www.w3.org/2000/01/rdf-schema#label> "Space" .
 # 
 # https://w3id.org/bot#Storey
 <https://w3id.org/bot#Storey> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/bot#Storey> <http://www.w3.org/2000/01/rdf-schema#comment> "A level part of a building. Concept from the BOT ontology."@en .
 <https://w3id.org/bot#Storey> <http://www.w3.org/2000/01/rdf-schema#label> "Storey" .
 # 
 # https://w3id.org/bot#Zone
 <https://w3id.org/bot#Zone> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/bot#Zone> <http://www.w3.org/2000/01/rdf-schema#comment> "A part of the physical world or a virtual world that is inherently both located in this world and having a 3D spatial extent. Concept from the BOT ontology."@en .
 <https://w3id.org/bot#Zone> <http://www.w3.org/2000/01/rdf-schema#label> "Zone" .
 # 
 # https://w3id.org/def/saref4bldg#Boiler
