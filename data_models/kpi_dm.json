@@ -308,9 +308,6 @@
                     "$ref": "#/float"
                 }
             },
-            "parent": {
-                "$ref": "#/KeyPerformanceIndicatorAssessment"
-            },
             "quantifiesKPI": {
                 "definition": "A KPI value quantifies a specific KPI.",
                 "related_terms": [
@@ -562,9 +559,6 @@
                     "codeType": null
                 },
                 "type": "string"
-            },
-            "parent": {
-                "$ref": "#/KeyPerformanceIndicator"
             },
             "CalculationPeriod": {
                 "definition": "Indicates the calculation period of a KPI.",
